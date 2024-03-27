@@ -70,16 +70,30 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion.Designer.cs">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Instancia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Instancia.Designer.cs">
       <DependentUpon>Instancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlumnosORM.cs" />
+    <Compile Include="Models\ClientesORM.cs" />
+    <Compile Include="Models\CursosORM.cs" />
+    <Compile Include="Models\InstanciaOrm.cs" />
+    <Compile Include="Models\Orm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.es.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -92,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,11 +121,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Resources\alumnos-icono.png" />
+    <Content Include="Resources\clientes-icono.png" />
+    <Content Include="Resources\curso-icono.png" />
     <Content Include="Resources\fondo_home.jpg" />
+    <Content Include="Resources\inscripcion-icono.png" />
+    <Content Include="Resources\instancia-icono.png" />
+    <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
