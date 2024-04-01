@@ -40,12 +40,14 @@
             this.buttonInscripcion = new System.Windows.Forms.Button();
             this.toolStripHome = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonCursos = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).BeginInit();
             this.toolStripHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAlumnos
@@ -85,7 +87,7 @@
             // 
             // pictureBoxAlumnos
             // 
-            this.pictureBoxAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlumnos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxAlumnos.Image = global::OpenSpaceComarcal.Properties.Resources.alumnos_icono;
             resources.ApplyResources(this.pictureBoxAlumnos, "pictureBoxAlumnos");
             this.pictureBoxAlumnos.Name = "pictureBoxAlumnos";
@@ -94,7 +96,7 @@
             // 
             // pictureBoxInstancia
             // 
-            this.pictureBoxInstancia.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInstancia.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInstancia.Image = global::OpenSpaceComarcal.Properties.Resources.instancia_icono;
             resources.ApplyResources(this.pictureBoxInstancia, "pictureBoxInstancia");
             this.pictureBoxInstancia.Name = "pictureBoxInstancia";
@@ -103,7 +105,7 @@
             // 
             // pictureBoxClientes
             // 
-            this.pictureBoxClientes.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxClientes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxClientes.Image = global::OpenSpaceComarcal.Properties.Resources.clientes_icono;
             resources.ApplyResources(this.pictureBoxClientes, "pictureBoxClientes");
             this.pictureBoxClientes.Name = "pictureBoxClientes";
@@ -112,7 +114,7 @@
             // 
             // pictureBoxInscripcion
             // 
-            this.pictureBoxInscripcion.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInscripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInscripcion.Image = global::OpenSpaceComarcal.Properties.Resources.inscripcion_icono;
             resources.ApplyResources(this.pictureBoxInscripcion, "pictureBoxInscripcion");
             this.pictureBoxInscripcion.Name = "pictureBoxInscripcion";
@@ -132,6 +134,7 @@
             // toolStripHome
             // 
             this.toolStripHome.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStripHome.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.toolStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonCursos});
             resources.ApplyResources(this.toolStripHome, "toolStripHome");
@@ -146,11 +149,19 @@
             this.toolStripButtonCursos.Name = "toolStripButtonCursos";
             this.toolStripButtonCursos.Click += new System.EventHandler(this.toolStripButtonCursos_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.toolStripHome);
             this.Controls.Add(this.pictureBoxInscripcion);
             this.Controls.Add(this.buttonInscripcion);
@@ -159,8 +170,8 @@
             this.Controls.Add(this.pictureBoxAlumnos);
             this.Controls.Add(this.buttonInstancia);
             this.Controls.Add(this.buttonClientes);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonAlumnos);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.RosyBrown;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Home";
@@ -171,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).EndInit();
             this.toolStripHome.ResumeLayout(false);
             this.toolStripHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +200,7 @@
         private System.Windows.Forms.Button buttonInscripcion;
         private System.Windows.Forms.ToolStrip toolStripHome;
         private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

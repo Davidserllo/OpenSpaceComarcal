@@ -543,10 +543,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAlumnos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 235</value>
+    <value>220, 434</value>
+  </data>
+  <data name="buttonAlumnos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="buttonAlumnos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 28</value>
+    <value>205, 52</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonAlumnos.TabIndex" type="System.Int32, mscorlib">
@@ -34541,10 +34544,13 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 302</value>
+    <value>503, 558</value>
+  </data>
+  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 119</value>
+    <value>460, 220</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -34562,7 +34568,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>0</value>
   </data>
   <data name="buttonClientes.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -34988,10 +34994,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonClientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 235</value>
+    <value>491, 434</value>
+  </data>
+  <data name="buttonClientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="buttonClientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 28</value>
+    <value>205, 52</value>
   </data>
   <data name="buttonClientes.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -35012,7 +35021,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonClientes.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="buttonInstancia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -35438,10 +35447,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonInstancia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 235</value>
+    <value>759, 434</value>
+  </data>
+  <data name="buttonInstancia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="buttonInstancia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 28</value>
+    <value>205, 52</value>
   </data>
   <data name="buttonInstancia.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -35462,13 +35474,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonInstancia.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pictureBoxAlumnos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 125</value>
+    <value>220, 231</value>
+  </data>
+  <data name="pictureBoxAlumnos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="pictureBoxAlumnos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 104</value>
+    <value>205, 192</value>
   </data>
   <data name="pictureBoxAlumnos.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -35486,16 +35501,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxAlumnos.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBoxInstancia.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBoxInstancia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 125</value>
+    <value>759, 231</value>
+  </data>
+  <data name="pictureBoxInstancia.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="pictureBoxInstancia.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 104</value>
+    <value>205, 192</value>
   </data>
   <data name="pictureBoxInstancia.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -35513,16 +35531,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxInstancia.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pictureBoxClientes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBoxClientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 125</value>
+    <value>491, 231</value>
+  </data>
+  <data name="pictureBoxClientes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="pictureBoxClientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 104</value>
+    <value>205, 192</value>
   </data>
   <data name="pictureBoxClientes.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -35540,16 +35561,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxClientes.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pictureBoxInscripcion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBoxInscripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 125</value>
+    <value>1043, 231</value>
+  </data>
+  <data name="pictureBoxInscripcion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="pictureBoxInscripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 104</value>
+    <value>205, 192</value>
   </data>
   <data name="pictureBoxInscripcion.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -35567,7 +35591,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxInscripcion.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="buttonInscripcion.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -35993,10 +36017,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonInscripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 235</value>
+    <value>1043, 434</value>
+  </data>
+  <data name="buttonInscripcion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="buttonInscripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 28</value>
+    <value>205, 52</value>
   </data>
   <data name="buttonInscripcion.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -36017,16 +36044,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonInscripcion.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="toolStripHome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="toolStripButtonCursos.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonCursos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 38</value>
+  </data>
+  <data name="toolStripButtonCursos.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="toolStripButtonCursos.ToolTipText" xml:space="preserve">
+    <value>Cursos</value>
+  </data>
   <data name="toolStripHome.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="toolStripHome.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 4, 0</value>
+  </data>
   <data name="toolStripHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 25</value>
+    <value>1467, 44</value>
   </data>
   <data name="toolStripHome.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -36044,25 +36086,34 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStripHome.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
-  <data name="toolStripButtonCursos.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 211</value>
   </data>
-  <data name="toolStripButtonCursos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1095, 296</value>
   </data>
-  <data name="toolStripButtonCursos.Text" xml:space="preserve">
-    <value>toolStripButton1</value>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="toolStripButtonCursos.ToolTipText" xml:space="preserve">
-    <value>Cursos</value>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>11, 24</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -42212,10 +42263,16 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>1467, 831</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Open Space Comarcal</value>
+    <value>OPEN SPACE COMARCAL</value>
   </data>
   <data name="&gt;&gt;toolStripButtonCursos.Name" xml:space="preserve">
     <value>toolStripButtonCursos</value>
