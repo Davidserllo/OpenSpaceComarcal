@@ -18,6 +18,14 @@ namespace OpenSpaceComarcal
             InitializeComponent();
         }
 
+        private void Clear()
+        {
+            textBoxDNI.Text= string.Empty;
+            textBoxNombre.Text= string.Empty;
+            textBoxApellidos.Text= string.Empty;
+            textBoxTelefono.Text= string.Empty;
+        }
+
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -39,6 +47,7 @@ namespace OpenSpaceComarcal
             if (message == "")
             {
                 MessageBox.Show("Se ha creado un nuevo alumno llamado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear();
             }
             else
             {

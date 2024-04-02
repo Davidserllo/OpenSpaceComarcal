@@ -28,5 +28,10 @@ namespace OpenSpaceComarcal
             CrearAlumno crearAlumno = new CrearAlumno();
             crearAlumno.ShowDialog();
         }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+        }
     }
 }
