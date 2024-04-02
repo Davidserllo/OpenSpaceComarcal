@@ -94,12 +94,12 @@
     <Compile Include="Models\alumno.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\AlumnosORM.cs" />
-    <Compile Include="Models\ClientesORM.cs" />
+    <Compile Include="Models\AlumnosOrm.cs" />
+    <Compile Include="Models\ClientesOrm.cs" />
     <Compile Include="Models\curso.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CursosORM.cs" />
+    <Compile Include="Models\CursosOrm.cs" />
     <Compile Include="Models\inscripcion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -164,6 +164,25 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Alumnos.datasource" />
+    <None Include="Properties\DataSources\Clientes.datasource" />
+    <None Include="Properties\DataSources\Cursos.datasource" />
+    <None Include="Properties\DataSources\Home.datasource" />
+    <None Include="Properties\DataSources\Inscripcion.datasource" />
+    <None Include="Properties\DataSources\Instancia.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.AlumnosORM.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.ClientesORM.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.curso.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.CursosORM.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.inscripcion.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.instancia.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.InstanciaOrm.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.open_spaceEntities.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.Orm.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

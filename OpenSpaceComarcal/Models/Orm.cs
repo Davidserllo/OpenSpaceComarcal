@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,9 @@ namespace OpenSpaceComarcal.Models
 {
     public static class Orm
     {
-        // public static abpEntities bd = new abpEntities();
+        public static open_spaceEntities bd = new open_spaceEntities();
 
-        public static String MissatgeError(SqlException sqlException)
+        public static String MensajeError(SqlException sqlException)
         {
             String missatge = "";
 
@@ -43,48 +44,48 @@ namespace OpenSpaceComarcal.Models
             return missatge;
         }
 
-        //public static String MySaveChanges()
-        //{
-        //    String missatge = "";
-        //    try
-        //    {
-        //        Orm.bd.SaveChanges();
-        //    }
-        //    catch (DbUpdateException ex)
-        //    {
-        //        SqlException sqlException = (SqlException)ex.InnerException.InnerException;
-        //        missatge = Orm.MissatgeError(sqlException);
-        //        RejectChanges();
-        //    }
+        public static String MySaveChanges()
+        {
+            String missatge = "";
+            try
+            {
+                Orm.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                SqlException sqlException = (SqlException)ex.InnerException.InnerException;
+                missatge = Orm.MensajeError(sqlException);
+                RejectChanges();
+            }
 
-        //    return missatge;
-        //}
+            return missatge;
+        }
 
-        //public static void RejectChanges()
-        //{
-        //    foreach (DbEntityEntry item in bd.ChangeTracker.Entries())
-        //    {
+        private static void RejectChanges()
+        {
+            foreach (DbEntityEntry item in bd.ChangeTracker.Entries())
+            {
+                switch (item.State)
+                {
+                    case System.Data.Entity.EntityState.Detached:
+                        break;
+                    case System.Data.Entity.EntityState.Unchanged:
+                        break;
+                    case System.Data.Entity.EntityState.Added:
+                        item.State = System.Data.Entity.EntityState.Detached;
+                        break;
+                    case System.Data.Entity.EntityState.Deleted:
+                        item.Reload();
+                        break;
+                    case System.Data.Entity.EntityState.Modified:
+                        item.State = System.Data.Entity.EntityState.Unchanged;
+                        break;
+                    default:
+                        break;
 
-        //        switch (item.State)
-        //        {
-        //            case System.Data.Entity.EntityState.Detached:
-        //                break;
-        //            case System.Data.Entity.EntityState.Unchanged:
-        //                break;
-        //            case System.Data.Entity.EntityState.Added:
-        //                item.State = System.Data.Entity.EntityState.Detached;
-        //                break;
-        //            case System.Data.Entity.EntityState.Deleted:
-        //                item.Reload();
-        //                break;
-        //            case System.Data.Entity.EntityState.Modified:
-        //                item.State = System.Data.Entity.EntityState.Unchanged;
-        //                break;
-        //            default:
-        //                break;
-        //        }
-        //    }
-        //}
+                }
+            }
+        }
 
     }
 }
