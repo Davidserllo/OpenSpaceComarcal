@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,15 @@ namespace OpenSpaceComarcal
             InitializeComponent();
         }
 
+        private void Alumnos_Load(object sender, EventArgs e)
+        {
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrearAlumno crearAlumno = new CrearAlumno();
+            crearAlumno.ShowDialog();
+        }
     }
 }

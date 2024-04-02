@@ -67,6 +67,12 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearAlumno.Designer.cs">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearAlumno.resx">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cursos.resx">
       <DependentUpon>Cursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,10 +180,7 @@
     <None Include="Properties\DataSources\Inscripcion.datasource" />
     <None Include="Properties\DataSources\Instancia.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.AlumnosORM.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.ClientesORM.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.curso.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.CursosORM.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.inscripcion.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.instancia.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.InstanciaOrm.datasource" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpenSpaceComarcal.Models
 {
-    internal class CursosORM
+    internal class CursosOrm
     {
     }
 }
