@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.buttonAlumnos = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonClientes = new System.Windows.Forms.Button();
             this.buttonInstancia = new System.Windows.Forms.Button();
@@ -40,24 +39,14 @@
             this.buttonInscripcion = new System.Windows.Forms.Button();
             this.toolStripHome = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonCursos = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonAlumnos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).BeginInit();
             this.toolStripHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonAlumnos
-            // 
-            resources.ApplyResources(this.buttonAlumnos, "buttonAlumnos");
-            this.buttonAlumnos.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonAlumnos.Name = "buttonAlumnos";
-            this.buttonAlumnos.UseVisualStyleBackColor = true;
-            this.buttonAlumnos.Click += new System.EventHandler(this.buttonAlumnos_Click);
             // 
             // pictureBox2
             // 
@@ -149,29 +138,30 @@
             this.toolStripButtonCursos.Name = "toolStripButtonCursos";
             this.toolStripButtonCursos.Click += new System.EventHandler(this.toolStripButtonCursos_Click);
             // 
-            // pictureBox1
+            // buttonAlumnos
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.buttonAlumnos, "buttonAlumnos");
+            this.buttonAlumnos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonAlumnos.Name = "buttonAlumnos";
+            this.buttonAlumnos.UseVisualStyleBackColor = true;
+            this.buttonAlumnos.Click += new System.EventHandler(this.buttonAlumnos_Click_1);
             // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.buttonAlumnos);
+            this.Controls.Add(this.pictureBoxAlumnos);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.toolStripHome);
-            this.Controls.Add(this.pictureBoxInscripcion);
-            this.Controls.Add(this.buttonInscripcion);
             this.Controls.Add(this.pictureBoxClientes);
             this.Controls.Add(this.pictureBoxInstancia);
-            this.Controls.Add(this.pictureBoxAlumnos);
-            this.Controls.Add(this.buttonInstancia);
+            this.Controls.Add(this.toolStripHome);
+            this.Controls.Add(this.buttonInscripcion);
             this.Controls.Add(this.buttonClientes);
-            this.Controls.Add(this.buttonAlumnos);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxInscripcion);
+            this.Controls.Add(this.buttonInstancia);
             this.ForeColor = System.Drawing.Color.RosyBrown;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Home";
@@ -182,14 +172,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).EndInit();
             this.toolStripHome.ResumeLayout(false);
             this.toolStripHome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonAlumnos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonInstancia;
@@ -200,7 +188,7 @@
         private System.Windows.Forms.Button buttonInscripcion;
         private System.Windows.Forms.ToolStrip toolStripHome;
         private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonAlumnos;
     }
 }
 

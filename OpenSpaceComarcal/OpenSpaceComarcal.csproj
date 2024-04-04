@@ -97,6 +97,7 @@
     <Compile Include="Instancia.Designer.cs">
       <DependentUpon>Instancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

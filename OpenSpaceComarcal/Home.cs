@@ -63,5 +63,11 @@ namespace OpenSpaceComarcal
             Inscripcion frm = new Inscripcion();
             frm.Show();
         }
+
+        private void buttonAlumnos_Click_1(object sender, EventArgs e)
+        {
+            Alumnos frm = new Alumnos();
+            frm.Show();
+        }
     }
 }
