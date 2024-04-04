@@ -32,11 +32,11 @@
             this.labelApellidos = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.groupBoxAlumno = new System.Windows.Forms.GroupBox();
-            this.labelTelefono = new System.Windows.Forms.Label();
-            this.textBoxDNI = new System.Windows.Forms.TextBox();
-            this.textBoxApellidos = new System.Windows.Forms.TextBox();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.textBoxDNI = new System.Windows.Forms.TextBox();
+            this.labelTelefono = new System.Windows.Forms.Label();
             this.buttonCrear = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBoxAlumno.SuspendLayout();
@@ -45,27 +45,30 @@
             // labelDNI
             // 
             this.labelDNI.AutoSize = true;
-            this.labelDNI.Location = new System.Drawing.Point(18, 41);
+            this.labelDNI.Location = new System.Drawing.Point(33, 76);
+            this.labelDNI.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelDNI.Name = "labelDNI";
-            this.labelDNI.Size = new System.Drawing.Size(26, 13);
+            this.labelDNI.Size = new System.Drawing.Size(45, 25);
             this.labelDNI.TabIndex = 0;
             this.labelDNI.Text = "DNI";
             // 
             // labelApellidos
             // 
             this.labelApellidos.AutoSize = true;
-            this.labelApellidos.Location = new System.Drawing.Point(18, 74);
+            this.labelApellidos.Location = new System.Drawing.Point(33, 137);
+            this.labelApellidos.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(49, 13);
+            this.labelApellidos.Size = new System.Drawing.Size(92, 25);
             this.labelApellidos.TabIndex = 1;
             this.labelApellidos.Text = "Apellidos";
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(18, 110);
+            this.labelNombre.Location = new System.Drawing.Point(33, 203);
+            this.labelNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(44, 13);
+            this.labelNombre.Size = new System.Drawing.Size(81, 25);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "Nombre";
             // 
@@ -79,55 +82,63 @@
             this.groupBoxAlumno.Controls.Add(this.labelDNI);
             this.groupBoxAlumno.Controls.Add(this.labelNombre);
             this.groupBoxAlumno.Controls.Add(this.labelApellidos);
-            this.groupBoxAlumno.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxAlumno.Location = new System.Drawing.Point(22, 22);
+            this.groupBoxAlumno.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxAlumno.Name = "groupBoxAlumno";
-            this.groupBoxAlumno.Size = new System.Drawing.Size(282, 191);
+            this.groupBoxAlumno.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBoxAlumno.Size = new System.Drawing.Size(517, 353);
             this.groupBoxAlumno.TabIndex = 3;
             this.groupBoxAlumno.TabStop = false;
             this.groupBoxAlumno.Text = "Información del alumno";
             // 
-            // labelTelefono
+            // textBoxTelefono
             // 
-            this.labelTelefono.AutoSize = true;
-            this.labelTelefono.Location = new System.Drawing.Point(18, 148);
-            this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(49, 13);
-            this.labelTelefono.TabIndex = 3;
-            this.labelTelefono.Text = "Teléfono";
-            // 
-            // textBoxDNI
-            // 
-            this.textBoxDNI.Location = new System.Drawing.Point(88, 38);
-            this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(174, 20);
-            this.textBoxDNI.TabIndex = 5;
-            // 
-            // textBoxApellidos
-            // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(88, 71);
-            this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(174, 20);
-            this.textBoxApellidos.TabIndex = 6;
+            this.textBoxTelefono.Location = new System.Drawing.Point(161, 268);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(316, 29);
+            this.textBoxTelefono.TabIndex = 8;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(88, 107);
+            this.textBoxNombre.Location = new System.Drawing.Point(161, 198);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(174, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(316, 29);
             this.textBoxNombre.TabIndex = 7;
             // 
-            // textBoxTelefono
+            // textBoxApellidos
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(88, 145);
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(174, 20);
-            this.textBoxTelefono.TabIndex = 8;
+            this.textBoxApellidos.Location = new System.Drawing.Point(161, 131);
+            this.textBoxApellidos.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(316, 29);
+            this.textBoxApellidos.TabIndex = 6;
+            // 
+            // textBoxDNI
+            // 
+            this.textBoxDNI.Location = new System.Drawing.Point(161, 70);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxDNI.Name = "textBoxDNI";
+            this.textBoxDNI.Size = new System.Drawing.Size(316, 29);
+            this.textBoxDNI.TabIndex = 5;
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.Location = new System.Drawing.Point(33, 273);
+            this.labelTelefono.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(89, 25);
+            this.labelTelefono.TabIndex = 3;
+            this.labelTelefono.Text = "Teléfono";
             // 
             // buttonCrear
             // 
-            this.buttonCrear.Location = new System.Drawing.Point(12, 209);
+            this.buttonCrear.Location = new System.Drawing.Point(22, 386);
+            this.buttonCrear.Margin = new System.Windows.Forms.Padding(6);
             this.buttonCrear.Name = "buttonCrear";
-            this.buttonCrear.Size = new System.Drawing.Size(141, 48);
+            this.buttonCrear.Size = new System.Drawing.Size(258, 89);
             this.buttonCrear.TabIndex = 4;
             this.buttonCrear.Text = "Crear";
             this.buttonCrear.UseVisualStyleBackColor = true;
@@ -135,9 +146,10 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(159, 209);
+            this.buttonCancelar.Location = new System.Drawing.Point(292, 386);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(6);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(135, 48);
+            this.buttonCancelar.Size = new System.Drawing.Size(248, 89);
             this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -145,14 +157,16 @@
             // 
             // CrearAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 269);
+            this.ClientSize = new System.Drawing.Size(561, 497);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonCrear);
             this.Controls.Add(this.groupBoxAlumno);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CrearAlumno";
-            this.Text = "CrearAlumno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NUEVO ALUMNO - OPEN SPACE COMARCAL";
             this.groupBoxAlumno.ResumeLayout(false);
             this.groupBoxAlumno.PerformLayout();
             this.ResumeLayout(false);

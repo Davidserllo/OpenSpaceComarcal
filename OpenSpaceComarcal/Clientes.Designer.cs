@@ -48,6 +48,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonActualizar = new System.Windows.Forms.Button();
             this.groupBoxBuscadorCliente.SuspendLayout();
             this.groupBoxInformacionCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -265,18 +266,29 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Clientes";
             // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(15, 15);
+            this.buttonActualizar.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(138, 42);
+            this.buttonActualizar.TabIndex = 23;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.groupBoxBuscadorCliente);
             this.Controls.Add(this.groupBoxInformacionCliente);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Clientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CLIENTES - OPEN SPACE COMARCAL";
             this.groupBoxBuscadorCliente.ResumeLayout(false);
             this.groupBoxBuscadorCliente.PerformLayout();
@@ -310,5 +322,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonActualizar;
     }
 }

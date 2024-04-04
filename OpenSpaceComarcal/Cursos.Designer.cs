@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BuscarAlumno = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,9 +49,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -266,6 +272,24 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Cursos";
             // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(15, 15);
+            this.buttonActualizar.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(138, 42);
+            this.buttonActualizar.TabIndex = 23;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            // 
+            // cursosBindingSource
+            // 
+            this.cursosBindingSource.DataSource = typeof(OpenSpaceComarcal.Cursos);
+            // 
+            // cursosBindingSource1
+            // 
+            this.cursosBindingSource1.DataSource = typeof(OpenSpaceComarcal.Cursos);
+            // 
             // Cursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -273,18 +297,22 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1467, 831);
+            this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Cursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CURSOS - OPEN SPACE COMARCAL";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +340,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.BindingSource cursosBindingSource;
+        private System.Windows.Forms.BindingSource cursosBindingSource1;
     }
 }

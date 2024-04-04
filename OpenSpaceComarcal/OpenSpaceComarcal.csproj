@@ -105,6 +105,7 @@
     <Compile Include="Models\curso.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\InscripcionOrm.cs" />
     <Compile Include="Models\CursosOrm.cs" />
     <Compile Include="Models\inscripcion.cs">
       <DependentUpon>Model1.tt</DependentUpon>

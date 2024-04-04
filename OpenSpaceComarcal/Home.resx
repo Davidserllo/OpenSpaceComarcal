@@ -36053,7 +36053,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonCursos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 38</value>
+    <value>40, 32</value>
   </data>
   <data name="toolStripButtonCursos.Text" xml:space="preserve">
     <value>toolStripButton1</value>
@@ -36068,7 +36068,7 @@
     <value>0, 0, 4, 0</value>
   </data>
   <data name="toolStripHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1467, 44</value>
+    <value>1467, 38</value>
   </data>
   <data name="toolStripHome.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>

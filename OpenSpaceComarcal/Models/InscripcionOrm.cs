@@ -7,22 +7,22 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal.Models
 {
-    internal class CursosOrm
+    internal class InscripcionOrm
     {
-        public static List<curso> Select()
+        public static List<inscripcion> Select()
         {
-            List<curso> _curso = Orm.bd.curso
-                .OrderBy(n => n.nombre)
+            List<inscripcion> _inscripcion = Orm.bd.inscripcion
+                .OrderBy(n => n.id)
                 .ToList();
 
-            return _curso;
+            return _inscripcion;
         }
 
-        public static String Insert(curso _curso)
+        public static String Insert(inscripcion _inscripcion)
         {
             String missatge = "";
 
-            Orm.bd.curso.Add(_curso);
+            Orm.bd.inscripcion.Add(_inscripcion);
             missatge = Orm.MySaveChanges();
 
             return missatge;
