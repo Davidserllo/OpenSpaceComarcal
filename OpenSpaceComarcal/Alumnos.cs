@@ -182,5 +182,11 @@ namespace OpenSpaceComarcal
                 }
             }
         }
+
+        private void BuscarAlumno_Click(object sender, EventArgs e)
+        {
+            String busqueda = textBoxBuscador.Text;
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select(busqueda);
+        }
     }
 }

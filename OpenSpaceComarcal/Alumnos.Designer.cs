@@ -50,9 +50,13 @@
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxBuscador = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,14 +84,14 @@
             this.nombreDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn});
             this.dataGridViewAlumno.DataSource = this.bindingSourceAlumno;
-            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 54);
+            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 107);
             this.dataGridViewAlumno.MultiSelect = false;
             this.dataGridViewAlumno.Name = "dataGridViewAlumno";
             this.dataGridViewAlumno.ReadOnly = true;
             this.dataGridViewAlumno.RowHeadersVisible = false;
             this.dataGridViewAlumno.RowHeadersWidth = 72;
             this.dataGridViewAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAlumno.Size = new System.Drawing.Size(784, 319);
+            this.dataGridViewAlumno.Size = new System.Drawing.Size(784, 266);
             this.dataGridViewAlumno.TabIndex = 2;
             this.dataGridViewAlumno.SelectionChanged += new System.EventHandler(this.dataGridViewAlumno_SelectionChanged);
             // 
@@ -95,20 +99,21 @@
             // 
             this.buttonCrearAlumno.Location = new System.Drawing.Point(524, 19);
             this.buttonCrearAlumno.Name = "buttonCrearAlumno";
-            this.buttonCrearAlumno.Size = new System.Drawing.Size(103, 34);
+            this.buttonCrearAlumno.Size = new System.Drawing.Size(103, 73);
             this.buttonCrearAlumno.TabIndex = 15;
-            this.buttonCrearAlumno.Text = "Nuevo alumno";
+            this.buttonCrearAlumno.Text = "Nuevo Alumno";
             this.buttonCrearAlumno.UseVisualStyleBackColor = true;
             this.buttonCrearAlumno.Click += new System.EventHandler(this.buttonCrearAlumno_Click);
             // 
             // BuscarAlumno
             // 
-            this.BuscarAlumno.Location = new System.Drawing.Point(524, 58);
+            this.BuscarAlumno.Location = new System.Drawing.Point(650, 12);
             this.BuscarAlumno.Name = "BuscarAlumno";
             this.BuscarAlumno.Size = new System.Drawing.Size(103, 34);
             this.BuscarAlumno.TabIndex = 0;
             this.BuscarAlumno.Text = "Buscar Alumno";
             this.BuscarAlumno.UseVisualStyleBackColor = true;
+            this.BuscarAlumno.Click += new System.EventHandler(this.BuscarAlumno_Click);
             // 
             // buttonActualizar
             // 
@@ -122,7 +127,7 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(342, 64);
+            this.textBoxTelefono.Location = new System.Drawing.Point(351, 63);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(153, 20);
             this.textBoxTelefono.TabIndex = 8;
@@ -183,7 +188,7 @@
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(342, 34);
+            this.textBoxApellidos.Location = new System.Drawing.Point(351, 33);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(153, 20);
             this.textBoxApellidos.TabIndex = 14;
@@ -195,7 +200,7 @@
             this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
             this.buttonEliminarAlumno.Size = new System.Drawing.Size(106, 34);
             this.buttonEliminarAlumno.TabIndex = 4;
-            this.buttonEliminarAlumno.Text = "Eliminar alumno";
+            this.buttonEliminarAlumno.Text = "Eliminar Alumno";
             this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
             this.buttonEliminarAlumno.Click += new System.EventHandler(this.buttonEliminarAlumno_Click);
             // 
@@ -211,7 +216,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.BuscarAlumno);
             this.groupBox1.Controls.Add(this.buttonModificarAlumno);
             this.groupBox1.Controls.Add(this.buttonEliminarAlumno);
             this.groupBox1.Controls.Add(this.textBoxApellidos);
@@ -262,11 +266,41 @@
             // 
             this.bindingSourceAlumno.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBoxBuscador);
+            this.groupBox2.Controls.Add(this.BuscarAlumno);
+            this.groupBox2.Location = new System.Drawing.Point(8, 49);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(784, 52);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscador";
+            // 
+            // textBoxBuscador
+            // 
+            this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
+            this.textBoxBuscador.Name = "textBoxBuscador";
+            this.textBoxBuscador.Size = new System.Drawing.Size(472, 20);
+            this.textBoxBuscador.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 16);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Cualquier campo";
+            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 499);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewAlumno);
@@ -279,6 +313,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +342,8 @@
         private System.Windows.Forms.Button buttonEliminarAlumno;
         private System.Windows.Forms.Button buttonModificarAlumno;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxBuscador;
     }
 }
