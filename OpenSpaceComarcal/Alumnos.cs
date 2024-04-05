@@ -103,75 +103,84 @@ namespace OpenSpaceComarcal
 
         private void buttonEliminarAlumno_Click(object sender, EventArgs e)
         {
-            if (camposRellenados())
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de que desea eliminar al alumno?", "Eliminar Alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
             {
-                String mensajeError = "";
-
-                if (dataGridViewAlumno.SelectedRows.Count == 1)
+                if (camposRellenados())
                 {
-                    DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
-                    alumno _alumno = (alumno)fila.DataBoundItem;
+                    String mensajeError = "";
 
-                    mensajeError = AlumnosOrm.Delete(_alumno);
-
-                    if (mensajeError == "")
+                    if (dataGridViewAlumno.SelectedRows.Count == 1)
                     {
-                        MessageBox.Show("Se ha eliminado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                        DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
+                        alumno _alumno = (alumno)fila.DataBoundItem;
+
+                        mensajeError = AlumnosOrm.Delete(_alumno);
+
+                        if (mensajeError == "")
+                        {
+                            MessageBox.Show("Se ha eliminado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                        }
+                        else
+                        {
+                            MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No hay un alumno seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No hay un alumno seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha dejado campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Ha dejado campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void buttonModificarAlumno_Click(object sender, EventArgs e)
         {
-            if (camposRellenados())
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de que desea eliminar al alumno?", "Eliminar Alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
             {
-                String mensajeError = "";
-
-                if (dataGridViewAlumno.SelectedRows.Count == 1)
+                if (camposRellenados())
                 {
-                    DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
-                    alumno _alumno = (alumno)fila.DataBoundItem;
+                    String mensajeError = "";
 
-                    _alumno.nombre = textBoxNombre.Text;
-                    _alumno.apellidos = textBoxApellidos.Text;
-                    _alumno.telefono= textBoxTelefono.Text;
-
-                    mensajeError = AlumnosOrm.Update(_alumno);
-
-                    if (mensajeError != "")
+                    if (dataGridViewAlumno.SelectedRows.Count == 1)
                     {
-                        MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
+                        alumno _alumno = (alumno)fila.DataBoundItem;
+
+                        _alumno.nombre = textBoxNombre.Text;
+                        _alumno.apellidos = textBoxApellidos.Text;
+                        _alumno.telefono = textBoxTelefono.Text;
+
+                        mensajeError = AlumnosOrm.Update(_alumno);
+
+                        if (mensajeError != "")
+                        {
+                            MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                        MessageBox.Show("No hay un alumno seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No hay un alumno seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No debe dejar campos en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("No debe dejar campos en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
     }
 }
