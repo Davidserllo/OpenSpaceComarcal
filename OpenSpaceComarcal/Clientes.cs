@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace OpenSpaceComarcal
         public Clientes()
         {
             InitializeComponent();
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

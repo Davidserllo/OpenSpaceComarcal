@@ -29,122 +29,122 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BuscarAlumno = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonModificarAlumno = new System.Windows.Forms.Button();
-            this.buttonEliminarAlumno = new System.Windows.Forms.Button();
+            this.groupBoxBuscador = new System.Windows.Forms.GroupBox();
+            this.BuscarCurso = new System.Windows.Forms.Button();
+            this.labelSiglasBuscarCurso = new System.Windows.Forms.Label();
+            this.textBoxSiglasBuscarSiglas = new System.Windows.Forms.TextBox();
+            this.groupBoxInformacionCurso = new System.Windows.Forms.GroupBox();
+            this.buttonModificarCurso = new System.Windows.Forms.Button();
+            this.buttonEliminarCurso = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelDNINIA = new System.Windows.Forms.Label();
+            this.labelSiglasCurso = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelNombreCurso = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.buttonNuevoCurso = new System.Windows.Forms.Button();
+            this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.buttonActualizarCursos = new System.Windows.Forms.Button();
             this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxBuscador.SuspendLayout();
+            this.groupBoxInformacionCurso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // groupBoxBuscador
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Controls.Add(this.BuscarAlumno);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Location = new System.Drawing.Point(15, 76);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(1437, 71);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscador";
+            this.groupBoxBuscador.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxBuscador.Controls.Add(this.BuscarCurso);
+            this.groupBoxBuscador.Controls.Add(this.labelSiglasBuscarCurso);
+            this.groupBoxBuscador.Controls.Add(this.textBoxSiglasBuscarSiglas);
+            this.groupBoxBuscador.Location = new System.Drawing.Point(15, 76);
+            this.groupBoxBuscador.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBoxBuscador.Name = "groupBoxBuscador";
+            this.groupBoxBuscador.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBoxBuscador.Size = new System.Drawing.Size(1437, 71);
+            this.groupBoxBuscador.TabIndex = 22;
+            this.groupBoxBuscador.TabStop = false;
+            this.groupBoxBuscador.Text = "Buscador";
             // 
-            // BuscarAlumno
+            // BuscarCurso
             // 
-            this.BuscarAlumno.Location = new System.Drawing.Point(1251, 21);
-            this.BuscarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.BuscarAlumno.Name = "BuscarAlumno";
-            this.BuscarAlumno.Size = new System.Drawing.Size(174, 38);
-            this.BuscarAlumno.TabIndex = 0;
-            this.BuscarAlumno.Text = "Buscar Curso";
-            this.BuscarAlumno.UseVisualStyleBackColor = true;
+            this.BuscarCurso.Location = new System.Drawing.Point(1251, 21);
+            this.BuscarCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.BuscarCurso.Name = "BuscarCurso";
+            this.BuscarCurso.Size = new System.Drawing.Size(174, 38);
+            this.BuscarCurso.TabIndex = 0;
+            this.BuscarCurso.Text = "Buscar Curso";
+            this.BuscarCurso.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // labelSiglasBuscarCurso
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 29);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "######";
+            this.labelSiglasBuscarCurso.AutoSize = true;
+            this.labelSiglasBuscarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSiglasBuscarCurso.Location = new System.Drawing.Point(12, 28);
+            this.labelSiglasBuscarCurso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelSiglasBuscarCurso.Name = "labelSiglasBuscarCurso";
+            this.labelSiglasBuscarCurso.Size = new System.Drawing.Size(86, 29);
+            this.labelSiglasBuscarCurso.TabIndex = 5;
+            this.labelSiglasBuscarCurso.Text = "Siglas";
             // 
-            // textBox9
+            // textBoxSiglasBuscarSiglas
             // 
-            this.textBox9.Location = new System.Drawing.Point(131, 28);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 29);
-            this.textBox9.TabIndex = 6;
+            this.textBoxSiglasBuscarSiglas.Location = new System.Drawing.Point(131, 28);
+            this.textBoxSiglasBuscarSiglas.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxSiglasBuscarSiglas.Name = "textBoxSiglasBuscarSiglas";
+            this.textBoxSiglasBuscarSiglas.Size = new System.Drawing.Size(233, 29);
+            this.textBoxSiglasBuscarSiglas.TabIndex = 6;
             // 
-            // groupBox1
+            // groupBoxInformacionCurso
             // 
-            this.groupBox1.Controls.Add(this.buttonModificarAlumno);
-            this.groupBox1.Controls.Add(this.buttonEliminarAlumno);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.labelDNINIA);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(15, 562);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(1437, 253);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion del Curso";
+            this.groupBoxInformacionCurso.Controls.Add(this.buttonModificarCurso);
+            this.groupBoxInformacionCurso.Controls.Add(this.buttonEliminarCurso);
+            this.groupBoxInformacionCurso.Controls.Add(this.textBox5);
+            this.groupBoxInformacionCurso.Controls.Add(this.textBox3);
+            this.groupBoxInformacionCurso.Controls.Add(this.label5);
+            this.groupBoxInformacionCurso.Controls.Add(this.labelSiglasCurso);
+            this.groupBoxInformacionCurso.Controls.Add(this.textBox4);
+            this.groupBoxInformacionCurso.Controls.Add(this.textBox1);
+            this.groupBoxInformacionCurso.Controls.Add(this.labelNombreCurso);
+            this.groupBoxInformacionCurso.Controls.Add(this.label2);
+            this.groupBoxInformacionCurso.Controls.Add(this.textBox2);
+            this.groupBoxInformacionCurso.Controls.Add(this.label3);
+            this.groupBoxInformacionCurso.Location = new System.Drawing.Point(15, 562);
+            this.groupBoxInformacionCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBoxInformacionCurso.Name = "groupBoxInformacionCurso";
+            this.groupBoxInformacionCurso.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBoxInformacionCurso.Size = new System.Drawing.Size(1437, 253);
+            this.groupBoxInformacionCurso.TabIndex = 21;
+            this.groupBoxInformacionCurso.TabStop = false;
+            this.groupBoxInformacionCurso.Text = "Informacion del Curso";
             // 
-            // buttonModificarAlumno
+            // buttonModificarCurso
             // 
-            this.buttonModificarAlumno.Location = new System.Drawing.Point(1230, 55);
-            this.buttonModificarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonModificarAlumno.Name = "buttonModificarAlumno";
-            this.buttonModificarAlumno.Size = new System.Drawing.Size(195, 74);
-            this.buttonModificarAlumno.TabIndex = 0;
-            this.buttonModificarAlumno.Text = "Modificar Curso";
-            this.buttonModificarAlumno.UseVisualStyleBackColor = true;
+            this.buttonModificarCurso.Location = new System.Drawing.Point(1230, 55);
+            this.buttonModificarCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonModificarCurso.Name = "buttonModificarCurso";
+            this.buttonModificarCurso.Size = new System.Drawing.Size(195, 74);
+            this.buttonModificarCurso.TabIndex = 0;
+            this.buttonModificarCurso.Text = "Modificar Curso";
+            this.buttonModificarCurso.UseVisualStyleBackColor = true;
             // 
-            // buttonEliminarAlumno
+            // buttonEliminarCurso
             // 
-            this.buttonEliminarAlumno.Location = new System.Drawing.Point(1230, 137);
-            this.buttonEliminarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
-            this.buttonEliminarAlumno.Size = new System.Drawing.Size(195, 74);
-            this.buttonEliminarAlumno.TabIndex = 4;
-            this.buttonEliminarAlumno.Text = "Eliminar Curso";
-            this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
+            this.buttonEliminarCurso.Location = new System.Drawing.Point(1230, 137);
+            this.buttonEliminarCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonEliminarCurso.Name = "buttonEliminarCurso";
+            this.buttonEliminarCurso.Size = new System.Drawing.Size(195, 74);
+            this.buttonEliminarCurso.TabIndex = 4;
+            this.buttonEliminarCurso.Text = "Eliminar Curso";
+            this.buttonEliminarCurso.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -156,10 +156,10 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(700, 182);
+            this.textBox3.Location = new System.Drawing.Point(594, 182);
             this.textBox3.Margin = new System.Windows.Forms.Padding(6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 29);
+            this.textBox3.Size = new System.Drawing.Size(406, 29);
             this.textBox3.TabIndex = 10;
             // 
             // label5
@@ -173,16 +173,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "######";
             // 
-            // labelDNINIA
+            // labelSiglasCurso
             // 
-            this.labelDNINIA.AutoSize = true;
-            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(11, 57);
-            this.labelDNINIA.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelDNINIA.Name = "labelDNINIA";
-            this.labelDNINIA.Size = new System.Drawing.Size(97, 29);
-            this.labelDNINIA.TabIndex = 5;
-            this.labelDNINIA.Text = "######";
+            this.labelSiglasCurso.AutoSize = true;
+            this.labelSiglasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSiglasCurso.Location = new System.Drawing.Point(11, 57);
+            this.labelSiglasCurso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelSiglasCurso.Name = "labelSiglasCurso";
+            this.labelSiglasCurso.Size = new System.Drawing.Size(86, 29);
+            this.labelSiglasCurso.TabIndex = 5;
+            this.labelSiglasCurso.Text = "Siglas";
             // 
             // textBox4
             // 
@@ -200,16 +200,16 @@
             this.textBox1.Size = new System.Drawing.Size(233, 29);
             this.textBox1.TabIndex = 6;
             // 
-            // label4
+            // labelNombreCurso
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre";
+            this.labelNombreCurso.AutoSize = true;
+            this.labelNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreCurso.Location = new System.Drawing.Point(11, 119);
+            this.labelNombreCurso.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelNombreCurso.Name = "labelNombreCurso";
+            this.labelNombreCurso.Size = new System.Drawing.Size(107, 29);
+            this.labelNombreCurso.TabIndex = 11;
+            this.labelNombreCurso.Text = "Nombre";
             // 
             // label2
             // 
@@ -241,54 +241,46 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "######";
             // 
-            // button1
+            // buttonNuevoCurso
             // 
-            this.button1.Location = new System.Drawing.Point(1266, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 42);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Nuevo Curso";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonNuevoCurso.Location = new System.Drawing.Point(1266, 22);
+            this.buttonNuevoCurso.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonNuevoCurso.Name = "buttonNuevoCurso";
+            this.buttonNuevoCurso.Size = new System.Drawing.Size(174, 42);
+            this.buttonNuevoCurso.TabIndex = 20;
+            this.buttonNuevoCurso.Text = "Nuevo Curso";
+            this.buttonNuevoCurso.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewCursos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 159);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 72;
-            this.dataGridView1.Size = new System.Drawing.Size(1437, 391);
-            this.dataGridView1.TabIndex = 19;
+            this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCursos.Location = new System.Drawing.Point(15, 159);
+            this.dataGridViewCursos.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridViewCursos.Name = "dataGridViewCursos";
+            this.dataGridViewCursos.RowHeadersWidth = 72;
+            this.dataGridViewCursos.Size = new System.Drawing.Size(1437, 391);
+            this.dataGridViewCursos.TabIndex = 19;
             // 
-            // label1
+            // labelCursos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(624, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 55);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Cursos";
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(624, 15);
+            this.labelCursos.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(183, 55);
+            this.labelCursos.TabIndex = 18;
+            this.labelCursos.Text = "Cursos";
             // 
-            // buttonActualizar
+            // buttonActualizarCursos
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(15, 15);
-            this.buttonActualizar.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(138, 42);
-            this.buttonActualizar.TabIndex = 23;
-            this.buttonActualizar.Text = "Actualizar";
-            this.buttonActualizar.UseVisualStyleBackColor = true;
-            // 
-            // cursosBindingSource
-            // 
-            this.cursosBindingSource.DataSource = typeof(OpenSpaceComarcal.Cursos);
-            // 
-            // cursosBindingSource1
-            // 
-            this.cursosBindingSource1.DataSource = typeof(OpenSpaceComarcal.Cursos);
+            this.buttonActualizarCursos.Location = new System.Drawing.Point(15, 15);
+            this.buttonActualizarCursos.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonActualizarCursos.Name = "buttonActualizarCursos";
+            this.buttonActualizarCursos.Size = new System.Drawing.Size(138, 42);
+            this.buttonActualizarCursos.TabIndex = 23;
+            this.buttonActualizarCursos.Text = "Actualizar";
+            this.buttonActualizarCursos.UseVisualStyleBackColor = true;
             // 
             // Cursos
             // 
@@ -297,20 +289,21 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1467, 831);
-            this.Controls.Add(this.buttonActualizar);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonActualizarCursos);
+            this.Controls.Add(this.groupBoxBuscador);
+            this.Controls.Add(this.groupBoxInformacionCurso);
+            this.Controls.Add(this.buttonNuevoCurso);
+            this.Controls.Add(this.dataGridViewCursos);
+            this.Controls.Add(this.labelCursos);
             this.Name = "Cursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CURSOS - OPEN SPACE COMARCAL";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Cursos_Load);
+            this.groupBoxBuscador.ResumeLayout(false);
+            this.groupBoxBuscador.PerformLayout();
+            this.groupBoxInformacionCurso.ResumeLayout(false);
+            this.groupBoxInformacionCurso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -320,27 +313,27 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button BuscarAlumno;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonModificarAlumno;
-        private System.Windows.Forms.Button buttonEliminarAlumno;
+        private System.Windows.Forms.GroupBox groupBoxBuscador;
+        private System.Windows.Forms.Button BuscarCurso;
+        private System.Windows.Forms.Label labelSiglasBuscarCurso;
+        private System.Windows.Forms.TextBox textBoxSiglasBuscarSiglas;
+        private System.Windows.Forms.GroupBox groupBoxInformacionCurso;
+        private System.Windows.Forms.Button buttonModificarCurso;
+        private System.Windows.Forms.Button buttonEliminarCurso;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelDNINIA;
+        private System.Windows.Forms.Label labelSiglasCurso;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelNombreCurso;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.Button buttonNuevoCurso;
+        private System.Windows.Forms.DataGridView dataGridViewCursos;
+        private System.Windows.Forms.Label labelCursos;
+        private System.Windows.Forms.Button buttonActualizarCursos;
         private System.Windows.Forms.BindingSource cursosBindingSource;
         private System.Windows.Forms.BindingSource cursosBindingSource1;
     }

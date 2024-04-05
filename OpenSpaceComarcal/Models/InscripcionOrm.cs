@@ -27,5 +27,32 @@ namespace OpenSpaceComarcal.Models
 
             return missatge;
         }
+
+        public static String Delete(inscripcion _inscripcion)
+        {
+            String mensajeError = "";
+
+            Orm.bd.inscripcion.Remove(_inscripcion);
+            mensajeError = Orm.MySaveChanges();
+
+            return mensajeError;
+        }
+
+        //public static String Update(alumno _alumno)
+        //{
+        //    String mensajeError = "";
+
+        //    alumno alumnoAnterior = Orm.bd.alumno.Find(_alumno.dni);
+
+        //    if (alumnoAnterior != null)
+        //    {
+        //        alumnoAnterior.nombre = _alumno.nombre;
+        //        alumnoAnterior.apellidos = _alumno.apellidos;
+        //        alumnoAnterior.telefono = _alumno.telefono;
+
+        //        mensajeError = Orm.MySaveChanges();
+        //    }
+        //    return mensajeError;
+        //}
     }
 }

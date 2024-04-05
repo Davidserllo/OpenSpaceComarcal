@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace OpenSpaceComarcal
         public Cursos()
         {
             InitializeComponent();
+        }
+
+        private void Cursos_Load(object sender, EventArgs e)
+        {
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+            actualizarTextBoxes();
         }
     }
 }

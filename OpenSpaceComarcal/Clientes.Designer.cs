@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.groupBoxBuscadorCliente = new System.Windows.Forms.GroupBox();
-            this.BuscarAlumno = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.buttonBuscarClientes = new System.Windows.Forms.Button();
+            this.labelCliente1 = new System.Windows.Forms.Label();
+            this.textBoxClientes1 = new System.Windows.Forms.TextBox();
             this.groupBoxInformacionCliente = new System.Windows.Forms.GroupBox();
-            this.buttonModificarAlumno = new System.Windows.Forms.Button();
-            this.buttonEliminarAlumno = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.buttonModificarCliente = new System.Windows.Forms.Button();
+            this.buttonEliminarCliente = new System.Windows.Forms.Button();
+            this.textBoxClientes3 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelDNINIA = new System.Windows.Forms.Label();
+            this.labelClientes3 = new System.Windows.Forms.Label();
+            this.labelClientes2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxClientes2 = new System.Windows.Forms.TextBox();
+            this.labelClientesNombre = new System.Windows.Forms.Label();
+            this.labelClientesTelefono = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.labelClientesCorreoElectronico = new System.Windows.Forms.Label();
+            this.buttonNuevoClientes = new System.Windows.Forms.Button();
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
+            this.labelClientes = new System.Windows.Forms.Label();
+            this.buttonActualizarClientes = new System.Windows.Forms.Button();
             this.groupBoxBuscadorCliente.SuspendLayout();
             this.groupBoxInformacionCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxBuscadorCliente
             // 
-            this.groupBoxBuscadorCliente.Controls.Add(this.BuscarAlumno);
-            this.groupBoxBuscadorCliente.Controls.Add(this.label7);
-            this.groupBoxBuscadorCliente.Controls.Add(this.textBox9);
+            this.groupBoxBuscadorCliente.Controls.Add(this.buttonBuscarClientes);
+            this.groupBoxBuscadorCliente.Controls.Add(this.labelCliente1);
+            this.groupBoxBuscadorCliente.Controls.Add(this.textBoxClientes1);
             this.groupBoxBuscadorCliente.Location = new System.Drawing.Point(15, 76);
             this.groupBoxBuscadorCliente.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxBuscadorCliente.Name = "groupBoxBuscadorCliente";
@@ -68,49 +68,49 @@
             this.groupBoxBuscadorCliente.TabStop = false;
             this.groupBoxBuscadorCliente.Text = "Buscador";
             // 
-            // BuscarAlumno
+            // buttonBuscarClientes
             // 
-            this.BuscarAlumno.Location = new System.Drawing.Point(1251, 21);
-            this.BuscarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.BuscarAlumno.Name = "BuscarAlumno";
-            this.BuscarAlumno.Size = new System.Drawing.Size(174, 38);
-            this.BuscarAlumno.TabIndex = 0;
-            this.BuscarAlumno.Text = "Buscar Clientes";
-            this.BuscarAlumno.UseVisualStyleBackColor = true;
+            this.buttonBuscarClientes.Location = new System.Drawing.Point(1251, 21);
+            this.buttonBuscarClientes.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonBuscarClientes.Name = "buttonBuscarClientes";
+            this.buttonBuscarClientes.Size = new System.Drawing.Size(174, 38);
+            this.buttonBuscarClientes.TabIndex = 0;
+            this.buttonBuscarClientes.Text = "Buscar Clientes";
+            this.buttonBuscarClientes.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // labelCliente1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 29);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "######";
+            this.labelCliente1.AutoSize = true;
+            this.labelCliente1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCliente1.Location = new System.Drawing.Point(12, 28);
+            this.labelCliente1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelCliente1.Name = "labelCliente1";
+            this.labelCliente1.Size = new System.Drawing.Size(97, 29);
+            this.labelCliente1.TabIndex = 5;
+            this.labelCliente1.Text = "######";
             // 
-            // textBox9
+            // textBoxClientes1
             // 
-            this.textBox9.Location = new System.Drawing.Point(131, 28);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 29);
-            this.textBox9.TabIndex = 6;
+            this.textBoxClientes1.Location = new System.Drawing.Point(131, 28);
+            this.textBoxClientes1.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxClientes1.Name = "textBoxClientes1";
+            this.textBoxClientes1.Size = new System.Drawing.Size(233, 29);
+            this.textBoxClientes1.TabIndex = 6;
             // 
             // groupBoxInformacionCliente
             // 
-            this.groupBoxInformacionCliente.Controls.Add(this.buttonModificarAlumno);
-            this.groupBoxInformacionCliente.Controls.Add(this.buttonEliminarAlumno);
-            this.groupBoxInformacionCliente.Controls.Add(this.textBox5);
+            this.groupBoxInformacionCliente.Controls.Add(this.buttonModificarCliente);
+            this.groupBoxInformacionCliente.Controls.Add(this.buttonEliminarCliente);
+            this.groupBoxInformacionCliente.Controls.Add(this.textBoxClientes3);
             this.groupBoxInformacionCliente.Controls.Add(this.textBox3);
-            this.groupBoxInformacionCliente.Controls.Add(this.label5);
-            this.groupBoxInformacionCliente.Controls.Add(this.labelDNINIA);
+            this.groupBoxInformacionCliente.Controls.Add(this.labelClientes3);
+            this.groupBoxInformacionCliente.Controls.Add(this.labelClientes2);
             this.groupBoxInformacionCliente.Controls.Add(this.textBox4);
-            this.groupBoxInformacionCliente.Controls.Add(this.textBox1);
-            this.groupBoxInformacionCliente.Controls.Add(this.label4);
-            this.groupBoxInformacionCliente.Controls.Add(this.label2);
+            this.groupBoxInformacionCliente.Controls.Add(this.textBoxClientes2);
+            this.groupBoxInformacionCliente.Controls.Add(this.labelClientesNombre);
+            this.groupBoxInformacionCliente.Controls.Add(this.labelClientesTelefono);
             this.groupBoxInformacionCliente.Controls.Add(this.textBox2);
-            this.groupBoxInformacionCliente.Controls.Add(this.label3);
+            this.groupBoxInformacionCliente.Controls.Add(this.labelClientesCorreoElectronico);
             this.groupBoxInformacionCliente.Location = new System.Drawing.Point(15, 562);
             this.groupBoxInformacionCliente.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxInformacionCliente.Name = "groupBoxInformacionCliente";
@@ -120,33 +120,33 @@
             this.groupBoxInformacionCliente.TabStop = false;
             this.groupBoxInformacionCliente.Text = "Informacion del cliente";
             // 
-            // buttonModificarAlumno
+            // buttonModificarCliente
             // 
-            this.buttonModificarAlumno.Location = new System.Drawing.Point(1230, 55);
-            this.buttonModificarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonModificarAlumno.Name = "buttonModificarAlumno";
-            this.buttonModificarAlumno.Size = new System.Drawing.Size(195, 74);
-            this.buttonModificarAlumno.TabIndex = 0;
-            this.buttonModificarAlumno.Text = "Modificar Clientes";
-            this.buttonModificarAlumno.UseVisualStyleBackColor = true;
+            this.buttonModificarCliente.Location = new System.Drawing.Point(1230, 55);
+            this.buttonModificarCliente.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonModificarCliente.Name = "buttonModificarCliente";
+            this.buttonModificarCliente.Size = new System.Drawing.Size(195, 74);
+            this.buttonModificarCliente.TabIndex = 0;
+            this.buttonModificarCliente.Text = "Modificar Clientes";
+            this.buttonModificarCliente.UseVisualStyleBackColor = true;
             // 
-            // buttonEliminarAlumno
+            // buttonEliminarCliente
             // 
-            this.buttonEliminarAlumno.Location = new System.Drawing.Point(1230, 137);
-            this.buttonEliminarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
-            this.buttonEliminarAlumno.Size = new System.Drawing.Size(195, 74);
-            this.buttonEliminarAlumno.TabIndex = 4;
-            this.buttonEliminarAlumno.Text = "Eliminar Clientes";
-            this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
+            this.buttonEliminarCliente.Location = new System.Drawing.Point(1230, 137);
+            this.buttonEliminarCliente.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonEliminarCliente.Name = "buttonEliminarCliente";
+            this.buttonEliminarCliente.Size = new System.Drawing.Size(195, 74);
+            this.buttonEliminarCliente.TabIndex = 4;
+            this.buttonEliminarCliente.Text = "Eliminar Clientes";
+            this.buttonEliminarCliente.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBoxClientes3
             // 
-            this.textBox5.Location = new System.Drawing.Point(594, 121);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(406, 29);
-            this.textBox5.TabIndex = 14;
+            this.textBoxClientes3.Location = new System.Drawing.Point(594, 121);
+            this.textBoxClientes3.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxClientes3.Name = "textBoxClientes3";
+            this.textBoxClientes3.Size = new System.Drawing.Size(406, 29);
+            this.textBoxClientes3.TabIndex = 14;
             // 
             // textBox3
             // 
@@ -156,27 +156,27 @@
             this.textBox3.Size = new System.Drawing.Size(300, 29);
             this.textBox3.TabIndex = 10;
             // 
-            // label5
+            // labelClientes3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(431, 120);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 29);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "######";
+            this.labelClientes3.AutoSize = true;
+            this.labelClientes3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientes3.Location = new System.Drawing.Point(431, 120);
+            this.labelClientes3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientes3.Name = "labelClientes3";
+            this.labelClientes3.Size = new System.Drawing.Size(97, 29);
+            this.labelClientes3.TabIndex = 13;
+            this.labelClientes3.Text = "######";
             // 
-            // labelDNINIA
+            // labelClientes2
             // 
-            this.labelDNINIA.AutoSize = true;
-            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(11, 57);
-            this.labelDNINIA.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelDNINIA.Name = "labelDNINIA";
-            this.labelDNINIA.Size = new System.Drawing.Size(97, 29);
-            this.labelDNINIA.TabIndex = 5;
-            this.labelDNINIA.Text = "######";
+            this.labelClientes2.AutoSize = true;
+            this.labelClientes2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientes2.Location = new System.Drawing.Point(11, 57);
+            this.labelClientes2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientes2.Name = "labelClientes2";
+            this.labelClientes2.Size = new System.Drawing.Size(97, 29);
+            this.labelClientes2.TabIndex = 5;
+            this.labelClientes2.Text = "######";
             // 
             // textBox4
             // 
@@ -186,35 +186,35 @@
             this.textBox4.Size = new System.Drawing.Size(233, 29);
             this.textBox4.TabIndex = 12;
             // 
-            // textBox1
+            // textBoxClientes2
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 29);
-            this.textBox1.TabIndex = 6;
+            this.textBoxClientes2.Location = new System.Drawing.Point(160, 55);
+            this.textBoxClientes2.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxClientes2.Name = "textBoxClientes2";
+            this.textBoxClientes2.Size = new System.Drawing.Size(233, 29);
+            this.textBoxClientes2.TabIndex = 6;
             // 
-            // label4
+            // labelClientesNombre
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre";
+            this.labelClientesNombre.AutoSize = true;
+            this.labelClientesNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientesNombre.Location = new System.Drawing.Point(11, 119);
+            this.labelClientesNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientesNombre.Name = "labelClientesNombre";
+            this.labelClientesNombre.Size = new System.Drawing.Size(107, 29);
+            this.labelClientesNombre.TabIndex = 11;
+            this.labelClientesNombre.Text = "Nombre";
             // 
-            // label2
+            // labelClientesTelefono
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 182);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Teléfono";
+            this.labelClientesTelefono.AutoSize = true;
+            this.labelClientesTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientesTelefono.Location = new System.Drawing.Point(11, 182);
+            this.labelClientesTelefono.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientesTelefono.Name = "labelClientesTelefono";
+            this.labelClientesTelefono.Size = new System.Drawing.Size(118, 29);
+            this.labelClientesTelefono.TabIndex = 7;
+            this.labelClientesTelefono.Text = "Teléfono";
             // 
             // textBox2
             // 
@@ -224,77 +224,78 @@
             this.textBox2.Size = new System.Drawing.Size(233, 29);
             this.textBox2.TabIndex = 8;
             // 
-            // label3
+            // labelClientesCorreoElectronico
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(431, 182);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Correo Electronico";
+            this.labelClientesCorreoElectronico.AutoSize = true;
+            this.labelClientesCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientesCorreoElectronico.Location = new System.Drawing.Point(431, 182);
+            this.labelClientesCorreoElectronico.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientesCorreoElectronico.Name = "labelClientesCorreoElectronico";
+            this.labelClientesCorreoElectronico.Size = new System.Drawing.Size(233, 29);
+            this.labelClientesCorreoElectronico.TabIndex = 9;
+            this.labelClientesCorreoElectronico.Text = "Correo Electronico";
             // 
-            // button1
+            // buttonNuevoClientes
             // 
-            this.button1.Location = new System.Drawing.Point(1266, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 42);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Nuevo Clientes";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonNuevoClientes.Location = new System.Drawing.Point(1266, 22);
+            this.buttonNuevoClientes.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonNuevoClientes.Name = "buttonNuevoClientes";
+            this.buttonNuevoClientes.Size = new System.Drawing.Size(174, 42);
+            this.buttonNuevoClientes.TabIndex = 20;
+            this.buttonNuevoClientes.Text = "Nuevo Clientes";
+            this.buttonNuevoClientes.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 159);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 72;
-            this.dataGridView1.Size = new System.Drawing.Size(1437, 391);
-            this.dataGridView1.TabIndex = 19;
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(15, 159);
+            this.dataGridViewClientes.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.RowHeadersWidth = 72;
+            this.dataGridViewClientes.Size = new System.Drawing.Size(1437, 391);
+            this.dataGridViewClientes.TabIndex = 19;
             // 
-            // label1
+            // labelClientes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(624, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 55);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Clientes";
+            this.labelClientes.AutoSize = true;
+            this.labelClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClientes.Location = new System.Drawing.Point(624, 15);
+            this.labelClientes.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelClientes.Name = "labelClientes";
+            this.labelClientes.Size = new System.Drawing.Size(205, 55);
+            this.labelClientes.TabIndex = 18;
+            this.labelClientes.Text = "Clientes";
             // 
-            // buttonActualizar
+            // buttonActualizarClientes
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(15, 15);
-            this.buttonActualizar.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(138, 42);
-            this.buttonActualizar.TabIndex = 23;
-            this.buttonActualizar.Text = "Actualizar";
-            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizarClientes.Location = new System.Drawing.Point(15, 15);
+            this.buttonActualizarClientes.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonActualizarClientes.Name = "buttonActualizarClientes";
+            this.buttonActualizarClientes.Size = new System.Drawing.Size(138, 42);
+            this.buttonActualizarClientes.TabIndex = 23;
+            this.buttonActualizarClientes.Text = "Actualizar";
+            this.buttonActualizarClientes.UseVisualStyleBackColor = true;
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 831);
-            this.Controls.Add(this.buttonActualizar);
+            this.Controls.Add(this.buttonActualizarClientes);
             this.Controls.Add(this.groupBoxBuscadorCliente);
             this.Controls.Add(this.groupBoxInformacionCliente);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonNuevoClientes);
+            this.Controls.Add(this.dataGridViewClientes);
+            this.Controls.Add(this.labelClientes);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CLIENTES - OPEN SPACE COMARCAL";
+            this.Load += new System.EventHandler(this.Clientes_Load);
             this.groupBoxBuscadorCliente.ResumeLayout(false);
             this.groupBoxBuscadorCliente.PerformLayout();
             this.groupBoxInformacionCliente.ResumeLayout(false);
             this.groupBoxInformacionCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,25 +304,25 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxBuscadorCliente;
-        private System.Windows.Forms.Button BuscarAlumno;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button buttonBuscarClientes;
+        private System.Windows.Forms.Label labelCliente1;
+        private System.Windows.Forms.TextBox textBoxClientes1;
         private System.Windows.Forms.GroupBox groupBoxInformacionCliente;
-        private System.Windows.Forms.Button buttonModificarAlumno;
-        private System.Windows.Forms.Button buttonEliminarAlumno;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button buttonModificarCliente;
+        private System.Windows.Forms.Button buttonEliminarCliente;
+        private System.Windows.Forms.TextBox textBoxClientes3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelDNINIA;
+        private System.Windows.Forms.Label labelClientes3;
+        private System.Windows.Forms.Label labelClientes2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxClientes2;
+        private System.Windows.Forms.Label labelClientesNombre;
+        private System.Windows.Forms.Label labelClientesTelefono;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.Label labelClientesCorreoElectronico;
+        private System.Windows.Forms.Button buttonNuevoClientes;
+        private System.Windows.Forms.DataGridView dataGridViewClientes;
+        private System.Windows.Forms.Label labelClientes;
+        private System.Windows.Forms.Button buttonActualizarClientes;
     }
 }

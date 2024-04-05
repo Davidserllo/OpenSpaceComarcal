@@ -28,296 +28,297 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BuscarAlumno = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonModificarAlumno = new System.Windows.Forms.Button();
-            this.buttonEliminarAlumno = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelDNINIA = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonActualizar = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxBuscadorInscripcion = new System.Windows.Forms.GroupBox();
+            this.BottonBuscarInscripcion = new System.Windows.Forms.Button();
+            this.labelInscripcion1 = new System.Windows.Forms.Label();
+            this.textBoxInscripcion1 = new System.Windows.Forms.TextBox();
+            this.groupBoxInformacionInscripcion = new System.Windows.Forms.GroupBox();
+            this.textBoxInscripcion3 = new System.Windows.Forms.TextBox();
+            this.labelInscripcion3 = new System.Windows.Forms.Label();
+            this.buttonModificarInscripcion = new System.Windows.Forms.Button();
+            this.buttonEliminarInscripcion = new System.Windows.Forms.Button();
+            this.textBoxInscripcion5 = new System.Windows.Forms.TextBox();
+            this.textBoxInscripcion7 = new System.Windows.Forms.TextBox();
+            this.labelInscripcion5 = new System.Windows.Forms.Label();
+            this.labelInscripcion2 = new System.Windows.Forms.Label();
+            this.textBoxInscripcion4 = new System.Windows.Forms.TextBox();
+            this.textBoxInscripcion2 = new System.Windows.Forms.TextBox();
+            this.labelInscripcion4 = new System.Windows.Forms.Label();
+            this.labelInscripcion6 = new System.Windows.Forms.Label();
+            this.textBoxInscripcion6 = new System.Windows.Forms.TextBox();
+            this.labelInscripcion7 = new System.Windows.Forms.Label();
+            this.buttonNuevaInscripcion = new System.Windows.Forms.Button();
+            this.dataGridViewInscripcion = new System.Windows.Forms.DataGridView();
+            this.labelInscripcion = new System.Windows.Forms.Label();
+            this.buttonActualizarInscripcion = new System.Windows.Forms.Button();
+            this.groupBoxBuscadorInscripcion.SuspendLayout();
+            this.groupBoxInformacionInscripcion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // groupBoxBuscadorInscripcion
             // 
-            this.groupBox2.Controls.Add(this.BuscarAlumno);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Location = new System.Drawing.Point(15, 76);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(1437, 71);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscador";
+            this.groupBoxBuscadorInscripcion.Controls.Add(this.BottonBuscarInscripcion);
+            this.groupBoxBuscadorInscripcion.Controls.Add(this.labelInscripcion1);
+            this.groupBoxBuscadorInscripcion.Controls.Add(this.textBoxInscripcion1);
+            this.groupBoxBuscadorInscripcion.Location = new System.Drawing.Point(15, 76);
+            this.groupBoxBuscadorInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBoxBuscadorInscripcion.Name = "groupBoxBuscadorInscripcion";
+            this.groupBoxBuscadorInscripcion.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBoxBuscadorInscripcion.Size = new System.Drawing.Size(1437, 71);
+            this.groupBoxBuscadorInscripcion.TabIndex = 27;
+            this.groupBoxBuscadorInscripcion.TabStop = false;
+            this.groupBoxBuscadorInscripcion.Text = "Buscador";
             // 
-            // BuscarAlumno
+            // BottonBuscarInscripcion
             // 
-            this.BuscarAlumno.Location = new System.Drawing.Point(1239, 21);
-            this.BuscarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.BuscarAlumno.Name = "BuscarAlumno";
-            this.BuscarAlumno.Size = new System.Drawing.Size(186, 38);
-            this.BuscarAlumno.TabIndex = 0;
-            this.BuscarAlumno.Text = "Buscar Inscripcion";
-            this.BuscarAlumno.UseVisualStyleBackColor = true;
+            this.BottonBuscarInscripcion.Location = new System.Drawing.Point(1239, 21);
+            this.BottonBuscarInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.BottonBuscarInscripcion.Name = "BottonBuscarInscripcion";
+            this.BottonBuscarInscripcion.Size = new System.Drawing.Size(186, 38);
+            this.BottonBuscarInscripcion.TabIndex = 0;
+            this.BottonBuscarInscripcion.Text = "Buscar Inscripcion";
+            this.BottonBuscarInscripcion.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // labelInscripcion1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 29);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "######";
+            this.labelInscripcion1.AutoSize = true;
+            this.labelInscripcion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion1.Location = new System.Drawing.Point(12, 28);
+            this.labelInscripcion1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion1.Name = "labelInscripcion1";
+            this.labelInscripcion1.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion1.TabIndex = 5;
+            this.labelInscripcion1.Text = "######";
             // 
-            // textBox9
+            // textBoxInscripcion1
             // 
-            this.textBox9.Location = new System.Drawing.Point(131, 28);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(233, 29);
-            this.textBox9.TabIndex = 6;
+            this.textBoxInscripcion1.Location = new System.Drawing.Point(131, 28);
+            this.textBoxInscripcion1.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion1.Name = "textBoxInscripcion1";
+            this.textBoxInscripcion1.Size = new System.Drawing.Size(233, 29);
+            this.textBoxInscripcion1.TabIndex = 6;
             // 
-            // groupBox1
+            // groupBoxInformacionInscripcion
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.buttonModificarAlumno);
-            this.groupBox1.Controls.Add(this.buttonEliminarAlumno);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.labelDNINIA);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(15, 562);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(1437, 253);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion del Inscripcion";
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion3);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion3);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.buttonModificarInscripcion);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.buttonEliminarInscripcion);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion5);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion7);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion5);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion2);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion4);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion2);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion4);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion6);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.textBoxInscripcion6);
+            this.groupBoxInformacionInscripcion.Controls.Add(this.labelInscripcion7);
+            this.groupBoxInformacionInscripcion.Location = new System.Drawing.Point(15, 562);
+            this.groupBoxInformacionInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBoxInformacionInscripcion.Name = "groupBoxInformacionInscripcion";
+            this.groupBoxInformacionInscripcion.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBoxInformacionInscripcion.Size = new System.Drawing.Size(1437, 253);
+            this.groupBoxInformacionInscripcion.TabIndex = 26;
+            this.groupBoxInformacionInscripcion.TabStop = false;
+            this.groupBoxInformacionInscripcion.Text = "Informacion del Inscripcion";
             // 
-            // textBox6
+            // textBoxInscripcion3
             // 
-            this.textBox6.Location = new System.Drawing.Point(594, 55);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(406, 29);
-            this.textBox6.TabIndex = 16;
+            this.textBoxInscripcion3.Location = new System.Drawing.Point(594, 55);
+            this.textBoxInscripcion3.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion3.Name = "textBoxInscripcion3";
+            this.textBoxInscripcion3.Size = new System.Drawing.Size(406, 29);
+            this.textBoxInscripcion3.TabIndex = 16;
             // 
-            // label6
+            // labelInscripcion3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 54);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 29);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "######";
+            this.labelInscripcion3.AutoSize = true;
+            this.labelInscripcion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion3.Location = new System.Drawing.Point(431, 54);
+            this.labelInscripcion3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion3.Name = "labelInscripcion3";
+            this.labelInscripcion3.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion3.TabIndex = 15;
+            this.labelInscripcion3.Text = "######";
             // 
-            // buttonModificarAlumno
+            // buttonModificarInscripcion
             // 
-            this.buttonModificarAlumno.Location = new System.Drawing.Point(1213, 55);
-            this.buttonModificarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonModificarAlumno.Name = "buttonModificarAlumno";
-            this.buttonModificarAlumno.Size = new System.Drawing.Size(212, 74);
-            this.buttonModificarAlumno.TabIndex = 0;
-            this.buttonModificarAlumno.Text = "Modificar Inscripcion";
-            this.buttonModificarAlumno.UseVisualStyleBackColor = true;
+            this.buttonModificarInscripcion.Location = new System.Drawing.Point(1213, 55);
+            this.buttonModificarInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonModificarInscripcion.Name = "buttonModificarInscripcion";
+            this.buttonModificarInscripcion.Size = new System.Drawing.Size(212, 74);
+            this.buttonModificarInscripcion.TabIndex = 0;
+            this.buttonModificarInscripcion.Text = "Modificar Inscripcion";
+            this.buttonModificarInscripcion.UseVisualStyleBackColor = true;
             // 
-            // buttonEliminarAlumno
+            // buttonEliminarInscripcion
             // 
-            this.buttonEliminarAlumno.Location = new System.Drawing.Point(1213, 137);
-            this.buttonEliminarAlumno.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
-            this.buttonEliminarAlumno.Size = new System.Drawing.Size(212, 74);
-            this.buttonEliminarAlumno.TabIndex = 4;
-            this.buttonEliminarAlumno.Text = "Eliminar Inscripcion";
-            this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
+            this.buttonEliminarInscripcion.Location = new System.Drawing.Point(1213, 137);
+            this.buttonEliminarInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonEliminarInscripcion.Name = "buttonEliminarInscripcion";
+            this.buttonEliminarInscripcion.Size = new System.Drawing.Size(212, 74);
+            this.buttonEliminarInscripcion.TabIndex = 4;
+            this.buttonEliminarInscripcion.Text = "Eliminar Inscripcion";
+            this.buttonEliminarInscripcion.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBoxInscripcion5
             // 
-            this.textBox5.Location = new System.Drawing.Point(594, 121);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(406, 29);
-            this.textBox5.TabIndex = 14;
+            this.textBoxInscripcion5.Location = new System.Drawing.Point(594, 121);
+            this.textBoxInscripcion5.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion5.Name = "textBoxInscripcion5";
+            this.textBoxInscripcion5.Size = new System.Drawing.Size(406, 29);
+            this.textBoxInscripcion5.TabIndex = 14;
             // 
-            // textBox3
+            // textBoxInscripcion7
             // 
-            this.textBox3.Location = new System.Drawing.Point(596, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(404, 29);
-            this.textBox3.TabIndex = 10;
+            this.textBoxInscripcion7.Location = new System.Drawing.Point(596, 182);
+            this.textBoxInscripcion7.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion7.Name = "textBoxInscripcion7";
+            this.textBoxInscripcion7.Size = new System.Drawing.Size(404, 29);
+            this.textBoxInscripcion7.TabIndex = 10;
             // 
-            // label5
+            // labelInscripcion5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(431, 120);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 29);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "######";
+            this.labelInscripcion5.AutoSize = true;
+            this.labelInscripcion5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion5.Location = new System.Drawing.Point(431, 120);
+            this.labelInscripcion5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion5.Name = "labelInscripcion5";
+            this.labelInscripcion5.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion5.TabIndex = 13;
+            this.labelInscripcion5.Text = "######";
             // 
-            // labelDNINIA
+            // labelInscripcion2
             // 
-            this.labelDNINIA.AutoSize = true;
-            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(11, 57);
-            this.labelDNINIA.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelDNINIA.Name = "labelDNINIA";
-            this.labelDNINIA.Size = new System.Drawing.Size(97, 29);
-            this.labelDNINIA.TabIndex = 5;
-            this.labelDNINIA.Text = "######";
+            this.labelInscripcion2.AutoSize = true;
+            this.labelInscripcion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion2.Location = new System.Drawing.Point(11, 57);
+            this.labelInscripcion2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion2.Name = "labelInscripcion2";
+            this.labelInscripcion2.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion2.TabIndex = 5;
+            this.labelInscripcion2.Text = "######";
             // 
-            // textBox4
+            // textBoxInscripcion4
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 121);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 29);
-            this.textBox4.TabIndex = 12;
+            this.textBoxInscripcion4.Location = new System.Drawing.Point(160, 121);
+            this.textBoxInscripcion4.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion4.Name = "textBoxInscripcion4";
+            this.textBoxInscripcion4.Size = new System.Drawing.Size(233, 29);
+            this.textBoxInscripcion4.TabIndex = 12;
             // 
-            // textBox1
+            // textBoxInscripcion2
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 29);
-            this.textBox1.TabIndex = 6;
+            this.textBoxInscripcion2.Location = new System.Drawing.Point(160, 55);
+            this.textBoxInscripcion2.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion2.Name = "textBoxInscripcion2";
+            this.textBoxInscripcion2.Size = new System.Drawing.Size(233, 29);
+            this.textBoxInscripcion2.TabIndex = 6;
             // 
-            // label4
+            // labelInscripcion4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre";
+            this.labelInscripcion4.AutoSize = true;
+            this.labelInscripcion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion4.Location = new System.Drawing.Point(11, 119);
+            this.labelInscripcion4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion4.Name = "labelInscripcion4";
+            this.labelInscripcion4.Size = new System.Drawing.Size(107, 29);
+            this.labelInscripcion4.TabIndex = 11;
+            this.labelInscripcion4.Text = "Nombre";
             // 
-            // label2
+            // labelInscripcion6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 182);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "######";
+            this.labelInscripcion6.AutoSize = true;
+            this.labelInscripcion6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion6.Location = new System.Drawing.Point(11, 182);
+            this.labelInscripcion6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion6.Name = "labelInscripcion6";
+            this.labelInscripcion6.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion6.TabIndex = 7;
+            this.labelInscripcion6.Text = "######";
             // 
-            // textBox2
+            // textBoxInscripcion6
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 182);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 29);
-            this.textBox2.TabIndex = 8;
+            this.textBoxInscripcion6.Location = new System.Drawing.Point(160, 182);
+            this.textBoxInscripcion6.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxInscripcion6.Name = "textBoxInscripcion6";
+            this.textBoxInscripcion6.Size = new System.Drawing.Size(233, 29);
+            this.textBoxInscripcion6.TabIndex = 8;
             // 
-            // label3
+            // labelInscripcion7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(431, 182);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "######";
+            this.labelInscripcion7.AutoSize = true;
+            this.labelInscripcion7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion7.Location = new System.Drawing.Point(431, 182);
+            this.labelInscripcion7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion7.Name = "labelInscripcion7";
+            this.labelInscripcion7.Size = new System.Drawing.Size(97, 29);
+            this.labelInscripcion7.TabIndex = 9;
+            this.labelInscripcion7.Text = "######";
             // 
-            // button1
+            // buttonNuevaInscripcion
             // 
-            this.button1.Location = new System.Drawing.Point(1254, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 42);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Nueva Inscripcion";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonNuevaInscripcion.Location = new System.Drawing.Point(1254, 22);
+            this.buttonNuevaInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonNuevaInscripcion.Name = "buttonNuevaInscripcion";
+            this.buttonNuevaInscripcion.Size = new System.Drawing.Size(186, 42);
+            this.buttonNuevaInscripcion.TabIndex = 25;
+            this.buttonNuevaInscripcion.Text = "Nueva Inscripcion";
+            this.buttonNuevaInscripcion.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewInscripcion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 159);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 72;
-            this.dataGridView1.Size = new System.Drawing.Size(1437, 391);
-            this.dataGridView1.TabIndex = 24;
+            this.dataGridViewInscripcion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInscripcion.Location = new System.Drawing.Point(15, 159);
+            this.dataGridViewInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridViewInscripcion.Name = "dataGridViewInscripcion";
+            this.dataGridViewInscripcion.RowHeadersWidth = 72;
+            this.dataGridViewInscripcion.Size = new System.Drawing.Size(1437, 391);
+            this.dataGridViewInscripcion.TabIndex = 24;
             // 
-            // label1
+            // labelInscripcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(601, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 55);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Inscripcion";
+            this.labelInscripcion.AutoSize = true;
+            this.labelInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInscripcion.Location = new System.Drawing.Point(601, 15);
+            this.labelInscripcion.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelInscripcion.Name = "labelInscripcion";
+            this.labelInscripcion.Size = new System.Drawing.Size(264, 55);
+            this.labelInscripcion.TabIndex = 23;
+            this.labelInscripcion.Text = "Inscripcion";
             // 
-            // buttonActualizar
+            // buttonActualizarInscripcion
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(15, 15);
-            this.buttonActualizar.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(138, 42);
-            this.buttonActualizar.TabIndex = 28;
-            this.buttonActualizar.Text = "Actualizar";
-            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizarInscripcion.Location = new System.Drawing.Point(15, 15);
+            this.buttonActualizarInscripcion.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonActualizarInscripcion.Name = "buttonActualizarInscripcion";
+            this.buttonActualizarInscripcion.Size = new System.Drawing.Size(138, 42);
+            this.buttonActualizarInscripcion.TabIndex = 28;
+            this.buttonActualizarInscripcion.Text = "Actualizar";
+            this.buttonActualizarInscripcion.UseVisualStyleBackColor = true;
             // 
             // Inscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 831);
-            this.Controls.Add(this.buttonActualizar);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonActualizarInscripcion);
+            this.Controls.Add(this.groupBoxBuscadorInscripcion);
+            this.Controls.Add(this.groupBoxInformacionInscripcion);
+            this.Controls.Add(this.buttonNuevaInscripcion);
+            this.Controls.Add(this.dataGridViewInscripcion);
+            this.Controls.Add(this.labelInscripcion);
             this.Name = "Inscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INSCRIPCION - OPEN SPACE COMARCAL";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Inscripcion_Load);
+            this.groupBoxBuscadorInscripcion.ResumeLayout(false);
+            this.groupBoxBuscadorInscripcion.PerformLayout();
+            this.groupBoxInformacionInscripcion.ResumeLayout(false);
+            this.groupBoxInformacionInscripcion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,28 +326,28 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button BuscarAlumno;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonModificarAlumno;
-        private System.Windows.Forms.Button buttonEliminarAlumno;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelDNINIA;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.GroupBox groupBoxBuscadorInscripcion;
+        private System.Windows.Forms.Button BottonBuscarInscripcion;
+        private System.Windows.Forms.Label labelInscripcion1;
+        private System.Windows.Forms.TextBox textBoxInscripcion1;
+        private System.Windows.Forms.GroupBox groupBoxInformacionInscripcion;
+        private System.Windows.Forms.Button buttonModificarInscripcion;
+        private System.Windows.Forms.Button buttonEliminarInscripcion;
+        private System.Windows.Forms.TextBox textBoxInscripcion5;
+        private System.Windows.Forms.TextBox textBoxInscripcion7;
+        private System.Windows.Forms.Label labelInscripcion5;
+        private System.Windows.Forms.Label labelInscripcion2;
+        private System.Windows.Forms.TextBox textBoxInscripcion4;
+        private System.Windows.Forms.TextBox textBoxInscripcion2;
+        private System.Windows.Forms.Label labelInscripcion4;
+        private System.Windows.Forms.Label labelInscripcion6;
+        private System.Windows.Forms.TextBox textBoxInscripcion6;
+        private System.Windows.Forms.Label labelInscripcion7;
+        private System.Windows.Forms.Button buttonNuevaInscripcion;
+        private System.Windows.Forms.DataGridView dataGridViewInscripcion;
+        private System.Windows.Forms.Label labelInscripcion;
+        private System.Windows.Forms.TextBox textBoxInscripcion3;
+        private System.Windows.Forms.Label labelInscripcion3;
+        private System.Windows.Forms.Button buttonActualizarInscripcion;
     }
 }
