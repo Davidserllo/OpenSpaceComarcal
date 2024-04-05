@@ -29,52 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonModificarAlumno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewAlumno = new System.Windows.Forms.DataGridView();
+            this.buttonCrearAlumno = new System.Windows.Forms.Button();
+            this.BuscarAlumno = new System.Windows.Forms.Button();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxDniNie = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.labelDNINIA = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.buttonEliminarAlumno = new System.Windows.Forms.Button();
+            this.buttonModificarAlumno = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonEliminarAlumno = new System.Windows.Forms.Button();
-            this.labelDNINIA = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BuscarAlumno = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.buttonActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonModificarAlumno
-            // 
-            this.buttonModificarAlumno.Location = new System.Drawing.Point(671, 30);
-            this.buttonModificarAlumno.Name = "buttonModificarAlumno";
-            this.buttonModificarAlumno.Size = new System.Drawing.Size(106, 40);
-            this.buttonModificarAlumno.TabIndex = 0;
-            this.buttonModificarAlumno.Text = "ModificarAlumno";
-            this.buttonModificarAlumno.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(340, 9);
+            this.label1.Location = new System.Drawing.Point(344, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 1;
@@ -95,18 +80,160 @@
             this.nombreDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn});
             this.dataGridViewAlumno.DataSource = this.bindingSourceAlumno;
-            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 87);
+            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 54);
+            this.dataGridViewAlumno.MultiSelect = false;
             this.dataGridViewAlumno.Name = "dataGridViewAlumno";
             this.dataGridViewAlumno.ReadOnly = true;
             this.dataGridViewAlumno.RowHeadersVisible = false;
             this.dataGridViewAlumno.RowHeadersWidth = 72;
-            this.dataGridViewAlumno.Size = new System.Drawing.Size(784, 212);
+            this.dataGridViewAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAlumno.Size = new System.Drawing.Size(784, 319);
             this.dataGridViewAlumno.TabIndex = 2;
+            this.dataGridViewAlumno.SelectionChanged += new System.EventHandler(this.dataGridViewAlumno_SelectionChanged);
+            // 
+            // buttonCrearAlumno
+            // 
+            this.buttonCrearAlumno.Location = new System.Drawing.Point(524, 19);
+            this.buttonCrearAlumno.Name = "buttonCrearAlumno";
+            this.buttonCrearAlumno.Size = new System.Drawing.Size(103, 34);
+            this.buttonCrearAlumno.TabIndex = 15;
+            this.buttonCrearAlumno.Text = "Nuevo alumno";
+            this.buttonCrearAlumno.UseVisualStyleBackColor = true;
+            this.buttonCrearAlumno.Click += new System.EventHandler(this.buttonCrearAlumno_Click);
+            // 
+            // BuscarAlumno
+            // 
+            this.BuscarAlumno.Location = new System.Drawing.Point(524, 58);
+            this.BuscarAlumno.Name = "BuscarAlumno";
+            this.BuscarAlumno.Size = new System.Drawing.Size(103, 34);
+            this.BuscarAlumno.TabIndex = 0;
+            this.BuscarAlumno.Text = "Buscar Alumno";
+            this.BuscarAlumno.UseVisualStyleBackColor = true;
+            // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(75, 31);
+            this.buttonActualizar.TabIndex = 18;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.Location = new System.Drawing.Point(342, 64);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(153, 20);
+            this.textBoxTelefono.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(263, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Teléfono";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Nombre";
+            // 
+            // textBoxDniNie
+            // 
+            this.textBoxDniNie.Location = new System.Drawing.Point(94, 33);
+            this.textBoxDniNie.Name = "textBoxDniNie";
+            this.textBoxDniNie.Size = new System.Drawing.Size(152, 20);
+            this.textBoxDniNie.TabIndex = 6;
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(94, 64);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(152, 20);
+            this.textBoxNombre.TabIndex = 12;
+            // 
+            // labelDNINIA
+            // 
+            this.labelDNINIA.AutoSize = true;
+            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNINIA.Location = new System.Drawing.Point(13, 35);
+            this.labelDNINIA.Name = "labelDNINIA";
+            this.labelDNINIA.Size = new System.Drawing.Size(63, 16);
+            this.labelDNINIA.TabIndex = 5;
+            this.labelDNINIA.Text = "DNI/NIE";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(263, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Apellidos";
+            // 
+            // textBoxApellidos
+            // 
+            this.textBoxApellidos.Location = new System.Drawing.Point(342, 34);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(153, 20);
+            this.textBoxApellidos.TabIndex = 14;
+            // 
+            // buttonEliminarAlumno
+            // 
+            this.buttonEliminarAlumno.ForeColor = System.Drawing.Color.IndianRed;
+            this.buttonEliminarAlumno.Location = new System.Drawing.Point(647, 58);
+            this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
+            this.buttonEliminarAlumno.Size = new System.Drawing.Size(106, 34);
+            this.buttonEliminarAlumno.TabIndex = 4;
+            this.buttonEliminarAlumno.Text = "Eliminar alumno";
+            this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
+            this.buttonEliminarAlumno.Click += new System.EventHandler(this.buttonEliminarAlumno_Click);
+            // 
+            // buttonModificarAlumno
+            // 
+            this.buttonModificarAlumno.Location = new System.Drawing.Point(647, 19);
+            this.buttonModificarAlumno.Name = "buttonModificarAlumno";
+            this.buttonModificarAlumno.Size = new System.Drawing.Size(106, 34);
+            this.buttonModificarAlumno.TabIndex = 0;
+            this.buttonModificarAlumno.Text = "Modificar Alumno";
+            this.buttonModificarAlumno.UseVisualStyleBackColor = true;
+            this.buttonModificarAlumno.Click += new System.EventHandler(this.buttonModificarAlumno_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.BuscarAlumno);
+            this.groupBox1.Controls.Add(this.buttonModificarAlumno);
+            this.groupBox1.Controls.Add(this.buttonEliminarAlumno);
+            this.groupBox1.Controls.Add(this.textBoxApellidos);
+            this.groupBox1.Controls.Add(this.buttonCrearAlumno);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.labelDNINIA);
+            this.groupBox1.Controls.Add(this.textBoxNombre);
+            this.groupBox1.Controls.Add(this.textBoxDniNie);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBoxTelefono);
+            this.groupBox1.Location = new System.Drawing.Point(8, 379);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(784, 108);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informacion del alumno";
             // 
             // dniDataGridViewTextBoxColumn
             // 
             this.dniDataGridViewTextBoxColumn.DataPropertyName = "dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dniDataGridViewTextBoxColumn.HeaderText = "DNI/NIE";
             this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
             this.dniDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -135,188 +262,13 @@
             // 
             this.bindingSourceAlumno.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
             // 
-            // buttonEliminarAlumno
-            // 
-            this.buttonEliminarAlumno.Location = new System.Drawing.Point(671, 74);
-            this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
-            this.buttonEliminarAlumno.Size = new System.Drawing.Size(106, 40);
-            this.buttonEliminarAlumno.TabIndex = 4;
-            this.buttonEliminarAlumno.Text = "Eliminar alumno";
-            this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
-            // 
-            // labelDNINIA
-            // 
-            this.labelDNINIA.AutoSize = true;
-            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(6, 31);
-            this.labelDNINIA.Name = "labelDNINIA";
-            this.labelDNINIA.Size = new System.Drawing.Size(63, 16);
-            this.labelDNINIA.TabIndex = 5;
-            this.labelDNINIA.Text = "DNI/NIA";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(87, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(87, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Teléfono";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(382, 99);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(235, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Correo Electronico";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(87, 66);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(129, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nombre";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(324, 66);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 20);
-            this.textBox5.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(235, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Apellidos";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(691, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Nuevo alumno";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.buttonModificarAlumno);
-            this.groupBox1.Controls.Add(this.buttonEliminarAlumno);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.labelDNINIA);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(8, 305);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(784, 137);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion del alumno";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.BuscarAlumno);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Location = new System.Drawing.Point(8, 42);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(784, 38);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscador";
-            // 
-            // BuscarAlumno
-            // 
-            this.BuscarAlumno.Location = new System.Drawing.Point(682, 11);
-            this.BuscarAlumno.Name = "BuscarAlumno";
-            this.BuscarAlumno.Size = new System.Drawing.Size(95, 21);
-            this.BuscarAlumno.TabIndex = 0;
-            this.BuscarAlumno.Text = "Buscar Alumno";
-            this.BuscarAlumno.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 16);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "DNI/NIA";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(71, 15);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(129, 20);
-            this.textBox9.TabIndex = 6;
-            // 
-            // buttonActualizar
-            // 
-            this.buttonActualizar.Location = new System.Drawing.Point(8, 9);
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
-            this.buttonActualizar.TabIndex = 18;
-            this.buttonActualizar.Text = "Actualizar";
-            this.buttonActualizar.UseVisualStyleBackColor = true;
-            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
-            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 499);
             this.Controls.Add(this.buttonActualizar);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewAlumno);
             this.Controls.Add(this.label1);
             this.Name = "Alumnos";
@@ -324,43 +276,35 @@
             this.Text = "ALUMNOS - OPEN SPACE COMARCAL";
             this.Load += new System.EventHandler(this.Alumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonModificarAlumno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewAlumno;
-        private System.Windows.Forms.Button buttonEliminarAlumno;
-        private System.Windows.Forms.Label labelDNINIA;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonCrearAlumno;
         private System.Windows.Forms.Button BuscarAlumno;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.BindingSource bindingSourceAlumno;
+        private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxDniNie;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.Label labelDNINIA;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxApellidos;
+        private System.Windows.Forms.Button buttonEliminarAlumno;
+        private System.Windows.Forms.Button buttonModificarAlumno;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

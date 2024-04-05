@@ -19,22 +19,22 @@ namespace OpenSpaceComarcal.Models
             switch (sqlException.Number)
             {
                 case 2:
-                    missatge = "El servidor no està operatiu";
+                    missatge = "El servidor no esta operativo";
                     break;
                 case 547:
-                    missatge = "El registre té dades relacionades";
+                    missatge = "El registro tiene datos relacionados";
                     break;
                 case 2601:
-                    missatge = "Registre duplicat";
+                    missatge = "Registro duplicado";
                     break;
                 case 2627:
-                    missatge = "Registre duplicat";
+                    missatge = "Registro duplicado";
                     break;
                 case 4060:
-                    missatge = "No es pot obrir la base de dades";
+                    missatge = "No se pudo abrir la base de datos";
                     break;
                 case 18456:
-                    missatge = "Error a l'iniciar la sessión";
+                    missatge = "Error al iniciar sesión";
                     break;
                 default:
                     missatge = sqlException.Number + " - " + sqlException.Message;
