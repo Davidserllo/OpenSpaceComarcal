@@ -142,7 +142,7 @@ namespace OpenSpaceComarcal
 
         private void buttonModificarAlumno_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro de que desea eliminar al alumno?", "Eliminar Alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de modificar al alumno?", "Eliminar Alumno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dialogResult == DialogResult.Yes)
             {
