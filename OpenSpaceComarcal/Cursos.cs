@@ -20,8 +20,8 @@ namespace OpenSpaceComarcal
 
         private void Cursos_Load(object sender, EventArgs e)
         {
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
-            actualizarTextBoxes();
+            //bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+            //actualizarTextBoxes();
         }
     }
 }

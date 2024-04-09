@@ -18,6 +18,25 @@ namespace OpenSpaceComarcal.Models
             return _alumnos;
         }
 
+        public static List<alumno> Select(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                return Orm.bd.alumno.OrderBy(a => a.nombre).ToList();
+            }
+
+            var query = Orm.bd.alumno
+                .Where(a => a.dni.Contains(busqueda)
+                            || a.nombre.Contains(busqueda)
+                            || a.apellidos.Contains(busqueda)
+                            || a.telefono.Contains(busqueda))
+                .OrderBy(a => a.nombre)
+                .ToList();
+
+            return query;
+        }
+
+
         public static String Insert(alumno _alumno)
         {
             String mensajeError = "";
