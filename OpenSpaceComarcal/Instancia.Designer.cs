@@ -29,329 +29,273 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBoxBuscadorInstancia = new System.Windows.Forms.GroupBox();
-            this.buttonBuscarInstancia = new System.Windows.Forms.Button();
-            this.labelInstancia1 = new System.Windows.Forms.Label();
-            this.textBoxInstancia1 = new System.Windows.Forms.TextBox();
-            this.groupBoxInformacionInstancia = new System.Windows.Forms.GroupBox();
-            this.textBoxInstancia3 = new System.Windows.Forms.TextBox();
-            this.labelInstancia3 = new System.Windows.Forms.Label();
-            this.buttonModificarInstancia = new System.Windows.Forms.Button();
-            this.buttonEliminarInstancia = new System.Windows.Forms.Button();
-            this.textBoxInstancia5 = new System.Windows.Forms.TextBox();
-            this.textBoxInstancia7 = new System.Windows.Forms.TextBox();
-            this.labelInstancia5 = new System.Windows.Forms.Label();
-            this.labelInstancia2 = new System.Windows.Forms.Label();
-            this.textBoxInstancia4 = new System.Windows.Forms.TextBox();
-            this.textBoxInstancia2 = new System.Windows.Forms.TextBox();
-            this.labelInstancia4 = new System.Windows.Forms.Label();
-            this.labelInstancia6 = new System.Windows.Forms.Label();
-            this.textBoxInstancia6 = new System.Windows.Forms.TextBox();
-            this.labelInstancia7 = new System.Windows.Forms.Label();
-            this.buttonNuevaInstancia = new System.Windows.Forms.Button();
-            this.dataGridViewInstancia = new System.Windows.Forms.DataGridView();
-            this.labelInstancia = new System.Windows.Forms.Label();
-            this.buttonActualizarInstancia = new System.Windows.Forms.Button();
             this.instanciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBoxBuscadorInstancia.SuspendLayout();
-            this.groupBoxInformacionInstancia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstancia)).BeginInit();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxBuscador = new System.Windows.Forms.TextBox();
+            this.buttonBuscarCurso = new System.Windows.Forms.Button();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonModificarPrograma = new System.Windows.Forms.Button();
+            this.buttonEliminarPrograma = new System.Windows.Forms.Button();
+            this.buttonCrearPrograma = new System.Windows.Forms.Button();
+            this.labelDNINIA = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewAlumno = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxCursosSiglas = new System.Windows.Forms.ComboBox();
+            this.buttonSeleccionarDiploma = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.instanciaBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBoxBuscadorInstancia
+            // groupBox2
             // 
-            this.groupBoxBuscadorInstancia.Controls.Add(this.buttonBuscarInstancia);
-            this.groupBoxBuscadorInstancia.Controls.Add(this.labelInstancia1);
-            this.groupBoxBuscadorInstancia.Controls.Add(this.textBoxInstancia1);
-            this.groupBoxBuscadorInstancia.Location = new System.Drawing.Point(15, 76);
-            this.groupBoxBuscadorInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBoxBuscadorInstancia.Name = "groupBoxBuscadorInstancia";
-            this.groupBoxBuscadorInstancia.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBoxBuscadorInstancia.Size = new System.Drawing.Size(1437, 71);
-            this.groupBoxBuscadorInstancia.TabIndex = 32;
-            this.groupBoxBuscadorInstancia.TabStop = false;
-            this.groupBoxBuscadorInstancia.Text = "Buscador";
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBoxBuscador);
+            this.groupBox2.Controls.Add(this.buttonBuscarCurso);
+            this.groupBox2.Location = new System.Drawing.Point(9, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(784, 52);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscador";
             // 
-            // buttonBuscarInstancia
+            // label3
             // 
-            this.buttonBuscarInstancia.Location = new System.Drawing.Point(1239, 21);
-            this.buttonBuscarInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonBuscarInstancia.Name = "buttonBuscarInstancia";
-            this.buttonBuscarInstancia.Size = new System.Drawing.Size(186, 38);
-            this.buttonBuscarInstancia.TabIndex = 0;
-            this.buttonBuscarInstancia.Text = "Buscar Instancia";
-            this.buttonBuscarInstancia.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 16);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Cualquier campo";
             // 
-            // labelInstancia1
+            // textBoxBuscador
             // 
-            this.labelInstancia1.AutoSize = true;
-            this.labelInstancia1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia1.Location = new System.Drawing.Point(12, 28);
-            this.labelInstancia1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia1.Name = "labelInstancia1";
-            this.labelInstancia1.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia1.TabIndex = 5;
-            this.labelInstancia1.Text = "######";
+            this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
+            this.textBoxBuscador.Name = "textBoxBuscador";
+            this.textBoxBuscador.Size = new System.Drawing.Size(472, 20);
+            this.textBoxBuscador.TabIndex = 16;
             // 
-            // textBoxInstancia1
+            // buttonBuscarCurso
             // 
-            this.textBoxInstancia1.Location = new System.Drawing.Point(131, 28);
-            this.textBoxInstancia1.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia1.Name = "textBoxInstancia1";
-            this.textBoxInstancia1.Size = new System.Drawing.Size(233, 29);
-            this.textBoxInstancia1.TabIndex = 6;
+            this.buttonBuscarCurso.Location = new System.Drawing.Point(650, 12);
+            this.buttonBuscarCurso.Name = "buttonBuscarCurso";
+            this.buttonBuscarCurso.Size = new System.Drawing.Size(103, 34);
+            this.buttonBuscarCurso.TabIndex = 0;
+            this.buttonBuscarCurso.Text = "Buscar Curso";
+            this.buttonBuscarCurso.UseVisualStyleBackColor = true;
             // 
-            // groupBoxInformacionInstancia
+            // buttonActualizar
             // 
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia3);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia3);
-            this.groupBoxInformacionInstancia.Controls.Add(this.buttonModificarInstancia);
-            this.groupBoxInformacionInstancia.Controls.Add(this.buttonEliminarInstancia);
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia5);
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia7);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia5);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia2);
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia4);
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia2);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia4);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia6);
-            this.groupBoxInformacionInstancia.Controls.Add(this.textBoxInstancia6);
-            this.groupBoxInformacionInstancia.Controls.Add(this.labelInstancia7);
-            this.groupBoxInformacionInstancia.Location = new System.Drawing.Point(15, 562);
-            this.groupBoxInformacionInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBoxInformacionInstancia.Name = "groupBoxInformacionInstancia";
-            this.groupBoxInformacionInstancia.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBoxInformacionInstancia.Size = new System.Drawing.Size(1437, 253);
-            this.groupBoxInformacionInstancia.TabIndex = 31;
-            this.groupBoxInformacionInstancia.TabStop = false;
-            this.groupBoxInformacionInstancia.Text = "Informacion del Instancia";
+            this.buttonActualizar.Location = new System.Drawing.Point(9, 7);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(75, 31);
+            this.buttonActualizar.TabIndex = 23;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
             // 
-            // textBoxInstancia3
+            // groupBox1
             // 
-            this.textBoxInstancia3.Location = new System.Drawing.Point(594, 55);
-            this.textBoxInstancia3.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia3.Name = "textBoxInstancia3";
-            this.textBoxInstancia3.Size = new System.Drawing.Size(406, 29);
-            this.textBoxInstancia3.TabIndex = 16;
+            this.groupBox1.Controls.Add(this.dateTimePickerFechaFin);
+            this.groupBox1.Controls.Add(this.dateTimePickerFechaInicio);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.buttonSeleccionarDiploma);
+            this.groupBox1.Controls.Add(this.comboBoxCursosSiglas);
+            this.groupBox1.Controls.Add(this.buttonModificarPrograma);
+            this.groupBox1.Controls.Add(this.buttonEliminarPrograma);
+            this.groupBox1.Controls.Add(this.buttonCrearPrograma);
+            this.groupBox1.Controls.Add(this.labelDNINIA);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 366);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(784, 108);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informacion del Curso";
             // 
-            // labelInstancia3
+            // buttonModificarPrograma
             // 
-            this.labelInstancia3.AutoSize = true;
-            this.labelInstancia3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia3.Location = new System.Drawing.Point(431, 54);
-            this.labelInstancia3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia3.Name = "labelInstancia3";
-            this.labelInstancia3.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia3.TabIndex = 15;
-            this.labelInstancia3.Text = "######";
+            this.buttonModificarPrograma.Location = new System.Drawing.Point(647, 21);
+            this.buttonModificarPrograma.Name = "buttonModificarPrograma";
+            this.buttonModificarPrograma.Size = new System.Drawing.Size(106, 34);
+            this.buttonModificarPrograma.TabIndex = 0;
+            this.buttonModificarPrograma.Text = "Modificar Programa";
+            this.buttonModificarPrograma.UseVisualStyleBackColor = true;
             // 
-            // buttonModificarInstancia
+            // buttonEliminarPrograma
             // 
-            this.buttonModificarInstancia.Location = new System.Drawing.Point(1213, 55);
-            this.buttonModificarInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonModificarInstancia.Name = "buttonModificarInstancia";
-            this.buttonModificarInstancia.Size = new System.Drawing.Size(212, 74);
-            this.buttonModificarInstancia.TabIndex = 0;
-            this.buttonModificarInstancia.Text = "Modificar Instancia";
-            this.buttonModificarInstancia.UseVisualStyleBackColor = true;
+            this.buttonEliminarPrograma.ForeColor = System.Drawing.Color.IndianRed;
+            this.buttonEliminarPrograma.Location = new System.Drawing.Point(647, 60);
+            this.buttonEliminarPrograma.Name = "buttonEliminarPrograma";
+            this.buttonEliminarPrograma.Size = new System.Drawing.Size(106, 34);
+            this.buttonEliminarPrograma.TabIndex = 4;
+            this.buttonEliminarPrograma.Text = "Eliminar Programa";
+            this.buttonEliminarPrograma.UseVisualStyleBackColor = true;
             // 
-            // buttonEliminarInstancia
+            // buttonCrearPrograma
             // 
-            this.buttonEliminarInstancia.Location = new System.Drawing.Point(1213, 137);
-            this.buttonEliminarInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonEliminarInstancia.Name = "buttonEliminarInstancia";
-            this.buttonEliminarInstancia.Size = new System.Drawing.Size(212, 74);
-            this.buttonEliminarInstancia.TabIndex = 4;
-            this.buttonEliminarInstancia.Text = "Eliminar Instancia";
-            this.buttonEliminarInstancia.UseVisualStyleBackColor = true;
+            this.buttonCrearPrograma.Location = new System.Drawing.Point(524, 21);
+            this.buttonCrearPrograma.Name = "buttonCrearPrograma";
+            this.buttonCrearPrograma.Size = new System.Drawing.Size(103, 73);
+            this.buttonCrearPrograma.TabIndex = 15;
+            this.buttonCrearPrograma.Text = "Nuevo Programa";
+            this.buttonCrearPrograma.UseVisualStyleBackColor = true;
             // 
-            // textBoxInstancia5
+            // labelDNINIA
             // 
-            this.textBoxInstancia5.Location = new System.Drawing.Point(594, 121);
-            this.textBoxInstancia5.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia5.Name = "textBoxInstancia5";
-            this.textBoxInstancia5.Size = new System.Drawing.Size(406, 29);
-            this.textBoxInstancia5.TabIndex = 14;
+            this.labelDNINIA.AutoSize = true;
+            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNINIA.Location = new System.Drawing.Point(14, 30);
+            this.labelDNINIA.Name = "labelDNINIA";
+            this.labelDNINIA.Size = new System.Drawing.Size(105, 16);
+            this.labelDNINIA.TabIndex = 5;
+            this.labelDNINIA.Text = "Curso (Siglas)";
             // 
-            // textBoxInstancia7
+            // label2
             // 
-            this.textBoxInstancia7.Location = new System.Drawing.Point(596, 182);
-            this.textBoxInstancia7.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia7.Name = "textBoxInstancia7";
-            this.textBoxInstancia7.Size = new System.Drawing.Size(404, 29);
-            this.textBoxInstancia7.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(288, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Fecha Fin";
             // 
-            // labelInstancia5
+            // dataGridViewAlumno
             // 
-            this.labelInstancia5.AutoSize = true;
-            this.labelInstancia5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia5.Location = new System.Drawing.Point(431, 120);
-            this.labelInstancia5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia5.Name = "labelInstancia5";
-            this.labelInstancia5.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia5.TabIndex = 13;
-            this.labelInstancia5.Text = "######";
+            this.dataGridViewAlumno.AllowUserToAddRows = false;
+            this.dataGridViewAlumno.AllowUserToDeleteRows = false;
+            this.dataGridViewAlumno.AllowUserToOrderColumns = true;
+            this.dataGridViewAlumno.AllowUserToResizeRows = false;
+            this.dataGridViewAlumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAlumno.Location = new System.Drawing.Point(9, 102);
+            this.dataGridViewAlumno.MultiSelect = false;
+            this.dataGridViewAlumno.Name = "dataGridViewAlumno";
+            this.dataGridViewAlumno.ReadOnly = true;
+            this.dataGridViewAlumno.RowHeadersVisible = false;
+            this.dataGridViewAlumno.RowHeadersWidth = 72;
+            this.dataGridViewAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAlumno.Size = new System.Drawing.Size(784, 258);
+            this.dataGridViewAlumno.TabIndex = 21;
             // 
-            // labelInstancia2
+            // label1
             // 
-            this.labelInstancia2.AutoSize = true;
-            this.labelInstancia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia2.Location = new System.Drawing.Point(11, 57);
-            this.labelInstancia2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia2.Name = "labelInstancia2";
-            this.labelInstancia2.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia2.TabIndex = 5;
-            this.labelInstancia2.Text = "######";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(257, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 31);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Cursos Programados";
             // 
-            // textBoxInstancia4
+            // comboBoxCursosSiglas
             // 
-            this.textBoxInstancia4.Location = new System.Drawing.Point(160, 121);
-            this.textBoxInstancia4.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia4.Name = "textBoxInstancia4";
-            this.textBoxInstancia4.Size = new System.Drawing.Size(233, 29);
-            this.textBoxInstancia4.TabIndex = 12;
+            this.comboBoxCursosSiglas.FormattingEnabled = true;
+            this.comboBoxCursosSiglas.Location = new System.Drawing.Point(125, 29);
+            this.comboBoxCursosSiglas.Name = "comboBoxCursosSiglas";
+            this.comboBoxCursosSiglas.Size = new System.Drawing.Size(139, 21);
+            this.comboBoxCursosSiglas.TabIndex = 16;
             // 
-            // textBoxInstancia2
+            // buttonSeleccionarDiploma
             // 
-            this.textBoxInstancia2.Location = new System.Drawing.Point(160, 55);
-            this.textBoxInstancia2.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia2.Name = "textBoxInstancia2";
-            this.textBoxInstancia2.Size = new System.Drawing.Size(233, 29);
-            this.textBoxInstancia2.TabIndex = 6;
+            this.buttonSeleccionarDiploma.Location = new System.Drawing.Point(125, 67);
+            this.buttonSeleccionarDiploma.Name = "buttonSeleccionarDiploma";
+            this.buttonSeleccionarDiploma.Size = new System.Drawing.Size(139, 27);
+            this.buttonSeleccionarDiploma.TabIndex = 17;
+            this.buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
+            this.buttonSeleccionarDiploma.UseVisualStyleBackColor = true;
             // 
-            // labelInstancia4
+            // label4
             // 
-            this.labelInstancia4.AutoSize = true;
-            this.labelInstancia4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia4.Location = new System.Drawing.Point(11, 119);
-            this.labelInstancia4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia4.Name = "labelInstancia4";
-            this.labelInstancia4.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia4.TabIndex = 11;
-            this.labelInstancia4.Text = "######";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Diploma";
             // 
-            // labelInstancia6
+            // label5
             // 
-            this.labelInstancia6.AutoSize = true;
-            this.labelInstancia6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia6.Location = new System.Drawing.Point(11, 182);
-            this.labelInstancia6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia6.Name = "labelInstancia6";
-            this.labelInstancia6.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia6.TabIndex = 7;
-            this.labelInstancia6.Text = "######";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(288, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 16);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Fecha Inicio";
             // 
-            // textBoxInstancia6
+            // dateTimePickerFechaInicio
             // 
-            this.textBoxInstancia6.Location = new System.Drawing.Point(160, 182);
-            this.textBoxInstancia6.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxInstancia6.Name = "textBoxInstancia6";
-            this.textBoxInstancia6.Size = new System.Drawing.Size(233, 29);
-            this.textBoxInstancia6.TabIndex = 8;
+            this.dateTimePickerFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(397, 26);
+            this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
+            this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePickerFechaInicio.TabIndex = 19;
             // 
-            // labelInstancia7
+            // dateTimePickerFechaFin
             // 
-            this.labelInstancia7.AutoSize = true;
-            this.labelInstancia7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia7.Location = new System.Drawing.Point(431, 182);
-            this.labelInstancia7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia7.Name = "labelInstancia7";
-            this.labelInstancia7.Size = new System.Drawing.Size(97, 29);
-            this.labelInstancia7.TabIndex = 9;
-            this.labelInstancia7.Text = "######";
-            // 
-            // buttonNuevaInstancia
-            // 
-            this.buttonNuevaInstancia.Location = new System.Drawing.Point(1254, 22);
-            this.buttonNuevaInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonNuevaInstancia.Name = "buttonNuevaInstancia";
-            this.buttonNuevaInstancia.Size = new System.Drawing.Size(186, 42);
-            this.buttonNuevaInstancia.TabIndex = 30;
-            this.buttonNuevaInstancia.Text = "Nueva Instancia";
-            this.buttonNuevaInstancia.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewInstancia
-            // 
-            this.dataGridViewInstancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInstancia.Location = new System.Drawing.Point(15, 159);
-            this.dataGridViewInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridViewInstancia.Name = "dataGridViewInstancia";
-            this.dataGridViewInstancia.RowHeadersWidth = 72;
-            this.dataGridViewInstancia.Size = new System.Drawing.Size(1437, 391);
-            this.dataGridViewInstancia.TabIndex = 29;
-            // 
-            // labelInstancia
-            // 
-            this.labelInstancia.AutoSize = true;
-            this.labelInstancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInstancia.Location = new System.Drawing.Point(621, 15);
-            this.labelInstancia.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labelInstancia.Name = "labelInstancia";
-            this.labelInstancia.Size = new System.Drawing.Size(225, 55);
-            this.labelInstancia.TabIndex = 28;
-            this.labelInstancia.Text = "Instancia";
-            // 
-            // buttonActualizarInstancia
-            // 
-            this.buttonActualizarInstancia.Location = new System.Drawing.Point(15, 15);
-            this.buttonActualizarInstancia.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonActualizarInstancia.Name = "buttonActualizarInstancia";
-            this.buttonActualizarInstancia.Size = new System.Drawing.Size(138, 42);
-            this.buttonActualizarInstancia.TabIndex = 33;
-            this.buttonActualizarInstancia.Text = "Actualizar";
-            this.buttonActualizarInstancia.UseVisualStyleBackColor = true;
+            this.dateTimePickerFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(397, 69);
+            this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
+            this.dateTimePickerFechaFin.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePickerFechaFin.TabIndex = 20;
             // 
             // Instancia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 831);
-            this.Controls.Add(this.buttonActualizarInstancia);
-            this.Controls.Add(this.groupBoxBuscadorInstancia);
-            this.Controls.Add(this.groupBoxInformacionInstancia);
-            this.Controls.Add(this.buttonNuevaInstancia);
-            this.Controls.Add(this.dataGridViewInstancia);
-            this.Controls.Add(this.labelInstancia);
+            this.ClientSize = new System.Drawing.Size(802, 486);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.buttonActualizar);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dataGridViewAlumno);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Instancia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "INSTANCIA - OPEN SPACE COMARCAL";
-            this.groupBoxBuscadorInstancia.ResumeLayout(false);
-            this.groupBoxBuscadorInstancia.PerformLayout();
-            this.groupBoxInformacionInstancia.ResumeLayout(false);
-            this.groupBoxInformacionInstancia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstancia)).EndInit();
+            this.Text = "CURSOS PROGRAMADOS - OPEN SPACE COMARCAL";
             ((System.ComponentModel.ISupportInitialize)(this.instanciaBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBoxBuscadorInstancia;
-        private System.Windows.Forms.Button buttonBuscarInstancia;
-        private System.Windows.Forms.Label labelInstancia1;
-        private System.Windows.Forms.TextBox textBoxInstancia1;
-        private System.Windows.Forms.GroupBox groupBoxInformacionInstancia;
-        private System.Windows.Forms.TextBox textBoxInstancia3;
-        private System.Windows.Forms.Label labelInstancia3;
-        private System.Windows.Forms.Button buttonModificarInstancia;
-        private System.Windows.Forms.Button buttonEliminarInstancia;
-        private System.Windows.Forms.TextBox textBoxInstancia5;
-        private System.Windows.Forms.TextBox textBoxInstancia7;
-        private System.Windows.Forms.Label labelInstancia5;
-        private System.Windows.Forms.Label labelInstancia2;
-        private System.Windows.Forms.TextBox textBoxInstancia4;
-        private System.Windows.Forms.TextBox textBoxInstancia2;
-        private System.Windows.Forms.Label labelInstancia4;
-        private System.Windows.Forms.Label labelInstancia6;
-        private System.Windows.Forms.TextBox textBoxInstancia6;
-        private System.Windows.Forms.Label labelInstancia7;
-        private System.Windows.Forms.Button buttonNuevaInstancia;
-        private System.Windows.Forms.DataGridView dataGridViewInstancia;
-        private System.Windows.Forms.Label labelInstancia;
-        private System.Windows.Forms.Button buttonActualizarInstancia;
         private System.Windows.Forms.BindingSource instanciaBindingSource;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxBuscador;
+        private System.Windows.Forms.Button buttonBuscarCurso;
+        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonModificarPrograma;
+        private System.Windows.Forms.Button buttonEliminarPrograma;
+        private System.Windows.Forms.Button buttonCrearPrograma;
+        private System.Windows.Forms.Label labelDNINIA;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridViewAlumno;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxCursosSiglas;
+        private System.Windows.Forms.Button buttonSeleccionarDiploma;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
     }
 }
