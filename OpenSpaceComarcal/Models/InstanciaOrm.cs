@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenSpaceComarcal.Models
 {
-    internal class InstanciaOrm
+    public static class InstanciaOrm
     {
         public static List<instancia> Select()
         {
@@ -15,6 +13,25 @@ namespace OpenSpaceComarcal.Models
                 .ToList();
 
             return _instancia;
+        }
+
+        public static List<instancia> Select(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                return Orm.bd.instancia.OrderBy(a => a.id).ToList();
+            }
+
+            var query = Orm.bd.instancia
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.id_curso.Contains(busqueda)
+                            || a.fecha_inicio.ToString().Contains(busqueda)
+                            || a.fecha_fin.ToString().Contains(busqueda)
+                            || a.diploma.Contains(busqueda))
+                .OrderBy(a => a.id)
+                .ToList();
+
+            return query;
         }
 
         public static String Insert(instancia _instancia)
@@ -37,21 +54,22 @@ namespace OpenSpaceComarcal.Models
             return mensajeError;
         }
 
-        //public static String Update(alumno _alumno)
-        //{
-        //    String mensajeError = "";
+        public static String Update(instancia _instancia)
+        {
+            String mensajeError = "";
 
-        //    alumno alumnoAnterior = Orm.bd.alumno.Find(_alumno.dni);
+            instancia instanciaAnterior = Orm.bd.instancia.Find(_instancia.id);
 
-        //    if (alumnoAnterior != null)
-        //    {
-        //        alumnoAnterior.nombre = _alumno.nombre;
-        //        alumnoAnterior.apellidos = _alumno.apellidos;
-        //        alumnoAnterior.telefono = _alumno.telefono;
+            if (instanciaAnterior != null)
+            {
+                instanciaAnterior.id_curso = _instancia.id_curso;
+                instanciaAnterior.fecha_inicio = _instancia.fecha_inicio;
+                instanciaAnterior.fecha_fin = _instancia.fecha_fin;
+                instanciaAnterior.diploma = _instancia.diploma;
 
-        //        mensajeError = Orm.MySaveChanges();
-        //    }
-        //    return mensajeError;
-        //}
+                mensajeError = Orm.MySaveChanges();
+            }
+            return mensajeError;
+        }
     }
 }

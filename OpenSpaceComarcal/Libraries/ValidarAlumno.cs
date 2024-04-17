@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace OpenSpaceComarcal.Libraries
 {
@@ -62,7 +58,7 @@ namespace OpenSpaceComarcal.Libraries
             String msgError = "";
             if (!(ValidarDNI(dniNie) || ValidarNIE(dniNie)))
             {
-                msgError = "El DNI o NIE es incorrecto ";
+                msgError = "El DNI o NIE es incorrecto, ¿desea seguir?";
             }
             return msgError;
         }

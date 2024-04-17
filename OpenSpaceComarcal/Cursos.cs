@@ -1,12 +1,5 @@
 ﻿using OpenSpaceComarcal.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
@@ -172,6 +165,13 @@ namespace OpenSpaceComarcal
         {
             String busqueda = textBoxBusqueda.Text;
             bindingSourceCursos.DataSource = CursosOrm.Select(busqueda);
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            textBoxCodigo.Text = "";
+            textBoxSiglas.Text = "";
+            textBoxNombre.Text = "";
         }
     }
 }

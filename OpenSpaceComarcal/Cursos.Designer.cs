@@ -34,9 +34,7 @@
             this.labelSiglasBuscarCurso = new System.Windows.Forms.Label();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.groupBoxInformacionCurso = new System.Windows.Forms.GroupBox();
-            this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
-            this.labelCursos = new System.Windows.Forms.Label();
-            this.buttonActualizarCursos = new System.Windows.Forms.Button();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
             this.buttonModificarCurso = new System.Windows.Forms.Button();
             this.buttonEliminarCurso = new System.Windows.Forms.Button();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -46,12 +44,14 @@
             this.textBoxSiglas = new System.Windows.Forms.TextBox();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diplomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instanciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
             this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.buttonActualizarCursos = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
@@ -100,6 +100,7 @@
             // 
             // groupBoxInformacionCurso
             // 
+            this.groupBoxInformacionCurso.Controls.Add(this.buttonLimpiar);
             this.groupBoxInformacionCurso.Controls.Add(this.buttonModificarCurso);
             this.groupBoxInformacionCurso.Controls.Add(this.buttonEliminarCurso);
             this.groupBoxInformacionCurso.Controls.Add(this.textBoxNombre);
@@ -116,51 +117,15 @@
             this.groupBoxInformacionCurso.TabStop = false;
             this.groupBoxInformacionCurso.Text = "Informacion del Curso";
             // 
-            // dataGridViewCursos
+            // buttonLimpiar
             // 
-            this.dataGridViewCursos.AllowUserToAddRows = false;
-            this.dataGridViewCursos.AllowUserToDeleteRows = false;
-            this.dataGridViewCursos.AllowUserToOrderColumns = true;
-            this.dataGridViewCursos.AutoGenerateColumns = false;
-            this.dataGridViewCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoDataGridViewTextBoxColumn,
-            this.siglasDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.diplomaDataGridViewTextBoxColumn,
-            this.instanciaDataGridViewTextBoxColumn});
-            this.dataGridViewCursos.DataSource = this.bindingSourceCursos;
-            this.dataGridViewCursos.Location = new System.Drawing.Point(8, 113);
-            this.dataGridViewCursos.MultiSelect = false;
-            this.dataGridViewCursos.Name = "dataGridViewCursos";
-            this.dataGridViewCursos.ReadOnly = true;
-            this.dataGridViewCursos.RowHeadersVisible = false;
-            this.dataGridViewCursos.RowHeadersWidth = 72;
-            this.dataGridViewCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCursos.Size = new System.Drawing.Size(527, 233);
-            this.dataGridViewCursos.TabIndex = 19;
-            this.dataGridViewCursos.SelectionChanged += new System.EventHandler(this.dataGridViewCursos_SelectionChanged);
-            // 
-            // labelCursos
-            // 
-            this.labelCursos.AutoSize = true;
-            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(225, 13);
-            this.labelCursos.Name = "labelCursos";
-            this.labelCursos.Size = new System.Drawing.Size(107, 31);
-            this.labelCursos.TabIndex = 18;
-            this.labelCursos.Text = "Cursos";
-            // 
-            // buttonActualizarCursos
-            // 
-            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 12);
-            this.buttonActualizarCursos.Name = "buttonActualizarCursos";
-            this.buttonActualizarCursos.Size = new System.Drawing.Size(75, 32);
-            this.buttonActualizarCursos.TabIndex = 23;
-            this.buttonActualizarCursos.Text = "Actualizar";
-            this.buttonActualizarCursos.UseVisualStyleBackColor = true;
-            this.buttonActualizarCursos.Click += new System.EventHandler(this.buttonActualizarCursos_Click);
+            this.buttonLimpiar.Location = new System.Drawing.Point(282, 70);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(103, 33);
+            this.buttonLimpiar.TabIndex = 27;
+            this.buttonLimpiar.Text = "Limpiar";
+            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // buttonModificarCurso
             // 
@@ -194,7 +159,7 @@
             // 
             this.buttonCrearCurso.Location = new System.Drawing.Point(282, 30);
             this.buttonCrearCurso.Name = "buttonCrearCurso";
-            this.buttonCrearCurso.Size = new System.Drawing.Size(103, 73);
+            this.buttonCrearCurso.Size = new System.Drawing.Size(103, 34);
             this.buttonCrearCurso.TabIndex = 26;
             this.buttonCrearCurso.Text = "Nuevo Curso";
             this.buttonCrearCurso.UseVisualStyleBackColor = true;
@@ -244,46 +209,83 @@
             this.labelSiglas.TabIndex = 22;
             this.labelSiglas.Text = "Siglas";
             // 
-            // codigoDataGridViewTextBoxColumn
+            // dataGridViewCursos
             // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // siglasDataGridViewTextBoxColumn
-            // 
-            this.siglasDataGridViewTextBoxColumn.DataPropertyName = "siglas";
-            this.siglasDataGridViewTextBoxColumn.HeaderText = "Siglas";
-            this.siglasDataGridViewTextBoxColumn.Name = "siglasDataGridViewTextBoxColumn";
-            this.siglasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diplomaDataGridViewTextBoxColumn
-            // 
-            this.diplomaDataGridViewTextBoxColumn.DataPropertyName = "diploma";
-            this.diplomaDataGridViewTextBoxColumn.HeaderText = "diploma";
-            this.diplomaDataGridViewTextBoxColumn.Name = "diplomaDataGridViewTextBoxColumn";
-            this.diplomaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diplomaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // instanciaDataGridViewTextBoxColumn
-            // 
-            this.instanciaDataGridViewTextBoxColumn.DataPropertyName = "instancia";
-            this.instanciaDataGridViewTextBoxColumn.HeaderText = "instancia";
-            this.instanciaDataGridViewTextBoxColumn.Name = "instanciaDataGridViewTextBoxColumn";
-            this.instanciaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.instanciaDataGridViewTextBoxColumn.Visible = false;
+            this.dataGridViewCursos.AllowUserToAddRows = false;
+            this.dataGridViewCursos.AllowUserToDeleteRows = false;
+            this.dataGridViewCursos.AllowUserToOrderColumns = true;
+            this.dataGridViewCursos.AutoGenerateColumns = false;
+            this.dataGridViewCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewCursos.DataSource = this.bindingSourceCursos;
+            this.dataGridViewCursos.Location = new System.Drawing.Point(8, 113);
+            this.dataGridViewCursos.MultiSelect = false;
+            this.dataGridViewCursos.Name = "dataGridViewCursos";
+            this.dataGridViewCursos.ReadOnly = true;
+            this.dataGridViewCursos.RowHeadersVisible = false;
+            this.dataGridViewCursos.RowHeadersWidth = 72;
+            this.dataGridViewCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCursos.Size = new System.Drawing.Size(527, 233);
+            this.dataGridViewCursos.TabIndex = 19;
+            this.dataGridViewCursos.SelectionChanged += new System.EventHandler(this.dataGridViewCursos_SelectionChanged);
             // 
             // bindingSourceCursos
             // 
             this.bindingSourceCursos.DataSource = typeof(OpenSpaceComarcal.Models.curso);
+            // 
+            // labelCursos
+            // 
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(225, 13);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(107, 31);
+            this.labelCursos.TabIndex = 18;
+            this.labelCursos.Text = "Cursos";
+            // 
+            // buttonActualizarCursos
+            // 
+            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizarCursos.Name = "buttonActualizarCursos";
+            this.buttonActualizarCursos.Size = new System.Drawing.Size(75, 32);
+            this.buttonActualizarCursos.TabIndex = 23;
+            this.buttonActualizarCursos.Text = "Actualizar";
+            this.buttonActualizarCursos.UseVisualStyleBackColor = true;
+            this.buttonActualizarCursos.Click += new System.EventHandler(this.buttonActualizarCursos_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "siglas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Siglas";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "instancia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "instancia";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // Cursos
             // 
@@ -297,7 +299,7 @@
             this.Controls.Add(this.groupBoxInformacionCurso);
             this.Controls.Add(this.dataGridViewCursos);
             this.Controls.Add(this.labelCursos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CURSOS - OPEN SPACE COMARCAL";
@@ -338,5 +340,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonLimpiar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

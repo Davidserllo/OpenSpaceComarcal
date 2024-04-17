@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System;
 
 namespace OpenSpaceComarcal.Models
 {
-    internal class CursosOrm
+    public static class CursosOrm
     {
         public static List<curso> Select()
         {
@@ -16,6 +13,17 @@ namespace OpenSpaceComarcal.Models
                 .ToList();
 
             return _curso;
+        }
+
+        public static List<string> SelectSigla(string id_curso)
+        {
+            List<string> siglaCurso = Orm.bd.curso
+                .Where(n => n.codigo == id_curso)
+                .OrderBy(n => n.siglas)
+                .Select(n => n.siglas)
+                .ToList();
+
+            return siglaCurso;
         }
 
         public static List<curso> Select(string busqueda)

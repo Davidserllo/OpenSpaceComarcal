@@ -15,9 +15,12 @@ namespace OpenSpaceComarcal.Models
     public partial class inscripcion
     {
         public int id { get; set; }
-        public string id_alumno { get; set; }
-        public Nullable<int> id_instancia { get; set; }
+        public int id_alumno { get; set; }
+        public int id_instancia { get; set; }
         public Nullable<System.DateTime> fecha_inscripcion { get; set; }
+        public Nullable<System.DateTime> fecha_expedicion { get; set; }
+        public Nullable<bool> apto { get; set; }
+        public string cod_factura { get; set; }
     
         public virtual alumno alumno { get; set; }
         public virtual instancia instancia { get; set; }

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="open_space_comarcalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="alumno">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dni_nie_pasp" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="apellidos" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="id_empresa" Type="int" />
+        </EntityType>
+        <EntityType Name="curso">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="siglas" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cif" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="siglas" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <EntityType Name="inscripcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_alumno" Type="int" Nullable="false" />
+          <Property Name="id_instancia" Type="int" Nullable="false" />
+          <Property Name="fecha_inscripcion" Type="date" />
+          <Property Name="fecha_expedicion" Type="date" />
+          <Property Name="apto" Type="bit" />
+          <Property Name="cod_factura" Type="varchar" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="instancia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_curso" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+          <Property Name="diploma" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <Association Name="FK__alumno__id_empre__398D8EEE">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="alumno" Type="Self.alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="alumno">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_al__412EB0B6">
+          <End Role="alumno" Type="Self.alumno" Multiplicity="1" />
+          <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alumno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_in__4222D4EF">
+          <End Role="instancia" Type="Self.instancia" Multiplicity="1" />
+          <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="instancia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_instancia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__instancia__id_cu__3E52440B">
+          <End Role="curso" Type="Self.curso" Multiplicity="1" />
+          <End Role="instancia" Type="Self.instancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="curso">
+              <PropertyRef Name="codigo" />
+            </Principal>
+            <Dependent Role="instancia">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="open_space_comarcalModelStoreContainer">
+          <EntitySet Name="alumno" EntityType="Self.alumno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="curso" EntityType="Self.curso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="inscripcion" EntityType="Self.inscripcion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="instancia" EntityType="Self.instancia" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__alumno__id_empre__398D8EEE" Association="Self.FK__alumno__id_empre__398D8EEE">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="alumno" EntitySet="alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_al__412EB0B6" Association="Self.FK__inscripci__id_al__412EB0B6">
+            <End Role="alumno" EntitySet="alumno" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_in__4222D4EF" Association="Self.FK__inscripci__id_in__4222D4EF">
+            <End Role="instancia" EntitySet="instancia" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__instancia__id_cu__3E52440B" Association="Self.FK__instancia__id_cu__3E52440B">
+            <End Role="curso" EntitySet="curso" />
+            <End Role="instancia" EntitySet="instancia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="open_space_comarcalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="alumno">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dni_nie_pasp" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id_empresa" Type="Int32" />
+          <NavigationProperty Name="empresa" Relationship="Self.FK__alumno__id_empre__398D8EEE" FromRole="alumno" ToRole="empresa" />
+          <NavigationProperty Name="inscripcion" Relationship="Self.FK__inscripci__id_al__412EB0B6" FromRole="alumno" ToRole="inscripcion" />
+        </EntityType>
+        <EntityType Name="curso">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="siglas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="instancia" Relationship="Self.FK__instancia__id_cu__3E52440B" FromRole="curso" ToRole="instancia" />
+        </EntityType>
+        <EntityType Name="empresa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cif" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="siglas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="alumno" Relationship="Self.FK__alumno__id_empre__398D8EEE" FromRole="empresa" ToRole="alumno" />
+        </EntityType>
+        <EntityType Name="inscripcion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_alumno" Type="Int32" Nullable="false" />
+          <Property Name="id_instancia" Type="Int32" Nullable="false" />
+          <Property Name="fecha_inscripcion" Type="DateTime" Precision="0" />
+          <Property Name="fecha_expedicion" Type="DateTime" Precision="0" />
+          <Property Name="apto" Type="Boolean" />
+          <Property Name="cod_factura" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="alumno" Relationship="Self.FK__inscripci__id_al__412EB0B6" FromRole="inscripcion" ToRole="alumno" />
+          <NavigationProperty Name="instancia" Relationship="Self.FK__inscripci__id_in__4222D4EF" FromRole="inscripcion" ToRole="instancia" />
+        </EntityType>
+        <EntityType Name="instancia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_curso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+          <Property Name="diploma" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="curso" Relationship="Self.FK__instancia__id_cu__3E52440B" FromRole="instancia" ToRole="curso" />
+          <NavigationProperty Name="inscripcion" Relationship="Self.FK__inscripci__id_in__4222D4EF" FromRole="instancia" ToRole="inscripcion" />
+        </EntityType>
+        <Association Name="FK__alumno__id_empre__398D8EEE">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="alumno" Type="Self.alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="alumno">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_al__412EB0B6">
+          <End Role="alumno" Type="Self.alumno" Multiplicity="1" />
+          <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="alumno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__instancia__id_cu__3E52440B">
+          <End Role="curso" Type="Self.curso" Multiplicity="1" />
+          <End Role="instancia" Type="Self.instancia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="curso">
+              <PropertyRef Name="codigo" />
+            </Principal>
+            <Dependent Role="instancia">
+              <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_in__4222D4EF">
+          <End Role="instancia" Type="Self.instancia" Multiplicity="1" />
+          <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="instancia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_instancia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="openSpaceComarcalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="alumno" EntityType="Self.alumno" />
+          <EntitySet Name="curso" EntityType="Self.curso" />
+          <EntitySet Name="empresa" EntityType="Self.empresa" />
+          <EntitySet Name="inscripcion" EntityType="Self.inscripcion" />
+          <EntitySet Name="instancia" EntityType="Self.instancia" />
+          <AssociationSet Name="FK__alumno__id_empre__398D8EEE" Association="Self.FK__alumno__id_empre__398D8EEE">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="alumno" EntitySet="alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_al__412EB0B6" Association="Self.FK__inscripci__id_al__412EB0B6">
+            <End Role="alumno" EntitySet="alumno" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__instancia__id_cu__3E52440B" Association="Self.FK__instancia__id_cu__3E52440B">
+            <End Role="curso" EntitySet="curso" />
+            <End Role="instancia" EntitySet="instancia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_in__4222D4EF" Association="Self.FK__inscripci__id_in__4222D4EF">
+            <End Role="instancia" EntitySet="instancia" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="open_space_comarcalModelStoreContainer" CdmEntityContainer="openSpaceComarcalEntities">
+          <EntitySetMapping Name="alumno">
+            <EntityTypeMapping TypeName="open_space_comarcalModel.alumno">
+              <MappingFragment StoreEntitySet="alumno">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dni_nie_pasp" ColumnName="dni_nie_pasp" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="curso">
+            <EntityTypeMapping TypeName="open_space_comarcalModel.curso">
+              <MappingFragment StoreEntitySet="curso">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="siglas" ColumnName="siglas" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empresa">
+            <EntityTypeMapping TypeName="open_space_comarcalModel.empresa">
+              <MappingFragment StoreEntitySet="empresa">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cif" ColumnName="cif" />
+                <ScalarProperty Name="siglas" ColumnName="siglas" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="inscripcion">
+            <EntityTypeMapping TypeName="open_space_comarcalModel.inscripcion">
+              <MappingFragment StoreEntitySet="inscripcion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+                <ScalarProperty Name="id_instancia" ColumnName="id_instancia" />
+                <ScalarProperty Name="fecha_inscripcion" ColumnName="fecha_inscripcion" />
+                <ScalarProperty Name="fecha_expedicion" ColumnName="fecha_expedicion" />
+                <ScalarProperty Name="apto" ColumnName="apto" />
+                <ScalarProperty Name="cod_factura" ColumnName="cod_factura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="instancia">
+            <EntityTypeMapping TypeName="open_space_comarcalModel.instancia">
+              <MappingFragment StoreEntitySet="instancia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+                <ScalarProperty Name="diploma" ColumnName="diploma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

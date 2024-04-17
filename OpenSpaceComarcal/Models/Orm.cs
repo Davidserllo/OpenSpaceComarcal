@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenSpaceComarcal.Models
 {
     public static class Orm
     {
-        public static open_spaceEntities bd = new open_spaceEntities();
+        public static openSpaceComarcalEntities bd = new openSpaceComarcalEntities();
 
         public static String MensajeError(SqlException sqlException)
         {

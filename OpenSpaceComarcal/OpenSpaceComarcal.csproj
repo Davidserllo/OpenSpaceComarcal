@@ -61,11 +61,11 @@
     <Compile Include="Alumnos.Designer.cs">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.cs">
+    <Compile Include="Empresas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="Empresas.Designer.cs">
+      <DependentUpon>Empresas.cs</DependentUpon>
     </Compile>
     <Compile Include="Cursos.cs">
       <SubType>Form</SubType>
@@ -73,11 +73,11 @@
     <Compile Include="Cursos.Designer.cs">
       <DependentUpon>Cursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Inscripcion.cs">
       <SubType>Form</SubType>
@@ -93,36 +93,40 @@
     </Compile>
     <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelOsc.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AlumnosOrm.cs" />
     <Compile Include="Models\ClientesOrm.cs" />
     <Compile Include="Models\curso.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelOsc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\empresa.cs">
+      <DependentUpon>ModelOsc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpresaOrm.cs" />
+    <Compile Include="Models\inscripcion.cs">
+      <DependentUpon>ModelOsc.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\InscripcionOrm.cs" />
     <Compile Include="Models\CursosOrm.cs" />
-    <Compile Include="Models\inscripcion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\instancia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelOsc.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\InstanciaOrm.cs" />
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\ModelOsc.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>ModelOsc.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.cs">
+    <Compile Include="Models\ModelOsc.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelOsc.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
+    <Compile Include="Models\ModelOsc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelOsc.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Orm.cs" />
     <Compile Include="Program.cs" />
@@ -130,17 +134,14 @@
     <EmbeddedResource Include="Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos.resx">
       <DependentUpon>Cursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.es.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
@@ -158,30 +159,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\ModelOsc.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelOsc.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Models\ModelOsc.edmx.diagram">
+      <DependentUpon>ModelOsc.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Alumnos.datasource" />
-    <None Include="Properties\DataSources\Clientes.datasource" />
-    <None Include="Properties\DataSources\Cursos.datasource" />
-    <None Include="Properties\DataSources\Home.datasource" />
-    <None Include="Properties\DataSources\Inscripcion.datasource" />
-    <None Include="Properties\DataSources\Instancia.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.curso.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.empresa.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.inscripcion.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.instancia.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.InstanciaOrm.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.open_spaceEntities.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.Orm.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\OpenSpaceComarcal.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,15 +189,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\ModelOsc.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelOsc.edmx</DependentUpon>
+      <LastGenOutput>ModelOsc.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\ModelOsc.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>ModelOsc.edmx</DependentUpon>
+      <LastGenOutput>ModelOsc.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\alumnos-icono.png" />
     <Content Include="Resources\clientes-icono.png" />
@@ -218,5 +208,6 @@
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

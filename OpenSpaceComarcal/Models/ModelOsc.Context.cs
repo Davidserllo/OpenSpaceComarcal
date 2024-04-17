@@ -13,10 +13,10 @@ namespace OpenSpaceComarcal.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class open_spaceEntities : DbContext
+    public partial class openSpaceComarcalEntities : DbContext
     {
-        public open_spaceEntities()
-            : base("name=open_spaceEntities")
+        public openSpaceComarcalEntities()
+            : base("name=openSpaceComarcalEntities")
         {
         }
     
@@ -27,6 +27,7 @@ namespace OpenSpaceComarcal.Models
     
         public virtual DbSet<alumno> alumno { get; set; }
         public virtual DbSet<curso> curso { get; set; }
+        public virtual DbSet<empresa> empresa { get; set; }
         public virtual DbSet<inscripcion> inscripcion { get; set; }
         public virtual DbSet<instancia> instancia { get; set; }
     }

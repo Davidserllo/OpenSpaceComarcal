@@ -12,19 +12,20 @@ namespace OpenSpaceComarcal.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class curso
+    public partial class empresa
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public curso()
+        public empresa()
         {
-            this.instancia = new HashSet<instancia>();
+            this.alumno = new HashSet<alumno>();
         }
     
-        public string codigo { get; set; }
+        public int id { get; set; }
+        public string cif { get; set; }
         public string siglas { get; set; }
         public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<instancia> instancia { get; set; }
+        public virtual ICollection<alumno> alumno { get; set; }
     }
 }

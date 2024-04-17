@@ -24,6 +24,7 @@ namespace OpenSpaceComarcal.Models
         public string id_curso { get; set; }
         public Nullable<System.DateTime> fecha_inicio { get; set; }
         public Nullable<System.DateTime> fecha_fin { get; set; }
+        public string diploma { get; set; }
     
         public virtual curso curso { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OpenSpaceComarcal.Models
 {
-    internal class InscripcionOrm
+    public static class InscripcionOrm
     {
         public static List<inscripcion> Select()
         {
@@ -17,6 +14,38 @@ namespace OpenSpaceComarcal.Models
 
             return _inscripcion;
         }
+        public static List<inscripcion> Select(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                return Orm.bd.inscripcion.OrderBy(a => a.id).ToList();
+            }
+
+            var query = Orm.bd.inscripcion
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.id_alumno.ToString().Contains(busqueda)
+                            || a.id_instancia.ToString().Contains(busqueda)
+                            || a.fecha_inscripcion.ToString().Contains(busqueda)
+                            || a.fecha_expedicion.ToString().Contains(busqueda)
+                            || a.apto.ToString().Contains(busqueda)
+                            || a.cod_factura.Contains(busqueda))
+                .OrderBy(a => a.id)
+                .ToList();
+
+            return query;
+        }
+
+        //public static List<string> SelectSigla(string id_instancia)
+        //{
+        //    List<string> siglaCurso = Orm.bd.curso
+        //        .Where(n => n.codigo == id_curso)
+        //        .OrderBy(n => n.siglas)
+        //        .Select(n => n.siglas)
+        //        .ToList();
+
+        //    return siglaCurso;
+        //}
+        
 
         public static String Insert(inscripcion _inscripcion)
         {
@@ -38,21 +67,24 @@ namespace OpenSpaceComarcal.Models
             return mensajeError;
         }
 
-        //public static String Update(alumno _alumno)
-        //{
-        //    String mensajeError = "";
+        public static String Update(inscripcion _inscripcion)
+        {
+            String mensajeError = "";
 
-        //    alumno alumnoAnterior = Orm.bd.alumno.Find(_alumno.dni);
+            inscripcion inscripcionAnterior = Orm.bd.inscripcion.Find(_inscripcion.id);
 
-        //    if (alumnoAnterior != null)
-        //    {
-        //        alumnoAnterior.nombre = _alumno.nombre;
-        //        alumnoAnterior.apellidos = _alumno.apellidos;
-        //        alumnoAnterior.telefono = _alumno.telefono;
+            if (inscripcionAnterior != null)
+            {
+                inscripcionAnterior.id_alumno = _inscripcion.id_alumno;
+                inscripcionAnterior.id_instancia = _inscripcion.id_instancia;
+                inscripcionAnterior.fecha_inscripcion = _inscripcion.fecha_inscripcion;
+                inscripcionAnterior.fecha_expedicion = _inscripcion.fecha_expedicion;
+                inscripcionAnterior.apto = _inscripcion.apto;
+                inscripcionAnterior.cod_factura = _inscripcion.cod_factura;
 
-        //        mensajeError = Orm.MySaveChanges();
-        //    }
-        //    return mensajeError;
-        //}
+                mensajeError = Orm.MySaveChanges();
+            }
+            return mensajeError;
+        }
     }
 }
