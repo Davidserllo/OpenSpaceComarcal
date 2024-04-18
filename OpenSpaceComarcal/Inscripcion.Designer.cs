@@ -240,6 +240,7 @@
             this.comboBoxInstancia.Size = new System.Drawing.Size(143, 21);
             this.comboBoxInstancia.TabIndex = 18;
             this.comboBoxInstancia.ValueMember = "id";
+            this.comboBoxInstancia.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInstancia_Format);
             // 
             // bindingSourceInstancia
             // 

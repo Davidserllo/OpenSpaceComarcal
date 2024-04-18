@@ -47,6 +47,17 @@ namespace OpenSpaceComarcal.Models
             return nombreAlumno;
         }
 
+        public static List<string> SelectCod(int id_alumno)
+        {
+            List<string> codAlumno = Orm.bd.alumno
+                .Where(n => n.id == id_alumno)
+                .OrderBy(n => n.dni_nie_pasp)
+                .Select(n => n.dni_nie_pasp)
+                .ToList();
+
+            return codAlumno;
+        }
+
 
         public static String Insert(alumno _alumno)
         {
