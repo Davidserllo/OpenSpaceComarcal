@@ -429,7 +429,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 31);
             this.button2.TabIndex = 25;
-            this.button2.Text = "Generar Diplomas";
+            this.button2.Text = "Diplomas";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Inscripcion
