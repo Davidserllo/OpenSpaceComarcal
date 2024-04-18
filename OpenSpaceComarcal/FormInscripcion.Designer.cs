@@ -55,6 +55,9 @@
             this.labelDNINIA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewInscripcion = new System.Windows.Forms.DataGridView();
+            this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idinstanciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -367,6 +370,29 @@
             this.dataGridViewInscripcion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInscripcion_CellFormatting);
             this.dataGridViewInscripcion.SelectionChanged += new System.EventHandler(this.dataGridViewInscripcion_SelectionChanged);
             // 
+            // bindingSourceInscipcion
+            // 
+            this.bindingSourceInscipcion.DataSource = typeof(OpenSpaceComarcal.Models.inscripcion);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 31);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Inscripción";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(660, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 31);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Diplomas";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -384,7 +410,7 @@
             // idinstanciaDataGridViewTextBoxColumn
             // 
             this.idinstanciaDataGridViewTextBoxColumn.DataPropertyName = "id_instancia";
-            this.idinstanciaDataGridViewTextBoxColumn.HeaderText = "Curso";
+            this.idinstanciaDataGridViewTextBoxColumn.HeaderText = "Curso Prg.";
             this.idinstanciaDataGridViewTextBoxColumn.Name = "idinstanciaDataGridViewTextBoxColumn";
             this.idinstanciaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -438,31 +464,24 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(322, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 31);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 20;
             this.label1.Text = "Inscripción";
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(660, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 31);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 25;
             this.button2.Text = "Generar Diplomas";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // skinEngineInscripción
-            // 
-            this.skinEngineInscripción.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineInscripción.SkinFile = "";
-            // 
-            // FormInscripcion
+            // Inscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -520,6 +539,8 @@
         private System.Windows.Forms.BindingSource bindingSourceInscipcion;
         private System.Windows.Forms.TextBox textBoxCodFactura;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.BindingSource bindingSourceAlumno;
+        private System.Windows.Forms.BindingSource bindingSourceInstancia;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinstanciaDataGridViewTextBoxColumn;
@@ -531,6 +552,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceAlumno;
         private System.Windows.Forms.BindingSource bindingSourceInstancia;
-        private Sunisoft.IrisSkin.SkinEngine skinEngineInscripción;
     }
 }
