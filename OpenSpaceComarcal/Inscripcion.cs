@@ -200,13 +200,13 @@ namespace OpenSpaceComarcal
                     e.Value = AlumnosOrm.SelectNombre(Convert.ToInt32(e.Value)).FirstOrDefault();
                 }
             }
-            //if (e.ColumnIndex == 2)
-            //{
-            //    if (e.Value != null)
-            //    {
-            //        e.Value = InscripcionOrm.SelectSigla(e.Value.ToString()).FirstOrDefault();
-            //    }
-            //}
+            if (e.ColumnIndex == 2)
+            {
+                if (e.Value != null)
+                {
+                    e.Value = CursosOrm.SelectSigla(InstanciaOrm.SelectIdCurso(Convert.ToInt32(e.Value)).FirstOrDefault()).FirstOrDefault();
+                }
+            }
         }
     }
 }
