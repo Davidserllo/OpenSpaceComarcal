@@ -71,6 +71,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(337, 12);
@@ -85,6 +86,9 @@
             this.dataGridViewAlumno.AllowUserToDeleteRows = false;
             this.dataGridViewAlumno.AllowUserToOrderColumns = true;
             this.dataGridViewAlumno.AllowUserToResizeRows = false;
+            this.dataGridViewAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewAlumno.AutoGenerateColumns = false;
             this.dataGridViewAlumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -174,6 +178,8 @@
             // 
             // BuscarAlumno
             // 
+            this.BuscarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarAlumno.Location = new System.Drawing.Point(660, 12);
             this.BuscarAlumno.Name = "BuscarAlumno";
             this.BuscarAlumno.Size = new System.Drawing.Size(106, 34);
@@ -262,6 +268,8 @@
             // 
             // buttonEliminarAlumno
             // 
+            this.buttonEliminarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarAlumno.ForeColor = System.Drawing.Color.IndianRed;
             this.buttonEliminarAlumno.Location = new System.Drawing.Point(660, 77);
             this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
@@ -273,6 +281,8 @@
             // 
             // buttonModificarAlumno
             // 
+            this.buttonModificarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModificarAlumno.Location = new System.Drawing.Point(660, 33);
             this.buttonModificarAlumno.Name = "buttonModificarAlumno";
             this.buttonModificarAlumno.Size = new System.Drawing.Size(106, 41);
@@ -283,6 +293,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.buttonLimpiar);
             this.groupBox1.Controls.Add(this.comboBoxEmpresa);
             this.groupBox1.Controls.Add(this.textBoxEmail);
@@ -360,6 +372,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBoxBuscador);
             this.groupBox2.Controls.Add(this.BuscarAlumno);
@@ -372,6 +386,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 21);
@@ -382,6 +398,8 @@
             // 
             // textBoxBuscador
             // 
+            this.textBoxBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscador.Location = new System.Drawing.Point(145, 19);
             this.textBoxBuscador.Name = "textBoxBuscador";
             this.textBoxBuscador.Size = new System.Drawing.Size(495, 20);

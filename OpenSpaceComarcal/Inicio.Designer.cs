@@ -50,6 +50,7 @@
             // 
             // buttonAlumnos
             // 
+            this.buttonAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAlumnos.BackColor = System.Drawing.SystemColors.Menu;
             this.buttonAlumnos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAlumnos.BackgroundImage")));
             this.buttonAlumnos.Cursor = System.Windows.Forms.Cursors.Default;
@@ -68,6 +69,7 @@
             // 
             // buttonInscripcion
             // 
+            this.buttonInscripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonInscripcion.BackColor = System.Drawing.SystemColors.Menu;
             this.buttonInscripcion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonInscripcion.BackgroundImage")));
             this.buttonInscripcion.Cursor = System.Windows.Forms.Cursors.Default;
@@ -86,6 +88,7 @@
             // 
             // buttonEmpresas
             // 
+            this.buttonEmpresas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonEmpresas.BackColor = System.Drawing.SystemColors.Menu;
             this.buttonEmpresas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEmpresas.BackgroundImage")));
             this.buttonEmpresas.Cursor = System.Windows.Forms.Cursors.Default;
@@ -104,6 +107,7 @@
             // 
             // buttonInstancia
             // 
+            this.buttonInstancia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonInstancia.BackColor = System.Drawing.SystemColors.Menu;
             this.buttonInstancia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonInstancia.BackgroundImage")));
             this.buttonInstancia.Cursor = System.Windows.Forms.Cursors.Default;
@@ -122,6 +126,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -157,6 +162,7 @@
             // 
             // pictureBoxAlumnos
             // 
+            this.pictureBoxAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxAlumnos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxAlumnos.Image = global::OpenSpaceComarcal.Properties.Resources.alumnos_icono;
             this.pictureBoxAlumnos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -169,6 +175,7 @@
             // 
             // pictureBoxClientes
             // 
+            this.pictureBoxClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxClientes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxClientes.Image = global::OpenSpaceComarcal.Properties.Resources.clientes_icono;
             this.pictureBoxClientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -181,6 +188,7 @@
             // 
             // pictureBoxInstancia
             // 
+            this.pictureBoxInstancia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxInstancia.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInstancia.Image = global::OpenSpaceComarcal.Properties.Resources.instancia_icono;
             this.pictureBoxInstancia.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -193,6 +201,7 @@
             // 
             // pictureBoxInscripcion
             // 
+            this.pictureBoxInscripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxInscripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInscripcion.Image = global::OpenSpaceComarcal.Properties.Resources.inscripcion_icono;
             this.pictureBoxInscripcion.ImeMode = System.Windows.Forms.ImeMode.NoControl;

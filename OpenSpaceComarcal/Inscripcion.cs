@@ -1,6 +1,9 @@
-﻿using OpenSpaceComarcal.Models;
+﻿using OpenSpaceComarcal.Libraries;
+using OpenSpaceComarcal.Models;
 using System;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
@@ -207,6 +210,37 @@ namespace OpenSpaceComarcal
             //        e.Value = InscripcionOrm.SelectSigla(e.Value.ToString()).FirstOrDefault();
             //    }
             //}
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            // Ejecuciomn del metodo Generarar diploma
+            //Diploma.GenerarDiploma();
+
+            // Ejecuciomn del metodo Generarar diploma
+            //Diploma.GenerarDiploma(
+            //    textBoxNombre.Text, textBoxApellidos.Text, textBoxDniNie.Text, "3327", "FCT33",
+            //    DateTime.Now, DateTime.Now.AddMonths(6), DateTime.Now.AddMonths(6), "43", "ffxd", "Puerto de Sagunto");
+
+            // Contador de milisegundos
+            //Stopwatch timeMeasure = new Stopwatch();
+            //timeMeasure.Start();
+            //int operacion = 10 / 4;
+
+            //// bucle para porbar velocidad de generacion de diplomas
+            //int counter = 0;
+            //while (counter < 20)
+            //{
+            //    Console.WriteLine($"Hello World! The counter is {counter}");
+            //    Diploma.GenerarDiploma(
+            //        counter + "Pedro David", "Serrano Llorca", "45803581R", "3327", "FCT33",
+            //        DateTime.Now, DateTime.Now.AddMonths(6), DateTime.Now.AddMonths(6), "43", "ffxd", "Puerto de Sagunto");
+            //    counter++;
+            //}
+            //timeMeasure.Stop();
+            //Console.WriteLine($"Tiempo: {timeMeasure.Elapsed.TotalMilliseconds} ms");
         }
     }
 }

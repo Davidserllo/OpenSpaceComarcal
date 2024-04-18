@@ -45,15 +45,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerInscripcion = new System.Windows.Forms.DateTimePicker();
             this.comboBoxInstancia = new System.Windows.Forms.ComboBox();
+            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxAlumno = new System.Windows.Forms.ComboBox();
+            this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.buttonModificarInscripcion = new System.Windows.Forms.Button();
             this.buttonEliminarInscripcion = new System.Windows.Forms.Button();
             this.buttonCrearInscripcion = new System.Windows.Forms.Button();
             this.labelDNINIA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewInscripcion = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idinstanciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,14 +64,14 @@
             this.alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instanciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -241,6 +241,10 @@
             this.comboBoxInstancia.TabIndex = 18;
             this.comboBoxInstancia.ValueMember = "id";
             // 
+            // bindingSourceInstancia
+            // 
+            this.bindingSourceInstancia.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
+            // 
             // comboBoxAlumno
             // 
             this.comboBoxAlumno.DataSource = this.bindingSourceAlumno;
@@ -251,6 +255,10 @@
             this.comboBoxAlumno.Size = new System.Drawing.Size(143, 21);
             this.comboBoxAlumno.TabIndex = 16;
             this.comboBoxAlumno.ValueMember = "id";
+            // 
+            // bindingSourceAlumno
+            // 
+            this.bindingSourceAlumno.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
             // 
             // buttonModificarInscripcion
             // 
@@ -335,25 +343,6 @@
             this.dataGridViewInscripcion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInscripcion_CellFormatting);
             this.dataGridViewInscripcion.SelectionChanged += new System.EventHandler(this.dataGridViewInscripcion_SelectionChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(322, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 31);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Inscripción";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(660, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 31);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Generar Diplomas";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -423,13 +412,25 @@
             // 
             this.bindingSourceInscipcion.DataSource = typeof(OpenSpaceComarcal.Models.inscripcion);
             // 
-            // bindingSourceAlumno
+            // label1
             // 
-            this.bindingSourceAlumno.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 31);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Inscripción";
             // 
-            // bindingSourceInstancia
+            // button2
             // 
-            this.bindingSourceInstancia.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
+            this.button2.Location = new System.Drawing.Point(660, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 31);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Generar Diplomas";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Inscripcion
             // 
@@ -451,10 +452,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

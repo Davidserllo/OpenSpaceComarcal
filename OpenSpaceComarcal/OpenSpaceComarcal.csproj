@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,10 +37,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\..\..\Recursos\Vista\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -53,6 +63,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Document.NET, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.3.0.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.3.0.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumnos.cs">
@@ -91,6 +107,7 @@
     <Compile Include="Instancia.Designer.cs">
       <DependentUpon>Instancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
       <DependentUpon>ModelOsc.tt</DependentUpon>
@@ -181,6 +198,71 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\TemasInterfaz\Carlmness\Calmness.ssk" />
+    <None Include="Resources\TemasInterfaz\Carlmness\CalmnessColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Carlmness\CalmnessColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Deep\DeepCyan.ssk" />
+    <None Include="Resources\TemasInterfaz\Deep\DeepGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\Deep\DeepOrange.ssk" />
+    <None Include="Resources\TemasInterfaz\Diamond\DiamondBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\Diamond\DiamondGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\Eighteen\Eighteen.ssk" />
+    <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\Emerald.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor3.ssk" />
+    <None Include="Resources\TemasInterfaz\Glass\GlassBrown.ssk" />
+    <None Include="Resources\TemasInterfaz\Glass\GlassGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\Glass\GlassOrange.ssk" />
+    <None Include="Resources\TemasInterfaz\Longhorn\Longhorn.ssk" />
+    <None Include="Resources\TemasInterfaz\MacOS\MacOS.ssk" />
+    <None Include="Resources\TemasInterfaz\Midsummer\Midsummer.ssk" />
+    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor3.ssk" />
+    <None Include="Resources\TemasInterfaz\MP10\MP10.ssk" />
+    <None Include="Resources\TemasInterfaz\MSN\MSN.ssk" />
+    <None Include="Resources\TemasInterfaz\Office2007\office2007.ssk" />
+    <None Include="Resources\TemasInterfaz\One\OneBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\One\OneCyan.ssk" />
+    <None Include="Resources\TemasInterfaz\One\OneGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\One\OneOrange.ssk" />
+    <None Include="Resources\TemasInterfaz\Page\Page.ssk" />
+    <None Include="Resources\TemasInterfaz\Page\PageColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Page\PageColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\RealOne\RealOne.ssk" />
+    <None Include="Resources\TemasInterfaz\Silver\Silver.ssk" />
+    <None Include="Resources\TemasInterfaz\Silver\SilverColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Silver\SilverColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Sports\SportsBlack.ssk" />
+    <None Include="Resources\TemasInterfaz\Sports\SportsBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\Sports\SportsCyan.ssk" />
+    <None Include="Resources\TemasInterfaz\Sports\SportsGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\Sports\SportsOrange.ssk" />
+    <None Include="Resources\TemasInterfaz\Steel\SteelBlack.ssk" />
+    <None Include="Resources\TemasInterfaz\Steel\SteelBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista1\vista1.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista1\vista1_green.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color1.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color2.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color3.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color4.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color5.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color6.ssk" />
+    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color7.ssk" />
+    <None Include="Resources\TemasInterfaz\Warm\Warm.ssk" />
+    <None Include="Resources\TemasInterfaz\Warm\WarmColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Warm\WarmColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\Warm\WarmColor3.ssk" />
+    <None Include="Resources\TemasInterfaz\Wave\Wave.ssk" />
+    <None Include="Resources\TemasInterfaz\Wave\WaveColor1.ssk" />
+    <None Include="Resources\TemasInterfaz\Wave\WaveColor2.ssk" />
+    <None Include="Resources\TemasInterfaz\WinXP\XPBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\WinXP\XPGreen.ssk" />
+    <None Include="Resources\TemasInterfaz\WinXP\XPOrange.ssk" />
+    <None Include="Resources\TemasInterfaz\WinXP\XPSilver.ssk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -207,7 +289,16 @@
     <Content Include="Resources\instancia-icono.png" />
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
+    <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>
