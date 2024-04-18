@@ -206,6 +206,7 @@ namespace OpenSpaceComarcal
             textBoxEmail.Text = "";
             comboBoxEmpresa.SelectedIndex = -1;
             dataGridViewAlumno.ClearSelection();
+            textBoxBuscador.Text = "";
         }
 
         private void dataGridViewAlumno_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

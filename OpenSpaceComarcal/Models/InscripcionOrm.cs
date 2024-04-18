@@ -35,17 +35,18 @@ namespace OpenSpaceComarcal.Models
             return query;
         }
 
-        //public static List<string> SelectSigla(string id_instancia)
-        //{
-        //    List<string> siglaCurso = Orm.bd.curso
-        //        .Where(n => n.codigo == id_curso)
-        //        .OrderBy(n => n.siglas)
-        //        .Select(n => n.siglas)
-        //        .ToList();
+        public static List<string> SelectFecha(int id_instancia)
+        {
+            List<string> siglaCurso = Orm.bd.instancia
+                .Where(n => n.id == id_instancia)
+                .OrderBy(n => n.fecha_inicio)
+                .AsEnumerable()
+                .Select(n => n.fecha_inicio.HasValue ? n.fecha_inicio.Value.ToString("yyyy-MM-dd") : "Error")
+                .ToList();
 
-        //    return siglaCurso;
-        //}
-        
+            return siglaCurso;
+        }
+
 
         public static String Insert(inscripcion _inscripcion)
         {

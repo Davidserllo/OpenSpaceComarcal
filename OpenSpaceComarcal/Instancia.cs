@@ -21,17 +21,15 @@ namespace OpenSpaceComarcal
             setToolTip();
         }
 
+        ToolTip toolTip1 = new ToolTip();
+
         private void setToolTip()
         {
-            ToolTip toolTip1 = new ToolTip();
-
-            // Configura el Tooltip
             toolTip1.AutoPopDelay = 2000;
             toolTip1.InitialDelay = 500;
             toolTip1.ReshowDelay = 500;
             toolTip1.ShowAlways = true;
 
-            // Establece el texto del Tooltip
             toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
         }
 
@@ -54,6 +52,7 @@ namespace OpenSpaceComarcal
                 dateTimePickerFechaInicio.Text = fila.Cells[2].Value.ToString();
                 dateTimePickerFechaFin.Text = fila.Cells[3].Value.ToString();
                 buttonSeleccionarDiploma.Text = fila.Cells[4].Value.ToString();
+                toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
             }
         }
         private void buttonActualizar_Click(object sender, System.EventArgs e)
@@ -205,6 +204,7 @@ namespace OpenSpaceComarcal
             buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
             dataGridViewCurso.ClearSelection();
             comboBoxCursosSiglas.SelectedIndex = -1;
+            textBoxBuscador.Text = "";
         }
 
         private void dataGridViewCurso_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

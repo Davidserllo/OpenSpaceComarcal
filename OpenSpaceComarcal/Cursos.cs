@@ -172,6 +172,8 @@ namespace OpenSpaceComarcal
             textBoxCodigo.Text = "";
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
+            textBoxBusqueda.Text = "";
+            dataGridViewCursos.ClearSelection();
         }
     }
 }

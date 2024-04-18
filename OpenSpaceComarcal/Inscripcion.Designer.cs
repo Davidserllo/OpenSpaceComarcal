@@ -240,6 +240,11 @@
             this.comboBoxInstancia.Size = new System.Drawing.Size(143, 21);
             this.comboBoxInstancia.TabIndex = 18;
             this.comboBoxInstancia.ValueMember = "id";
+            this.comboBoxInstancia.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInstancia_Format);
+            // 
+            // bindingSourceInstancia
+            // 
+            this.bindingSourceInstancia.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
             // 
             // bindingSourceInstancia
             // 
@@ -430,7 +435,6 @@
             this.button2.TabIndex = 25;
             this.button2.Text = "Generar Diplomas";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Inscripcion
             // 

@@ -34,6 +34,17 @@ namespace OpenSpaceComarcal.Models
             return query;
         }
 
+        public static List<string> SelectIdCurso(int id_instancia)
+        {
+            List<string> idCurso = Orm.bd.instancia
+                .Where(n => n.id == id_instancia)
+                .OrderBy(n => n.id)
+                .Select(n => n.id_curso)
+                .ToList();
+
+            return idCurso;
+        }
+
         public static String Insert(instancia _instancia)
         {
             String missatge = "";

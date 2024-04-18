@@ -192,6 +192,7 @@ namespace OpenSpaceComarcal
             dateTimePickerExpedicion.Value = DateTime.Now;
             dateTimePickerInscripcion.Value = DateTime.Now;
             textBoxCodFactura.Text = "";
+            textBoxBuscador.Text = "";
         }
 
         private void dataGridViewInscripcion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -200,16 +201,46 @@ namespace OpenSpaceComarcal
             {
                 if (e.Value != null)
                 {
-                    e.Value = AlumnosOrm.SelectNombre(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    string nombreAlumno = AlumnosOrm.SelectNombre(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    string codAlumno = AlumnosOrm.SelectCod(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    e.Value = nombreAlumno + " (" + codAlumno + ")";
                 }
             }
-            //if (e.ColumnIndex == 2)
-            //{
-            //    if (e.Value != null)
-            //    {
-            //        e.Value = InscripcionOrm.SelectSigla(e.Value.ToString()).FirstOrDefault();
-            //    }
-            //}
+            if (e.ColumnIndex == 2)
+            {
+                if (e.Value != null)
+                {
+                    string siglaCurso = CursosOrm.SelectSigla(
+                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(e.Value)).FirstOrDefault())
+                        .FirstOrDefault();
+                    string fechaPrograma = InscripcionOrm.SelectFecha(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    e.Value = siglaCurso + " (" + fechaPrograma + ")";
+                }
+            }
+            if (e.ColumnIndex == 5)
+            {
+                if ((bool)e.Value == true)
+                {
+                    e.Value = "✓";
+                }
+                else
+                {
+                    e.Value = "✗";
+                }
+            }
+        }
+
+        private void comboBoxInstancia_Format(object sender, ListControlConvertEventArgs e)
+        {
+            instancia _instancia = (instancia)e.ListItem;
+            string fecha = _instancia.fecha_inicio.HasValue
+                   ? _instancia.fecha_inicio.Value.ToString("yyyy/MM/dd")
+                   : "Error";
+            string siglaCurso = CursosOrm.SelectSigla(
+                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
+                        .FirstOrDefault();
+
+            e.Value = $"{siglaCurso} - ({fecha})  ";
         }
 
 
