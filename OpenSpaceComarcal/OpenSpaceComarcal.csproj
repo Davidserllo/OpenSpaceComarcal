@@ -83,7 +83,7 @@
     <Compile Include="Diploma.Designer.cs">
       <DependentUpon>Diploma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresas.cs">
+    <Compile Include="FormEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEmpresas.Designer.cs">
@@ -157,11 +157,11 @@
     <EmbeddedResource Include="FormAlumnos.resx">
       <DependentUpon>FormAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresas.resx">
-      <DependentUpon>Empresas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCursos.resx">
       <DependentUpon>FormCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpresas.resx">
+      <DependentUpon>FormEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>

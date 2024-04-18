@@ -70,7 +70,6 @@
             this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.skinEngineInscripción = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
@@ -550,7 +549,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codfacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bindingSourceAlumno;
-        private System.Windows.Forms.BindingSource bindingSourceInstancia;
     }
 }
