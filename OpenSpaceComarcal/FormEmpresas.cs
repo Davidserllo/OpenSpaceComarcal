@@ -72,7 +72,7 @@ namespace OpenSpaceComarcal
 
         private void buttonModificarEmpresa_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro de modificar la mepresa?", "Modificar Empresa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de modificar la empresa?", "Modificar Empresa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dialogResult == DialogResult.Yes)
             {
