@@ -189,6 +189,7 @@ namespace OpenSpaceComarcal
             dateTimePickerExpedicion.Value = DateTime.Now;
             dateTimePickerInscripcion.Value = DateTime.Now;
             textBoxCodFactura.Text = "";
+            textBoxBuscador.Text = "";
         }
 
         private void dataGridViewInscripcion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

@@ -173,6 +173,8 @@ namespace OpenSpaceComarcal
             textBoxCif.Text = "";
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
+            textBoxBusqueda.Text = "";
+            dataGridViewEmpresas.ClearSelection();
         }
     }
 }

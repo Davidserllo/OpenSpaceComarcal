@@ -205,6 +205,7 @@ namespace OpenSpaceComarcal
             buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
             dataGridViewCurso.ClearSelection();
             comboBoxCursosSiglas.SelectedIndex = -1;
+            textBoxBuscador.Text = "";
         }
 
         private void dataGridViewCurso_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
