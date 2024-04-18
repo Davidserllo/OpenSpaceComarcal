@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
-    public partial class Inscripcion : Form
+    public partial class FormInscripcion : Form
     {
-        public Inscripcion()
+        public FormInscripcion()
         {
             InitializeComponent();
         }

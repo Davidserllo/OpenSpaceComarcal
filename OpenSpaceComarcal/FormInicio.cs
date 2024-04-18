@@ -3,40 +3,40 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
-    public partial class Inicio : Form
+    public partial class FormInicio : Form
     {
-        public Inicio()
+        public FormInicio()
         {
             InitializeComponent();
         }
 
         private void buttonAlumnos_Click(object sender, EventArgs e)
         {
-            Alumnos ventanaAlumnos = new Alumnos();
+            FormAlumnos ventanaAlumnos = new FormAlumnos();
             ventanaAlumnos.Show();
         }
 
         private void buttonEmpresas_Click(object sender, EventArgs e)
         {
-            Empresas ventanaEmpresas = new Empresas();
+            FormEmpresas ventanaEmpresas = new FormEmpresas();
             ventanaEmpresas.Show();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Cursos ventanaCursos = new Cursos();
+            FormCursos ventanaCursos = new FormCursos();
             ventanaCursos.Show();
         }
 
         private void buttonInstancia_Click(object sender, EventArgs e)
         {
-            Instancia ventanaInstancia = new Instancia();
+            FormInstancia ventanaInstancia = new FormInstancia();
             ventanaInstancia.Show();
         }
 
         private void buttonInscripcion_Click(object sender, EventArgs e)
         {
-            Inscripcion ventanaInscripcion = new Inscripcion();
+            FormInscripcion ventanaInscripcion = new FormInscripcion();
             ventanaInscripcion.Show();
         }
     }

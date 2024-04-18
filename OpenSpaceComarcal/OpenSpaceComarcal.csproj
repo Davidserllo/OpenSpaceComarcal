@@ -71,41 +71,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumnos.cs">
+    <Compile Include="FormAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alumnos.Designer.cs">
-      <DependentUpon>Alumnos.cs</DependentUpon>
+    <Compile Include="FormAlumnos.Designer.cs">
+      <DependentUpon>FormAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresas.cs">
+    <Compile Include="FormEmpresas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empresas.Designer.cs">
-      <DependentUpon>Empresas.cs</DependentUpon>
+    <Compile Include="FormEmpresas.Designer.cs">
+      <DependentUpon>FormEmpresas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos.cs">
+    <Compile Include="FormCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos.Designer.cs">
-      <DependentUpon>Cursos.cs</DependentUpon>
+    <Compile Include="FormCursos.Designer.cs">
+      <DependentUpon>FormCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inscripcion.cs">
+    <Compile Include="FormInscripcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inscripcion.Designer.cs">
-      <DependentUpon>Inscripcion.cs</DependentUpon>
+    <Compile Include="FormInscripcion.Designer.cs">
+      <DependentUpon>FormInscripcion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instancia.cs">
+    <Compile Include="FormInstancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Instancia.Designer.cs">
-      <DependentUpon>Instancia.cs</DependentUpon>
+    <Compile Include="FormInstancia.Designer.cs">
+      <DependentUpon>FormInstancia.cs</DependentUpon>
     </Compile>
     <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
@@ -148,23 +148,23 @@
     <Compile Include="Models\Orm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Alumnos.resx">
-      <DependentUpon>Alumnos.cs</DependentUpon>
+    <EmbeddedResource Include="FormAlumnos.resx">
+      <DependentUpon>FormAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresas.resx">
-      <DependentUpon>Empresas.cs</DependentUpon>
+    <EmbeddedResource Include="FormEmpresas.resx">
+      <DependentUpon>FormEmpresas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos.resx">
-      <DependentUpon>Cursos.cs</DependentUpon>
+    <EmbeddedResource Include="FormCursos.resx">
+      <DependentUpon>FormCursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inscripcion.resx">
-      <DependentUpon>Inscripcion.cs</DependentUpon>
+    <EmbeddedResource Include="FormInscripcion.resx">
+      <DependentUpon>FormInscripcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instancia.resx">
-      <DependentUpon>Instancia.cs</DependentUpon>
+    <EmbeddedResource Include="FormInstancia.resx">
+      <DependentUpon>FormInstancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -290,6 +290,7 @@
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
     <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
+    <Content Include="Resources\TemasInterfaz\SERIAL.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

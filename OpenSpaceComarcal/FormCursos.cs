@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
-    public partial class Cursos : Form
+    public partial class FormCursos : Form
     {
-        public Cursos()
+        public FormCursos()
         {
             InitializeComponent();
         }

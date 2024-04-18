@@ -1,6 +1,6 @@
 ﻿namespace OpenSpaceComarcal
 {
-    partial class Inscripcion
+    partial class FormInscripcion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInscripcion));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
@@ -66,6 +67,7 @@
             this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.skinEngineInscripción = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
@@ -76,39 +78,46 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBoxBuscador);
             this.groupBox2.Controls.Add(this.buttonBuscarInscipcion);
             this.groupBox2.Location = new System.Drawing.Point(8, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(784, 52);
-            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscador";
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(14, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 16);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Cualquier campo";
             // 
             // textBoxBuscador
             // 
+            this.textBoxBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
             this.textBoxBuscador.Name = "textBoxBuscador";
             this.textBoxBuscador.Size = new System.Drawing.Size(472, 20);
-            this.textBoxBuscador.TabIndex = 16;
+            this.textBoxBuscador.TabIndex = 5;
             // 
             // buttonBuscarInscipcion
             // 
+            this.buttonBuscarInscipcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarInscipcion.Location = new System.Drawing.Point(652, 12);
             this.buttonBuscarInscipcion.Name = "buttonBuscarInscipcion";
             this.buttonBuscarInscipcion.Size = new System.Drawing.Size(113, 34);
-            this.buttonBuscarInscipcion.TabIndex = 0;
+            this.buttonBuscarInscipcion.TabIndex = 6;
             this.buttonBuscarInscipcion.Text = "Buscar Inscripción";
             this.buttonBuscarInscipcion.UseVisualStyleBackColor = true;
             this.buttonBuscarInscipcion.Click += new System.EventHandler(this.buttonBuscarInscipcion_Click);
@@ -118,13 +127,15 @@
             this.buttonActualizar.Location = new System.Drawing.Point(8, 12);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 31);
-            this.buttonActualizar.TabIndex = 23;
+            this.buttonActualizar.TabIndex = 0;
             this.buttonActualizar.Text = "Actualizar";
             this.buttonActualizar.UseVisualStyleBackColor = true;
             this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textBoxCodFactura);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -144,7 +155,7 @@
             this.groupBox1.Location = new System.Drawing.Point(8, 386);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(784, 130);
-            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de la Inscripción";
             // 
@@ -153,7 +164,7 @@
             this.textBoxCodFactura.Location = new System.Drawing.Point(374, 97);
             this.textBoxCodFactura.Name = "textBoxCodFactura";
             this.textBoxCodFactura.Size = new System.Drawing.Size(134, 20);
-            this.textBoxCodFactura.TabIndex = 28;
+            this.textBoxCodFactura.TabIndex = 20;
             // 
             // label7
             // 
@@ -162,7 +173,7 @@
             this.label7.Location = new System.Drawing.Point(260, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 16);
-            this.label7.TabIndex = 27;
+            this.label7.TabIndex = 19;
             this.label7.Text = "Cód. Factura";
             // 
             // label6
@@ -172,7 +183,7 @@
             this.label6.Location = new System.Drawing.Point(260, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 16);
-            this.label6.TabIndex = 26;
+            this.label6.TabIndex = 15;
             this.label6.Text = "F. Expedición";
             // 
             // dateTimePickerExpedicion
@@ -181,35 +192,38 @@
             this.dateTimePickerExpedicion.Location = new System.Drawing.Point(374, 65);
             this.dateTimePickerExpedicion.Name = "dateTimePickerExpedicion";
             this.dateTimePickerExpedicion.Size = new System.Drawing.Size(134, 20);
-            this.dateTimePickerExpedicion.TabIndex = 25;
+            this.dateTimePickerExpedicion.TabIndex = 16;
             // 
             // buttonLimpiar
             // 
+            this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLimpiar.Location = new System.Drawing.Point(526, 75);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(103, 34);
-            this.buttonLimpiar.TabIndex = 24;
+            this.buttonLimpiar.TabIndex = 23;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // checkBoxApto
             // 
+            this.checkBoxApto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxApto.AutoSize = true;
             this.checkBoxApto.Location = new System.Drawing.Point(100, 103);
             this.checkBoxApto.Name = "checkBoxApto";
             this.checkBoxApto.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxApto.TabIndex = 23;
+            this.checkBoxApto.TabIndex = 18;
             this.checkBoxApto.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(13, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 16);
-            this.label5.TabIndex = 22;
+            this.label5.TabIndex = 17;
             this.label5.Text = "Apto";
             // 
             // label2
@@ -219,7 +233,7 @@
             this.label2.Location = new System.Drawing.Point(262, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
-            this.label2.TabIndex = 21;
+            this.label2.TabIndex = 11;
             this.label2.Text = "F. Inscripción";
             // 
             // dateTimePickerInscripcion
@@ -228,23 +242,20 @@
             this.dateTimePickerInscripcion.Location = new System.Drawing.Point(374, 34);
             this.dateTimePickerInscripcion.Name = "dateTimePickerInscripcion";
             this.dateTimePickerInscripcion.Size = new System.Drawing.Size(134, 20);
-            this.dateTimePickerInscripcion.TabIndex = 20;
+            this.dateTimePickerInscripcion.TabIndex = 12;
             // 
             // comboBoxInstancia
             // 
+            this.comboBoxInstancia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxInstancia.DataSource = this.bindingSourceInstancia;
             this.comboBoxInstancia.DisplayMember = "id_curso";
             this.comboBoxInstancia.FormattingEnabled = true;
             this.comboBoxInstancia.Location = new System.Drawing.Point(100, 65);
             this.comboBoxInstancia.Name = "comboBoxInstancia";
             this.comboBoxInstancia.Size = new System.Drawing.Size(143, 21);
-            this.comboBoxInstancia.TabIndex = 18;
+            this.comboBoxInstancia.TabIndex = 14;
             this.comboBoxInstancia.ValueMember = "id";
             this.comboBoxInstancia.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInstancia_Format);
-            // 
-            // bindingSourceInstancia
-            // 
-            this.bindingSourceInstancia.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
             // 
             // bindingSourceInstancia
             // 
@@ -258,7 +269,7 @@
             this.comboBoxAlumno.Location = new System.Drawing.Point(100, 33);
             this.comboBoxAlumno.Name = "comboBoxAlumno";
             this.comboBoxAlumno.Size = new System.Drawing.Size(143, 21);
-            this.comboBoxAlumno.TabIndex = 16;
+            this.comboBoxAlumno.TabIndex = 10;
             this.comboBoxAlumno.ValueMember = "id";
             // 
             // bindingSourceAlumno
@@ -267,53 +278,58 @@
             // 
             // buttonModificarInscripcion
             // 
+            this.buttonModificarInscripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModificarInscripcion.Location = new System.Drawing.Point(649, 36);
             this.buttonModificarInscripcion.Name = "buttonModificarInscripcion";
             this.buttonModificarInscripcion.Size = new System.Drawing.Size(116, 34);
-            this.buttonModificarInscripcion.TabIndex = 0;
+            this.buttonModificarInscripcion.TabIndex = 22;
             this.buttonModificarInscripcion.Text = "Modificar Inscipción";
             this.buttonModificarInscripcion.UseVisualStyleBackColor = true;
             this.buttonModificarInscripcion.Click += new System.EventHandler(this.buttonModificarInscripcion_Click);
             // 
             // buttonEliminarInscripcion
             // 
+            this.buttonEliminarInscripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarInscripcion.ForeColor = System.Drawing.Color.IndianRed;
             this.buttonEliminarInscripcion.Location = new System.Drawing.Point(649, 75);
             this.buttonEliminarInscripcion.Name = "buttonEliminarInscripcion";
             this.buttonEliminarInscripcion.Size = new System.Drawing.Size(116, 34);
-            this.buttonEliminarInscripcion.TabIndex = 4;
+            this.buttonEliminarInscripcion.TabIndex = 24;
             this.buttonEliminarInscripcion.Text = "Eliminar Inscripción";
             this.buttonEliminarInscripcion.UseVisualStyleBackColor = true;
             this.buttonEliminarInscripcion.Click += new System.EventHandler(this.buttonEliminarInscripcion_Click);
             // 
             // buttonCrearInscripcion
             // 
+            this.buttonCrearInscripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCrearInscripcion.Location = new System.Drawing.Point(526, 36);
             this.buttonCrearInscripcion.Name = "buttonCrearInscripcion";
             this.buttonCrearInscripcion.Size = new System.Drawing.Size(103, 34);
-            this.buttonCrearInscripcion.TabIndex = 15;
+            this.buttonCrearInscripcion.TabIndex = 21;
             this.buttonCrearInscripcion.Text = "Nueva Inscripción";
             this.buttonCrearInscripcion.UseVisualStyleBackColor = true;
             this.buttonCrearInscripcion.Click += new System.EventHandler(this.buttonCrearInscripcion_Click);
             // 
             // labelDNINIA
             // 
+            this.labelDNINIA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDNINIA.AutoSize = true;
             this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDNINIA.Location = new System.Drawing.Point(14, 34);
             this.labelDNINIA.Name = "labelDNINIA";
             this.labelDNINIA.Size = new System.Drawing.Size(58, 16);
-            this.labelDNINIA.TabIndex = 5;
+            this.labelDNINIA.TabIndex = 9;
             this.labelDNINIA.Text = "Alumno";
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(13, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 16);
-            this.label4.TabIndex = 11;
+            this.label4.TabIndex = 13;
             this.label4.Text = "Curso Prg.";
             // 
             // dataGridViewInscripcion
@@ -322,6 +338,9 @@
             this.dataGridViewInscripcion.AllowUserToDeleteRows = false;
             this.dataGridViewInscripcion.AllowUserToOrderColumns = true;
             this.dataGridViewInscripcion.AllowUserToResizeRows = false;
+            this.dataGridViewInscripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInscripcion.AutoGenerateColumns = false;
             this.dataGridViewInscripcion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewInscripcion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -344,7 +363,7 @@
             this.dataGridViewInscripcion.RowHeadersWidth = 72;
             this.dataGridViewInscripcion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewInscripcion.Size = new System.Drawing.Size(784, 266);
-            this.dataGridViewInscripcion.TabIndex = 21;
+            this.dataGridViewInscripcion.TabIndex = 7;
             this.dataGridViewInscripcion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInscripcion_CellFormatting);
             this.dataGridViewInscripcion.SelectionChanged += new System.EventHandler(this.dataGridViewInscripcion_SelectionChanged);
             // 
@@ -419,24 +438,31 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(322, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 31);
-            this.label1.TabIndex = 20;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Inscripción";
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(660, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 31);
-            this.button2.TabIndex = 25;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Generar Diplomas";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Inscripcion
+            // skinEngineInscripción
+            // 
+            this.skinEngineInscripción.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineInscripción.SkinFile = "";
+            // 
+            // FormInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -447,10 +473,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewInscripcion);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Inscripcion";
+            this.Name = "FormInscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "INSCRIPCION - OPEN SPACE COMARCAL";
+            this.Text = "INSCRIPCIÓNES - OPEN SPACE COMARCAL";
             this.Load += new System.EventHandler(this.Inscripcion_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -504,5 +531,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceAlumno;
         private System.Windows.Forms.BindingSource bindingSourceInstancia;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineInscripción;
     }
 }

@@ -29,7 +29,7 @@ namespace OpenSpaceComarcal.Libraries
             using (DocX document = DocX.Load(PLANTILLAPATHWORD))
             {
                 // Reemplazar los marcadores de posición en la plantilla con los datos proporcionados
-                document.ReplaceText("<nombre>", nombreAlumno);
+                document.ReplaceText("<nombre>", nombreAlumno); //
                 document.ReplaceText("<apellidos>", apellidoAlumno);
                 document.ReplaceText("<num_cod>", codigoCurso);
                 document.ReplaceText("<f_inicio>", fechaInicio.ToString("dd/MM/yyyy"));

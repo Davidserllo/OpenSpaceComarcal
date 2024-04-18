@@ -1,6 +1,6 @@
 ﻿namespace OpenSpaceComarcal
 {
-    partial class Inicio
+    partial class FormInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.buttonAlumnos = new System.Windows.Forms.Button();
             this.buttonInscripcion = new System.Windows.Forms.Button();
             this.buttonEmpresas = new System.Windows.Forms.Button();
             this.buttonInstancia = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxAlumnos = new System.Windows.Forms.PictureBox();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
+            this.skinEngineInicio = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).BeginInit();
@@ -61,7 +62,7 @@
             this.buttonAlumnos.Location = new System.Drawing.Point(134, 211);
             this.buttonAlumnos.Name = "buttonAlumnos";
             this.buttonAlumnos.Size = new System.Drawing.Size(112, 28);
-            this.buttonAlumnos.TabIndex = 16;
+            this.buttonAlumnos.TabIndex = 0;
             this.buttonAlumnos.Text = "Alumnos";
             this.buttonAlumnos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAlumnos.UseVisualStyleBackColor = false;
@@ -80,7 +81,7 @@
             this.buttonInscripcion.Location = new System.Drawing.Point(555, 211);
             this.buttonInscripcion.Name = "buttonInscripcion";
             this.buttonInscripcion.Size = new System.Drawing.Size(112, 28);
-            this.buttonInscripcion.TabIndex = 15;
+            this.buttonInscripcion.TabIndex = 4;
             this.buttonInscripcion.Text = "Inscripcion";
             this.buttonInscripcion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonInscripcion.UseVisualStyleBackColor = false;
@@ -99,7 +100,7 @@
             this.buttonEmpresas.Location = new System.Drawing.Point(276, 211);
             this.buttonEmpresas.Name = "buttonEmpresas";
             this.buttonEmpresas.Size = new System.Drawing.Size(112, 28);
-            this.buttonEmpresas.TabIndex = 13;
+            this.buttonEmpresas.TabIndex = 2;
             this.buttonEmpresas.Text = "Empresas";
             this.buttonEmpresas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonEmpresas.UseVisualStyleBackColor = false;
@@ -118,7 +119,7 @@
             this.buttonInstancia.Location = new System.Drawing.Point(416, 211);
             this.buttonInstancia.Name = "buttonInstancia";
             this.buttonInstancia.Size = new System.Drawing.Size(112, 28);
-            this.buttonInstancia.TabIndex = 14;
+            this.buttonInstancia.TabIndex = 3;
             this.buttonInstancia.Text = "Cursos Prg.";
             this.buttonInstancia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonInstancia.UseVisualStyleBackColor = false;
@@ -139,16 +140,16 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
-            // toolStrip1
+            // toolStripInicio
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 18;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInicio.Name = "toolStripInicio";
+            this.toolStripInicio.Size = new System.Drawing.Size(800, 25);
+            this.toolStripInicio.TabIndex = 18;
+            this.toolStripInicio.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
@@ -212,7 +213,12 @@
             this.pictureBoxInscripcion.TabIndex = 22;
             this.pictureBoxInscripcion.TabStop = false;
             // 
-            // Inicio
+            // skinEngineInicio
+            // 
+            this.skinEngineInicio.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineInicio.SkinFile = "";
+            // 
+            // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,17 +229,19 @@
             this.Controls.Add(this.pictureBoxClientes);
             this.Controls.Add(this.pictureBoxInstancia);
             this.Controls.Add(this.pictureBoxInscripcion);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonAlumnos);
             this.Controls.Add(this.buttonInscripcion);
             this.Controls.Add(this.buttonEmpresas);
             this.Controls.Add(this.buttonInstancia);
-            this.Name = "Inicio";
-            this.Text = "INICIO - OPEN SPACE COMARCAL";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "OPEN SPACE COMARCAL";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.toolStripInicio.ResumeLayout(false);
+            this.toolStripInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).EndInit();
@@ -250,11 +258,12 @@
         private System.Windows.Forms.Button buttonEmpresas;
         private System.Windows.Forms.Button buttonInstancia;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStripInicio;
         private System.Windows.Forms.PictureBox pictureBoxAlumnos;
         private System.Windows.Forms.PictureBox pictureBoxClientes;
         private System.Windows.Forms.PictureBox pictureBoxInstancia;
         private System.Windows.Forms.PictureBox pictureBoxInscripcion;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineInicio;
     }
 }

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
-    public partial class Instancia : Form
+    public partial class FormInstancia : Form
     {
-        public Instancia()
+        public FormInstancia()
         {
             InitializeComponent();
         }
