@@ -37,7 +37,6 @@ namespace OpenSpaceComarcal
         private void Cursos_Load(object sender, EventArgs e)
         {
             bindingSourceCursos.DataSource = CursosOrm.Select();
-            actualizarTextBoxes();
         }
 
         private void buttonCrearCurso_Click(object sender, EventArgs e)

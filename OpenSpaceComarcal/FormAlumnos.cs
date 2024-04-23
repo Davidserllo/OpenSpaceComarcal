@@ -16,7 +16,6 @@ namespace OpenSpaceComarcal
         {
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-            actualizarTextBoxes();
         }
 
         private void actualizarTextBoxes()

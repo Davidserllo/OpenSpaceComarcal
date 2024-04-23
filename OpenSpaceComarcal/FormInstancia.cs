@@ -17,7 +17,6 @@ namespace OpenSpaceComarcal
         {
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceCursos.DataSource = CursosOrm.Select();
-            actualizarTextBoxes();
             setToolTip();
         }
 

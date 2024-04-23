@@ -35,6 +35,29 @@ namespace OpenSpaceComarcal.Models
             return query;
         }
 
+        public static List<inscripcion> SelectAvanzado(int alumnoId, int instanciaId, bool apto)
+        {
+            var query = Orm.bd.inscripcion.AsQueryable();
+
+            if (alumnoId != -1)
+            {
+                query = query.Where(i => i.id_alumno == alumnoId);
+            }
+
+            if (instanciaId != -1)
+            {
+                query = query.Where(i => i.id_instancia == instanciaId);
+            }
+
+            if (apto == true)
+            {
+                query = query.Where(i => i.apto == apto);
+            }
+
+            query = query.OrderBy(i => i.id);
+
+            return query.ToList();
+        }
         public static List<string> SelectFecha(int id_instancia)
         {
             List<string> siglaCurso = Orm.bd.instancia

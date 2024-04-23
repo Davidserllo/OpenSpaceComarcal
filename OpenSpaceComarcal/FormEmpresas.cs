@@ -37,7 +37,6 @@ namespace OpenSpaceComarcal
         private void Empresas_Load(object sender, EventArgs e)
         {
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-            actualizarTextBoxes();
         }
 
         private void buttonCrearEmpresa_Click(object sender, EventArgs e)

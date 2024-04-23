@@ -20,6 +20,13 @@ namespace OpenSpaceComarcal
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
+            iniciarPanelAvanzado();
+        }
+
+        private void iniciarPanelAvanzado()
+        {
+            comboBoxInstanciaBusqueda.SelectedIndex = -1;
+            comboBoxAlumnoBusqueda.SelectedIndex = -1;
         }
 
         private void actualizarTextBoxes()
@@ -193,6 +200,8 @@ namespace OpenSpaceComarcal
             dateTimePickerInscripcion.Value = DateTime.Now;
             textBoxCodFactura.Text = "";
             textBoxBuscador.Text = "";
+            comboBoxInstanciaBusqueda.SelectedIndex = -1;
+            comboBoxAlumnoBusqueda.SelectedIndex = -1;
         }
 
         private void dataGridViewInscripcion_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -230,18 +239,7 @@ namespace OpenSpaceComarcal
             }
         }
 
-        private void comboBoxInstancia_Format(object sender, ListControlConvertEventArgs e)
-        {
-            instancia _instancia = (instancia)e.ListItem;
-            string fecha = _instancia.fecha_inicio.HasValue
-                   ? _instancia.fecha_inicio.Value.ToString("yyyy/MM/dd")
-                   : "Error";
-            string siglaCurso = CursosOrm.SelectSigla(
-                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
-                        .FirstOrDefault();
 
-            e.Value = $"{siglaCurso} - ({fecha})  ";
-        }
 
         private void buttonGenerarDiplomas_Click(object sender, EventArgs e)
         {
@@ -277,6 +275,59 @@ namespace OpenSpaceComarcal
             //}
             //timeMeasure.Stop();
             //Console.WriteLine($"Tiempo: {timeMeasure.Elapsed.TotalMilliseconds} ms");
+        }
+
+
+        private void comboBoxInscripBusqueda_Format(object sender, ListControlConvertEventArgs e)
+        {
+            instancia _instancia = (instancia)e.ListItem;
+            string fecha = _instancia.fecha_inicio.HasValue
+                   ? _instancia.fecha_inicio.Value.ToString("yy/MM/dd")
+                   : "Error";
+            string siglaCurso = CursosOrm.SelectSigla(
+                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
+                        .FirstOrDefault();
+
+            e.Value = $"{siglaCurso} - ({fecha})  ";
+        }
+
+        private void comboBoxInstancia_Format(object sender, ListControlConvertEventArgs e)
+        {
+            instancia _instancia = (instancia)e.ListItem;
+            string fecha = _instancia.fecha_inicio.HasValue
+                   ? _instancia.fecha_inicio.Value.ToString("yy/MM/dd")
+                   : "Error";
+            string siglaCurso = CursosOrm.SelectSigla(
+                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
+                        .FirstOrDefault();
+
+            e.Value = $"{siglaCurso} - ({fecha})  ";
+        }
+
+        private void buttonBusquedaAvanzada_Click_1(object sender, EventArgs e)
+        {
+            int id_alumno;
+            int id_instancia;
+            if (comboBoxAlumnoBusqueda.SelectedValue == null)
+            {
+                id_alumno = -1;
+            }
+            else
+            {
+                id_alumno = (int)comboBoxAlumnoBusqueda.SelectedValue;
+            }
+
+            if (comboBoxInstanciaBusqueda.SelectedValue == null)
+            {
+                id_instancia = -1;
+            }
+            else
+            {
+                id_instancia = (int)comboBoxInstanciaBusqueda.SelectedValue;
+            }
+
+            bool apto = checkBoxAptoBusqueda.Checked;
+            bindingSourceInscipcion.DataSource = InscripcionOrm.SelectAvanzado(id_alumno, id_instancia, apto);
         }
     }
 }
