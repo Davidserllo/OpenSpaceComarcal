@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
-    public partial class Diploma : Form
+    public partial class FormRutaDiploma : Form
     {
-        public Diploma()
+        public FormRutaDiploma()
         {
             InitializeComponent();
         }

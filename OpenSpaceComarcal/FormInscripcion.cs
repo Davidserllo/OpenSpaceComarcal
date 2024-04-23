@@ -243,9 +243,14 @@ namespace OpenSpaceComarcal
             e.Value = $"{siglaCurso} - ({fecha})  ";
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonGenerarDiplomas_Click(object sender, EventArgs e)
         {
+
+            MessageBox.Show("Diploma generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            FormRutaDiploma formRutaDiploma = new FormRutaDiploma();
+            formRutaDiploma.Show();
 
             // Ejecuciomn del metodo Generarar diploma
             //Diploma.GenerarDiploma();

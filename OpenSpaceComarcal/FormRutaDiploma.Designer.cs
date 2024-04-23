@@ -1,6 +1,6 @@
 ﻿namespace OpenSpaceComarcal
 {
-    partial class Diploma
+    partial class FormRutaDiploma
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRutaDiploma));
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelNumeroDiplomas = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.buttonSeleccionarRuta = new System.Windows.Forms.Button();
             this.textBoxRutaDestino = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelNumeroDiplomas = new System.Windows.Forms.Label();
+            this.skinEngineDiploma = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +76,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
+            // labelNumeroDiplomas
+            // 
+            this.labelNumeroDiplomas.AutoSize = true;
+            this.labelNumeroDiplomas.Location = new System.Drawing.Point(171, 69);
+            this.labelNumeroDiplomas.Name = "labelNumeroDiplomas";
+            this.labelNumeroDiplomas.Size = new System.Drawing.Size(13, 13);
+            this.labelNumeroDiplomas.TabIndex = 32;
+            this.labelNumeroDiplomas.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Número de diplomas a generar:";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -110,25 +130,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Ruta destino:";
             // 
-            // label3
+            // skinEngineDiploma
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 13);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Número de diplomas a generar:";
+            this.skinEngineDiploma.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineDiploma.SkinFile = "";
             // 
-            // labelNumeroDiplomas
-            // 
-            this.labelNumeroDiplomas.AutoSize = true;
-            this.labelNumeroDiplomas.Location = new System.Drawing.Point(171, 69);
-            this.labelNumeroDiplomas.Name = "labelNumeroDiplomas";
-            this.labelNumeroDiplomas.Size = new System.Drawing.Size(13, 13);
-            this.labelNumeroDiplomas.TabIndex = 32;
-            this.labelNumeroDiplomas.Text = "0";
-            // 
-            // Diploma
+            // FormRutaDiploma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,8 +143,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Name = "Diploma";
-            this.Text = "Diploma";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormRutaDiploma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DIPLOMA - OPEN SPACE COMARCAL";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -156,5 +165,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelNumeroDiplomas;
         private System.Windows.Forms.Label label3;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineDiploma;
     }
 }

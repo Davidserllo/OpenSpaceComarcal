@@ -51,6 +51,42 @@ namespace OpenSpaceComarcal.Libraries
             //MessageBox.Show("Diploma de " + nombreAlumno + " generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public static void GenerarDiplomaRutaDestino(
+            string nombreAlumno, string apellidoAlumno, string dni, string numeroAlumno, string numeroFactura,
+            DateTime fechaInicio, DateTime fechaFin, DateTime fechaExpedicion, string codigoCurso, string numeroDiploma, string ciudad)
+        {
+
+            // Nombre del archivo
+            string nombreArchivo = $"{nombreAlumno}_{apellidoAlumno}_{dni}";
+            string rutaWord = Path.Combine(WORDFOLDER, $"{nombreArchivo}.docx");
+            string rutaPDF = Path.Combine(PDFFOLDER, $"{nombreArchivo}.pdf");
+
+            // Crear el documento Word usando la plantilla
+            using (DocX document = DocX.Load(PLANTILLAPATHWORD))
+            {
+                // Reemplazar los marcadores de posición en la plantilla con los datos proporcionados
+                document.ReplaceText("<nombre>", nombreAlumno); //
+                document.ReplaceText("<apellidos>", apellidoAlumno);
+                document.ReplaceText("<num_cod>", codigoCurso);
+                document.ReplaceText("<f_inicio>", fechaInicio.ToString("dd/MM/yyyy"));
+                document.ReplaceText("<f_fin>", fechaFin.ToString("dd/MM/yyyy"));
+                document.ReplaceText("<dni>", dni);
+                document.ReplaceText("<num_dip>", numeroDiploma);
+                document.ReplaceText("<num_cliente>", numeroAlumno);
+                document.ReplaceText("<num_fact>", numeroFactura); // La platilla tiene una separacion *SE DEBE CORREGIR*
+                document.ReplaceText("<ciudad>", ciudad);
+                document.ReplaceText("<f_exp>", fechaExpedicion.ToString("dd/MM/yyyy"));
+
+                // Guardar el documento Word
+                document.SaveAs(rutaWord);
+            }
+
+            // Convertir el documento Word a PDF
+            ConvertirWordAPdf(rutaWord, rutaPDF);
+
+            //MessageBox.Show("Diploma de " + nombreAlumno + " generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public static void ConvertirWordAPdf(string rutaArchivoWord, string rutaArchivoPdf)
         {
             Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
