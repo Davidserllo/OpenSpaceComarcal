@@ -1,4 +1,7 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Libraries;
+using OpenSpaceComarcal.Models;
+using OpenSpaceComarcal.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +44,18 @@ namespace OpenSpaceComarcal
 
         private void buttonGenerar_Click(object sender, EventArgs e)
         {
-
+            List<PersDiploma> diplomas = InscripcionOrm.SelectDatosDiploma(ids);
+            if (diplomas.Count > 0 && textBoxRutaDestino.Text != "")
+            {
+                int count = 0;
+                foreach (var diploma in diplomas)
+                {
+                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text, count);
+                    count++;
+                    Console.WriteLine($"Numero: {count}");
+                }
+            }
+            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,6 +34,49 @@ namespace OpenSpaceComarcal.Models
                 .ToList();
 
             return query;
+        }
+
+        public static List<PersDiploma> SelectDatosDiploma(List<int> listaDeIds)
+        {
+            // Primero, filtra las inscripciones por la lista de IDs
+            var query = Orm.bd.inscripcion
+                .Where(inscripcion => listaDeIds.Contains(inscripcion.id))
+                .Select(inscripcion => new
+                {
+                    // Información de la tabla Inscripcion
+                    inscripcion.cod_factura,
+                    inscripcion.fecha_expedicion,
+
+                    // Obtener información de la tabla Instancia
+                    inscripcion.instancia.curso.codigo,
+                    inscripcion.instancia.fecha_inicio,
+                    inscripcion.instancia.fecha_fin,
+                    inscripcion.instancia.diploma,
+
+                    // Obtener información de la tabla Alumno
+                    inscripcion.alumno.id,
+                    inscripcion.alumno.dni_nie_pasp,
+                    inscripcion.alumno.nombre,
+                    inscripcion.alumno.apellidos
+                })
+                .ToList();
+
+            // Mapear a una estructura más adecuada si es necesario
+            List<PersDiploma> resultados = query.Select(x => new PersDiploma
+            {
+                NumFactura = x.cod_factura,
+                FechaExpedicion = x.fecha_expedicion,
+                CodCurso = x.codigo,
+                FechaInicio = x.fecha_inicio,
+                FechaFin = x.fecha_fin,
+                AlumnoId = x.id,
+                AlumnoDNI = x.dni_nie_pasp,
+                AlumnoNombre = x.nombre,
+                AlumnoApellidos = x.apellidos,
+                Diploma = x.diploma,
+            }).ToList();
+
+            return resultados;
         }
 
         public static List<inscripcion> SelectAvanzado(int alumnoId, int instanciaId, bool apto)

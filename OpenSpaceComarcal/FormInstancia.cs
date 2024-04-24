@@ -222,7 +222,7 @@ namespace OpenSpaceComarcal
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "PowerPoint Presentations (*.ppt;*.pptx)|*.ppt;*.pptx"; 
+                openFileDialog.Filter = "Microsoft Word (*.docx)|*.docx"; 
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)

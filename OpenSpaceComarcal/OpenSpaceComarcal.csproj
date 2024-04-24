@@ -152,6 +152,7 @@
       <DependentUpon>ModelOsc.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Orm.cs" />
+    <Compile Include="Objects\PersDiploma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAlumnos.resx">
