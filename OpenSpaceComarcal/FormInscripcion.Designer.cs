@@ -36,6 +36,7 @@
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.buttonBuscarInscipcion = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.checkBoxAptoBusqueda = new System.Windows.Forms.CheckBox();
             this.comboBoxInstanciaBusqueda = new System.Windows.Forms.ComboBox();
@@ -140,6 +141,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.buttonBusquedaAvanzada);
             this.tabPage2.Controls.Add(this.checkBoxAptoBusqueda);
             this.tabPage2.Controls.Add(this.comboBoxInstanciaBusqueda);
@@ -151,6 +153,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Avanzado";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Por campo";
             // 
             // buttonBusquedaAvanzada
             // 
@@ -608,5 +622,6 @@
         private System.Windows.Forms.ComboBox comboBoxAlumnoBusqueda;
         private System.Windows.Forms.Button buttonBusquedaAvanzada;
         private System.Windows.Forms.CheckBox checkBoxAptoBusqueda;
+        private System.Windows.Forms.Label label1;
     }
 }

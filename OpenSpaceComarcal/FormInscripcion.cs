@@ -1,6 +1,7 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -243,12 +244,22 @@ namespace OpenSpaceComarcal
 
         private void buttonGenerarDiplomas_Click(object sender, EventArgs e)
         {
+            List<int> ids = new List<int>();
+            // Obtenemos la lista de ids y se la pasamos a la nueva ventana
+            foreach (DataGridViewRow row in dataGridViewInscripcion.Rows)
+            {
+                if (!row.IsNewRow) 
+                {
+                    int idInscripcion = Convert.ToInt32(row.Cells[0].Value);  
+                    ids.Add(idInscripcion);
+                }
+            }
 
-            MessageBox.Show("Diploma generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormRutaDiploma formRutaDiploma = new FormRutaDiploma(ids);
+            formRutaDiploma.ShowDialog();
 
 
-            FormRutaDiploma formRutaDiploma = new FormRutaDiploma();
-            formRutaDiploma.Show();
+            //MessageBox.Show("Diploma generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Ejecuciomn del metodo Generarar diploma
             //Diploma.GenerarDiploma();

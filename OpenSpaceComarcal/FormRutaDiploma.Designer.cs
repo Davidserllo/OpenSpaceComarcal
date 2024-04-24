@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRutaDiploma));
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonGenerar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelNumeroDiplomas = new System.Windows.Forms.Label();
@@ -42,14 +42,15 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonGenerar
             // 
-            this.button2.Location = new System.Drawing.Point(187, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 42);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Generar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonGenerar.Location = new System.Drawing.Point(187, 171);
+            this.buttonGenerar.Name = "buttonGenerar";
+            this.buttonGenerar.Size = new System.Drawing.Size(113, 42);
+            this.buttonGenerar.TabIndex = 26;
+            this.buttonGenerar.Text = "Generar";
+            this.buttonGenerar.UseVisualStyleBackColor = true;
+            this.buttonGenerar.Click += new System.EventHandler(this.buttonGenerar_Click);
             // 
             // label1
             // 
@@ -112,6 +113,7 @@
             this.buttonSeleccionarRuta.TabIndex = 29;
             this.buttonSeleccionarRuta.Text = "...";
             this.buttonSeleccionarRuta.UseVisualStyleBackColor = true;
+            this.buttonSeleccionarRuta.Click += new System.EventHandler(this.buttonSeleccionarRuta_Click);
             // 
             // textBoxRutaDestino
             // 
@@ -142,7 +144,7 @@
             this.ClientSize = new System.Drawing.Size(486, 224);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonGenerar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRutaDiploma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -156,7 +158,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonGenerar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxRutaDestino;
