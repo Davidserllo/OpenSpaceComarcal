@@ -39,6 +39,7 @@
             this.textBoxRutaDestino = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.skinEngineDiploma = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,11 +138,19 @@
             this.skinEngineDiploma.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineDiploma.SkinFile = "";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-3, -4);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(490, 10);
+            this.progressBar1.TabIndex = 29;
+            // 
             // FormRutaDiploma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 224);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGenerar);
@@ -168,5 +177,6 @@
         private System.Windows.Forms.Label labelNumeroDiplomas;
         private System.Windows.Forms.Label label3;
         private Sunisoft.IrisSkin.SkinEngine skinEngineDiploma;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

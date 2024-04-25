@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OpenSpaceComarcal
 {
@@ -20,6 +21,7 @@ namespace OpenSpaceComarcal
         {
             this.ids = ids;
             InitializeComponent();
+            progressBar1.Visible = false;
             labelNumeroDiplomas.Text = ids.Count.ToString();
         }
 
@@ -28,34 +30,43 @@ namespace OpenSpaceComarcal
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 folderDialog.Description = "Seleccione una carpeta para guardar el archivo";
-                folderDialog.ShowNewFolderButton = true;  // Permite crear nuevas carpetas
-                folderDialog.RootFolder = Environment.SpecialFolder.MyComputer;  // Carpeta raíz por defecto
+                folderDialog.ShowNewFolderButton = true; 
+                folderDialog.RootFolder = Environment.SpecialFolder.MyComputer;
 
                 // Mostrar el diálogo y obtener el resultado
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
                     string selectedPath = folderDialog.SelectedPath;
-                    MessageBox.Show($"Carpeta seleccionada: {selectedPath}");
+                    MessageBox.Show($"Carpeta seleccionada: {selectedPath}", "Ruta destino", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBoxRutaDestino.Text = selectedPath;
-                    // Puedes usar 'selectedPath' para guardar archivos o como necesites
                 }
             }
         }
-
+        
         private void buttonGenerar_Click(object sender, EventArgs e)
         {
+            buttonGenerar.Enabled = false;
             List<PersDiploma> diplomas = InscripcionOrm.SelectDatosDiploma(ids);
-            if (diplomas.Count > 0 && textBoxRutaDestino.Text != "")
+            if (diplomas.Count > 0 && !string.IsNullOrEmpty(textBoxRutaDestino.Text))
             {
-                int count = 0;
+                progressBar1.Visible = true;
+                progressBar1.Maximum = diplomas.Count;
+                progressBar1.Value = 0;
+
                 foreach (var diploma in diplomas)
                 {
-                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text, count);
-                    count++;
-                    Console.WriteLine($"Numero: {count}");
+                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text);
+
+                    progressBar1.Value += 1;
                 }
+                progressBar1.Visible = false;
+                MessageBox.Show("Se han creado los diplomas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+            else
+            {
+                MessageBox.Show("No ha puesto la ruta del destino o no hay alumnos seleccionados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            buttonGenerar.Enabled = true;
         }
     }
 }

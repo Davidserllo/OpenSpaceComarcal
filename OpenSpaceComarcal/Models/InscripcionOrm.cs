@@ -38,22 +38,21 @@ namespace OpenSpaceComarcal.Models
 
         public static List<PersDiploma> SelectDatosDiploma(List<int> listaDeIds)
         {
-            // Primero, filtra las inscripciones por la lista de IDs
             var query = Orm.bd.inscripcion
                 .Where(inscripcion => listaDeIds.Contains(inscripcion.id))
                 .Select(inscripcion => new
                 {
-                    // Información de la tabla Inscripcion
+                    // Inscripcion
                     inscripcion.cod_factura,
                     inscripcion.fecha_expedicion,
 
-                    // Obtener información de la tabla Instancia
+                    // Instancia
                     inscripcion.instancia.curso.codigo,
                     inscripcion.instancia.fecha_inicio,
                     inscripcion.instancia.fecha_fin,
                     inscripcion.instancia.diploma,
 
-                    // Obtener información de la tabla Alumno
+                    //Alumno
                     inscripcion.alumno.id,
                     inscripcion.alumno.dni_nie_pasp,
                     inscripcion.alumno.nombre,
@@ -61,7 +60,6 @@ namespace OpenSpaceComarcal.Models
                 })
                 .ToList();
 
-            // Mapear a una estructura más adecuada si es necesario
             List<PersDiploma> resultados = query.Select(x => new PersDiploma
             {
                 NumFactura = x.cod_factura,

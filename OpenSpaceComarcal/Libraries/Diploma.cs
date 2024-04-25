@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
+using Xceed.Document.NET;
 using Xceed.Words.NET;
 
 namespace OpenSpaceComarcal.Libraries
@@ -53,15 +54,18 @@ namespace OpenSpaceComarcal.Libraries
             //MessageBox.Show("Diploma de " + nombreAlumno + " generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static void generarDiplomaWord(PersDiploma diploma, string rutaDestino, int contador)
+        public static void generarDiplomaWord(PersDiploma diploma, string rutaDestino)
         {
             if (diploma.Diploma != "Seleccionar Diploma")
             {
+                int contador = Properties.Settings.Default.CONTADOR_DIPLOMAS;
+
                 string nombreArchivo = $"{contador}_{diploma.AlumnoNombre}_" +
                 $"{diploma.AlumnoApellidos}_" +
                 $"{diploma.AlumnoDNI}_" +
                 $"{diploma.CodCurso}";
                 string rutaDestinoCombinada = Path.Combine(rutaDestino, $"{nombreArchivo}.docx");
+
                 using (DocX document = DocX.Load(diploma.Diploma))
                 {
                     // Reemplazar los marcadores de posición en la plantilla con los datos proporcionados
@@ -80,6 +84,8 @@ namespace OpenSpaceComarcal.Libraries
                     // Guardar el documento Word
                     document.SaveAs(rutaDestinoCombinada);
                 }
+                Properties.Settings.Default.CONTADOR_DIPLOMAS = 1;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -107,7 +113,9 @@ namespace OpenSpaceComarcal.Libraries
                 document.ReplaceText("<num_cliente>", numeroAlumno);
                 document.ReplaceText("<num_fact>", numeroFactura); // La platilla tiene una separacion *SE DEBE CORREGIR*
                 document.ReplaceText("<ciudad>", ciudad);
+#pragma warning disable CS0618 // Type or member is obsolete
                 document.ReplaceText("<f_exp>", fechaExpedicion.ToString("dd/MM/yyyy"));
+#pragma warning restore CS0618 // Type or member is obsolete
 
                 // Guardar el documento Word
                 document.SaveAs(rutaWord);
