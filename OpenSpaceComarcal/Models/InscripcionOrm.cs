@@ -39,7 +39,7 @@ namespace OpenSpaceComarcal.Models
         public static List<PersDiploma> SelectDatosDiploma(List<int> listaDeIds)
         {
             var query = Orm.bd.inscripcion
-                .Where(inscripcion => listaDeIds.Contains(inscripcion.id))
+                .Where(inscripcion => listaDeIds.Contains(inscripcion.id) && inscripcion.apto == true)
                 .Select(inscripcion => new
                 {
                     // Inscripcion
