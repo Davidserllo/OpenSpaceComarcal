@@ -55,7 +55,7 @@ namespace OpenSpaceComarcal
 
                 foreach (var diploma in diplomas)
                 {
-                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text);
+                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text, checkBoxPDF.Checked);
 
                     progressBar1.Value += 1;
                 }

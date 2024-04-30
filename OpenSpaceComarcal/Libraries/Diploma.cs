@@ -3,6 +3,7 @@ using OpenSpaceComarcal.Objects;
 using System;
 using System.IO;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Xceed.Document.NET;
 using Xceed.Words.NET;
@@ -54,7 +55,7 @@ namespace OpenSpaceComarcal.Libraries
             //MessageBox.Show("Diploma de " + nombreAlumno + " generado correctamente", "Diplomas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static void generarDiplomaWord(PersDiploma diploma, string rutaDestino)
+        public static void generarDiplomaWord(PersDiploma diploma, string rutaDestino, bool saveAsPDF)
         {
             if (diploma.Diploma != "Seleccionar Diploma")
             {
@@ -83,6 +84,16 @@ namespace OpenSpaceComarcal.Libraries
 
                     // Guardar el documento Word
                     document.SaveAs(rutaDestinoCombinada);
+                }
+                if (saveAsPDF)
+                {
+                    string rutaCarpetaPDF = Path.Combine(rutaDestino, "PDF");
+                    string rutaPDF = Path.Combine(rutaCarpetaPDF, $"{nombreArchivo}.pdf");
+                    if (!Directory.Exists(rutaCarpetaPDF))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaPDF);
+                    }
+                    ConvertirWordAPdf(rutaDestinoCombinada, rutaPDF);
                 }
                 Properties.Settings.Default.CONTADOR_DIPLOMAS = 1;
                 Properties.Settings.Default.Save();
@@ -130,21 +141,16 @@ namespace OpenSpaceComarcal.Libraries
         public static void ConvertirWordAPdf(string rutaArchivoWord, string rutaArchivoPdf)
         {
             Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Document wordDoc = null;
             try
             {
                 wordApp.Visible = false;
 
                 // Abrir el archivo Word
-                Microsoft.Office.Interop.Word.Document wordDoc = wordApp.Documents.Open(rutaArchivoWord);
+                wordDoc = wordApp.Documents.Open(rutaArchivoWord, ReadOnly: false, Visible: false);
 
                 // Guardar el archivo Word como PDF
                 wordDoc.SaveAs2(rutaArchivoPdf, WdSaveFormat.wdFormatPDF);
-
-                // Cerrar el archivo Word
-                wordDoc.Close();
-
-                // Cerrar la aplicación de Word
-                wordApp.Quit();
             }
             catch (Exception ex)
             {
@@ -152,11 +158,15 @@ namespace OpenSpaceComarcal.Libraries
             }
             finally
             {
-                // Asegurarse de que se cierre la aplicación de Word
-                if (wordApp != null)
-                {
-                    wordApp.Quit();
-                }
+                // Cerrar el archivo Word
+                wordDoc?.Close(false);
+                Marshal.ReleaseComObject(wordDoc);
+
+                // Cerrar la aplicación de Word
+                wordApp.Quit();
+                Marshal.ReleaseComObject(wordApp);
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
             }
         }
 

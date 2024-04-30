@@ -34,7 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelNumeroDiplomas = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxPDF = new System.Windows.Forms.CheckBox();
             this.buttonSeleccionarRuta = new System.Windows.Forms.Button();
             this.textBoxRutaDestino = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             // 
             this.groupBox1.Controls.Add(this.labelNumeroDiplomas);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkBoxPDF);
             this.groupBox1.Controls.Add(this.buttonSeleccionarRuta);
             this.groupBox1.Controls.Add(this.textBoxRutaDestino);
             this.groupBox1.Controls.Add(this.label2);
@@ -96,15 +96,15 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Número de diplomas a generar:";
             // 
-            // checkBox1
+            // checkBoxPDF
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(323, 68);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 17);
-            this.checkBox1.TabIndex = 30;
-            this.checkBox1.Text = "Generar PDF";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxPDF.AutoSize = true;
+            this.checkBoxPDF.Location = new System.Drawing.Point(323, 68);
+            this.checkBoxPDF.Name = "checkBoxPDF";
+            this.checkBoxPDF.Size = new System.Drawing.Size(88, 17);
+            this.checkBoxPDF.TabIndex = 30;
+            this.checkBoxPDF.Text = "Generar PDF";
+            this.checkBoxPDF.UseVisualStyleBackColor = true;
             // 
             // buttonSeleccionarRuta
             // 
@@ -173,7 +173,7 @@
         private System.Windows.Forms.TextBox textBoxRutaDestino;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonSeleccionarRuta;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxPDF;
         private System.Windows.Forms.Label labelNumeroDiplomas;
         private System.Windows.Forms.Label label3;
         private Sunisoft.IrisSkin.SkinEngine skinEngineDiploma;
