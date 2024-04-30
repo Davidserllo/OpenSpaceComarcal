@@ -53,6 +53,7 @@
             this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.buttonActualizarCursos = new System.Windows.Forms.Button();
+            this.skinEngineCursos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
@@ -311,7 +312,12 @@
             this.buttonActualizarCursos.UseVisualStyleBackColor = true;
             this.buttonActualizarCursos.Click += new System.EventHandler(this.buttonActualizarCursos_Click);
             // 
-            // Cursos
+            // skinEngineCursos
+            // 
+            this.skinEngineCursos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineCursos.SkinFile = "";
+            // 
+            // FormCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +331,7 @@
             this.Controls.Add(this.labelCursos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Cursos";
+            this.Name = "FormCursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CURSOS - OPEN SPACE COMARCAL";
             this.Load += new System.EventHandler(this.Cursos_Load);
@@ -370,5 +376,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineCursos;
     }
 }

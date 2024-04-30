@@ -113,6 +113,7 @@
     <Compile Include="FormInstancia.Designer.cs">
       <DependentUpon>FormInstancia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\Apariencia.cs" />
     <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
@@ -292,7 +293,9 @@
       <LastGenOutput>ModelOsc.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\alumnos-icono.png" />
+    <None Include="Resources\check-icono.png" />
     <Content Include="Resources\clientes-icono.png" />
+    <None Include="Resources\configuracion-icono.png" />
     <Content Include="Resources\curso-icono.png" />
     <Content Include="Resources\fondo_home.jpg" />
     <Content Include="Resources\inscripcion-icono.png" />

@@ -1,4 +1,5 @@
-﻿using OpenSpaceComarcal.Models;
+﻿using OpenSpaceComarcal.Libraries;
+using OpenSpaceComarcal.Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace OpenSpaceComarcal
         public FormAlumnos()
         {
             InitializeComponent();
+            Apariencia.AplicarApariencia(skinEngineAlumnos);
         }
 
         private void Alumnos_Load(object sender, EventArgs e)

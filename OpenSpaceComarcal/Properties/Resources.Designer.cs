@@ -73,9 +73,29 @@ namespace OpenSpaceComarcal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_icono {
+            get {
+                object obj = ResourceManager.GetObject("check_icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clientes_icono {
             get {
                 object obj = ResourceManager.GetObject("clientes-icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap configuracion_icono {
+            get {
+                object obj = ResourceManager.GetObject("configuracion_icono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
