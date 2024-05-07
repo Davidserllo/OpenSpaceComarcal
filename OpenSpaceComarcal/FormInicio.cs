@@ -1,12 +1,21 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
     public partial class FormInicio : Form
     {
-        public static String nomApariencia;
+
+        private FormLoading loading;
+        private static String nomApariencia;
+        private static bool AcessoFormCursos = true;
+        private static bool AcessoFormAlumnos = true;
+        private static bool AcessoFormEmpresas = true;
+        private static bool AcessoFormInstancia = true;
+        private static bool AcessoFormInscripcion = true;
         public FormInicio()
         {
             InitializeComponent();
@@ -51,34 +60,34 @@ namespace OpenSpaceComarcal
             }
         }
 
-        private void buttonAlumnos_Click(object sender, EventArgs e)
+        private async void buttonAlumnos_Click(object sender, EventArgs e)
         {
-            FormAlumnos ventanaAlumnos = new FormAlumnos();
-            ventanaAlumnos.Show();
+            OpenForm<FormAlumnos>(AcessoFormAlumnos);
+            AcessoFormAlumnos = false;
         }
 
         private void buttonEmpresas_Click(object sender, EventArgs e)
         {
-            FormEmpresas ventanaEmpresas = new FormEmpresas();
-            ventanaEmpresas.Show();
+            OpenForm<FormEmpresas>(AcessoFormEmpresas);
+            AcessoFormEmpresas = false;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            FormCursos ventanaCursos = new FormCursos();
-            ventanaCursos.Show();
+            OpenForm<FormCursos>(AcessoFormCursos);
+            AcessoFormCursos = false;
         }
 
         private void buttonInstancia_Click(object sender, EventArgs e)
         {
-            FormInstancia ventanaInstancia = new FormInstancia();
-            ventanaInstancia.Show();
+            OpenForm<FormInstancia>(AcessoFormInstancia);
+            AcessoFormInstancia = false;
         }
 
         private void buttonInscripcion_Click(object sender, EventArgs e)
         {
-            FormInscripcion ventanaInscripcion = new FormInscripcion();
-            ventanaInscripcion.Show();
+            OpenForm<FormInscripcion>(AcessoFormInscripcion);
+            AcessoFormInscripcion = false;
         }
 
         private void toolStripMenuEmeraldCyan_Click(object sender, EventArgs e)
@@ -111,6 +120,44 @@ namespace OpenSpaceComarcal
             nomApariencia = "EmeraldBrown.ssk";
             Apariencia.CambiarApariencia(skinEngineInicio, nomApariencia);
             CheckTema(Properties.Settings.Default.NomApariencia);
+        }
+
+        // Método para llamar a loading y abrir el formulario
+        private async void OpenForm<T>(bool accessPermission) where T : Form, new()
+        {
+            if (accessPermission)
+            {
+                loading = new FormLoading();
+                loading.Show();
+
+                await Task.Delay(2000); // Timer de 2s
+
+                T form = new T();
+                form.Show();
+
+                loading.Close();
+                loading.Dispose();
+            }
+            else
+            {
+                T form = new T();
+                form.Show();
+            }
+        }
+
+        private void ShowLoading()
+        {
+            loading = new FormLoading();
+            loading.Show();
+        }
+
+        private void HideLoading()
+        {
+            if (loading != null && !loading.IsDisposed)
+            {
+                loading.Close();
+                loading.Dispose();
+            }
         }
 
     }

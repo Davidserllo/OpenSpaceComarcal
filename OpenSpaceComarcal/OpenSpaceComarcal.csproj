@@ -97,6 +97,12 @@
     <Compile Include="FormAlumnos.Designer.cs">
       <DependentUpon>FormAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRutaDiploma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     <EmbeddedResource Include="FormInstancia.resx">
       <DependentUpon>FormInstancia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRutaDiploma.resx">
       <DependentUpon>FormRutaDiploma.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +290,13 @@
     <Content Include="Resources\fondo_home.jpg" />
     <Content Include="Resources\inscripcion-icono.png" />
     <Content Include="Resources\instancia-icono.png" />
+    <None Include="Resources\loading_icono %281%29.gif" />
+    <None Include="Resources\loading_icono %282%29.gif" />
+    <None Include="Resources\loading_icono %283%29.gif" />
+    <None Include="Resources\loading_icono %284%29.gif" />
+    <None Include="Resources\loading_icono %285%29.gif" />
+    <None Include="Resources\loading_icono %286%29.gif" />
+    <None Include="Resources\loading_icono %287%29.gif" />
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
     <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
