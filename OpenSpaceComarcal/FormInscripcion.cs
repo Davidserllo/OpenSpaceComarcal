@@ -14,6 +14,7 @@ namespace OpenSpaceComarcal
         public FormInscripcion()
         {
             InitializeComponent();
+            Apariencia.AplicarApariencia(skinEngineinscripcion);
         }
 
         private void Inscripcion_Load(object sender, EventArgs e)

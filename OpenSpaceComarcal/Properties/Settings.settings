@@ -2,8 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OpenSpaceComarcal.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="CONTADOR_DIPLOMAS" Type="System.Int32" Scope="Application">
+    <Setting Name="CONTADOR_DIPLOMAS" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="NomApariencia" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EmeraldCyan.ssk</Value>
     </Setting>
   </Settings>
 </SettingsFile>

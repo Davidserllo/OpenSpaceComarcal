@@ -74,6 +74,7 @@
             this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
             this.labelInscripcion = new System.Windows.Forms.Label();
             this.buttonGenerarDiplomas = new System.Windows.Forms.Button();
+            this.skinEngineinscripcion = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -545,6 +546,11 @@
             this.buttonGenerarDiplomas.UseVisualStyleBackColor = true;
             this.buttonGenerarDiplomas.Click += new System.EventHandler(this.buttonGenerarDiplomas_Click);
             // 
+            // skinEngineinscripcion
+            // 
+            this.skinEngineinscripcion.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineinscripcion.SkinFile = "";
+            // 
             // FormInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,5 +629,6 @@
         private System.Windows.Forms.Button buttonBusquedaAvanzada;
         private System.Windows.Forms.CheckBox checkBoxAptoBusqueda;
         private System.Windows.Forms.Label label1;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineinscripcion;
     }
 }

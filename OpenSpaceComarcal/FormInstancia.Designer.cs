@@ -59,6 +59,7 @@
             this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inscripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCursosProgramados = new System.Windows.Forms.Label();
+            this.skinEngineCursosProgramados = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBoxInfoCurso.SuspendLayout();
@@ -370,6 +371,11 @@
             this.labelCursosProgramados.TabIndex = 1;
             this.labelCursosProgramados.Text = "Cursos Programados";
             // 
+            // skinEngineCursosProgramados
+            // 
+            this.skinEngineCursosProgramados.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineCursosProgramados.SkinFile = "";
+            // 
             // FormInstancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn inscripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceCursos;
         private System.Windows.Forms.Button buttonLimpiar;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineCursosProgramados;
     }
 }

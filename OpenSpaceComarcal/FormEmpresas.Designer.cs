@@ -47,13 +47,14 @@
             this.textBoxCif = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
-            this.labelCursos = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
@@ -268,17 +269,6 @@
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
             // 
-            // labelCursos
-            // 
-            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCursos.AutoSize = true;
-            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(203, 13);
-            this.labelCursos.Name = "labelCursos";
-            this.labelCursos.Size = new System.Drawing.Size(144, 31);
-            this.labelCursos.TabIndex = 1;
-            this.labelCursos.Text = "Empresas";
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -318,6 +308,22 @@
             // bindingSourceEmpresa
             // 
             this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
+            // 
+            // labelCursos
+            // 
+            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(203, 13);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(144, 31);
+            this.labelCursos.TabIndex = 1;
+            this.labelCursos.Text = "Empresas";
+            // 
+            // skinEngineEmpresas
+            // 
+            this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineEmpresas.SkinFile = "";
             // 
             // FormEmpresas
             // 
@@ -372,5 +378,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn siglasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alumnoDataGridViewTextBoxColumn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineEmpresas;
     }
 }

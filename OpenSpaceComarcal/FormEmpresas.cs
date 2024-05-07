@@ -1,4 +1,5 @@
-﻿using OpenSpaceComarcal.Models;
+﻿using OpenSpaceComarcal.Libraries;
+using OpenSpaceComarcal.Models;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +10,7 @@ namespace OpenSpaceComarcal
         public FormEmpresas()
         {
             InitializeComponent();
+            Apariencia.AplicarApariencia(skinEngineEmpresas);
         }
 
         private void actualizarTextBoxes()
