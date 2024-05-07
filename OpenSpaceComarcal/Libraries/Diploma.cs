@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
 using Xceed.Document.NET;
 using Xceed.Words.NET;
@@ -30,14 +31,14 @@ namespace OpenSpaceComarcal.Libraries
                     document.ReplaceText("<nombre>", diploma.AlumnoNombre); //
                     document.ReplaceText("<apellidos>", diploma.AlumnoApellidos);
                     document.ReplaceText("<num_cod>", diploma.CodCurso);
-                    document.ReplaceText("<f_inicio>", diploma.FechaInicio.ToString());
-                    document.ReplaceText("<f_fin>", diploma.FechaFin.ToString());
+                    document.ReplaceText("<f_inicio>", diploma.FechaInicio.HasValue ? diploma.FechaInicio.Value.ToString("dd/MM/yyyy") : "");
+                    document.ReplaceText("<f_fin>", diploma.FechaFin.HasValue ? diploma.FechaFin.Value.ToString("dd/MM/yyyy") : "");
                     document.ReplaceText("<dni>", diploma.AlumnoDNI);
                     document.ReplaceText("<num_dip>", contador.ToString());
-                    document.ReplaceText("<num_cliente>", diploma.AlumnoDNI);
-                    document.ReplaceText("num_fact", diploma.NumFactura); // La platilla tiene una separacion *SE DEBE CORREGIR*
+                    document.ReplaceText("<num_cliente>", diploma.EmpresaId);
+                    document.ReplaceText("num_fact", diploma.NumFactura);
                     document.ReplaceText("<ciudad>", diploma.Ciudad);
-                    document.ReplaceText("<f_exp>", diploma.FechaExpedicion.ToString());
+                    document.ReplaceText("<f_exp>", diploma.FechaExpedicion.HasValue ? diploma.FechaExpedicion.Value.ToString("dd/MM/yyyy") : "");
 
                     // Guardar el documento Word
                     document.SaveAs(rutaDestinoCombinada);
@@ -59,31 +60,41 @@ namespace OpenSpaceComarcal.Libraries
 
         public static void ConvertirWordAPdf(string rutaArchivoWord, string rutaArchivoPdf)
         {
-            Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Application wordApp = null;
             Microsoft.Office.Interop.Word.Document wordDoc = null;
+
             try
             {
-                wordApp.Visible = false;
+                wordApp = new Microsoft.Office.Interop.Word.Application { Visible = false };
 
-                // Abrir el archivo Word
-                wordDoc = wordApp.Documents.Open(rutaArchivoWord, ReadOnly: false, Visible: false);
-
-                // Guardar el archivo Word como PDF
-                wordDoc.SaveAs2(rutaArchivoPdf, WdSaveFormat.wdFormatPDF);
+                wordDoc = wordApp.Documents.Open(rutaArchivoWord, ReadOnly: true, Visible: false);
+                wordDoc.SaveAs2(rutaArchivoPdf, Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatPDF);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al convertir el archivo Word a PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al convertir Word a PDF: " + ex.Message);
             }
             finally
             {
-                // Cerrar el archivo Word
-                wordDoc?.Close(false);
-                Marshal.ReleaseComObject(wordDoc);
+                if (wordDoc != null)
+                {
+                    wordDoc.Close(false);
+                    Marshal.ReleaseComObject(wordDoc);
+                    wordDoc = null;
+                }
 
-                // Cerrar la aplicación de Word
-                wordApp.Quit();
-                Marshal.ReleaseComObject(wordApp);
+                if (wordApp != null)
+                {
+                    wordApp.Quit();
+                    Marshal.ReleaseComObject(wordApp);
+                    wordApp = null;
+                }
+
+                // Recolectar basura inmediatamente después de liberar recursos
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                // Realizar segunda recolección para asegurar la limpieza de los RCWs
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
             }

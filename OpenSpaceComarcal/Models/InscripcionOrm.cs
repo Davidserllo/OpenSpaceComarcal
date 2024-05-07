@@ -56,7 +56,8 @@ namespace OpenSpaceComarcal.Models
                     inscripcion.alumno.id,
                     inscripcion.alumno.dni_nie_pasp,
                     inscripcion.alumno.nombre,
-                    inscripcion.alumno.apellidos
+                    inscripcion.alumno.apellidos,
+                    inscripcion.alumno.id_empresa
                 })
                 .ToList();
 
@@ -68,6 +69,7 @@ namespace OpenSpaceComarcal.Models
                 FechaInicio = x.fecha_inicio,
                 FechaFin = x.fecha_fin,
                 AlumnoId = x.id,
+                EmpresaId = x.id_empresa.ToString(),
                 AlumnoDNI = x.dni_nie_pasp,
                 AlumnoNombre = x.nombre,
                 AlumnoApellidos = x.apellidos,

@@ -18,6 +18,7 @@ namespace OpenSpaceComarcal.Objects
         public string AlumnoApellidos { get; set; }
         public string Ciudad {  get; set; }
         public string NumFactura { get; set; }
+        public string EmpresaId { get; set; }
         public DateTime? FechaExpedicion { get; set; }
         public string CodCurso { get; set; }
         public DateTime? FechaInicio { get; set; }
@@ -28,6 +29,9 @@ namespace OpenSpaceComarcal.Objects
         public PersDiploma()
         {
             Ciudad = CIUDAD;
+            EmpresaId = "P001";
+
+            
         }
     }
 }
