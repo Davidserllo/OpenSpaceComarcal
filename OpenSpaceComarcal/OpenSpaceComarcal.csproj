@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +50,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-oscomarcal.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -49,7 +67,9 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -209,41 +229,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\TemasInterfaz\Carlmness\Calmness.ssk" />
-    <None Include="Resources\TemasInterfaz\Carlmness\CalmnessColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Carlmness\CalmnessColor2.ssk" />
     <None Include="Resources\TemasInterfaz\Deep\DeepCyan.ssk" />
     <None Include="Resources\TemasInterfaz\Deep\DeepGreen.ssk" />
     <None Include="Resources\TemasInterfaz\Deep\DeepOrange.ssk" />
-    <None Include="Resources\TemasInterfaz\Diamond\DiamondBlue.ssk" />
-    <None Include="Resources\TemasInterfaz\Diamond\DiamondGreen.ssk" />
     <None Include="Resources\TemasInterfaz\Eighteen\Eighteen.ssk" />
     <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor1.ssk" />
     <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Emerald\Emerald.ssk" />
-    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Emerald\EmeraldColor3.ssk" />
-    <None Include="Resources\TemasInterfaz\Glass\GlassBrown.ssk" />
-    <None Include="Resources\TemasInterfaz\Glass\GlassGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\Glass\GlassOrange.ssk" />
-    <None Include="Resources\TemasInterfaz\Longhorn\Longhorn.ssk" />
-    <None Include="Resources\TemasInterfaz\MacOS\MacOS.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldBlue.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldBrown.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldCyan.ssk" />
+    <None Include="Resources\TemasInterfaz\Emerald\EmeraldGreen.ssk" />
     <None Include="Resources\TemasInterfaz\Midsummer\Midsummer.ssk" />
     <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor1.ssk" />
     <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor2.ssk" />
     <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor3.ssk" />
-    <None Include="Resources\TemasInterfaz\MP10\MP10.ssk" />
-    <None Include="Resources\TemasInterfaz\MSN\MSN.ssk" />
-    <None Include="Resources\TemasInterfaz\Office2007\office2007.ssk" />
-    <None Include="Resources\TemasInterfaz\One\OneBlue.ssk" />
-    <None Include="Resources\TemasInterfaz\One\OneCyan.ssk" />
-    <None Include="Resources\TemasInterfaz\One\OneGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\One\OneOrange.ssk" />
     <None Include="Resources\TemasInterfaz\Page\Page.ssk" />
     <None Include="Resources\TemasInterfaz\Page\PageColor1.ssk" />
     <None Include="Resources\TemasInterfaz\Page\PageColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\RealOne\RealOne.ssk" />
     <None Include="Resources\TemasInterfaz\Silver\Silver.ssk" />
     <None Include="Resources\TemasInterfaz\Silver\SilverColor1.ssk" />
     <None Include="Resources\TemasInterfaz\Silver\SilverColor2.ssk" />
@@ -252,28 +254,6 @@
     <None Include="Resources\TemasInterfaz\Sports\SportsCyan.ssk" />
     <None Include="Resources\TemasInterfaz\Sports\SportsGreen.ssk" />
     <None Include="Resources\TemasInterfaz\Sports\SportsOrange.ssk" />
-    <None Include="Resources\TemasInterfaz\Steel\SteelBlack.ssk" />
-    <None Include="Resources\TemasInterfaz\Steel\SteelBlue.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista1\vista1.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista1\vista1_green.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color1.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color2.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color3.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color4.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color5.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color6.ssk" />
-    <None Include="Resources\TemasInterfaz\Vista2\Vista2_color7.ssk" />
-    <None Include="Resources\TemasInterfaz\Warm\Warm.ssk" />
-    <None Include="Resources\TemasInterfaz\Warm\WarmColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Warm\WarmColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Warm\WarmColor3.ssk" />
-    <None Include="Resources\TemasInterfaz\Wave\Wave.ssk" />
-    <None Include="Resources\TemasInterfaz\Wave\WaveColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Wave\WaveColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\WinXP\XPBlue.ssk" />
-    <None Include="Resources\TemasInterfaz\WinXP\XPGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\WinXP\XPOrange.ssk" />
-    <None Include="Resources\TemasInterfaz\WinXP\XPSilver.ssk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -282,6 +262,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo-oscomarcal.ico" />
     <Content Include="Models\ModelOsc.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelOsc.edmx</DependentUpon>
@@ -305,7 +286,18 @@
     <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
     <Content Include="Resources\TemasInterfaz\SERIAL.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
