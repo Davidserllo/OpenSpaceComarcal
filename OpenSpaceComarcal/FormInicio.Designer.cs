@@ -42,7 +42,7 @@
             this.ToolStripMenuEmeraldBlue = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuEmeraldGreen = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuEmeraldBrown = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCursos = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxAlumnos = new System.Windows.Forms.PictureBox();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
@@ -148,7 +148,7 @@
             this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButtonSettings,
-            this.toolStripButton1});
+            this.toolStripButtonCursos});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Size = new System.Drawing.Size(800, 25);
@@ -171,7 +171,7 @@
             // ToolStripMenuBaseDeDatos
             // 
             this.ToolStripMenuBaseDeDatos.Name = "ToolStripMenuBaseDeDatos";
-            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuBaseDeDatos.Text = "Base de datos";
             // 
             // ToolStripMenuApariencia
@@ -182,47 +182,48 @@
             this.ToolStripMenuEmeraldGreen,
             this.ToolStripMenuEmeraldBrown});
             this.ToolStripMenuApariencia.Name = "ToolStripMenuApariencia";
-            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuApariencia.Text = "Apariencia";
             this.ToolStripMenuApariencia.ToolTipText = "Apariencia";
             // 
             // toolStripMenuEmeraldCyan
             // 
             this.toolStripMenuEmeraldCyan.Name = "toolStripMenuEmeraldCyan";
-            this.toolStripMenuEmeraldCyan.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuEmeraldCyan.Size = new System.Drawing.Size(154, 22);
             this.toolStripMenuEmeraldCyan.Text = "Emerald Cyan";
             this.toolStripMenuEmeraldCyan.Click += new System.EventHandler(this.toolStripMenuEmeraldCyan_Click);
             // 
             // ToolStripMenuEmeraldBlue
             // 
             this.ToolStripMenuEmeraldBlue.Name = "ToolStripMenuEmeraldBlue";
-            this.ToolStripMenuEmeraldBlue.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuEmeraldBlue.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuEmeraldBlue.Text = "Emerald Blue";
             this.ToolStripMenuEmeraldBlue.Click += new System.EventHandler(this.ToolStripMenuEmeraldBlue_Click);
             // 
             // ToolStripMenuEmeraldGreen
             // 
             this.ToolStripMenuEmeraldGreen.Name = "ToolStripMenuEmeraldGreen";
-            this.ToolStripMenuEmeraldGreen.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuEmeraldGreen.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuEmeraldGreen.Text = "Emerald Green";
             this.ToolStripMenuEmeraldGreen.Click += new System.EventHandler(this.ToolStripMenuEmeraldGreen_Click);
             // 
             // ToolStripMenuEmeraldBrown
             // 
             this.ToolStripMenuEmeraldBrown.Name = "ToolStripMenuEmeraldBrown";
-            this.ToolStripMenuEmeraldBrown.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuEmeraldBrown.Size = new System.Drawing.Size(154, 22);
             this.ToolStripMenuEmeraldBrown.Text = "Emerald Brown";
             this.ToolStripMenuEmeraldBrown.Click += new System.EventHandler(this.ToolStripMenuEmeraldBrown_Click);
             // 
-            // toolStripButton1
+            // toolStripButtonCursos
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::OpenSpaceComarcal.Properties.Resources.curso_icono;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButtonCursos";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButtonCursos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonCursos.Image = global::OpenSpaceComarcal.Properties.Resources.curso_icono;
+            this.toolStripButtonCursos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCursos.Name = "toolStripButtonCursos";
+            this.toolStripButtonCursos.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonCursos.Text = "Cursos";
+            this.toolStripButtonCursos.ToolTipText = "Cursos";
+            this.toolStripButtonCursos.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // pictureBoxAlumnos
             // 
@@ -326,7 +327,7 @@
         private System.Windows.Forms.PictureBox pictureBoxClientes;
         private System.Windows.Forms.PictureBox pictureBoxInstancia;
         private System.Windows.Forms.PictureBox pictureBoxInscripcion;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
         private Sunisoft.IrisSkin.SkinEngine skinEngineInicio;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuBaseDeDatos;
