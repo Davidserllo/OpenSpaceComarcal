@@ -27,7 +27,6 @@ namespace OpenSpaceComarcal.Libraries
             Properties.Settings.Default.NomApariencia = NombreApariencia;
             Properties.Settings.Default.Save();
 
-
             // Localizar ruta de la apariencia
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string fullPath = Path.GetFullPath(Path.Combine(basePath, RelativePath));
