@@ -50,10 +50,8 @@ CREATE TABLE alumno (
 	email VARCHAR(50),
 	fecha_registro DATE,
 	id_empresa INT,
-	id_instancia INT,
 	notas VARCHAR(1000),
-	FOREIGN KEY (id_empresa) REFERENCES empresa(id),
-	FOREIGN KEY (id_instancia) REFERENCES instancia(id)
+	FOREIGN KEY (id_empresa) REFERENCES empresa(id)
 );
 
 CREATE TABLE inscripcion (
