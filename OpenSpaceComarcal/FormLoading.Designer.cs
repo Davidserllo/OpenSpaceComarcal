@@ -29,41 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoading));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLoadingBar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingBar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // pictureBoxLogo
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Image = global::OpenSpaceComarcal.Properties.Resources.logo_oscomarcal;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(283, 253);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(251, 119);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxLogo.Image = global::OpenSpaceComarcal.Properties.Resources.logo_oscomarcal;
+            this.pictureBoxLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(275, 253);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(267, 119);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 18;
+            this.pictureBoxLogo.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBoxLoadingBar
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 116);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 256);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLoadingBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLoadingBar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLoadingBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxLoadingBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBoxLoadingBar.Image = global::OpenSpaceComarcal.Properties.Resources.loading_icono;
+            this.pictureBoxLoadingBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBoxLoadingBar.Location = new System.Drawing.Point(239, 167);
+            this.pictureBoxLoadingBar.Name = "pictureBoxLoadingBar";
+            this.pictureBoxLoadingBar.Size = new System.Drawing.Size(339, 80);
+            this.pictureBoxLoadingBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxLoadingBar.TabIndex = 19;
+            this.pictureBoxLoadingBar.TabStop = false;
+            this.pictureBoxLoadingBar.WaitOnLoad = true;
             // 
             // FormLoading
             // 
@@ -73,24 +74,22 @@
             this.BackgroundImage = global::OpenSpaceComarcal.Properties.Resources.fondo_home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 489);
-            this.ControlBox = false;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxLogo);
+            this.Controls.Add(this.pictureBoxLoadingBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLoading";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "OPEN SPACE COMARCAL - Loading";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingBar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.PictureBox pictureBoxLoadingBar;
     }
 }

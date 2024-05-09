@@ -1,21 +1,26 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using System;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
     public partial class FormInicio : Form
     {
-
         private FormLoading loading;
         private static String nomApariencia;
-        private static bool AcessoFormCursos = true;
-        private static bool AcessoFormAlumnos = true;
-        private static bool AcessoFormEmpresas = true;
-        private static bool AcessoFormInstancia = true;
-        private static bool AcessoFormInscripcion = true;
+
+        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+
         public FormInicio()
         {
             InitializeComponent();
@@ -25,69 +30,43 @@ namespace OpenSpaceComarcal
 
         public void CheckTema(string nomtema)
         {
-            switch (nomtema)
+            Dictionary<string, ToolStripMenuItem> temaMap = new Dictionary<string, ToolStripMenuItem>
             {
-                case "EmeraldCyan.ssk":
-                    nomtema = "EmeraldCyan.ssk";
-                    this.toolStripMenuEmeraldCyan.Image = Properties.Resources.check_icono;
-                    this.ToolStripMenuEmeraldBlue.Image = null;
-                    this.ToolStripMenuEmeraldGreen.Image = null;
-                    this.ToolStripMenuEmeraldBrown.Image = null;
-                    break;
-                case "EmeraldBlue.ssk":
-                    nomtema = "EmeraldBlue.ssk";
-                    this.ToolStripMenuEmeraldBlue.Image = Properties.Resources.check_icono;
-                    this.toolStripMenuEmeraldCyan.Image = null;
-                    this.ToolStripMenuEmeraldGreen.Image = null;
-                    this.ToolStripMenuEmeraldBrown.Image = null;
-                    break;
-                case "EmeraldGreen.ssk":
-                    nomtema = "EmeraldGreen.ssk";
-                    this.ToolStripMenuEmeraldGreen.Image = Properties.Resources.check_icono;
-                    this.ToolStripMenuEmeraldBlue.Image = null;
-                    this.toolStripMenuEmeraldCyan.Image = null;
-                    this.ToolStripMenuEmeraldBrown.Image = null;
-                    break;
-                case "EmeraldBrown.ssk":
-                    nomtema = "EmeraldBrown.ssk";
-                    this.ToolStripMenuEmeraldBrown.Image = Properties.Resources.check_icono;
-                    this.ToolStripMenuEmeraldBlue.Image = null;
-                    this.ToolStripMenuEmeraldGreen.Image = null;
-                    this.toolStripMenuEmeraldCyan.Image = null;
-                    break;
-                default:
-                    break;
+                { "EmeraldCyan.ssk", toolStripMenuEmeraldCyan },
+                { "EmeraldBlue.ssk", ToolStripMenuEmeraldBlue },
+                { "EmeraldGreen.ssk", ToolStripMenuEmeraldGreen },
+                { "EmeraldBrown.ssk", ToolStripMenuEmeraldBrown }
+            };
+
+            foreach (var kvp in temaMap)
+            {
+                kvp.Value.Image = (kvp.Key == nomtema) ? Properties.Resources.check_icono : null;
             }
         }
 
         private async void buttonAlumnos_Click(object sender, EventArgs e)
         {
-            OpenForm<FormAlumnos>(AcessoFormAlumnos);
-            AcessoFormAlumnos = false;
+            OpenForm<FormAlumnos>();
         }
 
         private void buttonEmpresas_Click(object sender, EventArgs e)
         {
-            OpenForm<FormEmpresas>(AcessoFormEmpresas);
-            AcessoFormEmpresas = false;
+            OpenForm<FormEmpresas>();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            OpenForm<FormCursos>(AcessoFormCursos);
-            AcessoFormCursos = false;
+            OpenForm<FormCursos>();
         }
 
         private void buttonInstancia_Click(object sender, EventArgs e)
         {
-            OpenForm<FormInstancia>(AcessoFormInstancia);
-            AcessoFormInstancia = false;
+            OpenForm<FormInstancia>();
         }
 
         private void buttonInscripcion_Click(object sender, EventArgs e)
         {
-            OpenForm<FormInscripcion>(AcessoFormInscripcion);
-            AcessoFormInscripcion = false;
+            OpenForm<FormInscripcion>();
         }
 
         private void toolStripMenuEmeraldCyan_Click(object sender, EventArgs e)
@@ -122,42 +101,41 @@ namespace OpenSpaceComarcal
             CheckTema(Properties.Settings.Default.NomApariencia);
         }
 
-        // Método para llamar a loading y abrir el formulario
-        private async void OpenForm<T>(bool accessPermission) where T : Form, new()
-        {
-            if (accessPermission)
-            {
-                loading = new FormLoading();
-                loading.Show();
-
-                await Task.Delay(2000); // Timer de 2s
-
-                T form = new T();
-                form.Show();
-
-                loading.Close();
-                loading.Dispose();
-            }
-            else
-            {
-                T form = new T();
-                form.Show();
-            }
-        }
-
+        // Método para mostrar la ventana de carga
         private void ShowLoading()
         {
             loading = new FormLoading();
-            loading.Show();
+            loading.Show(this);
         }
 
+        // Método para ocultar la ventana de carga
         private void HideLoading()
         {
-            if (loading != null && !loading.IsDisposed)
+            loading?.Close();
+            loading?.Dispose();
+        }
+
+        // Método genérico para abrir formas
+        private void OpenForm<T>() where T : Form, new()
+        {
+            pictureBoxLoadingBar.Visible = true;
+            ShowLoading();
+
+            T form = new T();
+
+            form.Load += (sender, e) =>
             {
-                loading.Close();
-                loading.Dispose();
-            }
+                HideLoading();
+            };
+
+            pictureBoxLoadingBar.Visible = false;
+            form.Show(this);
+        }
+
+        private async void FormInicio_Load(object sender, EventArgs e)
+        {
+            // Cuando carge el formulario deja de ser visible "pictureBoxLoadingBar"
+            pictureBoxLoadingBar.Visible = false;
         }
 
     }

@@ -284,6 +284,7 @@
     </Content>
     <Content Include="Resources\alumnos-icono.png" />
     <None Include="Resources\check-icono.png" />
+    <None Include="Resources\cargando_icono.png" />
     <Content Include="Resources\clientes-icono.png" />
     <None Include="Resources\configuracion-icono.png" />
     <Content Include="Resources\curso-icono.png" />
@@ -299,6 +300,7 @@
     <None Include="Resources\loading_icono %287%29.gif" />
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
+    <Content Include="Resources\TemasInterfaz\cargando_icono.png" />
     <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
     <Content Include="Resources\TemasInterfaz\SERIAL.txt" />
   </ItemGroup>
