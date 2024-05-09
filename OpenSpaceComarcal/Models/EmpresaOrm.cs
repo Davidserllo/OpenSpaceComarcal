@@ -32,7 +32,7 @@ namespace OpenSpaceComarcal.Models
         {
             if (string.IsNullOrEmpty(busqueda))
             {
-                return Orm.bd.empresa.OrderBy(a => a.nombre).ToList();
+                return Orm.bd.empresa.OrderBy(a => a.id).ToList();
             }
 
             var query = Orm.bd.empresa
@@ -44,7 +44,7 @@ namespace OpenSpaceComarcal.Models
                             || a.email.Contains(busqueda)
                             || a.persona_contacto.Contains(busqueda)
                             || a.notas.Contains(busqueda))
-                .OrderBy(a => a.nombre)
+                .OrderBy(a => a.id)
                 .ToList();
 
             return query;
@@ -74,7 +74,7 @@ namespace OpenSpaceComarcal.Models
         {
             String mensajeError = "";
 
-            empresa empresaAnterior = Orm.bd.empresa.First(n => n.id == _empresa.id);
+            empresa empresaAnterior = Orm.bd.empresa.Find(_empresa.id);
 
             if (empresaAnterior != null)
             {

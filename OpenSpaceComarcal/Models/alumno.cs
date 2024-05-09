@@ -28,12 +28,10 @@ namespace OpenSpaceComarcal.Models
         public string email { get; set; }
         public Nullable<int> id_empresa { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }
-        public Nullable<int> id_instancia { get; set; }
         public string notas { get; set; }
     
         public virtual empresa empresa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<inscripcion> inscripcion { get; set; }
-        public virtual instancia instancia { get; set; }
     }
 }

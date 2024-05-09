@@ -13,7 +13,6 @@
         <AssociationConnector Association="open_space_comarcalModel.FK__alumno__id_empre__398D8EEE" ManuallyRouted="false" />
         <AssociationConnector Association="open_space_comarcalModel.FK__inscripci__id_al__412EB0B6" ManuallyRouted="false" />
         <AssociationConnector Association="open_space_comarcalModel.FK__inscripci__id_in__4222D4EF" ManuallyRouted="false" />
-        <AssociationConnector Association="open_space_comarcalModel.FK__alumno__id_insta__3F466844" />
         <AssociationConnector Association="open_space_comarcalModel.FK__instancia__id_cu__3B75D760" />
       </Diagram>
     </edmx:Diagrams>

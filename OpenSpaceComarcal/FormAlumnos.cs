@@ -58,15 +58,7 @@ namespace OpenSpaceComarcal
                 {
                     comboBoxEmpresa.SelectedIndex = -1;
                 }
-                if (fila.Cells[7].Value != null)
-                {
-                    comboBoxInstancia.SelectedValue = fila.Cells[7].Value;
-                }
-                else
-                {
-                    comboBoxEmpresa.SelectedIndex = -1;
-                }
-                textBoxNotas.Text = fila.Cells[9].Value.ToString();
+                textBoxNotas.Text = fila.Cells[8].Value.ToString();
             }
         }
 
@@ -88,28 +80,6 @@ namespace OpenSpaceComarcal
             return esValido;
         }
 
-        private void inscribirAlumno()
-        {
-            if (dataGridViewAlumno.SelectedRows.Count == 1)
-            {
-                DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
-                alumno _alumno = (alumno)fila.DataBoundItem;
-
-                String mensajeError = "";
-
-                inscripcion _inscripcion = new inscripcion();
-
-                _inscripcion.id_alumno = (int) fila.Cells[0].Value;
-                _inscripcion.id_instancia = (int)fila.Cells[7].Value;
-                _inscripcion.fecha_inscripcion = DateTime.Now;
-                _inscripcion.apto = false;
-
-                mensajeError = InscripcionOrm.Insert(_inscripcion);
-            }
-                
-        }
-
-
         private void buttonCrearAlumno_Click(object sender, EventArgs e)
         {
             if (camposRellenados())
@@ -127,11 +97,6 @@ namespace OpenSpaceComarcal
                 if (comboBoxEmpresa.SelectedItem != null)
                 { 
                     _alumno.id_empresa = (int)comboBoxEmpresa.SelectedValue;
-                }
-                if (comboBoxInstancia.SelectedItem != null)
-                {
-                    _alumno.id_instancia = (int)comboBoxInstancia.SelectedValue;
-                    inscribirAlumno();
                 }
 
                 _alumno.fecha_registro = DateTime.Now;
@@ -224,10 +189,6 @@ namespace OpenSpaceComarcal
                         {
                             _alumno.id_empresa = (int)comboBoxEmpresa.SelectedValue;
                         }
-                        if (comboBoxInstancia.SelectedItem != null)
-                        {
-                            _alumno.id_instancia = (int)comboBoxInstancia.SelectedValue;
-                        }
 
                         _alumno.notas = textBoxNotas.Text;
 
@@ -269,7 +230,6 @@ namespace OpenSpaceComarcal
             textBoxTelefono.Text = "";
             textBoxEmail.Text = "";
             comboBoxEmpresa.SelectedIndex = -1;
-            comboBoxInstancia.SelectedIndex = -1;
             dataGridViewAlumno.ClearSelection();
             textBoxBuscador.Text = "";
             textBoxNotas.Text = "";

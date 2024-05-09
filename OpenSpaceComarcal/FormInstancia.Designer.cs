@@ -206,7 +206,7 @@
             this.comboBoxCursosSiglas.Name = "comboBoxCursosSiglas";
             this.comboBoxCursosSiglas.Size = new System.Drawing.Size(139, 21);
             this.comboBoxCursosSiglas.TabIndex = 9;
-            this.comboBoxCursosSiglas.ValueMember = "codigo";
+            this.comboBoxCursosSiglas.ValueMember = "id";
             // 
             // bindingSourceCursos
             // 

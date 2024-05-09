@@ -86,6 +86,7 @@ namespace OpenSpaceComarcal
                         DataGridViewRow fila = dataGridViewCursos.SelectedRows[0];
                         curso _curso = (curso)fila.DataBoundItem;
 
+                        _curso.codigo = textBoxCodigo.Text;
                         _curso.siglas = textBoxSiglas.Text;
                         _curso.nombre = textBoxNombre.Text;
 

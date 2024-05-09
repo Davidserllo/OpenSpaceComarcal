@@ -94,7 +94,6 @@ namespace OpenSpaceComarcal.Models
                 alumnoAnterior.telefono = _alumno.telefono;
                 alumnoAnterior.email = _alumno.email;
                 alumnoAnterior.id_empresa = _alumno.id_empresa;
-                alumnoAnterior.id_instancia = _alumno.id_instancia;
                 alumnoAnterior.fecha_registro = _alumno.fecha_registro;
                 alumnoAnterior.notas = _alumno.notas;
 

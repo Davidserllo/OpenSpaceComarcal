@@ -9,7 +9,7 @@ namespace OpenSpaceComarcal.Models
         public static List<curso> Select()
         {
             List<curso> _curso = Orm.bd.curso
-                .OrderBy(n => n.nombre)
+                .OrderBy(n => n.id)
                 .ToList();
 
             return _curso;
@@ -30,14 +30,15 @@ namespace OpenSpaceComarcal.Models
         {
             if (string.IsNullOrEmpty(busqueda))
             {
-                return Orm.bd.curso.OrderBy(a => a.nombre).ToList();
+                return Orm.bd.curso.OrderBy(a => a.id).ToList();
             }
 
             var query = Orm.bd.curso
-                .Where(a => a.codigo.Contains(busqueda)
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.codigo.Contains(busqueda)
                             || a.siglas.Contains(busqueda)
                             || a.nombre.Contains(busqueda))
-                .OrderBy(a => a.nombre)
+                .OrderBy(a => a.id)
                 .ToList();
 
             return query;
@@ -67,10 +68,11 @@ namespace OpenSpaceComarcal.Models
         {
             String mensajeError = "";
 
-            curso cursoAnterior = Orm.bd.curso.Find(_curso.codigo);
+            curso cursoAnterior = Orm.bd.curso.Find(_curso.id);
 
             if (cursoAnterior != null)
             {
+                cursoAnterior.codigo = _curso.codigo;
                 cursoAnterior.siglas = _curso.siglas;
                 cursoAnterior.nombre = _curso.nombre;
 
