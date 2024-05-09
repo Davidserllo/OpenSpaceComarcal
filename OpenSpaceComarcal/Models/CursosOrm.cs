@@ -15,10 +15,10 @@ namespace OpenSpaceComarcal.Models
             return _curso;
         }
 
-        public static List<string> SelectSigla(string id_curso)
+        public static List<string> SelectSigla(int id_curso)
         {
             List<string> siglaCurso = Orm.bd.curso
-                .Where(n => n.codigo == id_curso)
+                .Where(n => n.id == id_curso)
                 .OrderBy(n => n.siglas)
                 .Select(n => n.siglas)
                 .ToList();

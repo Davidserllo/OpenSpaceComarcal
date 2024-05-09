@@ -77,7 +77,7 @@ namespace OpenSpaceComarcal
 
                 instancia _instancia = new instancia();
 
-                _instancia.id_curso = comboBoxCursosSiglas.SelectedValue.ToString();
+                _instancia.id_curso = (int) comboBoxCursosSiglas.SelectedValue;
                 _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                 _instancia.fecha_fin = dateTimePickerFechaFin.Value;
                 _instancia.diploma = buttonSeleccionarDiploma.Text;
@@ -162,7 +162,7 @@ namespace OpenSpaceComarcal
 
                         if (comboBoxCursosSiglas.SelectedItem != null)
                         {
-                            _instancia.id_curso = comboBoxCursosSiglas.SelectedValue.ToString();
+                            _instancia.id_curso = (int) comboBoxCursosSiglas.SelectedValue;
                         }
                         _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                         _instancia.fecha_fin = dateTimePickerFechaFin.Value;
@@ -214,7 +214,7 @@ namespace OpenSpaceComarcal
             {
                 if (e.Value != null)
                 {
-                    e.Value = CursosOrm.SelectSigla(e.Value.ToString()).FirstOrDefault();
+                    e.Value = CursosOrm.SelectSigla((int) e.Value).FirstOrDefault();
                 }
             }
         }

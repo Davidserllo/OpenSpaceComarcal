@@ -18,16 +18,19 @@ namespace OpenSpaceComarcal.Models
         public instancia()
         {
             this.inscripcion = new HashSet<inscripcion>();
+            this.alumno = new HashSet<alumno>();
         }
     
         public int id { get; set; }
-        public string id_curso { get; set; }
+        public int id_curso { get; set; }
         public Nullable<System.DateTime> fecha_inicio { get; set; }
         public Nullable<System.DateTime> fecha_fin { get; set; }
         public string diploma { get; set; }
     
-        public virtual curso curso { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<inscripcion> inscripcion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<alumno> alumno { get; set; }
+        public virtual curso curso { get; set; }
     }
 }

@@ -24,7 +24,6 @@ namespace OpenSpaceComarcal.Models
 
             var query = Orm.bd.instancia
                 .Where(a => a.id.ToString().Contains(busqueda)
-                            || a.id_curso.Contains(busqueda)
                             || a.fecha_inicio.ToString().Contains(busqueda)
                             || a.fecha_fin.ToString().Contains(busqueda)
                             || a.diploma.Contains(busqueda))
@@ -34,9 +33,9 @@ namespace OpenSpaceComarcal.Models
             return query;
         }
 
-        public static List<string> SelectIdCurso(int id_instancia)
+        public static List<int> SelectIdCurso(int id_instancia)
         {
-            List<string> idCurso = Orm.bd.instancia
+            List<int> idCurso = Orm.bd.instancia
                 .Where(n => n.id == id_instancia)
                 .OrderBy(n => n.id)
                 .Select(n => n.id_curso)

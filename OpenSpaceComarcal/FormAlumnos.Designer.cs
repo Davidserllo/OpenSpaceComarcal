@@ -64,6 +64,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.skinEngineAlumnos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.id_instancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -101,7 +104,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.emailDataGridViewTextBoxColumn,
-            this.idempresaDataGridViewTextBoxColumn});
+            this.idempresaDataGridViewTextBoxColumn,
+            this.id_instancia,
+            this.fecha_registro,
+            this.notas});
             this.dataGridViewAlumno.DataSource = this.bindingSourceAlumno;
             this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 107);
             this.dataGridViewAlumno.MultiSelect = false;
@@ -411,6 +417,27 @@
             this.skinEngineAlumnos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineAlumnos.SkinFile = "";
             // 
+            // id_instancia
+            // 
+            this.id_instancia.DataPropertyName = "id_instancia";
+            this.id_instancia.HeaderText = "id_instancia";
+            this.id_instancia.Name = "id_instancia";
+            this.id_instancia.ReadOnly = true;
+            // 
+            // fecha_registro
+            // 
+            this.fecha_registro.DataPropertyName = "fecha_registro";
+            this.fecha_registro.HeaderText = "fecha_registro";
+            this.fecha_registro.Name = "fecha_registro";
+            this.fecha_registro.ReadOnly = true;
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "notas";
+            this.notas.Name = "notas";
+            this.notas.ReadOnly = true;
+            // 
             // FormAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,5 +504,8 @@
         private System.Windows.Forms.BindingSource bindingSourceEmpresa;
         private System.Windows.Forms.Button buttonLimpiar;
         private Sunisoft.IrisSkin.SkinEngine skinEngineAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_instancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_registro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notas;
     }
 }
