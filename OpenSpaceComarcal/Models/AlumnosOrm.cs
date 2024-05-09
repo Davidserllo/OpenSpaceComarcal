@@ -29,7 +29,8 @@ namespace OpenSpaceComarcal.Models
                             || a.nombre.Contains(busqueda)
                             || a.telefono.Contains(busqueda)
                             || a.email.Contains(busqueda)
-                            || a.id_empresa.ToString().Contains(busqueda))
+                            || a.fecha_registro.ToString().Contains(busqueda)
+                            || a.notas.Contains(busqueda))
                 .OrderBy(a => a.id)
                 .ToList();
 
@@ -93,6 +94,9 @@ namespace OpenSpaceComarcal.Models
                 alumnoAnterior.telefono = _alumno.telefono;
                 alumnoAnterior.email = _alumno.email;
                 alumnoAnterior.id_empresa = _alumno.id_empresa;
+                alumnoAnterior.id_instancia = _alumno.id_instancia;
+                alumnoAnterior.fecha_registro = _alumno.fecha_registro;
+                alumnoAnterior.notas = _alumno.notas;
 
                 mensajeError = Orm.MySaveChanges();
             }

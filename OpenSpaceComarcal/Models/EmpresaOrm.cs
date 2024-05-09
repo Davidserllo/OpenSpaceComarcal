@@ -36,9 +36,14 @@ namespace OpenSpaceComarcal.Models
             }
 
             var query = Orm.bd.empresa
-                .Where(a => a.cif.Contains(busqueda)
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.cif.Contains(busqueda)
                             || a.siglas.Contains(busqueda)
-                            || a.nombre.Contains(busqueda))
+                            || a.nombre.Contains(busqueda)
+                            || a.telefono.ToString().Contains(busqueda)
+                            || a.email.Contains(busqueda)
+                            || a.persona_contacto.Contains(busqueda)
+                            || a.notas.Contains(busqueda))
                 .OrderBy(a => a.nombre)
                 .ToList();
 
@@ -76,6 +81,10 @@ namespace OpenSpaceComarcal.Models
                 empresaAnterior.cif = _empresa.cif;
                 empresaAnterior.siglas = _empresa.siglas;
                 empresaAnterior.nombre = _empresa.nombre;
+                empresaAnterior.telefono = _empresa.telefono;
+                empresaAnterior.email = _empresa.email;
+                empresaAnterior.persona_contacto = _empresa.persona_contacto;
+                empresaAnterior.notas = _empresa.notas;
 
                 mensajeError = Orm.MySaveChanges();
             }
