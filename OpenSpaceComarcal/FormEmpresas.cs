@@ -22,6 +22,10 @@ namespace OpenSpaceComarcal
                 textBoxCif.Text = fila.Cells[1].Value.ToString();
                 textBoxSiglas.Text = fila.Cells[2].Value.ToString();
                 textBoxNombre.Text = fila.Cells[3].Value.ToString();
+                textBoxTelefono.Text = fila.Cells[4].Value.ToString();
+                textBoxMail.Text = fila.Cells[5].Value.ToString();
+                textBoxContacto.Text = fila.Cells[6].Value.ToString();
+                textBoxNotas.Text = fila.Cells[7].Value.ToString();
             }
         }
 
@@ -52,6 +56,10 @@ namespace OpenSpaceComarcal
                 _empresa.cif = textBoxCif.Text;
                 _empresa.siglas = textBoxSiglas.Text;
                 _empresa.nombre = textBoxNombre.Text;
+                _empresa.telefono = textBoxTelefono.Text;
+                _empresa.email = textBoxMail.Text;
+                _empresa.persona_contacto = textBoxContacto.Text;
+                _empresa.notas = textBoxNotas.Text;
 
                 mensajeError = EmpresaOrm.Insert(_empresa);
 
@@ -89,6 +97,10 @@ namespace OpenSpaceComarcal
                         _empresa.cif = textBoxCif.Text;
                         _empresa.siglas = textBoxSiglas.Text;
                         _empresa.nombre = textBoxNombre.Text;
+                        _empresa.telefono = textBoxTelefono.Text;
+                        _empresa.email = textBoxMail.Text;
+                        _empresa.persona_contacto = textBoxContacto.Text;
+                        _empresa.notas = textBoxNotas.Text;
 
                         mensajeError = EmpresaOrm.Update(_empresa);
 
@@ -175,6 +187,10 @@ namespace OpenSpaceComarcal
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
             textBoxBusqueda.Text = "";
+            textBoxTelefono.Text = "";
+            textBoxMail.Text = "";
+            textBoxContacto.Text = "";
+            textBoxNotas.Text = "";
             dataGridViewEmpresas.ClearSelection();
         }
     }

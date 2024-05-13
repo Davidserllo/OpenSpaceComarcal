@@ -47,14 +47,25 @@
             this.textBoxCif = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.textBoxContacto = new System.Windows.Forms.TextBox();
+            this.labelContacto = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNotas = new System.Windows.Forms.TextBox();
+            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
-            this.labelCursos = new System.Windows.Forms.Label();
-            this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.persona_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
@@ -81,7 +92,7 @@
             this.groupBoxBuscador.Controls.Add(this.textBoxBusqueda);
             this.groupBoxBuscador.Location = new System.Drawing.Point(12, 55);
             this.groupBoxBuscador.Name = "groupBoxBuscador";
-            this.groupBoxBuscador.Size = new System.Drawing.Size(527, 52);
+            this.groupBoxBuscador.Size = new System.Drawing.Size(939, 52);
             this.groupBoxBuscador.TabIndex = 2;
             this.groupBoxBuscador.TabStop = false;
             this.groupBoxBuscador.Text = "Buscador";
@@ -89,7 +100,7 @@
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(416, 13);
+            this.buttonBuscar.Location = new System.Drawing.Point(828, 13);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(95, 31);
             this.buttonBuscar.TabIndex = 5;
@@ -115,13 +126,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBusqueda.Location = new System.Drawing.Point(147, 18);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(252, 20);
+            this.textBoxBusqueda.Size = new System.Drawing.Size(664, 20);
             this.textBoxBusqueda.TabIndex = 4;
             // 
             // groupBoxInformacionEmpresa
             // 
             this.groupBoxInformacionEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxNotas);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.label1);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxContacto);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.labelContacto);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.labelTelefono);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxMail);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxTelefono);
+            this.groupBoxInformacionEmpresa.Controls.Add(this.labelEmail);
             this.groupBoxInformacionEmpresa.Controls.Add(this.buttonLimpiar);
             this.groupBoxInformacionEmpresa.Controls.Add(this.buttonModificarEmpresa);
             this.groupBoxInformacionEmpresa.Controls.Add(this.buttonEliminarEmpresa);
@@ -132,9 +151,9 @@
             this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxSiglas);
             this.groupBoxInformacionEmpresa.Controls.Add(this.textBoxCif);
             this.groupBoxInformacionEmpresa.Controls.Add(this.labelSiglas);
-            this.groupBoxInformacionEmpresa.Location = new System.Drawing.Point(11, 352);
+            this.groupBoxInformacionEmpresa.Location = new System.Drawing.Point(11, 450);
             this.groupBoxInformacionEmpresa.Name = "groupBoxInformacionEmpresa";
-            this.groupBoxInformacionEmpresa.Size = new System.Drawing.Size(527, 126);
+            this.groupBoxInformacionEmpresa.Size = new System.Drawing.Size(939, 126);
             this.groupBoxInformacionEmpresa.TabIndex = 7;
             this.groupBoxInformacionEmpresa.TabStop = false;
             this.groupBoxInformacionEmpresa.Text = "Informacion de la Empresa";
@@ -142,9 +161,9 @@
             // buttonLimpiar
             // 
             this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(282, 70);
+            this.buttonLimpiar.Location = new System.Drawing.Point(708, 69);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(103, 33);
+            this.buttonLimpiar.Size = new System.Drawing.Size(103, 40);
             this.buttonLimpiar.TabIndex = 16;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
@@ -153,9 +172,9 @@
             // buttonModificarEmpresa
             // 
             this.buttonModificarEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModificarEmpresa.Location = new System.Drawing.Point(405, 30);
+            this.buttonModificarEmpresa.Location = new System.Drawing.Point(817, 26);
             this.buttonModificarEmpresa.Name = "buttonModificarEmpresa";
-            this.buttonModificarEmpresa.Size = new System.Drawing.Size(106, 34);
+            this.buttonModificarEmpresa.Size = new System.Drawing.Size(106, 38);
             this.buttonModificarEmpresa.TabIndex = 15;
             this.buttonModificarEmpresa.Text = "Modificar Empresa";
             this.buttonModificarEmpresa.UseVisualStyleBackColor = true;
@@ -165,9 +184,9 @@
             // 
             this.buttonEliminarEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarEmpresa.ForeColor = System.Drawing.Color.IndianRed;
-            this.buttonEliminarEmpresa.Location = new System.Drawing.Point(405, 69);
+            this.buttonEliminarEmpresa.Location = new System.Drawing.Point(817, 69);
             this.buttonEliminarEmpresa.Name = "buttonEliminarEmpresa";
-            this.buttonEliminarEmpresa.Size = new System.Drawing.Size(106, 34);
+            this.buttonEliminarEmpresa.Size = new System.Drawing.Size(106, 40);
             this.buttonEliminarEmpresa.TabIndex = 17;
             this.buttonEliminarEmpresa.Text = "Eliminar Empresa";
             this.buttonEliminarEmpresa.UseVisualStyleBackColor = true;
@@ -177,17 +196,17 @@
             // 
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNombre.Location = new System.Drawing.Point(100, 88);
+            this.textBoxNombre.Location = new System.Drawing.Point(94, 88);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(153, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(155, 20);
             this.textBoxNombre.TabIndex = 13;
             // 
             // buttonCrearEmpresa
             // 
             this.buttonCrearEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCrearEmpresa.Location = new System.Drawing.Point(282, 30);
+            this.buttonCrearEmpresa.Location = new System.Drawing.Point(708, 25);
             this.buttonCrearEmpresa.Name = "buttonCrearEmpresa";
-            this.buttonCrearEmpresa.Size = new System.Drawing.Size(103, 34);
+            this.buttonCrearEmpresa.Size = new System.Drawing.Size(103, 38);
             this.buttonCrearEmpresa.TabIndex = 14;
             this.buttonCrearEmpresa.Text = "Nueva Empresa";
             this.buttonCrearEmpresa.UseVisualStyleBackColor = true;
@@ -199,9 +218,9 @@
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.Location = new System.Drawing.Point(20, 89);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(62, 16);
+            this.labelNombre.Size = new System.Drawing.Size(68, 16);
             this.labelNombre.TabIndex = 12;
-            this.labelNombre.Text = "Nombre";
+            this.labelNombre.Text = "Nombre*";
             // 
             // labelDNINIA
             // 
@@ -210,24 +229,24 @@
             this.labelDNINIA.Name = "labelDNINIA";
             this.labelDNINIA.Size = new System.Drawing.Size(57, 16);
             this.labelDNINIA.TabIndex = 8;
-            this.labelDNINIA.Text = "CIF";
+            this.labelDNINIA.Text = "CIF*";
             // 
             // textBoxSiglas
             // 
             this.textBoxSiglas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSiglas.Location = new System.Drawing.Point(100, 55);
+            this.textBoxSiglas.Location = new System.Drawing.Point(94, 55);
             this.textBoxSiglas.Name = "textBoxSiglas";
-            this.textBoxSiglas.Size = new System.Drawing.Size(152, 20);
+            this.textBoxSiglas.Size = new System.Drawing.Size(155, 20);
             this.textBoxSiglas.TabIndex = 11;
             // 
             // textBoxCif
             // 
             this.textBoxCif.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCif.Location = new System.Drawing.Point(100, 24);
+            this.textBoxCif.Location = new System.Drawing.Point(94, 25);
             this.textBoxCif.Name = "textBoxCif";
-            this.textBoxCif.Size = new System.Drawing.Size(152, 20);
+            this.textBoxCif.Size = new System.Drawing.Size(155, 20);
             this.textBoxCif.TabIndex = 9;
             // 
             // labelSiglas
@@ -236,9 +255,9 @@
             this.labelSiglas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSiglas.Location = new System.Drawing.Point(20, 58);
             this.labelSiglas.Name = "labelSiglas";
-            this.labelSiglas.Size = new System.Drawing.Size(51, 16);
+            this.labelSiglas.Size = new System.Drawing.Size(57, 16);
             this.labelSiglas.TabIndex = 10;
-            this.labelSiglas.Text = "Siglas";
+            this.labelSiglas.Text = "Siglas*";
             // 
             // dataGridViewEmpresas
             // 
@@ -256,7 +275,10 @@
             this.cifDataGridViewTextBoxColumn,
             this.siglasDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
-            this.alumnoDataGridViewTextBoxColumn});
+            this.telefono,
+            this.email,
+            this.persona_contacto,
+            this.notas});
             this.dataGridViewEmpresas.DataSource = this.bindingSourceEmpresa;
             this.dataGridViewEmpresas.Location = new System.Drawing.Point(12, 113);
             this.dataGridViewEmpresas.MultiSelect = false;
@@ -265,9 +287,102 @@
             this.dataGridViewEmpresas.RowHeadersVisible = false;
             this.dataGridViewEmpresas.RowHeadersWidth = 72;
             this.dataGridViewEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEmpresas.Size = new System.Drawing.Size(527, 233);
+            this.dataGridViewEmpresas.Size = new System.Drawing.Size(939, 331);
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
+            // 
+            // labelCursos
+            // 
+            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(409, 13);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(144, 31);
+            this.labelCursos.TabIndex = 1;
+            this.labelCursos.Text = "Empresas";
+            // 
+            // skinEngineEmpresas
+            // 
+            this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineEmpresas.SkinFile = "";
+            // 
+            // textBoxContacto
+            // 
+            this.textBoxContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxContacto.Location = new System.Drawing.Point(344, 89);
+            this.textBoxContacto.Name = "textBoxContacto";
+            this.textBoxContacto.Size = new System.Drawing.Size(155, 20);
+            this.textBoxContacto.TabIndex = 23;
+            // 
+            // labelContacto
+            // 
+            this.labelContacto.AutoSize = true;
+            this.labelContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContacto.Location = new System.Drawing.Point(264, 90);
+            this.labelContacto.Name = "labelContacto";
+            this.labelContacto.Size = new System.Drawing.Size(68, 16);
+            this.labelContacto.TabIndex = 22;
+            this.labelContacto.Text = "Contacto";
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelefono.Location = new System.Drawing.Point(263, 27);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(75, 16);
+            this.labelTelefono.TabIndex = 18;
+            this.labelTelefono.Text = "Teléfono";
+            // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMail.Location = new System.Drawing.Point(344, 56);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(155, 20);
+            this.textBoxMail.TabIndex = 21;
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTelefono.Location = new System.Drawing.Point(344, 27);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
+            this.textBoxTelefono.TabIndex = 19;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(264, 59);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(51, 16);
+            this.labelEmail.TabIndex = 20;
+            this.labelEmail.Text = "E-mail";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(514, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Notas";
+            // 
+            // textBoxNotas
+            // 
+            this.textBoxNotas.Location = new System.Drawing.Point(517, 54);
+            this.textBoxNotas.Multiline = true;
+            this.textBoxNotas.Name = "textBoxNotas";
+            this.textBoxNotas.Size = new System.Drawing.Size(180, 55);
+            this.textBoxNotas.TabIndex = 25;
+            // 
+            // bindingSourceEmpresa
+            // 
+            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -297,39 +412,39 @@
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // alumnoDataGridViewTextBoxColumn
+            // telefono
             // 
-            this.alumnoDataGridViewTextBoxColumn.DataPropertyName = "alumno";
-            this.alumnoDataGridViewTextBoxColumn.HeaderText = "Alumno";
-            this.alumnoDataGridViewTextBoxColumn.Name = "alumnoDataGridViewTextBoxColumn";
-            this.alumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alumnoDataGridViewTextBoxColumn.Visible = false;
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
             // 
-            // bindingSourceEmpresa
+            // email
             // 
-            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
-            // labelCursos
+            // persona_contacto
             // 
-            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCursos.AutoSize = true;
-            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(203, 13);
-            this.labelCursos.Name = "labelCursos";
-            this.labelCursos.Size = new System.Drawing.Size(144, 31);
-            this.labelCursos.TabIndex = 1;
-            this.labelCursos.Text = "Empresas";
+            this.persona_contacto.DataPropertyName = "persona_contacto";
+            this.persona_contacto.HeaderText = "Nombre Contacto";
+            this.persona_contacto.Name = "persona_contacto";
+            this.persona_contacto.ReadOnly = true;
             // 
-            // skinEngineEmpresas
+            // notas
             // 
-            this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineEmpresas.SkinFile = "";
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Notas";
+            this.notas.Name = "notas";
+            this.notas.ReadOnly = true;
             // 
             // FormEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 489);
+            this.ClientSize = new System.Drawing.Size(963, 587);
             this.Controls.Add(this.buttonActualizarEmpresas);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.groupBoxInformacionEmpresa);
@@ -373,11 +488,22 @@
         private System.Windows.Forms.DataGridView dataGridViewEmpresas;
         private System.Windows.Forms.Label labelCursos;
         private System.Windows.Forms.BindingSource bindingSourceEmpresa;
+        private Sunisoft.IrisSkin.SkinEngine skinEngineEmpresas;
+        private System.Windows.Forms.TextBox textBoxContacto;
+        private System.Windows.Forms.Label labelContacto;
+        private System.Windows.Forms.Label labelTelefono;
+        private System.Windows.Forms.TextBox textBoxMail;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox textBoxNotas;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cifDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn siglasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alumnoDataGridViewTextBoxColumn;
-        private Sunisoft.IrisSkin.SkinEngine skinEngineEmpresas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn persona_contacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notas;
     }
 }
