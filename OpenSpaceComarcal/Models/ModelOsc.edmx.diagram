@@ -5,15 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="aa2dae78e1104435aa5d4d6c6209330f" Name="Diagram1">
-        <EntityTypeShape EntityType="open_space_comarcalModel.alumno" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="open_space_comarcalModel.alumno" Width="1.5" PointX="9.25" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="open_space_comarcalModel.curso" Width="1.5" PointX="1" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="open_space_comarcalModel.empresa" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="open_space_comarcalModel.empresa" Width="1.5" PointX="5.625" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="open_space_comarcalModel.inscripcion" Width="1.5" PointX="5.5" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="open_space_comarcalModel.instancia" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="open_space_comarcalModel.FK__alumno__id_empre__398D8EEE" ManuallyRouted="false" />
         <AssociationConnector Association="open_space_comarcalModel.FK__inscripci__id_al__412EB0B6" ManuallyRouted="false" />
         <AssociationConnector Association="open_space_comarcalModel.FK__inscripci__id_in__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="open_space_comarcalModel.FK__instancia__id_cu__3B75D760" />
+        <AssociationConnector Association="open_space_comarcalModel.FK__inscripci__id_em__412EB0B6" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

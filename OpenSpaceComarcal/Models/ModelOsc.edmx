@@ -48,6 +48,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_alumno" Type="int" Nullable="false" />
           <Property Name="id_instancia" Type="int" Nullable="false" />
+          <Property Name="id_empresa" Type="int" />
           <Property Name="fecha_inscripcion" Type="date" />
           <Property Name="fecha_expedicion" Type="date" />
           <Property Name="apto" Type="bit" />
@@ -75,7 +76,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__inscripci__id_al__412EB0B6">
+        <Association Name="FK__inscripci__id_al__4222D4EF">
           <End Role="alumno" Type="Self.alumno" Multiplicity="1" />
           <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -87,7 +88,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__inscripci__id_in__4222D4EF">
+        <Association Name="FK__inscripci__id_em__412EB0B6">
+          <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+          <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_in__4316F928">
           <End Role="instancia" Type="Self.instancia" Multiplicity="1" />
           <End Role="inscripcion" Type="Self.inscripcion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,11 +134,15 @@
             <End Role="empresa" EntitySet="empresa" />
             <End Role="alumno" EntitySet="alumno" />
           </AssociationSet>
-          <AssociationSet Name="FK__inscripci__id_al__412EB0B6" Association="Self.FK__inscripci__id_al__412EB0B6">
+          <AssociationSet Name="FK__inscripci__id_al__4222D4EF" Association="Self.FK__inscripci__id_al__4222D4EF">
             <End Role="alumno" EntitySet="alumno" />
             <End Role="inscripcion" EntitySet="inscripcion" />
           </AssociationSet>
-          <AssociationSet Name="FK__inscripci__id_in__4222D4EF" Association="Self.FK__inscripci__id_in__4222D4EF">
+          <AssociationSet Name="FK__inscripci__id_em__412EB0B6" Association="Self.FK__inscripci__id_em__412EB0B6">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_in__4316F928" Association="Self.FK__inscripci__id_in__4316F928">
             <End Role="instancia" EntitySet="instancia" />
             <End Role="inscripcion" EntitySet="inscripcion" />
           </AssociationSet>
@@ -177,6 +194,7 @@
           <Property Name="email" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="persona_contacto" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="notas" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="inscripcion" Relationship="open_space_comarcalModel.FK__inscripci__id_em__412EB0B6" FromRole="empresa" ToRole="inscripcion" />
         </EntityType>
         <EntityType Name="inscripcion">
           <Key>
@@ -191,6 +209,8 @@
           <Property Name="cod_factura" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="alumno" Relationship="Self.FK__inscripci__id_al__412EB0B6" FromRole="inscripcion" ToRole="alumno" />
           <NavigationProperty Name="instancia" Relationship="Self.FK__inscripci__id_in__4222D4EF" FromRole="inscripcion" ToRole="instancia" />
+          <Property Name="id_empresa" Type="Int32" />
+          <NavigationProperty Name="empresa" Relationship="open_space_comarcalModel.FK__inscripci__id_em__412EB0B6" FromRole="inscripcion" ToRole="empresa" />
         </EntityType>
         <EntityType Name="instancia">
           <Key>
@@ -262,6 +282,10 @@
             <End Role="curso" EntitySet="curso" />
             <End Role="instancia" EntitySet="instancia" />
           </AssociationSet>
+          <AssociationSet Name="FK__inscripci__id_em__412EB0B6" Association="open_space_comarcalModel.FK__inscripci__id_em__412EB0B6">
+            <End Role="empresa" EntitySet="empresa" />
+            <End Role="inscripcion" EntitySet="inscripcion" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="FK__instancia__id_cu__3B75D760">
           <End Type="open_space_comarcalModel.curso" Role="curso" Multiplicity="1" />
@@ -272,6 +296,18 @@
             </Principal>
             <Dependent Role="instancia">
               <PropertyRef Name="id_curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__inscripci__id_em__412EB0B6">
+          <End Type="open_space_comarcalModel.empresa" Role="empresa" Multiplicity="0..1" />
+          <End Type="open_space_comarcalModel.inscripcion" Role="inscripcion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="inscripcion">
+              <PropertyRef Name="id_empresa" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -323,6 +359,7 @@
           <EntitySetMapping Name="inscripcion">
             <EntityTypeMapping TypeName="open_space_comarcalModel.inscripcion">
               <MappingFragment StoreEntitySet="inscripcion">
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
                 <ScalarProperty Name="id_instancia" ColumnName="id_instancia" />
