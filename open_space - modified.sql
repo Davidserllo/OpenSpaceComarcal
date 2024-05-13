@@ -51,22 +51,34 @@ CREATE TABLE alumno (
 	fecha_registro DATE,
 	id_empresa INT,
 	notas VARCHAR(1000),
-	FOREIGN KEY (id_empresa) REFERENCES empresa(id)
+	FOREIGN KEY (id_empresa) REFERENCES empresa(id),
 );
 
 CREATE TABLE inscripcion (
     id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     id_alumno INT NOT NULL,
     id_instancia INT NOT NULL,
+	id_empresa INT,
     fecha_inscripcion DATE,
 	fecha_expedicion DATE,
     apto BIT,
 	cod_factura VARCHAR(70),
+	FOREIGN KEY (id_empresa) REFERENCES empresa(id),
     FOREIGN KEY (id_alumno) REFERENCES alumno(id),
     FOREIGN KEY (id_instancia) REFERENCES instancia(id)
 );
+GO
 
-
-
+CREATE TRIGGER trg_InsertInscripcion
+ON inscripcion
+AFTER INSERT
+AS
+BEGIN
+    UPDATE inscripcion
+    SET id_empresa = (SELECT id_empresa FROM alumno WHERE id = inserted.id_alumno)
+    FROM inserted
+    WHERE inscripcion.id = inserted.id;
+END;
+GO
 
 
