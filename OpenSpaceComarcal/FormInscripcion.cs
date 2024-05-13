@@ -39,10 +39,10 @@ namespace OpenSpaceComarcal
                 
                 comboBoxAlumno.SelectedValue = fila.Cells[1].Value;
                 comboBoxInstancia.SelectedValue = fila.Cells[2].Value;
-                dateTimePickerInscripcion.Text = fila.Cells[3].Value.ToString();
-                dateTimePickerExpedicion.Text = fila.Cells[4].Value.ToString();
-                checkBoxApto.Checked = Convert.ToInt32(fila.Cells[5].Value) != 0;
-                textBoxCodFactura.Text = fila.Cells[6].Value.ToString();
+                dateTimePickerInscripcion.Text = fila.Cells[4].Value.ToString();
+                dateTimePickerExpedicion.Text = fila.Cells[5].Value.ToString();
+                checkBoxApto.Checked = Convert.ToInt32(fila.Cells[6].Value) != 0;
+                textBoxCodFactura.Text = fila.Cells[7].Value.ToString();
             }
         }
 
@@ -228,7 +228,20 @@ namespace OpenSpaceComarcal
                     e.Value = siglaCurso + " (" + fechaPrograma + ")";
                 }
             }
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 3)
+            {
+                if (e.Value != null)
+                {
+                    string siglaEmpresa = EmpresaOrm.Select(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    e.Value = siglaEmpresa;
+                }
+                else
+                {
+                    e.Value = "P001";
+                }
+
+            }
+            if (e.ColumnIndex == 6)
             {
                 if ((bool)e.Value == true)
                 {
