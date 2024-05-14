@@ -81,4 +81,34 @@ BEGIN
 END;
 GO
 
+CREATE TRIGGER trg_UpdateInscripcion
+ON alumno
+AFTER UPDATE
+AS
+BEGIN
+    IF UPDATE(id_empresa)  -- Solo actúa si id_empresa ha sido actualizado
+    BEGIN
+        UPDATE inscripcion
+        SET id_empresa = inserted.id_empresa
+        FROM inserted
+        WHERE inscripcion.id_alumno = inserted.id;
+    END
+END;
+GO
+
+CREATE TRIGGER trg_UpdateInscripcionNull
+ON alumno
+AFTER UPDATE
+AS
+BEGIN
+    IF UPDATE(id_empresa)  -- Solo actúa si id_empresa ha sido actualizado
+    BEGIN
+        UPDATE inscripcion
+        SET id_empresa = NULL
+        FROM inserted
+        WHERE inscripcion.id_alumno = inserted.id AND inserted.id_empresa IS NULL;
+    END
+END;
+GO
+
 
