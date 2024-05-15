@@ -1,9 +1,9 @@
-﻿using OpenSpaceComarcal.Libraries;
+﻿using ClosedXML.Excel;
+using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -269,6 +269,84 @@ namespace OpenSpaceComarcal
                     e.Value = "P001";
                 }
             }
+        }
+
+        private List<alumno> leerAlumnosDeExcel(string rutaExcel)
+        {
+            var alumnos = new List<alumno>();
+
+            try
+            {
+                using (var workbook = new XLWorkbook(rutaExcel))
+                {
+                    // Acceder a la primera hoja
+                    var worksheet = workbook.Worksheet(1);
+
+                    foreach (var row in worksheet.RowsUsed())
+                    {
+                        // Crear una instancia de Alumno y llenar con datos de la fila
+                        var alu = new alumno
+                        {
+                            dni_nie_pasp = row.Cell(1).GetValue<string>(),
+                            apellidos = row.Cell(2).GetValue<string>(),
+                            nombre = row.Cell(3).GetValue<string>(),
+                            telefono = row.Cell(4).GetValue<string>(),
+                            email = row.Cell(5).GetValue<string>(),
+                            id_empresa = row.Cell(6).GetValue<int>(),
+                            fecha_registro = row.Cell(7).GetValue<DateTime>(),
+                            notas = row.Cell(8).GetValue<string>(),
+                        };
+
+                        // Añadir el alumno a la lista
+                        alumnos.Add(alu);
+                    }
+                }
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show($"Un proceso esta usando este excel, cierrelo o finalice el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           }
+            return alumnos;
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+            string rutaExcel = "";
+            using (OpenFileDialog fileDialog = new OpenFileDialog())
+            {
+                fileDialog.Title = "Seleccione un archivo Excel para importarlo";
+                fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
+                fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
+
+                // Mostrar el diálogo y obtener el resultado
+                if (fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    rutaExcel = fileDialog.FileName;
+                    MessageBox.Show($"Archivo Excel seleccionado: {rutaExcel}", "Archivo Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            List<alumno> listaAlumnos = leerAlumnosDeExcel(rutaExcel);
+            string messag = "";
+            // Insertamos los alumnos en la BD
+            foreach (var alu in listaAlumnos)
+            {
+                alumno _alumno = new alumno();
+
+                _alumno.dni_nie_pasp = alu.dni_nie_pasp;
+                _alumno.apellidos = alu.apellidos;
+                _alumno.nombre = alu.nombre;
+                _alumno.telefono = alu.telefono;
+                _alumno.email = alu.email;
+                _alumno.id_empresa = alu.id_empresa;
+                _alumno.fecha_registro = DateTime.Now;
+                _alumno.notas = alu.notas;
+
+                messag = AlumnosOrm.Insert(_alumno);
+            }
+
+            MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            dataGridViewAlumno.Refresh();
         }
 
         private void toolStripMenuExportar_Click(object sender, EventArgs e)

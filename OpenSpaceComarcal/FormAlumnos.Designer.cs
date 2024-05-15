@@ -73,10 +73,6 @@
             this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuBaseDeDatos = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAlumno = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -478,7 +474,7 @@
             this.toolStripDropDownButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.ToolStripMenuBaseDeDatos});
+            this.ToolStripMenuImportar});
             this.toolStripDropDownButtonSettings.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
             this.toolStripDropDownButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButtonSettings.Name = "toolStripDropDownButtonSettings";
@@ -493,11 +489,11 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuItem1.Text = "Exportar";
             // 
-            // ToolStripMenuBaseDeDatos
+            // ToolStripMenuImportar
             // 
             this.ToolStripMenuBaseDeDatos.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
             this.ToolStripMenuBaseDeDatos.Name = "ToolStripMenuBaseDeDatos";
-            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuBaseDeDatos.Text = "Importar";
             // 
             // toolStripAlumno
@@ -620,9 +616,5 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuBaseDeDatos;
-        private System.Windows.Forms.ToolStrip toolStripAlumno;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
     }
 }
