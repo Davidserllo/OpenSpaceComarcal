@@ -1,6 +1,8 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -9,7 +11,7 @@ namespace OpenSpaceComarcal
     public partial class FormAlumnos : Form
     {
         public const string EXPLICACION_BUSQUEDA = "Busca la primera coincidencia de una fila." +
-            " Busqueda por todos los campos exceptuando: Empresa y Curso Prg." +
+            " Busqueda por todos los campos exceptuando: Empresa e ID." +
             " (Use el buscador avanzado para estos)";
 
         private ToolTip toolTipExplicacionBusqueda;
@@ -94,7 +96,7 @@ namespace OpenSpaceComarcal
                 _alumno.telefono = textBoxTelefono.Text;
                 _alumno.email = textBoxEmail.Text;
 
-                if (comboBoxEmpresa.SelectedItem != null)
+                if (comboBoxEmpresa.SelectedItem != null && comboBoxEmpresa.Text  != "")
                 { 
                     _alumno.id_empresa = (int)comboBoxEmpresa.SelectedValue;
                 }
@@ -185,9 +187,13 @@ namespace OpenSpaceComarcal
                         _alumno.telefono = textBoxTelefono.Text;
                         _alumno.email = textBoxEmail.Text;
 
-                        if (comboBoxEmpresa.SelectedItem != null)
+                        if (comboBoxEmpresa.SelectedItem != null && comboBoxEmpresa.Text != "")
                         {
                             _alumno.id_empresa = (int)comboBoxEmpresa.SelectedValue;
+                        }
+                        else
+                        {
+                            _alumno.id_empresa = null;
                         }
 
                         _alumno.notas = textBoxNotas.Text;

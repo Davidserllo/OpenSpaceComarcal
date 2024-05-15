@@ -79,7 +79,7 @@ namespace OpenSpaceComarcal.Models
             return resultados;
         }
 
-        public static List<inscripcion> SelectAvanzado(int alumnoId, int instanciaId, bool apto)
+        public static List<inscripcion> SelectAvanzado(int alumnoId, int instanciaId, int empresaId, bool apto)
         {
             var query = Orm.bd.inscripcion.AsQueryable();
 
@@ -91,6 +91,11 @@ namespace OpenSpaceComarcal.Models
             if (instanciaId != -1)
             {
                 query = query.Where(i => i.id_instancia == instanciaId);
+            }
+
+            if (empresaId != -1)
+            {
+                query = query.Where(i => i.id_empresa == empresaId);
             }
 
             if (apto == true)

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace OpenSpaceComarcal.Models
 {
@@ -46,6 +48,12 @@ namespace OpenSpaceComarcal.Models
             try
             {
                 Orm.bd.SaveChanges();
+
+                // Recargar entidades específicas
+                foreach (var entry in bd.ChangeTracker.Entries().Where(e => e.Entity is alumno || e.Entity is inscripcion))
+                {
+                    entry.Reload();
+                }
             }
             catch (DbUpdateException ex)
             {

@@ -36,8 +36,8 @@
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.buttonBuscarInscipcion = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxEmpresa = new System.Windows.Forms.ComboBox();
+            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.checkBoxAptoBusqueda = new System.Windows.Forms.CheckBox();
@@ -45,6 +45,7 @@
             this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxAlumnoBusqueda = new System.Windows.Forms.ComboBox();
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxCodFactura = new System.Windows.Forms.TextBox();
@@ -80,9 +81,10 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).BeginInit();
             this.SuspendLayout();
@@ -144,7 +146,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.comboBoxEmpresa);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.buttonBusquedaAvanzada);
             this.tabPage2.Controls.Add(this.checkBoxAptoBusqueda);
@@ -158,21 +160,21 @@
             this.tabPage2.Text = "Avanzado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBoxEmpresa
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.DataSource = this.bindingSourceInscipcion;
-            this.comboBox1.DisplayMember = "id_empresa";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(314, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 22;
-            this.comboBox1.ValueMember = "id_empresa";
+            this.comboBoxEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxEmpresa.DataSource = this.bindingSourceEmpresa;
+            this.comboBoxEmpresa.DisplayMember = "siglas";
+            this.comboBoxEmpresa.FormattingEnabled = true;
+            this.comboBoxEmpresa.Location = new System.Drawing.Point(314, 14);
+            this.comboBoxEmpresa.Name = "comboBoxEmpresa";
+            this.comboBoxEmpresa.Size = new System.Drawing.Size(91, 21);
+            this.comboBoxEmpresa.TabIndex = 22;
+            this.comboBoxEmpresa.ValueMember = "id";
             // 
-            // bindingSourceInscipcion
+            // bindingSourceEmpresa
             // 
-            this.bindingSourceInscipcion.DataSource = typeof(OpenSpaceComarcal.Models.inscripcion);
+            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
             // 
             // label1
             // 
@@ -238,6 +240,10 @@
             // bindingSourceAlumno
             // 
             this.bindingSourceAlumno.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
+            // 
+            // bindingSourceInscipcion
+            // 
+            this.bindingSourceInscipcion.DataSource = typeof(OpenSpaceComarcal.Models.inscripcion);
             // 
             // buttonActualizar
             // 
@@ -596,9 +602,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).EndInit();
@@ -654,6 +661,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codfacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEmpresa;
+        private System.Windows.Forms.BindingSource bindingSourceEmpresa;
     }
 }

@@ -22,6 +22,7 @@ namespace OpenSpaceComarcal
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
             iniciarPanelAvanzado();
         }
 
@@ -29,6 +30,7 @@ namespace OpenSpaceComarcal
         {
             comboBoxInstanciaBusqueda.SelectedIndex = -1;
             comboBoxAlumnoBusqueda.SelectedIndex = -1;
+            comboBoxEmpresa.SelectedIndex = -1;
         }
 
         private void actualizarTextBoxes()
@@ -51,6 +53,7 @@ namespace OpenSpaceComarcal
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
         }
 
         private bool camposRellenados()
@@ -196,6 +199,7 @@ namespace OpenSpaceComarcal
         {
             comboBoxAlumno.SelectedIndex = -1;
             comboBoxInstancia.SelectedIndex = -1;
+            comboBoxEmpresa.SelectedIndex = -1;
             dataGridViewInscripcion.ClearSelection();
             checkBoxApto.Checked = false;
             dateTimePickerExpedicion.Value = DateTime.Now;
@@ -304,7 +308,8 @@ namespace OpenSpaceComarcal
         {
             int id_alumno;
             int id_instancia;
-            if (comboBoxAlumnoBusqueda.SelectedValue == null)
+            int id_empresa;
+            if (comboBoxAlumnoBusqueda.SelectedValue == null || comboBoxAlumnoBusqueda.Text == "")
             {
                 id_alumno = -1;
             }
@@ -313,7 +318,7 @@ namespace OpenSpaceComarcal
                 id_alumno = (int)comboBoxAlumnoBusqueda.SelectedValue;
             }
 
-            if (comboBoxInstanciaBusqueda.SelectedValue == null)
+            if (comboBoxInstanciaBusqueda.SelectedValue == null || comboBoxInstanciaBusqueda.Text == "")
             {
                 id_instancia = -1;
             }
@@ -322,8 +327,17 @@ namespace OpenSpaceComarcal
                 id_instancia = (int)comboBoxInstanciaBusqueda.SelectedValue;
             }
 
+            if (comboBoxEmpresa.SelectedValue == null || comboBoxEmpresa.Text == "")
+            {
+                id_empresa = -1;
+            }
+            else
+            {
+                id_empresa = (int)comboBoxEmpresa.SelectedValue;
+            }
+
             bool apto = checkBoxAptoBusqueda.Checked;
-            bindingSourceInscipcion.DataSource = InscripcionOrm.SelectAvanzado(id_alumno, id_instancia, apto);
+            bindingSourceInscipcion.DataSource = InscripcionOrm.SelectAvanzado(id_alumno, id_instancia, id_empresa, apto);
         }
     }
 }
