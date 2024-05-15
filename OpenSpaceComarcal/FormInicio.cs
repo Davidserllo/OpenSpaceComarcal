@@ -118,7 +118,6 @@ namespace OpenSpaceComarcal
         // Método genérico para abrir formas
         private void OpenForm<T>() where T : Form, new()
         {
-            pictureBoxLoadingBar.Visible = true;
             ShowLoading();
 
             T form = new T();
@@ -128,15 +127,7 @@ namespace OpenSpaceComarcal
                 HideLoading();
             };
 
-            pictureBoxLoadingBar.Visible = false;
             form.Show(this);
         }
-
-        private async void FormInicio_Load(object sender, EventArgs e)
-        {
-            // Cuando carge el formulario deja de ser visible "pictureBoxLoadingBar"
-            pictureBoxLoadingBar.Visible = false;
-        }
-
     }
 }

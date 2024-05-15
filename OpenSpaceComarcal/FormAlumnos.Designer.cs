@@ -69,17 +69,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.skinEngineAlumnos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
-            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripAlumnos = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuBaseDeDatos = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAlumno = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.groupBoxBuscador.SuspendLayout();
-            this.toolStripInicio.SuspendLayout();
+            this.toolStripAlumnos.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAlumnos
@@ -87,7 +91,7 @@
             this.labelAlumnos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelAlumnos.AutoSize = true;
             this.labelAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlumnos.Location = new System.Drawing.Point(462, 12);
+            this.labelAlumnos.Location = new System.Drawing.Point(462, 28);
             this.labelAlumnos.Name = "labelAlumnos";
             this.labelAlumnos.Size = new System.Drawing.Size(126, 31);
             this.labelAlumnos.TabIndex = 1;
@@ -116,14 +120,14 @@
             this.fecha_registro,
             this.notas});
             this.dataGridViewAlumno.DataSource = this.bindingSourceAlumno;
-            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 107);
+            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 123);
             this.dataGridViewAlumno.MultiSelect = false;
             this.dataGridViewAlumno.Name = "dataGridViewAlumno";
             this.dataGridViewAlumno.ReadOnly = true;
             this.dataGridViewAlumno.RowHeadersVisible = false;
             this.dataGridViewAlumno.RowHeadersWidth = 72;
             this.dataGridViewAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAlumno.Size = new System.Drawing.Size(1034, 328);
+            this.dataGridViewAlumno.Size = new System.Drawing.Size(1034, 312);
             this.dataGridViewAlumno.TabIndex = 6;
             this.dataGridViewAlumno.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAlumno_CellFormatting);
             this.dataGridViewAlumno.SelectionChanged += new System.EventHandler(this.dataGridViewAlumno_SelectionChanged);
@@ -219,7 +223,7 @@
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizar.Location = new System.Drawing.Point(8, 28);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 31);
             this.buttonActualizar.TabIndex = 0;
@@ -425,7 +429,7 @@
             this.groupBoxBuscador.Controls.Add(this.label3);
             this.groupBoxBuscador.Controls.Add(this.textBoxBuscador);
             this.groupBoxBuscador.Controls.Add(this.BuscarAlumno);
-            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 49);
+            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 65);
             this.groupBoxBuscador.Name = "groupBoxBuscador";
             this.groupBoxBuscador.Size = new System.Drawing.Size(1034, 52);
             this.groupBoxBuscador.TabIndex = 2;
@@ -458,16 +462,16 @@
             this.skinEngineAlumnos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineAlumnos.SkinFile = "";
             // 
-            // toolStripInicio
+            // toolStripAlumnos
             // 
-            this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButtonSettings});
-            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
-            this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(1050, 25);
-            this.toolStripInicio.TabIndex = 20;
-            this.toolStripInicio.Text = "toolStrip1";
+            this.toolStripAlumnos.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripAlumnos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonArchivo});
+            this.toolStripAlumnos.Location = new System.Drawing.Point(0, 0);
+            this.toolStripAlumnos.Name = "toolStripAlumnos";
+            this.toolStripAlumnos.Size = new System.Drawing.Size(1050, 25);
+            this.toolStripAlumnos.TabIndex = 20;
+            this.toolStripAlumnos.Text = "toolStripAlumnos";
             // 
             // toolStripDropDownButtonSettings
             // 
@@ -486,22 +490,63 @@
             // 
             this.toolStripMenuItem1.Image = global::OpenSpaceComarcal.Properties.Resources.exportar_icono;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuItem1.Text = "Exportar";
             // 
             // ToolStripMenuBaseDeDatos
             // 
             this.ToolStripMenuBaseDeDatos.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
             this.ToolStripMenuBaseDeDatos.Name = "ToolStripMenuBaseDeDatos";
-            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuBaseDeDatos.Text = "Importar";
+            // 
+            // toolStripAlumno
+            // 
+            this.toolStripAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolStripAlumno.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripAlumno.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripAlumno.Location = new System.Drawing.Point(0, 0);
+            this.toolStripAlumno.Name = "toolStripAlumno";
+            this.toolStripAlumno.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStripAlumno.Size = new System.Drawing.Size(1050, 25);
+            this.toolStripAlumno.TabIndex = 20;
+            this.toolStripAlumno.Text = "toolStripAlumnos";
+            // 
+            // toolStripDropDownButtonArchivo
+            // 
+            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuExportar,
+            this.ToolStripMenuImportar});
+            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
+            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonArchivo.Text = "Archivo";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuExportar
+            // 
+            this.toolStripMenuExportar.Image = global::OpenSpaceComarcal.Properties.Resources.exportar_icono;
+            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Text = "Exportar";
+            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
+            // 
+            // ToolStripMenuImportar
+            // 
+            this.ToolStripMenuImportar.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
+            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Text = "Importar";
             // 
             // FormAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 589);
-            this.Controls.Add(this.toolStripInicio);
+            this.Controls.Add(this.toolStripAlumnos);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.groupBox1);
@@ -520,8 +565,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             this.groupBoxBuscador.ResumeLayout(false);
             this.groupBoxBuscador.PerformLayout();
-            this.toolStripInicio.ResumeLayout(false);
-            this.toolStripInicio.PerformLayout();
+            this.toolStripAlumnos.ResumeLayout(false);
+            this.toolStripAlumnos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,9 +616,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idempresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_registro;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
-        private System.Windows.Forms.ToolStrip toolStripInicio;
+        private System.Windows.Forms.ToolStrip toolStripAlumnos;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuBaseDeDatos;
+        private System.Windows.Forms.ToolStrip toolStripAlumno;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
     }
 }

@@ -36,7 +36,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ToolStripMenuBaseDeDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuApariencia = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuEmeraldCyan = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuEmeraldBlue = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,14 +47,12 @@
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
             this.skinEngineInicio = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
-            this.pictureBoxLoadingBar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingBar)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAlumnos
@@ -161,7 +158,6 @@
             // 
             this.toolStripDropDownButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuBaseDeDatos,
             this.ToolStripMenuApariencia});
             this.toolStripDropDownButtonSettings.Image = global::OpenSpaceComarcal.Properties.Resources.configuracion_icono;
             this.toolStripDropDownButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -169,12 +165,6 @@
             this.toolStripDropDownButtonSettings.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButtonSettings.Text = "Apariencia de la aplicación";
             this.toolStripDropDownButtonSettings.ToolTipText = "Ajustes";
-            // 
-            // ToolStripMenuBaseDeDatos
-            // 
-            this.ToolStripMenuBaseDeDatos.Name = "ToolStripMenuBaseDeDatos";
-            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(146, 22);
-            this.ToolStripMenuBaseDeDatos.Text = "Base de datos";
             // 
             // ToolStripMenuApariencia
             // 
@@ -284,22 +274,6 @@
             this.skinEngineInicio.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineInicio.SkinFile = "";
             // 
-            // pictureBoxLoadingBar
-            // 
-            this.pictureBoxLoadingBar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxLoadingBar.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLoadingBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLoadingBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxLoadingBar.Image = global::OpenSpaceComarcal.Properties.Resources.loading_icono;
-            this.pictureBoxLoadingBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxLoadingBar.Location = new System.Drawing.Point(134, 86);
-            this.pictureBoxLoadingBar.Name = "pictureBoxLoadingBar";
-            this.pictureBoxLoadingBar.Size = new System.Drawing.Size(533, 153);
-            this.pictureBoxLoadingBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxLoadingBar.TabIndex = 23;
-            this.pictureBoxLoadingBar.TabStop = false;
-            this.pictureBoxLoadingBar.WaitOnLoad = true;
-            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +283,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBoxLoadingBar);
             this.Controls.Add(this.pictureBoxAlumnos);
             this.Controls.Add(this.pictureBoxClientes);
             this.Controls.Add(this.pictureBoxInstancia);
@@ -323,7 +296,6 @@
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPEN SPACE COMARCAL";
-            this.Load += new System.EventHandler(this.FormInicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolStripInicio.ResumeLayout(false);
             this.toolStripInicio.PerformLayout();
@@ -331,7 +303,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInscripcion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,12 +323,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
         private Sunisoft.IrisSkin.SkinEngine skinEngineInicio;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuBaseDeDatos;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuApariencia;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuEmeraldCyan;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBlue;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldGreen;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBrown;
-        private System.Windows.Forms.PictureBox pictureBoxLoadingBar;
     }
 }

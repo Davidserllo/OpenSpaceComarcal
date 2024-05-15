@@ -3,6 +3,7 @@ using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,6 +11,11 @@ namespace OpenSpaceComarcal
 {
     public partial class FormAlumnos : Form
     {
+
+        //private PictureBox pictureBoxFondoLoading;
+        //private PictureBox pictureBoxIcono;
+        //private PictureBox pictureBoxLoading;
+
         public const string EXPLICACION_BUSQUEDA = "Busca la primera coincidencia de una fila." +
             " Busqueda por todos los campos exceptuando: Empresa e ID." +
             " (Use el buscador avanzado para estos)";
@@ -26,7 +32,6 @@ namespace OpenSpaceComarcal
                 return cp;
             }
         }
-
 
         public FormAlumnos()
         {
@@ -265,5 +270,137 @@ namespace OpenSpaceComarcal
                 }
             }
         }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+            // Preguntar al usuario si desea exportar los datos
+            DialogResult result = MessageBox.Show("¿Desea exportar los datos seleccionados?", "Exportar datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Limpiar los campos y la selección
+                LimpiarCampos();
+
+                // Mostrar mensaje de carga
+                //MostarVentanaLoading();
+
+                // Exportar los datos a Excel
+                Exportar.ExportarDataGridViewExcel(dataGridViewAlumno, "Alumnos");
+
+                // Ocultar mensaje de carga
+                //OcultarVentanaLoading();
+            }
+        }
+
+        private Point CalcularPosicionCentrada(Size contenedorSize, Size contenidoSize)
+        {
+            int x = (contenedorSize.Width - contenidoSize.Width) / 2;
+            int y = (contenedorSize.Height - contenidoSize.Height) / 2;
+            return new Point(x, y);
+        }
+
+
+        //private void MostarVentanaLoading()
+        //{
+
+        //    // Imagen de fondo
+        //    this.BackgroundImage = Properties.Resources.fondo_home;
+        //    this.BackgroundImageLayout = ImageLayout.Stretch;
+
+        //    // PictureBox para el fondo de carga
+        //    pictureBoxFondoLoading = new PictureBox();
+        //    pictureBoxFondoLoading.Anchor = AnchorStyles.None;
+        //    pictureBoxFondoLoading.BackColor = Color.Transparent;
+        //    pictureBoxFondoLoading.BackgroundImageLayout = ImageLayout.Stretch;
+        //    pictureBoxFondoLoading.Cursor = Cursors.Default;
+        //    pictureBoxFondoLoading.Image = Properties.Resources.fondo_home;
+        //    pictureBoxFondoLoading.Location = new Point(8, 12);
+        //    pictureBoxFondoLoading.Name = "pictureBoxFondoLoading";
+        //    pictureBoxFondoLoading.Size = new Size(784, 503);
+        //    pictureBoxFondoLoading.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pictureBoxFondoLoading.TabStop = false;
+        //    pictureBoxFondoLoading.WaitOnLoad = true;
+        //    Controls.Add(pictureBoxFondoLoading);
+
+        //    // PictureBox para el logo de carga
+        //    pictureBoxIcono = new PictureBox();
+        //    pictureBoxIcono.Anchor = AnchorStyles.None;
+        //    pictureBoxIcono.BackColor = Color.Transparent;
+        //    pictureBoxIcono.BackgroundImageLayout = ImageLayout.Stretch;
+        //    pictureBoxIcono.Cursor = Cursors.Default;
+        //    pictureBoxIcono.Image = Properties.Resources.logo_oscomarcal;
+        //    //pictureBoxLogoLoading.Location = new Point(267, 247);
+        //    pictureBoxIcono.Name = "pictureBoxLogoLoading";
+        //    pictureBoxIcono.Size = new Size(267, 119);
+        //    pictureBoxIcono.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pictureBoxIcono.TabStop = false;
+        //    Controls.Add(pictureBoxIcono);
+
+        //    // PictureBox para la animación de carga
+        //    pictureBoxLoading = new PictureBox();
+        //    pictureBoxLoading.Anchor = AnchorStyles.None;
+        //    pictureBoxLoading.BackColor = Color.Transparent;
+        //    pictureBoxLoading.BackgroundImageLayout = ImageLayout.None;
+        //    pictureBoxLoading.Cursor = Cursors.Default;
+        //    pictureBoxLoading.Image = Properties.Resources.cargando_icono;
+        //    //pictureBoxLoading.Location = new Point(231, 161);
+        //    pictureBoxLoading.Name = "pictureBoxLoading";
+        //    pictureBoxLoading.Size = new Size(339, 80);
+        //    pictureBoxLoading.SizeMode = PictureBoxSizeMode.CenterImage;
+        //    pictureBoxLoading.TabStop = false;
+        //    pictureBoxLoading.WaitOnLoad = true;
+        //    Controls.Add(pictureBoxLoading);
+
+        //    // Calcular la posición centrada para el logo de carga
+        //    Point logoPosition = CalcularPosicionCentrada(pictureBoxFondoLoading.Size, pictureBoxIcono.Size);
+        //    logoPosition.Y += 100;
+        //    pictureBoxIcono.Location = logoPosition;
+
+        //    // Calcular la posición centrada para la animación de carga
+        //    Point loadingPosition = CalcularPosicionCentrada(pictureBoxFondoLoading.Size, pictureBoxLoading.Size);
+        //    //logoPosition.Y += 100;
+        //    pictureBoxLoading.Location = loadingPosition;
+
+        //    pictureBoxFondoLoading.BringToFront();
+        //    pictureBoxIcono.BringToFront();
+        //    pictureBoxLoading.BringToFront();
+
+
+        //    pictureBoxFondoLoading.Size = this.ClientSize;
+        //    // También ajusta el tamaño de la imagen de fondo al tamaño del pictureBox
+        //    pictureBoxFondoLoading.BackgroundImage = new Bitmap(Properties.Resources.fondo_home, this.ClientSize);
+
+        //    //// Imagen de fondo
+        //    //this.BackgroundImage = Properties.Resources.fondo_home;
+        //    //this.BackgroundImageLayout = ImageLayout.Stretch;
+        //}
+
+        //private void OcultarVentanaLoading()
+        //{
+        //    this.BackgroundImage = null;
+
+        //    // PictureBox para el fondo de carga
+        //    pictureBoxFondoLoading.Visible = false;
+
+        //    // PictureBox para el logo de carga
+        //    pictureBoxIcono.Visible = false;
+
+        //    // PictureBox para la animación de carga
+        //    pictureBoxLoading.Visible = false;
+        //}
+
+        private void LimpiarCampos()
+        {
+            // Limpiar los campos y la selección
+            textBoxDniNie.Text = "";
+            textBoxApellidos.Text = "";
+            textBoxNombre.Text = "";
+            textBoxTelefono.Text = "";
+            textBoxEmail.Text = "";
+            comboBoxEmpresa.SelectedIndex = -1;
+            dataGridViewAlumno.ClearSelection();
+            textBoxBuscador.Text = "";
+        }
+
     }
 }

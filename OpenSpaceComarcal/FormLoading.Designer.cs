@@ -56,7 +56,7 @@
             this.pictureBoxLoadingBar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLoadingBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxLoadingBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBoxLoadingBar.Image = global::OpenSpaceComarcal.Properties.Resources.loading_icono;
+            this.pictureBoxLoadingBar.Image = global::OpenSpaceComarcal.Properties.Resources.cargando_icono;
             this.pictureBoxLoadingBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBoxLoadingBar.Location = new System.Drawing.Point(239, 167);
             this.pictureBoxLoadingBar.Name = "pictureBoxLoadingBar";
