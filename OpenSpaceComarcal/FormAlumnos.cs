@@ -4,6 +4,7 @@ using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -32,6 +33,7 @@ namespace OpenSpaceComarcal
                 return cp;
             }
         }
+
 
         public FormAlumnos()
         {
@@ -270,7 +272,6 @@ namespace OpenSpaceComarcal
                 }
             }
         }
-
         private List<alumno> leerAlumnosDeExcel(string rutaExcel)
         {
             var alumnos = new List<alumno>();
@@ -305,77 +306,18 @@ namespace OpenSpaceComarcal
             catch (IOException ex)
             {
                 MessageBox.Show($"Un proceso esta usando este excel, cierrelo o finalice el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           }
+            }
             return alumnos;
         }
 
-        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
-        {
-            string rutaExcel = "";
-            using (OpenFileDialog fileDialog = new OpenFileDialog())
-            {
-                fileDialog.Title = "Seleccione un archivo Excel para importarlo";
-                fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
-                fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
+        
 
-                // Mostrar el diálogo y obtener el resultado
-                if (fileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    rutaExcel = fileDialog.FileName;
-                    MessageBox.Show($"Archivo Excel seleccionado: {rutaExcel}", "Archivo Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            List<alumno> listaAlumnos = leerAlumnosDeExcel(rutaExcel);
-            string messag = "";
-            // Insertamos los alumnos en la BD
-            foreach (var alu in listaAlumnos)
-            {
-                alumno _alumno = new alumno();
-
-                _alumno.dni_nie_pasp = alu.dni_nie_pasp;
-                _alumno.apellidos = alu.apellidos;
-                _alumno.nombre = alu.nombre;
-                _alumno.telefono = alu.telefono;
-                _alumno.email = alu.email;
-                _alumno.id_empresa = alu.id_empresa;
-                _alumno.fecha_registro = DateTime.Now;
-                _alumno.notas = alu.notas;
-
-                messag = AlumnosOrm.Insert(_alumno);
-            }
-
-            MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            dataGridViewAlumno.Refresh();
-        }
-
-        private void toolStripMenuExportar_Click(object sender, EventArgs e)
-        {
-            // Preguntar al usuario si desea exportar los datos
-            DialogResult result = MessageBox.Show("¿Desea exportar los datos seleccionados?", "Exportar datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                // Limpiar los campos y la selección
-                LimpiarCampos();
-
-                // Mostrar mensaje de carga
-                //MostarVentanaLoading();
-
-                // Exportar los datos a Excel
-                Exportar.ExportarDataGridViewExcel(dataGridViewAlumno, "Alumnos");
-
-                // Ocultar mensaje de carga
-                //OcultarVentanaLoading();
-            }
-        }
-
-        private Point CalcularPosicionCentrada(Size contenedorSize, Size contenidoSize)
-        {
-            int x = (contenedorSize.Width - contenidoSize.Width) / 2;
-            int y = (contenedorSize.Height - contenidoSize.Height) / 2;
-            return new Point(x, y);
-        }
+        //private Point CalcularPosicionCentrada(Size contenedorSize, Size contenidoSize)
+        //{
+        //    int x = (contenedorSize.Width - contenidoSize.Width) / 2;
+        //    int y = (contenedorSize.Height - contenidoSize.Height) / 2;
+        //    return new Point(x, y);
+        //}
 
 
         //private void MostarVentanaLoading()
@@ -480,5 +422,65 @@ namespace OpenSpaceComarcal
             textBoxBuscador.Text = "";
         }
 
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+            string rutaExcel = "";
+            using (OpenFileDialog fileDialog = new OpenFileDialog())
+            {
+                fileDialog.Title = "Seleccione un archivo Excel para importarlo";
+                fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
+                fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
+
+                // Mostrar el diálogo y obtener el resultado
+                if (fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    rutaExcel = fileDialog.FileName;
+                    MessageBox.Show($"Archivo Excel seleccionado: {rutaExcel}", "Archivo Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            List<alumno> listaAlumnos = leerAlumnosDeExcel(rutaExcel);
+            string messag = "";
+            // Insertamos los alumnos en la BD
+            foreach (var alu in listaAlumnos)
+            {
+                alumno _alumno = new alumno();
+
+                _alumno.dni_nie_pasp = alu.dni_nie_pasp;
+                _alumno.apellidos = alu.apellidos;
+                _alumno.nombre = alu.nombre;
+                _alumno.telefono = alu.telefono;
+                _alumno.email = alu.email;
+                _alumno.id_empresa = alu.id_empresa;
+                _alumno.fecha_registro = DateTime.Now;
+                _alumno.notas = alu.notas;
+
+                messag = AlumnosOrm.Insert(_alumno);
+            }
+
+            MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            dataGridViewAlumno.Refresh();
+        }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+            // Preguntar al usuario si desea exportar los datos
+            DialogResult result = MessageBox.Show("¿Desea exportar los datos seleccionados?", "Exportar datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Limpiar los campos y la selección
+                LimpiarCampos();
+
+                // Mostrar mensaje de carga
+                //MostarVentanaLoading();
+
+                // Exportar los datos a Excel
+                Exportar.ExportarDataGridViewExcel(dataGridViewAlumno, "Alumnos");
+
+                // Ocultar mensaje de carga
+                //OcultarVentanaLoading();
+            }
+        }
     }
 }
