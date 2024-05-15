@@ -36,6 +36,14 @@
             this.labelSiglasBuscarCurso = new System.Windows.Forms.Label();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.groupBoxInformacionEmpresa = new System.Windows.Forms.GroupBox();
+            this.textBoxNotas = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxContacto = new System.Windows.Forms.TextBox();
+            this.labelContacto = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.buttonModificarEmpresa = new System.Windows.Forms.Button();
             this.buttonEliminarEmpresa = new System.Windows.Forms.Button();
@@ -47,17 +55,6 @@
             this.textBoxCif = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
-            this.labelCursos = new System.Windows.Forms.Label();
-            this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
-            this.textBoxContacto = new System.Windows.Forms.TextBox();
-            this.labelContacto = new System.Windows.Forms.Label();
-            this.labelTelefono = new System.Windows.Forms.Label();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
-            this.textBoxTelefono = new System.Windows.Forms.TextBox();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNotas = new System.Windows.Forms.TextBox();
-            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +63,9 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.persona_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
@@ -157,6 +157,79 @@
             this.groupBoxInformacionEmpresa.TabIndex = 7;
             this.groupBoxInformacionEmpresa.TabStop = false;
             this.groupBoxInformacionEmpresa.Text = "Informacion de la Empresa";
+            // 
+            // textBoxNotas
+            // 
+            this.textBoxNotas.Location = new System.Drawing.Point(517, 54);
+            this.textBoxNotas.Multiline = true;
+            this.textBoxNotas.Name = "textBoxNotas";
+            this.textBoxNotas.Size = new System.Drawing.Size(180, 55);
+            this.textBoxNotas.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(514, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Notas";
+            // 
+            // textBoxContacto
+            // 
+            this.textBoxContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxContacto.Location = new System.Drawing.Point(344, 89);
+            this.textBoxContacto.Name = "textBoxContacto";
+            this.textBoxContacto.Size = new System.Drawing.Size(155, 20);
+            this.textBoxContacto.TabIndex = 23;
+            // 
+            // labelContacto
+            // 
+            this.labelContacto.AutoSize = true;
+            this.labelContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContacto.Location = new System.Drawing.Point(264, 90);
+            this.labelContacto.Name = "labelContacto";
+            this.labelContacto.Size = new System.Drawing.Size(68, 16);
+            this.labelContacto.TabIndex = 22;
+            this.labelContacto.Text = "Contacto";
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelefono.Location = new System.Drawing.Point(263, 27);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(75, 16);
+            this.labelTelefono.TabIndex = 18;
+            this.labelTelefono.Text = "Teléfono";
+            // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMail.Location = new System.Drawing.Point(344, 56);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(155, 20);
+            this.textBoxMail.TabIndex = 21;
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTelefono.Location = new System.Drawing.Point(344, 27);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
+            this.textBoxTelefono.TabIndex = 19;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(264, 59);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(51, 16);
+            this.labelEmail.TabIndex = 20;
+            this.labelEmail.Text = "E-mail";
             // 
             // buttonLimpiar
             // 
@@ -291,99 +364,6 @@
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
             // 
-            // labelCursos
-            // 
-            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCursos.AutoSize = true;
-            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(409, 13);
-            this.labelCursos.Name = "labelCursos";
-            this.labelCursos.Size = new System.Drawing.Size(144, 31);
-            this.labelCursos.TabIndex = 1;
-            this.labelCursos.Text = "Empresas";
-            // 
-            // skinEngineEmpresas
-            // 
-            this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineEmpresas.SkinFile = "";
-            // 
-            // textBoxContacto
-            // 
-            this.textBoxContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxContacto.Location = new System.Drawing.Point(344, 89);
-            this.textBoxContacto.Name = "textBoxContacto";
-            this.textBoxContacto.Size = new System.Drawing.Size(155, 20);
-            this.textBoxContacto.TabIndex = 23;
-            // 
-            // labelContacto
-            // 
-            this.labelContacto.AutoSize = true;
-            this.labelContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContacto.Location = new System.Drawing.Point(264, 90);
-            this.labelContacto.Name = "labelContacto";
-            this.labelContacto.Size = new System.Drawing.Size(68, 16);
-            this.labelContacto.TabIndex = 22;
-            this.labelContacto.Text = "Contacto";
-            // 
-            // labelTelefono
-            // 
-            this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelefono.Location = new System.Drawing.Point(263, 27);
-            this.labelTelefono.Name = "labelTelefono";
-            this.labelTelefono.Size = new System.Drawing.Size(75, 16);
-            this.labelTelefono.TabIndex = 18;
-            this.labelTelefono.Text = "Teléfono";
-            // 
-            // textBoxMail
-            // 
-            this.textBoxMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxMail.Location = new System.Drawing.Point(344, 56);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(155, 20);
-            this.textBoxMail.TabIndex = 21;
-            // 
-            // textBoxTelefono
-            // 
-            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTelefono.Location = new System.Drawing.Point(344, 27);
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
-            this.textBoxTelefono.TabIndex = 19;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(264, 59);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(51, 16);
-            this.labelEmail.TabIndex = 20;
-            this.labelEmail.Text = "E-mail";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(514, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Notas";
-            // 
-            // textBoxNotas
-            // 
-            this.textBoxNotas.Location = new System.Drawing.Point(517, 54);
-            this.textBoxNotas.Multiline = true;
-            this.textBoxNotas.Name = "textBoxNotas";
-            this.textBoxNotas.Size = new System.Drawing.Size(180, 55);
-            this.textBoxNotas.TabIndex = 25;
-            // 
-            // bindingSourceEmpresa
-            // 
-            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -439,6 +419,26 @@
             this.notas.HeaderText = "Notas";
             this.notas.Name = "notas";
             this.notas.ReadOnly = true;
+            // 
+            // bindingSourceEmpresa
+            // 
+            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
+            // 
+            // labelCursos
+            // 
+            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(409, 13);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(144, 31);
+            this.labelCursos.TabIndex = 1;
+            this.labelCursos.Text = "Empresas";
+            // 
+            // skinEngineEmpresas
+            // 
+            this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineEmpresas.SkinFile = "";
             // 
             // FormEmpresas
             // 

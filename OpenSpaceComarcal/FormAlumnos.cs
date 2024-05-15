@@ -247,15 +247,8 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            textBoxDniNie.Text = "";
-            textBoxApellidos.Text = "";
-            textBoxNombre.Text = "";
-            textBoxTelefono.Text = "";
-            textBoxEmail.Text = "";
-            comboBoxEmpresa.SelectedIndex = -1;
-            dataGridViewAlumno.ClearSelection();
-            textBoxBuscador.Text = "";
-            textBoxNotas.Text = "";
+            // Limpiar los campos y la selección
+            LimpiarCampos();
         }
 
         private void dataGridViewAlumno_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -420,6 +413,7 @@ namespace OpenSpaceComarcal
             comboBoxEmpresa.SelectedIndex = -1;
             dataGridViewAlumno.ClearSelection();
             textBoxBuscador.Text = "";
+            textBoxNotas.Text = "";
         }
 
         private void ToolStripMenuImportar_Click(object sender, EventArgs e)

@@ -79,6 +79,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLoading";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPEN SPACE COMARCAL - Loading";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
