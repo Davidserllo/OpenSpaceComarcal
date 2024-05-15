@@ -73,6 +73,16 @@ namespace OpenSpaceComarcal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archivo_icono {
+            get {
+                object obj = ResourceManager.GetObject("archivo_icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cargando_icono {
             get {
                 object obj = ResourceManager.GetObject("cargando_icono", resourceCulture);
@@ -123,9 +133,29 @@ namespace OpenSpaceComarcal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exportar_icono {
+            get {
+                object obj = ResourceManager.GetObject("exportar_icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_home {
             get {
                 object obj = ResourceManager.GetObject("fondo_home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap importar_icono {
+            get {
+                object obj = ResourceManager.GetObject("importar_icono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

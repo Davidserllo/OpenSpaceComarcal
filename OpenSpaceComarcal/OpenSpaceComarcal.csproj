@@ -63,6 +63,10 @@
     <Reference Include="IrisSkin2">
       <HintPath>..\..\..\Recursos\Vista\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -141,6 +145,8 @@
     </Compile>
     <Compile Include="Libraries\Apariencia.cs" />
     <Compile Include="Libraries\Diploma.cs" />
+    <Compile Include="Libraries\Exportar.cs" />
+    <Compile Include="Libraries\Importar.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
       <DependentUpon>ModelOsc.tt</DependentUpon>
@@ -285,10 +291,13 @@
     <Content Include="Resources\alumnos-icono.png" />
     <None Include="Resources\check-icono.png" />
     <None Include="Resources\cargando_icono.png" />
+    <None Include="Resources\archivo_icono.png" />
     <Content Include="Resources\clientes-icono.png" />
     <None Include="Resources\configuracion-icono.png" />
     <Content Include="Resources\curso-icono.png" />
+    <None Include="Resources\exportar-icono.png" />
     <Content Include="Resources\fondo_home.jpg" />
+    <None Include="Resources\importar-icono.png" />
     <Content Include="Resources\inscripcion-icono.png" />
     <Content Include="Resources\instancia-icono.png" />
     <None Include="Resources\loading_icono %281%29.gif" />

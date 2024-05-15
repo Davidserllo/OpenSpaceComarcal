@@ -32,6 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlumnos));
             this.labelAlumnos = new System.Windows.Forms.Label();
             this.dataGridViewAlumno = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniniepaspDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.BuscarAlumno = new System.Windows.Forms.Button();
@@ -48,7 +57,6 @@
             this.buttonModificarAlumno = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxNotas = new System.Windows.Forms.TextBox();
-            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.comboBoxEmpresa = new System.Windows.Forms.ComboBox();
@@ -56,25 +64,22 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEMail = new System.Windows.Forms.Label();
             this.labelEmpresa = new System.Windows.Forms.Label();
+            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxBuscador = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.skinEngineAlumnos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dniniepaspDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripInicio = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuBaseDeDatos = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.groupBoxBuscador.SuspendLayout();
+            this.toolStripInicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAlumnos
@@ -122,6 +127,69 @@
             this.dataGridViewAlumno.TabIndex = 6;
             this.dataGridViewAlumno.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAlumno_CellFormatting);
             this.dataGridViewAlumno.SelectionChanged += new System.EventHandler(this.dataGridViewAlumno_SelectionChanged);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dniniepaspDataGridViewTextBoxColumn
+            // 
+            this.dniniepaspDataGridViewTextBoxColumn.DataPropertyName = "dni_nie_pasp";
+            this.dniniepaspDataGridViewTextBoxColumn.HeaderText = "DNI/NIE/PASP";
+            this.dniniepaspDataGridViewTextBoxColumn.Name = "dniniepaspDataGridViewTextBoxColumn";
+            this.dniniepaspDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "apellidos";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Apellidos";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Teléfono";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idempresaDataGridViewTextBoxColumn
+            // 
+            this.idempresaDataGridViewTextBoxColumn.DataPropertyName = "id_empresa";
+            this.idempresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
+            this.idempresaDataGridViewTextBoxColumn.Name = "idempresaDataGridViewTextBoxColumn";
+            this.idempresaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fecha_registro
+            // 
+            this.fecha_registro.DataPropertyName = "fecha_registro";
+            this.fecha_registro.HeaderText = "Fecha Registro";
+            this.fecha_registro.Name = "fecha_registro";
+            this.fecha_registro.ReadOnly = true;
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Notas";
+            this.notas.Name = "notas";
+            this.notas.ReadOnly = true;
             // 
             // bindingSourceAlumno
             // 
@@ -390,74 +458,50 @@
             this.skinEngineAlumnos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineAlumnos.SkinFile = "";
             // 
-            // idDataGridViewTextBoxColumn
+            // toolStripInicio
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonSettings});
+            this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInicio.Name = "toolStripInicio";
+            this.toolStripInicio.Size = new System.Drawing.Size(1050, 25);
+            this.toolStripInicio.TabIndex = 20;
+            this.toolStripInicio.Text = "toolStrip1";
             // 
-            // dniniepaspDataGridViewTextBoxColumn
+            // toolStripDropDownButtonSettings
             // 
-            this.dniniepaspDataGridViewTextBoxColumn.DataPropertyName = "dni_nie_pasp";
-            this.dniniepaspDataGridViewTextBoxColumn.HeaderText = "DNI/NIE/PASP";
-            this.dniniepaspDataGridViewTextBoxColumn.Name = "dniniepaspDataGridViewTextBoxColumn";
-            this.dniniepaspDataGridViewTextBoxColumn.ReadOnly = true;
+            this.toolStripDropDownButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.ToolStripMenuBaseDeDatos});
+            this.toolStripDropDownButtonSettings.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonSettings.Name = "toolStripDropDownButtonSettings";
+            this.toolStripDropDownButtonSettings.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonSettings.Text = "Apariencia de la aplicación";
+            this.toolStripDropDownButtonSettings.ToolTipText = "Ajustes";
             // 
-            // dataGridViewTextBoxColumn1
+            // toolStripMenuItem1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "apellidos";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.toolStripMenuItem1.Image = global::OpenSpaceComarcal.Properties.Resources.exportar_icono;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Exportar";
             // 
-            // dataGridViewTextBoxColumn2
+            // ToolStripMenuBaseDeDatos
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idempresaDataGridViewTextBoxColumn
-            // 
-            this.idempresaDataGridViewTextBoxColumn.DataPropertyName = "id_empresa";
-            this.idempresaDataGridViewTextBoxColumn.HeaderText = "Empresa";
-            this.idempresaDataGridViewTextBoxColumn.Name = "idempresaDataGridViewTextBoxColumn";
-            this.idempresaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fecha_registro
-            // 
-            this.fecha_registro.DataPropertyName = "fecha_registro";
-            this.fecha_registro.HeaderText = "Fecha Registro";
-            this.fecha_registro.Name = "fecha_registro";
-            this.fecha_registro.ReadOnly = true;
-            // 
-            // notas
-            // 
-            this.notas.DataPropertyName = "notas";
-            this.notas.HeaderText = "Notas";
-            this.notas.Name = "notas";
-            this.notas.ReadOnly = true;
+            this.ToolStripMenuBaseDeDatos.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
+            this.ToolStripMenuBaseDeDatos.Name = "ToolStripMenuBaseDeDatos";
+            this.ToolStripMenuBaseDeDatos.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuBaseDeDatos.Text = "Importar";
             // 
             // FormAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 589);
+            this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.groupBox1);
@@ -472,10 +516,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             this.groupBoxBuscador.ResumeLayout(false);
             this.groupBoxBuscador.PerformLayout();
+            this.toolStripInicio.ResumeLayout(false);
+            this.toolStripInicio.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,5 +571,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idempresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_registro;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
+        private System.Windows.Forms.ToolStrip toolStripInicio;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuBaseDeDatos;
     }
 }
