@@ -129,6 +129,10 @@ namespace OpenSpaceComarcal
 
                 if (mensajeError == "")
                 {
+                    String msg = ValidarAlumno.validarDniNie(_alumno.dni_nie_pasp);
+                    if (msg != "") {
+                        MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                     MessageBox.Show("Se ha creado un nuevo alumno llamado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     bindingSourceAlumno.DataSource = AlumnosOrm.Select();
                 }
@@ -221,14 +225,19 @@ namespace OpenSpaceComarcal
 
                         mensajeError = AlumnosOrm.Update(_alumno);
 
-                        if (mensajeError != "")
+                        if (mensajeError == "")
                         {
-                            MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            String msg = ValidarAlumno.validarDniNie(_alumno.dni_nie_pasp);
+                            if (msg != "")
+                            {
+                                MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
                         }
                         else
                         {
-                            MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                            MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else

@@ -108,7 +108,7 @@
             // 
             // buttonSeleccionarRuta
             // 
-            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(422, 27);
+            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(417, 27);
             this.buttonSeleccionarRuta.Name = "buttonSeleccionarRuta";
             this.buttonSeleccionarRuta.Size = new System.Drawing.Size(26, 20);
             this.buttonSeleccionarRuta.TabIndex = 29;
