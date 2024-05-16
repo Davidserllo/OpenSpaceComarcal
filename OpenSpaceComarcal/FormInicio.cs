@@ -127,7 +127,7 @@ namespace OpenSpaceComarcal
                 HideLoading();
             };
 
-            form.Show(this);
+            form.Show();
         }
     }
 }
