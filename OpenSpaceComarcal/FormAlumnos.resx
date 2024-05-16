@@ -142,19 +142,19 @@
     <value>191, 17</value>
   </metadata>
   <metadata name="bindingSourceInstancia.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>534, 17</value>
+    <value>521, 17</value>
   </metadata>
   <metadata name="skinEngineAlumnos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>367, 17</value>
   </metadata>
   <metadata name="toolStripAlumnos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>840, 17</value>
+    <value>692, 18</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripMenuExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAABE5JREFUeF7tnDuIVGcYhteoEcEmKTSVgigmEFC00ZBSUBGUFKJNIARULGxEsDMi
+        DwAACw8BkvkDpQAABE5JREFUeF7tnDuIVGcYhteoEcEmKTSVgigmEFC00ZBSUBGUFKJNIARULGxEsDMi
         ghckCII3LASVkBCiYKFgAkFTqY0gAQMJiCxooUg0Qby/r/gt4+y7s3Pbc745533gqfbMzz/n2Tmz+5/L
         0Du+hFfhK/i6Br6Ef8FvYTqWwqdQTbwO7oKpuAzVROviMzgHpuERVBOtkxtgGtQE62aq7xI1wbrpIMkc
         mCDD8KcK+AdU7y8cmCDnYRVYC9X7Cx2kYBwkGQ6SDAdJhoMkw0GS4SDJcJBkOEgyHCQZDpIMB0mGgyTD
@@ -178,7 +178,7 @@
   <data name="ToolStripMenuImportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAA+BJREFUeF7tnEmoTn8Yx68hU+YSK2HDigw7K5EhKyFsLbAwFIUFsSBsyJySBTsk
+        DwAACw8BkvkDpQAAA+BJREFUeF7tnEmoTn8Yx68hU+YSK2HDigw7K5EhKyFsLbAwFIUFsSBsyJySBTsk
         RcYFkjEypWwM2UikFMo1fr65b91uzz3vxT3vec7vPJ/69C+b3/O+n9v/nPd3hqZ2mIuP8VdFbMYHOBPd
         sQh/ojV46upzL0RXvEZr2Kr4DnuiC4ahNWTVHI8uGI3WgFVzMroggvwxgjizNEGe4fEEfITW56tZmiA7
         MAXWovX5akaQBhNBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnBFBnNELB2XYHV1Q

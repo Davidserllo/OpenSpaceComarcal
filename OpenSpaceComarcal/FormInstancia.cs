@@ -32,6 +32,9 @@ namespace OpenSpaceComarcal
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceCursos.DataSource = CursosOrm.Select();
             setToolTip();
+
+            // Ocultar barra de progreso
+            progressBarArchivo.Visible = false;
         }
 
         ToolTip toolTip1 = new ToolTip();
@@ -245,6 +248,16 @@ namespace OpenSpaceComarcal
                     buttonSeleccionarDiploma.Text = filePath;
                 }
             }
+        }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

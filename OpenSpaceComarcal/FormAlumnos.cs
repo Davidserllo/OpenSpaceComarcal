@@ -1,11 +1,8 @@
-﻿using ClosedXML.Excel;
-using OpenSpaceComarcal.Libraries;
+﻿using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
@@ -36,6 +33,8 @@ namespace OpenSpaceComarcal
             InitializeComponent();
             Apariencia.AplicarApariencia(skinEngineAlumnos);
             configToolTip();
+
+            // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
 

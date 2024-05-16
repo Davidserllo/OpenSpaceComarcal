@@ -66,15 +66,14 @@
             this.labelEmpresa = new System.Windows.Forms.Label();
             this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxBuscador = new System.Windows.Forms.GroupBox();
-            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
+            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.skinEngineAlumnos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripAlumnos = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -437,13 +436,6 @@
             this.groupBoxBuscador.TabStop = false;
             this.groupBoxBuscador.Text = "Buscador";
             // 
-            // progressBarArchivo
-            // 
-            this.progressBarArchivo.Location = new System.Drawing.Point(91, 62);
-            this.progressBarArchivo.Name = "progressBarArchivo";
-            this.progressBarArchivo.Size = new System.Drawing.Size(869, 10);
-            this.progressBarArchivo.TabIndex = 30;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -464,6 +456,13 @@
             this.textBoxBuscador.Name = "textBoxBuscador";
             this.textBoxBuscador.Size = new System.Drawing.Size(745, 20);
             this.textBoxBuscador.TabIndex = 4;
+            // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(91, 62);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(869, 10);
+            this.progressBarArchivo.TabIndex = 30;
             // 
             // skinEngineAlumnos
             // 
@@ -500,7 +499,7 @@
             // 
             this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
@@ -508,18 +507,9 @@
             // 
             this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(963, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormAlumnos
             // 
@@ -527,7 +517,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 589);
             this.Controls.Add(this.progressBarArchivo);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStripAlumnos);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.buttonActualizar);
@@ -603,6 +592,5 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
         private System.Windows.Forms.ProgressBar progressBarArchivo;
-        private System.Windows.Forms.Button button1;
     }
 }

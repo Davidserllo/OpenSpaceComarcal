@@ -55,10 +55,16 @@
             this.labelCursos = new System.Windows.Forms.Label();
             this.buttonActualizarCursos = new System.Windows.Forms.Button();
             this.skinEngineCursos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.toolStripCursos = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).BeginInit();
+            this.toolStripCursos.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxBuscador
@@ -69,7 +75,7 @@
             this.groupBoxBuscador.Controls.Add(this.buttonBuscar);
             this.groupBoxBuscador.Controls.Add(this.labelSiglasBuscarCurso);
             this.groupBoxBuscador.Controls.Add(this.textBoxBusqueda);
-            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 55);
+            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 70);
             this.groupBoxBuscador.Name = "groupBoxBuscador";
             this.groupBoxBuscador.Size = new System.Drawing.Size(568, 52);
             this.groupBoxBuscador.TabIndex = 2;
@@ -122,9 +128,9 @@
             this.groupBoxInformacionCurso.Controls.Add(this.textBoxSiglas);
             this.groupBoxInformacionCurso.Controls.Add(this.textBoxCodigo);
             this.groupBoxInformacionCurso.Controls.Add(this.labelSiglas);
-            this.groupBoxInformacionCurso.Location = new System.Drawing.Point(7, 424);
+            this.groupBoxInformacionCurso.Location = new System.Drawing.Point(8, 433);
             this.groupBoxInformacionCurso.Name = "groupBoxInformacionCurso";
-            this.groupBoxInformacionCurso.Size = new System.Drawing.Size(568, 126);
+            this.groupBoxInformacionCurso.Size = new System.Drawing.Size(568, 117);
             this.groupBoxInformacionCurso.TabIndex = 7;
             this.groupBoxInformacionCurso.TabStop = false;
             this.groupBoxInformacionCurso.Text = "Informacion del Curso";
@@ -132,7 +138,7 @@
             // buttonLimpiar
             // 
             this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(323, 70);
+            this.buttonLimpiar.Location = new System.Drawing.Point(323, 61);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(103, 33);
             this.buttonLimpiar.TabIndex = 16;
@@ -143,7 +149,7 @@
             // buttonModificarCurso
             // 
             this.buttonModificarCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModificarCurso.Location = new System.Drawing.Point(446, 30);
+            this.buttonModificarCurso.Location = new System.Drawing.Point(446, 21);
             this.buttonModificarCurso.Name = "buttonModificarCurso";
             this.buttonModificarCurso.Size = new System.Drawing.Size(106, 34);
             this.buttonModificarCurso.TabIndex = 15;
@@ -155,7 +161,7 @@
             // 
             this.buttonEliminarCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarCurso.ForeColor = System.Drawing.Color.IndianRed;
-            this.buttonEliminarCurso.Location = new System.Drawing.Point(446, 69);
+            this.buttonEliminarCurso.Location = new System.Drawing.Point(446, 60);
             this.buttonEliminarCurso.Name = "buttonEliminarCurso";
             this.buttonEliminarCurso.Size = new System.Drawing.Size(106, 34);
             this.buttonEliminarCurso.TabIndex = 17;
@@ -175,7 +181,7 @@
             // buttonCrearCurso
             // 
             this.buttonCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCrearCurso.Location = new System.Drawing.Point(323, 30);
+            this.buttonCrearCurso.Location = new System.Drawing.Point(323, 21);
             this.buttonCrearCurso.Name = "buttonCrearCurso";
             this.buttonCrearCurso.Size = new System.Drawing.Size(103, 34);
             this.buttonCrearCurso.TabIndex = 14;
@@ -249,14 +255,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataGridViewCursos.DataSource = this.bindingSourceCursos;
-            this.dataGridViewCursos.Location = new System.Drawing.Point(8, 113);
+            this.dataGridViewCursos.Location = new System.Drawing.Point(8, 128);
             this.dataGridViewCursos.MultiSelect = false;
             this.dataGridViewCursos.Name = "dataGridViewCursos";
             this.dataGridViewCursos.ReadOnly = true;
             this.dataGridViewCursos.RowHeadersVisible = false;
             this.dataGridViewCursos.RowHeadersWidth = 72;
             this.dataGridViewCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCursos.Size = new System.Drawing.Size(568, 305);
+            this.dataGridViewCursos.Size = new System.Drawing.Size(568, 299);
             this.dataGridViewCursos.TabIndex = 6;
             this.dataGridViewCursos.SelectionChanged += new System.EventHandler(this.dataGridViewCursos_SelectionChanged);
             // 
@@ -305,7 +311,7 @@
             this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelCursos.AutoSize = true;
             this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(245, 13);
+            this.labelCursos.Location = new System.Drawing.Point(240, 29);
             this.labelCursos.Name = "labelCursos";
             this.labelCursos.Size = new System.Drawing.Size(107, 31);
             this.labelCursos.TabIndex = 1;
@@ -313,7 +319,7 @@
             // 
             // buttonActualizarCursos
             // 
-            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 28);
             this.buttonActualizarCursos.Name = "buttonActualizarCursos";
             this.buttonActualizarCursos.Size = new System.Drawing.Size(75, 32);
             this.buttonActualizarCursos.TabIndex = 0;
@@ -326,6 +332,55 @@
             this.skinEngineCursos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineCursos.SkinFile = "";
             // 
+            // toolStripCursos
+            // 
+            this.toolStripCursos.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripCursos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonArchivo});
+            this.toolStripCursos.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStripCursos.Location = new System.Drawing.Point(0, 0);
+            this.toolStripCursos.Name = "toolStripCursos";
+            this.toolStripCursos.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripCursos.Size = new System.Drawing.Size(587, 25);
+            this.toolStripCursos.TabIndex = 21;
+            this.toolStripCursos.Text = "toolStripCursos";
+            // 
+            // toolStripDropDownButtonArchivo
+            // 
+            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuExportar,
+            this.ToolStripMenuImportar});
+            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
+            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonArchivo.Text = "Archivo";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuExportar
+            // 
+            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
+            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Text = "Exportar";
+            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
+            // 
+            // ToolStripMenuImportar
+            // 
+            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
+            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Text = "Importar";
+            this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
+            // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(91, 63);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(404, 10);
+            this.progressBarArchivo.TabIndex = 32;
+            // 
             // FormCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +388,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(587, 562);
+            this.Controls.Add(this.progressBarArchivo);
+            this.Controls.Add(this.toolStripCursos);
             this.Controls.Add(this.buttonActualizarCursos);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.groupBoxInformacionCurso);
@@ -350,6 +407,8 @@
             this.groupBoxInformacionCurso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).EndInit();
+            this.toolStripCursos.ResumeLayout(false);
+            this.toolStripCursos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +446,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ToolStrip toolStripCursos;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
+        private System.Windows.Forms.ProgressBar progressBarArchivo;
     }
 }
