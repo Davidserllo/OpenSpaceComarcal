@@ -124,7 +124,7 @@ namespace OpenSpaceComarcal
         {
             ShowLoading();
 
-            await Task.Delay(100); // Simulate loading time, replace with actual loading code
+            await Task.Delay(50);
 
             T form = new T();
 
