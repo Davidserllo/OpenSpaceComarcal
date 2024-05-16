@@ -1,6 +1,7 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
@@ -111,14 +112,19 @@ namespace OpenSpaceComarcal
         // Método para ocultar la ventana de carga
         private void HideLoading()
         {
-            loading?.Close();
-            loading?.Dispose();
+            if (loading != null && !loading.IsDisposed)
+            {
+                loading.Close();
+                loading.Dispose();
+            }
         }
 
         // Método genérico para abrir formas
-        private void OpenForm<T>() where T : Form, new()
+        private async void OpenForm<T>() where T : Form, new()
         {
             ShowLoading();
+
+            await Task.Delay(100); // Simulate loading time, replace with actual loading code
 
             T form = new T();
 

@@ -46,15 +46,15 @@
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
-            this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
-            this.labelCursos = new System.Windows.Forms.Label();
-            this.buttonActualizarCursos = new System.Windows.Forms.Button();
-            this.skinEngineCursos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
+            this.labelCursos = new System.Windows.Forms.Label();
+            this.buttonActualizarCursos = new System.Windows.Forms.Button();
+            this.skinEngineCursos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
@@ -260,36 +260,6 @@
             this.dataGridViewCursos.TabIndex = 6;
             this.dataGridViewCursos.SelectionChanged += new System.EventHandler(this.dataGridViewCursos_SelectionChanged);
             // 
-            // bindingSourceCursos
-            // 
-            this.bindingSourceCursos.DataSource = typeof(OpenSpaceComarcal.Models.curso);
-            // 
-            // labelCursos
-            // 
-            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCursos.AutoSize = true;
-            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(245, 13);
-            this.labelCursos.Name = "labelCursos";
-            this.labelCursos.Size = new System.Drawing.Size(107, 31);
-            this.labelCursos.TabIndex = 1;
-            this.labelCursos.Text = "Cursos";
-            // 
-            // buttonActualizarCursos
-            // 
-            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 12);
-            this.buttonActualizarCursos.Name = "buttonActualizarCursos";
-            this.buttonActualizarCursos.Size = new System.Drawing.Size(75, 32);
-            this.buttonActualizarCursos.TabIndex = 0;
-            this.buttonActualizarCursos.Text = "Actualizar";
-            this.buttonActualizarCursos.UseVisualStyleBackColor = true;
-            this.buttonActualizarCursos.Click += new System.EventHandler(this.buttonActualizarCursos_Click);
-            // 
-            // skinEngineCursos
-            // 
-            this.skinEngineCursos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineCursos.SkinFile = "";
-            // 
             // id
             // 
             this.id.DataPropertyName = "id";
@@ -325,6 +295,36 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // bindingSourceCursos
+            // 
+            this.bindingSourceCursos.DataSource = typeof(OpenSpaceComarcal.Models.curso);
+            // 
+            // labelCursos
+            // 
+            this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCursos.AutoSize = true;
+            this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursos.Location = new System.Drawing.Point(245, 13);
+            this.labelCursos.Name = "labelCursos";
+            this.labelCursos.Size = new System.Drawing.Size(107, 31);
+            this.labelCursos.TabIndex = 1;
+            this.labelCursos.Text = "Cursos";
+            // 
+            // buttonActualizarCursos
+            // 
+            this.buttonActualizarCursos.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizarCursos.Name = "buttonActualizarCursos";
+            this.buttonActualizarCursos.Size = new System.Drawing.Size(75, 32);
+            this.buttonActualizarCursos.TabIndex = 0;
+            this.buttonActualizarCursos.Text = "Actualizar";
+            this.buttonActualizarCursos.UseVisualStyleBackColor = true;
+            this.buttonActualizarCursos.Click += new System.EventHandler(this.buttonActualizarCursos_Click);
+            // 
+            // skinEngineCursos
+            // 
+            this.skinEngineCursos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineCursos.SkinFile = "";
             // 
             // FormCursos
             // 
