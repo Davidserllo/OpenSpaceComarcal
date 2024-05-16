@@ -5,6 +5,7 @@ namespace OpenSpaceComarcal.Libraries
 {
     public static class ValidarAlumno
     {
+
         private static bool ValidarDNI(string dni)
         {
             if (string.IsNullOrEmpty(dni))
@@ -58,9 +59,11 @@ namespace OpenSpaceComarcal.Libraries
             String msgError = "";
             if (!(ValidarDNI(dniNie) || ValidarNIE(dniNie)))
             {
-                msgError = "El DNI o NIE es incorrecto, ¿desea seguir?";
+                msgError = "Aviso: El DNI o NIE es incorrecto";
             }
             return msgError;
         }
+
+        
     }
 }
