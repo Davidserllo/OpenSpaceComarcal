@@ -220,6 +220,7 @@
     <Compile Include="Libraries\Exportar.cs" />
     <Compile Include="Libraries\Importar.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
+    <Compile Include="Libraries\XD.cs" />
     <Compile Include="Models\alumno.cs">
       <DependentUpon>ModelOsc.tt</DependentUpon>
     </Compile>

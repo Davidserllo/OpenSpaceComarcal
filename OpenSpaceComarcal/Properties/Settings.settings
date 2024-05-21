@@ -8,5 +8,8 @@
     <Setting Name="NomApariencia" Type="System.String" Scope="User">
       <Value Profile="(Default)">EmeraldCyan.ssk</Value>
     </Setting>
+    <Setting Name="XD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01/04/2025</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
