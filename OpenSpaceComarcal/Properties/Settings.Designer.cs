@@ -25,7 +25,7 @@ namespace OpenSpaceComarcal.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1001")]
         public int CONTADOR_DIPLOMAS {
             get {
                 return ((int)(this["CONTADOR_DIPLOMAS"]));

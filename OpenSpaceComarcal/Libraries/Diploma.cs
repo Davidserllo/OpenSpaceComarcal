@@ -54,7 +54,7 @@ namespace OpenSpaceComarcal.Libraries
                     }
                     ConvertirWordAPdf(rutaDestinoCombinada, rutaPDF);
                 }
-                Properties.Settings.Default.CONTADOR_DIPLOMAS = 1;
+                Properties.Settings.Default.CONTADOR_DIPLOMAS++;
                 Properties.Settings.Default.Save();
             }
         }
