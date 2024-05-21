@@ -198,6 +198,37 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
+            // Limpiar los campos y la selección
+            LimpiarCampos();
+        }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+
+            // Preguntar al usuario si desea exportar los datos
+            DialogResult result = MessageBox.Show("¿Desea exportar los datos seleccionados?", "Exportar datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Limpiar los campos y la selección
+                LimpiarCampos();
+
+                // Exportar los datos a Excel
+                Exportar.ExportarDataGridViewExcel(dataGridViewEmpresas, "Empresas", progressBarArchivo);
+
+                // Ocultar la barra de progreso al finalizar la exportación
+                progressBarArchivo.Visible = false;
+            }
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LimpiarCampos()
+        {
+            // Limpiar los campos y la selección
             textBoxCif.Text = "";
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
@@ -209,14 +240,5 @@ namespace OpenSpaceComarcal
             dataGridViewEmpresas.ClearSelection();
         }
 
-        private void toolStripMenuExportar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
