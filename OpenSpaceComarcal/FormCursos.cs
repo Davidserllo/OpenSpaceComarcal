@@ -189,5 +189,15 @@ namespace OpenSpaceComarcal
             textBoxBusqueda.Text = "";
             dataGridViewCursos.ClearSelection();
         }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

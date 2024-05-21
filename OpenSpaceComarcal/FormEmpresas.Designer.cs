@@ -66,15 +66,21 @@
             this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.toolStripEmpresas = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
+            this.toolStripEmpresas.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonActualizarEmpresas
             // 
-            this.buttonActualizarEmpresas.Location = new System.Drawing.Point(12, 12);
+            this.buttonActualizarEmpresas.Location = new System.Drawing.Point(11, 28);
             this.buttonActualizarEmpresas.Name = "buttonActualizarEmpresas";
             this.buttonActualizarEmpresas.Size = new System.Drawing.Size(75, 32);
             this.buttonActualizarEmpresas.TabIndex = 0;
@@ -90,7 +96,7 @@
             this.groupBoxBuscador.Controls.Add(this.buttonBuscar);
             this.groupBoxBuscador.Controls.Add(this.labelSiglasBuscarCurso);
             this.groupBoxBuscador.Controls.Add(this.textBoxBusqueda);
-            this.groupBoxBuscador.Location = new System.Drawing.Point(12, 55);
+            this.groupBoxBuscador.Location = new System.Drawing.Point(11, 68);
             this.groupBoxBuscador.Name = "groupBoxBuscador";
             this.groupBoxBuscador.Size = new System.Drawing.Size(939, 52);
             this.groupBoxBuscador.TabIndex = 2;
@@ -353,14 +359,14 @@
             this.persona_contacto,
             this.notas});
             this.dataGridViewEmpresas.DataSource = this.bindingSourceEmpresa;
-            this.dataGridViewEmpresas.Location = new System.Drawing.Point(12, 113);
+            this.dataGridViewEmpresas.Location = new System.Drawing.Point(12, 126);
             this.dataGridViewEmpresas.MultiSelect = false;
             this.dataGridViewEmpresas.Name = "dataGridViewEmpresas";
             this.dataGridViewEmpresas.ReadOnly = true;
             this.dataGridViewEmpresas.RowHeadersVisible = false;
             this.dataGridViewEmpresas.RowHeadersWidth = 72;
             this.dataGridViewEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEmpresas.Size = new System.Drawing.Size(939, 331);
+            this.dataGridViewEmpresas.Size = new System.Drawing.Size(939, 318);
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
             // 
@@ -429,7 +435,7 @@
             this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelCursos.AutoSize = true;
             this.labelCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursos.Location = new System.Drawing.Point(409, 13);
+            this.labelCursos.Location = new System.Drawing.Point(409, 29);
             this.labelCursos.Name = "labelCursos";
             this.labelCursos.Size = new System.Drawing.Size(144, 31);
             this.labelCursos.TabIndex = 1;
@@ -440,11 +446,62 @@
             this.skinEngineEmpresas.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineEmpresas.SkinFile = "";
             // 
+            // toolStripEmpresas
+            // 
+            this.toolStripEmpresas.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripEmpresas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonArchivo});
+            this.toolStripEmpresas.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStripEmpresas.Location = new System.Drawing.Point(0, 0);
+            this.toolStripEmpresas.Name = "toolStripEmpresas";
+            this.toolStripEmpresas.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripEmpresas.Size = new System.Drawing.Size(963, 25);
+            this.toolStripEmpresas.TabIndex = 21;
+            this.toolStripEmpresas.Text = "toolStripEmpresas";
+            // 
+            // toolStripDropDownButtonArchivo
+            // 
+            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuExportar,
+            this.ToolStripMenuImportar});
+            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
+            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonArchivo.Text = "Archivo";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuExportar
+            // 
+            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
+            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Text = "Exportar";
+            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
+            // 
+            // ToolStripMenuImportar
+            // 
+            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
+            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Text = "Importar";
+            this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
+            // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(91, 63);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(780, 10);
+            this.progressBarArchivo.TabIndex = 31;
+            // 
             // FormEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 587);
+            this.Controls.Add(this.progressBarArchivo);
+            this.Controls.Add(this.toolStripEmpresas);
             this.Controls.Add(this.buttonActualizarEmpresas);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.groupBoxInformacionEmpresa);
@@ -462,6 +519,8 @@
             this.groupBoxInformacionEmpresa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
+            this.toolStripEmpresas.ResumeLayout(false);
+            this.toolStripEmpresas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +564,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn persona_contacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
+        private System.Windows.Forms.ToolStrip toolStripEmpresas;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
+        private System.Windows.Forms.ProgressBar progressBarArchivo;
     }
 }

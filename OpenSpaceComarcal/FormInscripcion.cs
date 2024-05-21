@@ -27,6 +27,9 @@ namespace OpenSpaceComarcal
         {
             InitializeComponent();
             Apariencia.AplicarApariencia(skinEngineinscripcion);
+
+            // Ocultar barra de progreso
+            progressBarArchivo.Visible = false;
         }
 
         private void Inscripcion_Load(object sender, EventArgs e)
@@ -350,6 +353,16 @@ namespace OpenSpaceComarcal
 
             bool apto = checkBoxAptoBusqueda.Checked;
             bindingSourceInscipcion.DataSource = InscripcionOrm.SelectAvanzado(id_alumno, id_instancia, id_empresa, apto);
+        }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

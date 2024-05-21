@@ -368,8 +368,10 @@
     <Content Include="Resources\clientes-icono.png" />
     <None Include="Resources\configuracion-icono.png" />
     <Content Include="Resources\curso-icono.png" />
+    <None Include="Resources\exportar-iconooooooooooooooo.png" />
     <None Include="Resources\exportar-icono.png" />
     <Content Include="Resources\fondo_home.jpg" />
+    <None Include="Resources\importar-iconooooooooooooooo.png" />
     <None Include="Resources\importar-icono.png" />
     <Content Include="Resources\inscripcion-icono.png" />
     <Content Include="Resources\instancia-icono.png" />

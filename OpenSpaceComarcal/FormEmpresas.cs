@@ -23,6 +23,9 @@ namespace OpenSpaceComarcal
         {
             InitializeComponent();
             Apariencia.AplicarApariencia(skinEngineEmpresas);
+
+            // Ocultar barra de progreso
+            progressBarArchivo.Visible = false;
         }
 
         private void actualizarTextBoxes()
@@ -204,6 +207,16 @@ namespace OpenSpaceComarcal
             textBoxContacto.Text = "";
             textBoxNotas.Text = "";
             dataGridViewEmpresas.ClearSelection();
+        }
+
+        private void toolStripMenuExportar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolStripMenuImportar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

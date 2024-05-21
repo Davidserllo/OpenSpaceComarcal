@@ -7,68 +7,77 @@ namespace OpenSpaceComarcal.Libraries
     internal class Exportar
     {
 
-        public static void ExportarDataGridViewExcel(DataGridView dataGridView, String nameArchivo)
+        public static void ExportarDataGridViewExcel(DataGridView dataGridView, string nameArchivo, ProgressBar progressBar)
         {
-            // Crear un diálogo de guardado de archivos
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
             saveFileDialog.Title = "Guardar como";
 
-            // Obtiene la fecha actual para el nombre predeterminado del archivo
             DateTime fechaActual = DateTime.Now;
-            string fechaHoraFormateada = fechaActual.ToString("yyyy-MM-dd"); // Para añadir la hora "yyyy-MM-dd_HH:mm"
-            saveFileDialog.FileName = "OpenSpaceComarcal_" + nameArchivo + "_" + fechaHoraFormateada + ".xlsx"; // Nombre predeterminado del archivo
+            string fechaHoraFormateada = fechaActual.ToString("yyyy-MM-dd");
+            saveFileDialog.FileName = $"OpenSpaceComarcal_{nameArchivo}_{fechaHoraFormateada}.xlsx";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Obtener la ruta del archivo seleccionado por el usuario
                 string filePath = saveFileDialog.FileName;
-
-                // Crear una instancia de Excel
                 Excel.Application excelApp = new Excel.Application();
-                excelApp.Visible = false; // Oculta la aplicación de Excel
+                excelApp.Visible = false;
 
                 try
                 {
                     Excel.Workbook workbook = excelApp.Workbooks.Add();
                     Excel.Worksheet worksheet = workbook.Sheets[1];
 
-                    // Exportar los encabezados de las columnas
-                    for (int i = 0; i < dataGridView.Columns.Count; i++)
-                    {
-                        worksheet.Cells[1, i + 1] = dataGridView.Columns[i].HeaderText;
-                    }
+                    int totalRows = dataGridView.Rows.Count;
+                    int totalColumns = dataGridView.Columns.Count;
 
-                    // Exportar los datos de las celdas
-                    for (int i = 0; i < dataGridView.Rows.Count; i++)
+                    progressBar.Visible = true;
+                    progressBar.Maximum = totalRows;
+
+                    object[,] data = new object[totalRows, totalColumns];
+
+                    // Llenar la matriz de datos
+                    for (int i = 0; i < totalRows; i++)
                     {
-                        for (int j = 0; j < dataGridView.Columns.Count; j++)
+                        for (int j = 0; j < totalColumns; j++)
                         {
-                            if (dataGridView.Rows[i].Cells[j].Value is DateTime)
+                            object cellValue = dataGridView.Rows[i].Cells[j].Value;
+                            if (cellValue != null)
                             {
-                                DateTime fecha = (DateTime)dataGridView.Rows[i].Cells[j].Value;
-                                // Formatear la fecha y alinear el texto a la izquierda
-                                worksheet.Cells[i + 2, j + 1].NumberFormat = "@";
-                                worksheet.Cells[i + 2, j + 1] = fecha.ToShortDateString();
+                                if (cellValue is DateTime)
+                                {
+                                    DateTime fecha = (DateTime)cellValue;
+                                    data[i, j] = fecha.ToShortDateString();
+                                }
+                                else
+                                {
+                                    data[i, j] = cellValue.ToString();
+                                }
                             }
                             else
                             {
-                                // Si no es una fecha, solo se escribe el valor
-                                worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                                data[i, j] = "";
                             }
                         }
+                        progressBar.Value = i + 1;
                     }
 
-                    // Ajustar el ancho de las columnas automáticamente
+                    // Escribir la matriz de datos en Excel
+                    Excel.Range startCell = worksheet.Cells[1, 1];
+                    Excel.Range endCell = worksheet.Cells[totalRows, totalColumns];
+                    Excel.Range writeRange = worksheet.Range[startCell, endCell];
+                    writeRange.Value = data;
+
                     worksheet.Columns.AutoFit();
 
-                    // Guardar el archivo Excel en la ubicación seleccionada por el usuario
                     workbook.SaveAs(filePath);
                     workbook.Close();
+
+                    MessageBox.Show($"La exportación de {nameArchivo} se ha realizado correctamente.\n\nRuta del archivo:\n{filePath}", "Exportación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al exportar a Excel: " + ex.Message);
+                    MessageBox.Show($"Error al exportar a Excel: {ex.Message}");
                 }
                 finally
                 {

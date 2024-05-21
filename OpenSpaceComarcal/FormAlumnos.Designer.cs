@@ -68,6 +68,7 @@
             this.groupBoxBuscador = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
+            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.skinEngineAlumnos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripAlumnos = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
@@ -456,6 +457,13 @@
             this.textBoxBuscador.Size = new System.Drawing.Size(745, 20);
             this.textBoxBuscador.TabIndex = 4;
             // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(91, 62);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(869, 10);
+            this.progressBarArchivo.TabIndex = 30;
+            // 
             // skinEngineAlumnos
             // 
             this.skinEngineAlumnos.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
@@ -489,7 +497,7 @@
             // 
             // toolStripMenuExportar
             // 
-            this.toolStripMenuExportar.Image = global::OpenSpaceComarcal.Properties.Resources.exportar_icono;
+            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
             this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuExportar.Text = "Exportar";
@@ -497,7 +505,7 @@
             // 
             // ToolStripMenuImportar
             // 
-            this.ToolStripMenuImportar.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
+            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
             this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuImportar.Text = "Importar";
@@ -508,6 +516,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 589);
+            this.Controls.Add(this.progressBarArchivo);
             this.Controls.Add(this.toolStripAlumnos);
             this.Controls.Add(this.groupBoxBuscador);
             this.Controls.Add(this.buttonActualizar);
@@ -582,5 +591,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
+        private System.Windows.Forms.ProgressBar progressBarArchivo;
     }
 }

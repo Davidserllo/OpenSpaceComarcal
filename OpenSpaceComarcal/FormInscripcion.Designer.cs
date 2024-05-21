@@ -78,6 +78,11 @@
             this.labelInscripcion = new System.Windows.Forms.Label();
             this.buttonGenerarDiplomas = new System.Windows.Forms.Button();
             this.skinEngineinscripcion = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.toolStripInscripcion = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -87,16 +92,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInscipcion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).BeginInit();
+            this.toolStripInscripcion.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(8, 49);
+            this.tabControl1.Location = new System.Drawing.Point(8, 69);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(828, 73);
+            this.tabControl1.Size = new System.Drawing.Size(831, 73);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -107,7 +113,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(820, 47);
+            this.tabPage1.Size = new System.Drawing.Size(823, 47);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Buscador";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -130,13 +136,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscador.Location = new System.Drawing.Point(150, 14);
             this.textBoxBuscador.Name = "textBoxBuscador";
-            this.textBoxBuscador.Size = new System.Drawing.Size(516, 20);
+            this.textBoxBuscador.Size = new System.Drawing.Size(519, 20);
             this.textBoxBuscador.TabIndex = 5;
             // 
             // buttonBuscarInscipcion
             // 
             this.buttonBuscarInscipcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscarInscipcion.Location = new System.Drawing.Point(689, 6);
+            this.buttonBuscarInscipcion.Location = new System.Drawing.Point(692, 6);
             this.buttonBuscarInscipcion.Name = "buttonBuscarInscipcion";
             this.buttonBuscarInscipcion.Size = new System.Drawing.Size(113, 34);
             this.buttonBuscarInscipcion.TabIndex = 6;
@@ -247,7 +253,7 @@
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(8, 12);
+            this.buttonActualizar.Location = new System.Drawing.Point(12, 28);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 31);
             this.buttonActualizar.TabIndex = 0;
@@ -275,7 +281,7 @@
             this.groupBox1.Controls.Add(this.buttonCrearInscripcion);
             this.groupBox1.Controls.Add(this.labelDNINIA);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(8, 407);
+            this.groupBox1.Location = new System.Drawing.Point(8, 425);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(831, 130);
             this.groupBox1.TabIndex = 8;
@@ -471,14 +477,14 @@
             this.alumnoDataGridViewTextBoxColumn,
             this.instanciaDataGridViewTextBoxColumn});
             this.dataGridViewInscripcion.DataSource = this.bindingSourceInscipcion;
-            this.dataGridViewInscripcion.Location = new System.Drawing.Point(8, 124);
+            this.dataGridViewInscripcion.Location = new System.Drawing.Point(8, 148);
             this.dataGridViewInscripcion.MultiSelect = false;
             this.dataGridViewInscripcion.Name = "dataGridViewInscripcion";
             this.dataGridViewInscripcion.ReadOnly = true;
             this.dataGridViewInscripcion.RowHeadersVisible = false;
             this.dataGridViewInscripcion.RowHeadersWidth = 72;
             this.dataGridViewInscripcion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewInscripcion.Size = new System.Drawing.Size(831, 273);
+            this.dataGridViewInscripcion.Size = new System.Drawing.Size(831, 267);
             this.dataGridViewInscripcion.TabIndex = 7;
             this.dataGridViewInscripcion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInscripcion_CellFormatting);
             this.dataGridViewInscripcion.SelectionChanged += new System.EventHandler(this.dataGridViewInscripcion_SelectionChanged);
@@ -559,7 +565,7 @@
             // 
             this.labelInscripcion.AutoSize = true;
             this.labelInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInscripcion.Location = new System.Drawing.Point(322, 12);
+            this.labelInscripcion.Location = new System.Drawing.Point(346, 28);
             this.labelInscripcion.Name = "labelInscripcion";
             this.labelInscripcion.Size = new System.Drawing.Size(156, 31);
             this.labelInscripcion.TabIndex = 20;
@@ -567,7 +573,7 @@
             // 
             // buttonGenerarDiplomas
             // 
-            this.buttonGenerarDiplomas.Location = new System.Drawing.Point(704, 12);
+            this.buttonGenerarDiplomas.Location = new System.Drawing.Point(704, 28);
             this.buttonGenerarDiplomas.Name = "buttonGenerarDiplomas";
             this.buttonGenerarDiplomas.Size = new System.Drawing.Size(113, 31);
             this.buttonGenerarDiplomas.TabIndex = 25;
@@ -580,11 +586,62 @@
             this.skinEngineinscripcion.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineinscripcion.SkinFile = "";
             // 
+            // toolStripInscripcion
+            // 
+            this.toolStripInscripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripInscripcion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonArchivo});
+            this.toolStripInscripcion.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStripInscripcion.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInscripcion.Name = "toolStripInscripcion";
+            this.toolStripInscripcion.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripInscripcion.Size = new System.Drawing.Size(848, 25);
+            this.toolStripInscripcion.TabIndex = 26;
+            this.toolStripInscripcion.Text = "toolStripInscripcion";
+            // 
+            // toolStripDropDownButtonArchivo
+            // 
+            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuExportar,
+            this.ToolStripMenuImportar});
+            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
+            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonArchivo.Text = "Archivo";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuExportar
+            // 
+            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
+            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Text = "Exportar";
+            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
+            // 
+            // ToolStripMenuImportar
+            // 
+            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
+            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Text = "Importar";
+            this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
+            // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(151, 65);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(547, 10);
+            this.progressBarArchivo.TabIndex = 33;
+            // 
             // FormInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 549);
+            this.ClientSize = new System.Drawing.Size(848, 567);
+            this.Controls.Add(this.progressBarArchivo);
+            this.Controls.Add(this.toolStripInscripcion);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonGenerarDiplomas);
             this.Controls.Add(this.buttonActualizar);
@@ -609,6 +666,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInscripcion)).EndInit();
+            this.toolStripInscripcion.ResumeLayout(false);
+            this.toolStripInscripcion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -663,5 +722,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboBoxEmpresa;
         private System.Windows.Forms.BindingSource bindingSourceEmpresa;
+        private System.Windows.Forms.ToolStrip toolStripInscripcion;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
+        private System.Windows.Forms.ProgressBar progressBarArchivo;
     }
 }
