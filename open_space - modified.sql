@@ -27,7 +27,6 @@ CREATE TABLE empresa (
 
 CREATE TABLE curso (
     id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    codigo VARCHAR(50) NOT NULL,
     siglas VARCHAR(10) NOT NULL,
     nombre VARCHAR(100) NOT NULL
 );
@@ -38,6 +37,8 @@ CREATE TABLE instancia (
     fecha_inicio DATE,
     fecha_fin DATE,
     diploma VARCHAR(300),
+    codigo VARCHAR(50) NOT NULL,
+    sesion INT,
     FOREIGN KEY (id_curso) REFERENCES curso(id)
 );
 
