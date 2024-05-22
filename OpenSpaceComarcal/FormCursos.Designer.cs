@@ -41,16 +41,9 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.buttonCrearCurso = new System.Windows.Forms.Button();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.labelDNINIA = new System.Windows.Forms.Label();
             this.textBoxSiglas = new System.Windows.Forms.TextBox();
-            this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.buttonActualizarCursos = new System.Windows.Forms.Button();
@@ -60,6 +53,10 @@
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
@@ -124,9 +121,7 @@
             this.groupBoxInformacionCurso.Controls.Add(this.textBoxNombre);
             this.groupBoxInformacionCurso.Controls.Add(this.buttonCrearCurso);
             this.groupBoxInformacionCurso.Controls.Add(this.labelNombre);
-            this.groupBoxInformacionCurso.Controls.Add(this.labelDNINIA);
             this.groupBoxInformacionCurso.Controls.Add(this.textBoxSiglas);
-            this.groupBoxInformacionCurso.Controls.Add(this.textBoxCodigo);
             this.groupBoxInformacionCurso.Controls.Add(this.labelSiglas);
             this.groupBoxInformacionCurso.Location = new System.Drawing.Point(8, 433);
             this.groupBoxInformacionCurso.Name = "groupBoxInformacionCurso";
@@ -173,7 +168,7 @@
             // 
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNombre.Location = new System.Drawing.Point(100, 88);
+            this.textBoxNombre.Location = new System.Drawing.Point(100, 65);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(194, 20);
             this.textBoxNombre.TabIndex = 13;
@@ -193,45 +188,26 @@
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(20, 89);
+            this.labelNombre.Location = new System.Drawing.Point(20, 66);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(62, 16);
             this.labelNombre.TabIndex = 12;
             this.labelNombre.Text = "Nombre";
             // 
-            // labelDNINIA
-            // 
-            this.labelDNINIA.AutoSize = true;
-            this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(19, 26);
-            this.labelDNINIA.Name = "labelDNINIA";
-            this.labelDNINIA.Size = new System.Drawing.Size(57, 16);
-            this.labelDNINIA.TabIndex = 8;
-            this.labelDNINIA.Text = "Código";
-            // 
             // textBoxSiglas
             // 
             this.textBoxSiglas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSiglas.Location = new System.Drawing.Point(100, 55);
+            this.textBoxSiglas.Location = new System.Drawing.Point(100, 32);
             this.textBoxSiglas.Name = "textBoxSiglas";
             this.textBoxSiglas.Size = new System.Drawing.Size(193, 20);
             this.textBoxSiglas.TabIndex = 11;
-            // 
-            // textBoxCodigo
-            // 
-            this.textBoxCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCodigo.Location = new System.Drawing.Point(100, 24);
-            this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(193, 20);
-            this.textBoxCodigo.TabIndex = 9;
             // 
             // labelSiglas
             // 
             this.labelSiglas.AutoSize = true;
             this.labelSiglas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSiglas.Location = new System.Drawing.Point(20, 58);
+            this.labelSiglas.Location = new System.Drawing.Point(20, 35);
             this.labelSiglas.Name = "labelSiglas";
             this.labelSiglas.Size = new System.Drawing.Size(51, 16);
             this.labelSiglas.TabIndex = 10;
@@ -250,7 +226,6 @@
             this.dataGridViewCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
@@ -265,42 +240,6 @@
             this.dataGridViewCursos.Size = new System.Drawing.Size(568, 299);
             this.dataGridViewCursos.TabIndex = 6;
             this.dataGridViewCursos.SelectionChanged += new System.EventHandler(this.dataGridViewCursos_SelectionChanged);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "siglas";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Siglas";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "instancia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "instancia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // bindingSourceCursos
             // 
@@ -362,7 +301,7 @@
             // 
             this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
@@ -370,7 +309,7 @@
             // 
             this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
@@ -380,6 +319,35 @@
             this.progressBarArchivo.Name = "progressBarArchivo";
             this.progressBarArchivo.Size = new System.Drawing.Size(404, 10);
             this.progressBarArchivo.TabIndex = 32;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "siglas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Siglas";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "instancia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "instancia";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // FormCursos
             // 
@@ -430,9 +398,7 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Button buttonCrearCurso;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelDNINIA;
         private System.Windows.Forms.TextBox textBoxSiglas;
-        private System.Windows.Forms.TextBox textBoxCodigo;
         private System.Windows.Forms.Label labelSiglas;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn siglasDataGridViewTextBoxColumn;
@@ -441,15 +407,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instanciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonLimpiar;
         private Sunisoft.IrisSkin.SkinEngine skinEngineCursos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.ToolStrip toolStripCursos;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
         private System.Windows.Forms.ProgressBar progressBarArchivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

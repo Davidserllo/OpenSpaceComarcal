@@ -26,7 +26,9 @@ namespace OpenSpaceComarcal.Models
                 .Where(a => a.id.ToString().Contains(busqueda)
                             || a.fecha_inicio.ToString().Contains(busqueda)
                             || a.fecha_fin.ToString().Contains(busqueda)
-                            || a.diploma.Contains(busqueda))
+                            || a.diploma.Contains(busqueda)
+                            || a.codigo.Contains(busqueda)
+                            || a.sesion.ToString().Contains(busqueda))
                 .OrderBy(a => a.id)
                 .ToList();
 
@@ -76,6 +78,8 @@ namespace OpenSpaceComarcal.Models
                 instanciaAnterior.fecha_inicio = _instancia.fecha_inicio;
                 instanciaAnterior.fecha_fin = _instancia.fecha_fin;
                 instanciaAnterior.diploma = _instancia.diploma;
+                instanciaAnterior.codigo = _instancia.codigo;
+                instanciaAnterior.sesion = _instancia.sesion;
 
                 mensajeError = Orm.MySaveChanges();
             }

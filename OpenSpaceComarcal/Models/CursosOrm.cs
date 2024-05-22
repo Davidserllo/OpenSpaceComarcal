@@ -35,7 +35,6 @@ namespace OpenSpaceComarcal.Models
 
             var query = Orm.bd.curso
                 .Where(a => a.id.ToString().Contains(busqueda)
-                            || a.codigo.Contains(busqueda)
                             || a.siglas.Contains(busqueda)
                             || a.nombre.Contains(busqueda))
                 .OrderBy(a => a.id)
@@ -72,7 +71,6 @@ namespace OpenSpaceComarcal.Models
 
             if (cursoAnterior != null)
             {
-                cursoAnterior.codigo = _curso.codigo;
                 cursoAnterior.siglas = _curso.siglas;
                 cursoAnterior.nombre = _curso.nombre;
 

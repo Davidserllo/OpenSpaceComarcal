@@ -37,6 +37,10 @@
             this.buttonBuscarCurso = new System.Windows.Forms.Button();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.groupBoxInfoCurso = new System.Windows.Forms.GroupBox();
+            this.textBoxCodigo = new System.Windows.Forms.TextBox();
+            this.numericUpDownSesion = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
@@ -56,8 +60,8 @@
             this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diplomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inscripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCursosProgramados = new System.Windows.Forms.Label();
             this.skinEngineCursosProgramados = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripInstancia = new System.Windows.Forms.ToolStrip();
@@ -69,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBoxInfoCurso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurso)).BeginInit();
             this.toolStripInstancia.SuspendLayout();
@@ -110,13 +115,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
             this.textBoxBuscador.Name = "textBoxBuscador";
-            this.textBoxBuscador.Size = new System.Drawing.Size(472, 20);
+            this.textBoxBuscador.Size = new System.Drawing.Size(465, 20);
             this.textBoxBuscador.TabIndex = 4;
             // 
             // buttonBuscarCurso
             // 
             this.buttonBuscarCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscarCurso.Location = new System.Drawing.Point(650, 12);
+            this.buttonBuscarCurso.Location = new System.Drawing.Point(643, 12);
             this.buttonBuscarCurso.Name = "buttonBuscarCurso";
             this.buttonBuscarCurso.Size = new System.Drawing.Size(103, 34);
             this.buttonBuscarCurso.TabIndex = 5;
@@ -138,6 +143,10 @@
             // 
             this.groupBoxInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxInfoCurso.Controls.Add(this.textBoxCodigo);
+            this.groupBoxInfoCurso.Controls.Add(this.numericUpDownSesion);
+            this.groupBoxInfoCurso.Controls.Add(this.label2);
+            this.groupBoxInfoCurso.Controls.Add(this.label1);
             this.groupBoxInfoCurso.Controls.Add(this.buttonLimpiar);
             this.groupBoxInfoCurso.Controls.Add(this.dateTimePickerFechaFin);
             this.groupBoxInfoCurso.Controls.Add(this.dateTimePickerFechaInicio);
@@ -150,19 +159,69 @@
             this.groupBoxInfoCurso.Controls.Add(this.labelSiglasCurso);
             this.groupBoxInfoCurso.Controls.Add(this.labelDiploma);
             this.groupBoxInfoCurso.Controls.Add(this.labelFechaFin);
-            this.groupBoxInfoCurso.Location = new System.Drawing.Point(9, 410);
+            this.groupBoxInfoCurso.Location = new System.Drawing.Point(9, 445);
             this.groupBoxInfoCurso.Name = "groupBoxInfoCurso";
-            this.groupBoxInfoCurso.Size = new System.Drawing.Size(784, 108);
+            this.groupBoxInfoCurso.Size = new System.Drawing.Size(784, 141);
             this.groupBoxInfoCurso.TabIndex = 7;
             this.groupBoxInfoCurso.TabStop = false;
             this.groupBoxInfoCurso.Text = "Informacion del Curso";
             // 
+            // textBoxCodigo
+            // 
+            this.textBoxCodigo.Location = new System.Drawing.Point(125, 106);
+            this.textBoxCodigo.Name = "textBoxCodigo";
+            this.textBoxCodigo.Size = new System.Drawing.Size(139, 20);
+            this.textBoxCodigo.TabIndex = 23;
+            // 
+            // numericUpDownSesion
+            // 
+            this.numericUpDownSesion.Location = new System.Drawing.Point(397, 106);
+            this.numericUpDownSesion.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDownSesion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownSesion.Name = "numericUpDownSesion";
+            this.numericUpDownSesion.ReadOnly = true;
+            this.numericUpDownSesion.Size = new System.Drawing.Size(111, 20);
+            this.numericUpDownSesion.TabIndex = 22;
+            this.numericUpDownSesion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(288, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Sesiones";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Código*";
+            // 
             // buttonLimpiar
             // 
             this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(524, 60);
+            this.buttonLimpiar.Location = new System.Drawing.Point(531, 78);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(103, 34);
+            this.buttonLimpiar.Size = new System.Drawing.Size(103, 48);
             this.buttonLimpiar.TabIndex = 18;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
@@ -171,7 +230,7 @@
             // dateTimePickerFechaFin
             // 
             this.dateTimePickerFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(397, 69);
+            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(396, 66);
             this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
             this.dateTimePickerFechaFin.Size = new System.Drawing.Size(112, 20);
             this.dateTimePickerFechaFin.TabIndex = 15;
@@ -196,7 +255,7 @@
             // 
             // buttonSeleccionarDiploma
             // 
-            this.buttonSeleccionarDiploma.Location = new System.Drawing.Point(125, 67);
+            this.buttonSeleccionarDiploma.Location = new System.Drawing.Point(124, 64);
             this.buttonSeleccionarDiploma.Name = "buttonSeleccionarDiploma";
             this.buttonSeleccionarDiploma.Size = new System.Drawing.Size(139, 27);
             this.buttonSeleccionarDiploma.TabIndex = 13;
@@ -222,9 +281,9 @@
             // buttonModificarPrograma
             // 
             this.buttonModificarPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModificarPrograma.Location = new System.Drawing.Point(647, 21);
+            this.buttonModificarPrograma.Location = new System.Drawing.Point(654, 21);
             this.buttonModificarPrograma.Name = "buttonModificarPrograma";
-            this.buttonModificarPrograma.Size = new System.Drawing.Size(106, 34);
+            this.buttonModificarPrograma.Size = new System.Drawing.Size(106, 51);
             this.buttonModificarPrograma.TabIndex = 17;
             this.buttonModificarPrograma.Text = "Modificar Programa";
             this.buttonModificarPrograma.UseVisualStyleBackColor = true;
@@ -234,9 +293,9 @@
             // 
             this.buttonEliminarPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarPrograma.ForeColor = System.Drawing.Color.IndianRed;
-            this.buttonEliminarPrograma.Location = new System.Drawing.Point(647, 60);
+            this.buttonEliminarPrograma.Location = new System.Drawing.Point(654, 78);
             this.buttonEliminarPrograma.Name = "buttonEliminarPrograma";
-            this.buttonEliminarPrograma.Size = new System.Drawing.Size(106, 34);
+            this.buttonEliminarPrograma.Size = new System.Drawing.Size(106, 48);
             this.buttonEliminarPrograma.TabIndex = 19;
             this.buttonEliminarPrograma.Text = "Eliminar Programa";
             this.buttonEliminarPrograma.UseVisualStyleBackColor = true;
@@ -245,9 +304,9 @@
             // buttonCrearPrograma
             // 
             this.buttonCrearPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCrearPrograma.Location = new System.Drawing.Point(524, 21);
+            this.buttonCrearPrograma.Location = new System.Drawing.Point(531, 21);
             this.buttonCrearPrograma.Name = "buttonCrearPrograma";
-            this.buttonCrearPrograma.Size = new System.Drawing.Size(103, 34);
+            this.buttonCrearPrograma.Size = new System.Drawing.Size(103, 51);
             this.buttonCrearPrograma.TabIndex = 16;
             this.buttonCrearPrograma.Text = "Nuevo Programa";
             this.buttonCrearPrograma.UseVisualStyleBackColor = true;
@@ -267,7 +326,7 @@
             // 
             this.labelDiploma.AutoSize = true;
             this.labelDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiploma.Location = new System.Drawing.Point(14, 72);
+            this.labelDiploma.Location = new System.Drawing.Point(13, 69);
             this.labelDiploma.Name = "labelDiploma";
             this.labelDiploma.Size = new System.Drawing.Size(65, 16);
             this.labelDiploma.TabIndex = 12;
@@ -277,7 +336,7 @@
             // 
             this.labelFechaFin.AutoSize = true;
             this.labelFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFechaFin.Location = new System.Drawing.Point(288, 72);
+            this.labelFechaFin.Location = new System.Drawing.Point(287, 69);
             this.labelFechaFin.Name = "labelFechaFin";
             this.labelFechaFin.Size = new System.Drawing.Size(75, 16);
             this.labelFechaFin.TabIndex = 14;
@@ -301,8 +360,8 @@
             this.fechainicioDataGridViewTextBoxColumn,
             this.fechafinDataGridViewTextBoxColumn,
             this.diplomaDataGridViewTextBoxColumn,
-            this.cursoDataGridViewTextBoxColumn,
-            this.inscripcionDataGridViewTextBoxColumn});
+            this.codigo,
+            this.sesion});
             this.dataGridViewCurso.DataSource = this.bindingSourceInstancia;
             this.dataGridViewCurso.Location = new System.Drawing.Point(9, 129);
             this.dataGridViewCurso.MultiSelect = false;
@@ -311,7 +370,7 @@
             this.dataGridViewCurso.RowHeadersVisible = false;
             this.dataGridViewCurso.RowHeadersWidth = 72;
             this.dataGridViewCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCurso.Size = new System.Drawing.Size(784, 275);
+            this.dataGridViewCurso.Size = new System.Drawing.Size(784, 310);
             this.dataGridViewCurso.TabIndex = 6;
             this.dataGridViewCurso.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCurso_CellFormatting);
             this.dataGridViewCurso.SelectionChanged += new System.EventHandler(this.dataGridViewCurso_SelectionChanged);
@@ -351,21 +410,19 @@
             this.diplomaDataGridViewTextBoxColumn.Name = "diplomaDataGridViewTextBoxColumn";
             this.diplomaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // cursoDataGridViewTextBoxColumn
+            // codigo
             // 
-            this.cursoDataGridViewTextBoxColumn.DataPropertyName = "curso";
-            this.cursoDataGridViewTextBoxColumn.HeaderText = "curso";
-            this.cursoDataGridViewTextBoxColumn.Name = "cursoDataGridViewTextBoxColumn";
-            this.cursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cursoDataGridViewTextBoxColumn.Visible = false;
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
-            // inscripcionDataGridViewTextBoxColumn
+            // sesion
             // 
-            this.inscripcionDataGridViewTextBoxColumn.DataPropertyName = "inscripcion";
-            this.inscripcionDataGridViewTextBoxColumn.HeaderText = "inscripcion";
-            this.inscripcionDataGridViewTextBoxColumn.Name = "inscripcionDataGridViewTextBoxColumn";
-            this.inscripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inscripcionDataGridViewTextBoxColumn.Visible = false;
+            this.sesion.DataPropertyName = "sesion";
+            this.sesion.HeaderText = "Sesiones";
+            this.sesion.Name = "sesion";
+            this.sesion.ReadOnly = true;
             // 
             // labelCursosProgramados
             // 
@@ -413,7 +470,7 @@
             // 
             this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
@@ -421,7 +478,7 @@
             // 
             this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
@@ -445,7 +502,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 530);
+            this.ClientSize = new System.Drawing.Size(802, 598);
             this.Controls.Add(this.progressBarArchivo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStripInstancia);
@@ -465,6 +522,7 @@
             this.groupBox2.PerformLayout();
             this.groupBoxInfoCurso.ResumeLayout(false);
             this.groupBoxInfoCurso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCurso)).EndInit();
             this.toolStripInstancia.ResumeLayout(false);
@@ -495,13 +553,6 @@
         private System.Windows.Forms.Label labelDiploma;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechafinDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inscripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceCursos;
         private System.Windows.Forms.Button buttonLimpiar;
         private Sunisoft.IrisSkin.SkinEngine skinEngineCursosProgramados;
@@ -511,5 +562,16 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBarArchivo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxCodigo;
+        private System.Windows.Forms.NumericUpDown numericUpDownSesion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechafinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sesion;
     }
 }

@@ -31,7 +31,6 @@ namespace OpenSpaceComarcal
             {
                 DataGridViewRow fila = dataGridViewCursos.SelectedRows[0];
 
-                textBoxCodigo.Text = fila.Cells[0].Value.ToString();
                 textBoxSiglas.Text = fila.Cells[1].Value.ToString();
                 textBoxNombre.Text = fila.Cells[2].Value.ToString();
             }
@@ -40,7 +39,7 @@ namespace OpenSpaceComarcal
         private bool camposRellenados()
         {
             bool esValido = false;
-            if (textBoxCodigo.Text != "" &&
+            if (
                 textBoxNombre.Text != "" &&
                 textBoxSiglas.Text != ""
                 )
@@ -61,7 +60,6 @@ namespace OpenSpaceComarcal
 
                 curso _curso = new curso();
 
-                _curso.codigo = textBoxCodigo.Text;
                 _curso.siglas = textBoxSiglas.Text;
                 _curso.nombre = textBoxNombre.Text;
 
@@ -98,7 +96,6 @@ namespace OpenSpaceComarcal
                         DataGridViewRow fila = dataGridViewCursos.SelectedRows[0];
                         curso _curso = (curso)fila.DataBoundItem;
 
-                        _curso.codigo = textBoxCodigo.Text;
                         _curso.siglas = textBoxSiglas.Text;
                         _curso.nombre = textBoxNombre.Text;
 
@@ -213,7 +210,6 @@ namespace OpenSpaceComarcal
         private void LimpiarCampos()
         {
             // Limpiar los campos y la selección
-            textBoxCodigo.Text = "";
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
             textBoxBusqueda.Text = "";

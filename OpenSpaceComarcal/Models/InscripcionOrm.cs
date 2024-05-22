@@ -47,7 +47,7 @@ namespace OpenSpaceComarcal.Models
                     inscripcion.fecha_expedicion,
 
                     // Instancia
-                    inscripcion.instancia.curso.codigo,
+                    inscripcion.instancia.codigo,
                     inscripcion.instancia.fecha_inicio,
                     inscripcion.instancia.fecha_fin,
                     inscripcion.instancia.diploma,
