@@ -303,6 +303,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
+    <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno1.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.curso.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.empresa.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.inscripcion.datasource" />

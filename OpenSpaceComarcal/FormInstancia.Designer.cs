@@ -51,13 +51,6 @@
             this.labelDiploma = new System.Windows.Forms.Label();
             this.labelFechaFin = new System.Windows.Forms.Label();
             this.dataGridViewCurso = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diplomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inscripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCursosProgramados = new System.Windows.Forms.Label();
             this.skinEngineCursosProgramados = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripInstancia = new System.Windows.Forms.ToolStrip();
@@ -66,6 +59,15 @@
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diplomaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inscripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBoxInfoCurso.SuspendLayout();
@@ -302,7 +304,9 @@
             this.fechafinDataGridViewTextBoxColumn,
             this.diplomaDataGridViewTextBoxColumn,
             this.cursoDataGridViewTextBoxColumn,
-            this.inscripcionDataGridViewTextBoxColumn});
+            this.inscripcionDataGridViewTextBoxColumn,
+            this.codigo,
+            this.sesion});
             this.dataGridViewCurso.DataSource = this.bindingSourceInstancia;
             this.dataGridViewCurso.Location = new System.Drawing.Point(9, 129);
             this.dataGridViewCurso.MultiSelect = false;
@@ -315,6 +319,80 @@
             this.dataGridViewCurso.TabIndex = 6;
             this.dataGridViewCurso.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCurso_CellFormatting);
             this.dataGridViewCurso.SelectionChanged += new System.EventHandler(this.dataGridViewCurso_SelectionChanged);
+            // 
+            // labelCursosProgramados
+            // 
+            this.labelCursosProgramados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCursosProgramados.AutoSize = true;
+            this.labelCursosProgramados.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCursosProgramados.Location = new System.Drawing.Point(257, 28);
+            this.labelCursosProgramados.Name = "labelCursosProgramados";
+            this.labelCursosProgramados.Size = new System.Drawing.Size(288, 31);
+            this.labelCursosProgramados.TabIndex = 1;
+            this.labelCursosProgramados.Text = "Cursos Programados";
+            // 
+            // skinEngineCursosProgramados
+            // 
+            this.skinEngineCursosProgramados.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngineCursosProgramados.SkinFile = "";
+            // 
+            // toolStripInstancia
+            // 
+            this.toolStripInstancia.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripInstancia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonArchivo});
+            this.toolStripInstancia.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStripInstancia.Location = new System.Drawing.Point(0, 0);
+            this.toolStripInstancia.Name = "toolStripInstancia";
+            this.toolStripInstancia.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripInstancia.Size = new System.Drawing.Size(802, 25);
+            this.toolStripInstancia.TabIndex = 21;
+            this.toolStripInstancia.Text = "toolStripInstancia";
+            // 
+            // toolStripDropDownButtonArchivo
+            // 
+            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuExportar,
+            this.ToolStripMenuImportar});
+            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
+            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
+            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButtonArchivo.Text = "Archivo";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuExportar
+            // 
+            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
+            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
+            this.toolStripMenuExportar.Text = "Exportar";
+            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
+            // 
+            // ToolStripMenuImportar
+            // 
+            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
+            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuImportar.Text = "Importar";
+            this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(715, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // progressBarArchivo
+            // 
+            this.progressBarArchivo.Location = new System.Drawing.Point(93, 62);
+            this.progressBarArchivo.Name = "progressBarArchivo";
+            this.progressBarArchivo.Size = new System.Drawing.Size(617, 10);
+            this.progressBarArchivo.TabIndex = 34;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -367,79 +445,19 @@
             this.inscripcionDataGridViewTextBoxColumn.ReadOnly = true;
             this.inscripcionDataGridViewTextBoxColumn.Visible = false;
             // 
-            // labelCursosProgramados
+            // codigo
             // 
-            this.labelCursosProgramados.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCursosProgramados.AutoSize = true;
-            this.labelCursosProgramados.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCursosProgramados.Location = new System.Drawing.Point(257, 28);
-            this.labelCursosProgramados.Name = "labelCursosProgramados";
-            this.labelCursosProgramados.Size = new System.Drawing.Size(288, 31);
-            this.labelCursosProgramados.TabIndex = 1;
-            this.labelCursosProgramados.Text = "Cursos Programados";
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
-            // skinEngineCursosProgramados
+            // sesion
             // 
-            this.skinEngineCursosProgramados.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineCursosProgramados.SkinFile = "";
-            // 
-            // toolStripInstancia
-            // 
-            this.toolStripInstancia.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.toolStripInstancia.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButtonArchivo});
-            this.toolStripInstancia.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolStripInstancia.Location = new System.Drawing.Point(0, 0);
-            this.toolStripInstancia.Name = "toolStripInstancia";
-            this.toolStripInstancia.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripInstancia.Size = new System.Drawing.Size(802, 25);
-            this.toolStripInstancia.TabIndex = 21;
-            this.toolStripInstancia.Text = "toolStripInstancia";
-            // 
-            // toolStripDropDownButtonArchivo
-            // 
-            this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuExportar,
-            this.ToolStripMenuImportar});
-            this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
-            this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
-            this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButtonArchivo.Text = "Archivo";
-            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
-            // 
-            // toolStripMenuExportar
-            // 
-            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
-            this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuExportar.Text = "Exportar";
-            this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
-            // 
-            // ToolStripMenuImportar
-            // 
-            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
-            this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuImportar.Text = "Importar";
-            this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(715, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // progressBarArchivo
-            // 
-            this.progressBarArchivo.Location = new System.Drawing.Point(93, 62);
-            this.progressBarArchivo.Name = "progressBarArchivo";
-            this.progressBarArchivo.Size = new System.Drawing.Size(617, 10);
-            this.progressBarArchivo.TabIndex = 34;
+            this.sesion.DataPropertyName = "sesion";
+            this.sesion.HeaderText = "Sesiones";
+            this.sesion.Name = "sesion";
+            this.sesion.ReadOnly = true;
             // 
             // FormInstancia
             // 
@@ -495,13 +513,6 @@
         private System.Windows.Forms.Label labelDiploma;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechafinDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inscripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceCursos;
         private System.Windows.Forms.Button buttonLimpiar;
         private Sunisoft.IrisSkin.SkinEngine skinEngineCursosProgramados;
@@ -511,5 +522,14 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBarArchivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechafinDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inscripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sesion;
     }
 }

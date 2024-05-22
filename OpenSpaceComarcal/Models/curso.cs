@@ -20,7 +20,6 @@ namespace OpenSpaceComarcal.Models
             this.instancia = new HashSet<instancia>();
         }
     
-        public string codigo { get; set; }
         public string siglas { get; set; }
         public string nombre { get; set; }
         public int id { get; set; }

@@ -9,7 +9,6 @@
 
 namespace OpenSpaceComarcal.Models
 {
-    using DocumentFormat.OpenXml.Drawing;
     using System;
     using System.Collections.Generic;
     
@@ -34,10 +33,5 @@ namespace OpenSpaceComarcal.Models
         public virtual empresa empresa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<inscripcion> inscripcion { get; set; }
-
-        public override string ToString()
-        {
-            return $"Nombre: {nombre}, Apellido: {apellidos}";
-        }
     }
 }
