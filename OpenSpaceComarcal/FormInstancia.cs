@@ -49,25 +49,27 @@ namespace OpenSpaceComarcal
             toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
         }
 
-        private string GetFormattedCellValue(int rowIndex, int columnIndex)
-        {
-            DataGridViewCell cell = dataGridViewCurso.Rows[rowIndex].Cells[columnIndex];
-
-            string formattedValue = cell.Value.ToString(); 
-            return formattedValue;
-        }
         private void actualizarTextBoxes()
         {
             if (dataGridViewCurso.SelectedRows.Count == 1)
             {
                 DataGridViewRow fila = dataGridViewCurso.SelectedRows[0];
 
-                string valorFormateado = GetFormattedCellValue(fila.Index, 1);
+                if (fila.Cells[1].Value != null)
+                {
+                    comboBoxCursosSiglas.SelectedValue = fila.Cells[1].Value;
+                }
+                else
+                {
+                    comboBoxCursosSiglas.SelectedIndex = -1;
+                }
 
-                comboBoxCursosSiglas.SelectedValue = valorFormateado;
+
                 dateTimePickerFechaInicio.Text = fila.Cells[2].Value.ToString();
                 dateTimePickerFechaFin.Text = fila.Cells[3].Value.ToString();
                 buttonSeleccionarDiploma.Text = fila.Cells[4].Value.ToString();
+                textBoxCodigo.Text = fila.Cells[5].Value.ToString();
+                numericUpDownSesion.Value = (int)fila.Cells[6].Value;
                 toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
             }
         }
@@ -79,7 +81,8 @@ namespace OpenSpaceComarcal
         private bool camposRellenados()
         {
             bool esValido = false;
-            if (comboBoxCursosSiglas.SelectedItem != null)
+            if (comboBoxCursosSiglas.SelectedItem != null &&
+                textBoxCodigo.Text != "")
                 esValido = true;
             return esValido;
         }
@@ -96,6 +99,8 @@ namespace OpenSpaceComarcal
                 _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                 _instancia.fecha_fin = dateTimePickerFechaFin.Value;
                 _instancia.diploma = buttonSeleccionarDiploma.Text;
+                _instancia.codigo = textBoxCodigo.Text;
+                _instancia.sesion = (int)numericUpDownSesion.Value;
 
                 mensajeError = InstanciaOrm.Insert(_instancia);
 
@@ -182,6 +187,8 @@ namespace OpenSpaceComarcal
                         _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                         _instancia.fecha_fin = dateTimePickerFechaFin.Value;
                         _instancia.diploma = buttonSeleccionarDiploma.Text;
+                        _instancia.codigo = textBoxCodigo.Text;
+                        _instancia.sesion = (int)numericUpDownSesion.Value;
 
                         mensajeError = InstanciaOrm.Update(_instancia);
 
