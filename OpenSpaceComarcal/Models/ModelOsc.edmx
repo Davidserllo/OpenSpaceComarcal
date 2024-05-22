@@ -24,7 +24,6 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="codigo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="siglas" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -63,6 +62,8 @@
           <Property Name="fecha_inicio" Type="date" />
           <Property Name="fecha_fin" Type="date" />
           <Property Name="diploma" Type="varchar" MaxLength="300" />
+          <Property Name="codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sesion" Type="int" />
         </EntityType>
         <Association Name="FK__alumno__id_empre__3E52440B">
           <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
@@ -175,7 +176,6 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="siglas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
@@ -223,6 +223,8 @@
           <Property Name="diploma" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="inscripcion" Relationship="Self.FK__inscripci__id_in__4222D4EF" FromRole="instancia" ToRole="inscripcion" />
           <NavigationProperty Name="curso" Relationship="open_space_comarcalModel.FK__instancia__id_cu__3B75D760" FromRole="instancia" ToRole="curso" />
+          <Property Name="codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sesion" Type="Int32" />
         </EntityType>
         <Association Name="FK__alumno__id_empre__398D8EEE">
           <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
@@ -336,7 +338,6 @@
             <EntityTypeMapping TypeName="open_space_comarcalModel.curso">
               <MappingFragment StoreEntitySet="curso">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="siglas" ColumnName="siglas" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
@@ -373,6 +374,8 @@
           <EntitySetMapping Name="instancia">
             <EntityTypeMapping TypeName="open_space_comarcalModel.instancia">
               <MappingFragment StoreEntitySet="instancia">
+                <ScalarProperty Name="sesion" ColumnName="sesion" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_curso" ColumnName="id_curso" />
                 <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
