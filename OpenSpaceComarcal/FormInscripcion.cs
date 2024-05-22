@@ -31,6 +31,17 @@ namespace OpenSpaceComarcal
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
+        // Constructor para inscribir un alumno de alumnos más rápido
+        private int id_alumno = -1;
+        public FormInscripcion(int id_alumno)
+        {
+            InitializeComponent();
+            Apariencia.AplicarApariencia(skinEngineinscripcion);
+
+            // Ocultar barra de progreso
+            progressBarArchivo.Visible = false;
+            this.id_alumno = id_alumno;
+        }
 
         private void Inscripcion_Load(object sender, EventArgs e)
         {
@@ -39,6 +50,11 @@ namespace OpenSpaceComarcal
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
             iniciarPanelAvanzado();
+            if (this.id_alumno != -1)
+            {
+                LimpiarCampos();
+                comboBoxAlumno.SelectedValue = id_alumno;
+            }
         }
 
         private void iniciarPanelAvanzado()

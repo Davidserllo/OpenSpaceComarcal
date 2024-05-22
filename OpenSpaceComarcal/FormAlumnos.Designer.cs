@@ -32,6 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlumnos));
             this.labelAlumnos = new System.Windows.Forms.Label();
             this.dataGridViewAlumno = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.BuscarAlumno = new System.Windows.Forms.Button();
@@ -65,15 +74,7 @@
             this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonInscribir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -117,17 +118,80 @@
             this.fecha_registro,
             this.notas});
             this.dataGridViewAlumno.DataSource = this.bindingSourceAlumno;
-            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 126);
+            this.dataGridViewAlumno.Location = new System.Drawing.Point(8, 137);
             this.dataGridViewAlumno.MultiSelect = false;
             this.dataGridViewAlumno.Name = "dataGridViewAlumno";
             this.dataGridViewAlumno.ReadOnly = true;
             this.dataGridViewAlumno.RowHeadersVisible = false;
             this.dataGridViewAlumno.RowHeadersWidth = 72;
             this.dataGridViewAlumno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAlumno.Size = new System.Drawing.Size(1034, 309);
+            this.dataGridViewAlumno.Size = new System.Drawing.Size(1034, 317);
             this.dataGridViewAlumno.TabIndex = 6;
             this.dataGridViewAlumno.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAlumno_CellFormatting);
             this.dataGridViewAlumno.SelectionChanged += new System.EventHandler(this.dataGridViewAlumno_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "dni_nie_pasp";
+            this.dataGridViewTextBoxColumn5.HeaderText = "DNI/NIE/PASP";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "apellidos";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Apellidos";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Teléfono";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_empresa";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Empresa";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // fecha_registro
+            // 
+            this.fecha_registro.DataPropertyName = "fecha_registro";
+            this.fecha_registro.HeaderText = "Fecha Registro";
+            this.fecha_registro.Name = "fecha_registro";
+            this.fecha_registro.ReadOnly = true;
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Notas";
+            this.notas.Name = "notas";
+            this.notas.ReadOnly = true;
             // 
             // bindingSourceAlumno
             // 
@@ -278,7 +342,7 @@
             this.groupBox1.Controls.Add(this.labelNombre);
             this.groupBox1.Controls.Add(this.labelTelefono);
             this.groupBox1.Controls.Add(this.textBoxTelefono);
-            this.groupBox1.Location = new System.Drawing.Point(8, 441);
+            this.groupBox1.Location = new System.Drawing.Point(8, 460);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1034, 136);
             this.groupBox1.TabIndex = 7;
@@ -362,7 +426,7 @@
             this.groupBoxBuscador.Controls.Add(this.label3);
             this.groupBoxBuscador.Controls.Add(this.textBoxBuscador);
             this.groupBoxBuscador.Controls.Add(this.BuscarAlumno);
-            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 68);
+            this.groupBoxBuscador.Location = new System.Drawing.Point(8, 78);
             this.groupBoxBuscador.Name = "groupBoxBuscador";
             this.groupBoxBuscador.Size = new System.Drawing.Size(1034, 52);
             this.groupBoxBuscador.TabIndex = 2;
@@ -392,7 +456,7 @@
             // 
             // progressBarArchivo
             // 
-            this.progressBarArchivo.Location = new System.Drawing.Point(91, 62);
+            this.progressBarArchivo.Location = new System.Drawing.Point(91, 74);
             this.progressBarArchivo.Name = "progressBarArchivo";
             this.progressBarArchivo.Size = new System.Drawing.Size(869, 10);
             this.progressBarArchivo.TabIndex = 30;
@@ -444,74 +508,23 @@
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
-            // dataGridViewTextBoxColumn4
+            // buttonInscribir
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "dni_nie_pasp";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DNI/NIE/PASP";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "apellidos";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "id_empresa";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Empresa";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // fecha_registro
-            // 
-            this.fecha_registro.DataPropertyName = "fecha_registro";
-            this.fecha_registro.HeaderText = "Fecha Registro";
-            this.fecha_registro.Name = "fecha_registro";
-            this.fecha_registro.ReadOnly = true;
-            // 
-            // notas
-            // 
-            this.notas.DataPropertyName = "notas";
-            this.notas.HeaderText = "Notas";
-            this.notas.Name = "notas";
-            this.notas.ReadOnly = true;
+            this.buttonInscribir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInscribir.Location = new System.Drawing.Point(918, 34);
+            this.buttonInscribir.Name = "buttonInscribir";
+            this.buttonInscribir.Size = new System.Drawing.Size(106, 34);
+            this.buttonInscribir.TabIndex = 6;
+            this.buttonInscribir.Text = "Inscripción rápida";
+            this.buttonInscribir.UseVisualStyleBackColor = true;
+            this.buttonInscribir.Click += new System.EventHandler(this.buttonInscribir_Click);
             // 
             // FormAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 589);
+            this.ClientSize = new System.Drawing.Size(1050, 608);
+            this.Controls.Add(this.buttonInscribir);
             this.Controls.Add(this.progressBarArchivo);
             this.Controls.Add(this.toolStripAlumnos);
             this.Controls.Add(this.groupBoxBuscador);
@@ -595,5 +608,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_registro;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
+        private System.Windows.Forms.Button buttonInscribir;
     }
 }

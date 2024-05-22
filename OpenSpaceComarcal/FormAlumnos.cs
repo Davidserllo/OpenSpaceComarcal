@@ -354,5 +354,16 @@ namespace OpenSpaceComarcal
             }
         }
 
+        private void buttonInscribir_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAlumno.SelectedRows.Count == 1)
+            {
+                DataGridViewRow fila = dataGridViewAlumno.SelectedRows[0];
+
+                FormInscripcion ventanaInscripcion = new FormInscripcion((int)fila.Cells[0].Value);
+                ventanaInscripcion.Show();
+            }
+                
+        }
     }
 }
