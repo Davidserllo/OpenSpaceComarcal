@@ -12,6 +12,7 @@ namespace OpenSpaceComarcal.Objects
         // Cnst
         public static string CIUDAD = "Sagunto (Valencia)";
         // Atrib
+        public int InscripcionId { get; set; }
         public int AlumnoId { get; set; }
         public string AlumnoDNI { get; set; }
         public string AlumnoNombre { get; set; }

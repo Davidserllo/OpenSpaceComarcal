@@ -43,6 +43,7 @@ namespace OpenSpaceComarcal.Models
                 .Select(inscripcion => new
                 {
                     // Inscripcion
+                    inscripcion.id,
                     inscripcion.cod_factura,
                     inscripcion.fecha_expedicion,
 
@@ -53,7 +54,7 @@ namespace OpenSpaceComarcal.Models
                     inscripcion.instancia.diploma,
 
                     //Alumno
-                    inscripcion.alumno.id,
+                    
                     inscripcion.alumno.dni_nie_pasp,
                     inscripcion.alumno.nombre,
                     inscripcion.alumno.apellidos,
@@ -63,12 +64,12 @@ namespace OpenSpaceComarcal.Models
 
             List<PersDiploma> resultados = query.Select(x => new PersDiploma
             {
+                InscripcionId = x.id,
                 NumFactura = x.cod_factura,
                 FechaExpedicion = x.fecha_expedicion,
                 CodCurso = x.codigo,
                 FechaInicio = x.fecha_inicio,
                 FechaFin = x.fecha_fin,
-                AlumnoId = x.id,
                 EmpresaId = x.id_empresa.ToString(),
                 AlumnoDNI = x.dni_nie_pasp,
                 AlumnoNombre = x.nombre,

@@ -18,9 +18,8 @@ namespace OpenSpaceComarcal.Libraries
         {
             if (diploma.Diploma != "Seleccionar Diploma")
             {
-                int contador = Properties.Settings.Default.CONTADOR_DIPLOMAS;
 
-                string nombreArchivo = $"{contador}_{diploma.AlumnoNombre}_" +
+                string nombreArchivo = $"{diploma.InscripcionId}_{diploma.AlumnoNombre}_" +
                 $"{diploma.AlumnoApellidos}_" +
                 $"{diploma.AlumnoDNI}_" +
                 $"{diploma.CodCurso}";
@@ -35,12 +34,22 @@ namespace OpenSpaceComarcal.Libraries
                     document.ReplaceText("<f_inicio>", diploma.FechaInicio.HasValue ? diploma.FechaInicio.Value.ToString("dd/MM/yyyy") : "");
                     document.ReplaceText("<f_fin>", diploma.FechaFin.HasValue ? diploma.FechaFin.Value.ToString("dd/MM/yyyy") : "");
                     document.ReplaceText("<dni>", diploma.AlumnoDNI);
-                    document.ReplaceText("<num_dip>", contador.ToString());
-                    document.ReplaceText("<num_cliente>", diploma.EmpresaId);
+                    document.ReplaceText("<num_dip>", diploma.InscripcionId.ToString());
+                    if (diploma.EmpresaId != null && diploma.EmpresaId != "")
+                    {
+                        document.ReplaceText("<num_cliente>", diploma.EmpresaId);
+                    }
+                    else
+                    {
+                        document.ReplaceText("<num_cliente>", "POO1");
+                    }
+                    
+                    document.ReplaceText("<num_fact>", diploma.NumFactura);
                     document.ReplaceText("num_fact", diploma.NumFactura);
                     document.ReplaceText("<ciudad>", diploma.Ciudad);
                     document.ReplaceText("<f_exp>", diploma.FechaExpedicion.HasValue ? diploma.FechaExpedicion.Value.ToString("dd/MM/yyyy") : "");
-
+                    document.ReplaceText("<", "");
+                    document.ReplaceText(">", "");
                     // Guardar el documento Word
                     document.SaveAs(rutaDestinoCombinada);
                 }
@@ -54,8 +63,6 @@ namespace OpenSpaceComarcal.Libraries
                     }
                     ConvertirWordAPdf(rutaDestinoCombinada, rutaPDF);
                 }
-                Properties.Settings.Default.CONTADOR_DIPLOMAS++;
-                Properties.Settings.Default.Save();
             }
         }
 
