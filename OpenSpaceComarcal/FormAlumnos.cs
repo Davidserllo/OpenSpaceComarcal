@@ -44,19 +44,19 @@ namespace OpenSpaceComarcal
             toolTipExplicacionBusqueda.AutoPopDelay = 10000;
             toolTipExplicacionBusqueda.InitialDelay = 100;
             toolTipExplicacionBusqueda.ReshowDelay = 100;
-            toolTipExplicacionBusqueda.SetToolTip(groupBoxBuscador, EXPLICACION_BUSQUEDA);
+            toolTipExplicacionBusqueda.SetToolTip(tabControl1, EXPLICACION_BUSQUEDA);
         }
 
         private void Alumnos_Load(object sender, EventArgs e)
         {
             actualizarDatos();
+            comboBoxEmpresaBusqueda.SelectedIndex = -1;
         }
 
         private void actualizarDatos()
         {
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
         }
 
         private void actualizarTextBoxes()
@@ -286,6 +286,7 @@ namespace OpenSpaceComarcal
             dataGridViewAlumno.ClearSelection();
             textBoxBuscador.Text = "";
             textBoxNotas.Text = "";
+            comboBoxEmpresaBusqueda.SelectedIndex = -1;
         }
 
         private void ToolStripMenuImportar_Click(object sender, EventArgs e)
@@ -364,6 +365,22 @@ namespace OpenSpaceComarcal
                 ventanaInscripcion.Show();
             }
                 
+        }
+
+        private void buttonBuscarPorCampo_Click(object sender, EventArgs e)
+        {
+            int id_empresa;
+            if (comboBoxEmpresaBusqueda.SelectedValue == null || comboBoxEmpresaBusqueda.Text == "")
+            {
+                id_empresa = -1;
+            }
+            else
+            {
+                id_empresa = (int)comboBoxEmpresa.SelectedValue;
+            }
+
+            bindingSourceAlumno.DataSource = AlumnosOrm.SelectAvanzado(id_empresa);
+        
         }
     }
 }

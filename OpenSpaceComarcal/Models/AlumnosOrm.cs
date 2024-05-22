@@ -37,6 +37,20 @@ namespace OpenSpaceComarcal.Models
             return query;
         }
 
+        public static List<alumno> SelectAvanzado(int empresaId)
+        {
+            var query = Orm.bd.alumno.AsQueryable();
+
+            if (empresaId != -1)
+            {
+                query = query.Where(i => i.id_empresa == empresaId);
+            }
+
+            query = query.OrderBy(i => i.id);
+
+            return query.ToList();
+        }
+
         public static List<string> SelectNombre(int id_alumno)
         {
             List<string> nombreAlumno = Orm.bd.alumno
