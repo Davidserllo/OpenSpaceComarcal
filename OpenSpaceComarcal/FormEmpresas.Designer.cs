@@ -166,6 +166,8 @@
             // 
             // textBoxNotas
             // 
+            this.textBoxNotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNotas.Location = new System.Drawing.Point(517, 54);
             this.textBoxNotas.Multiline = true;
             this.textBoxNotas.Name = "textBoxNotas";
@@ -174,6 +176,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(514, 28);
             this.label1.Name = "label1";
@@ -183,8 +187,6 @@
             // 
             // textBoxContacto
             // 
-            this.textBoxContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxContacto.Location = new System.Drawing.Point(344, 89);
             this.textBoxContacto.Name = "textBoxContacto";
             this.textBoxContacto.Size = new System.Drawing.Size(155, 20);
@@ -211,8 +213,6 @@
             // 
             // textBoxMail
             // 
-            this.textBoxMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMail.Location = new System.Drawing.Point(344, 56);
             this.textBoxMail.Name = "textBoxMail";
             this.textBoxMail.Size = new System.Drawing.Size(155, 20);
@@ -220,8 +220,6 @@
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTelefono.Location = new System.Drawing.Point(344, 27);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(155, 20);
@@ -273,8 +271,6 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNombre.Location = new System.Drawing.Point(94, 88);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(155, 20);
@@ -312,8 +308,6 @@
             // 
             // textBoxSiglas
             // 
-            this.textBoxSiglas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSiglas.Location = new System.Drawing.Point(94, 55);
             this.textBoxSiglas.Name = "textBoxSiglas";
             this.textBoxSiglas.Size = new System.Drawing.Size(155, 20);
@@ -321,8 +315,6 @@
             // 
             // textBoxCif
             // 
-            this.textBoxCif.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCif.Location = new System.Drawing.Point(94, 25);
             this.textBoxCif.Name = "textBoxCif";
             this.textBoxCif.Size = new System.Drawing.Size(155, 20);
@@ -470,13 +462,13 @@
             this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
             this.toolStripDropDownButtonArchivo.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButtonArchivo.Text = "Archivo";
-            this.toolStripDropDownButtonArchivo.ToolTipText = "Ajustes";
+            this.toolStripDropDownButtonArchivo.ToolTipText = "Archivo";
             // 
             // toolStripMenuExportar
             // 
             this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
@@ -484,12 +476,14 @@
             // 
             this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
             // progressBarArchivo
             // 
+            this.progressBarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBarArchivo.Location = new System.Drawing.Point(91, 63);
             this.progressBarArchivo.Name = "progressBarArchivo";
             this.progressBarArchivo.Size = new System.Drawing.Size(780, 10);

@@ -402,5 +402,34 @@ namespace OpenSpaceComarcal
             comboBoxAlumnoBusqueda.SelectedIndex = -1;
         }
 
+        private void comboBoxAlumno_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceAlumno.Filter = $"nombre LIKE '*{filtro}*'";
+        }
+
+        private void comboBoxInstancia_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceInstancia.Filter = $"nombre LIKE '*{filtro}*'";
+        }
+
+        private void comboBoxAlumnoBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceAlumno.Filter = $"nombre LIKE '*{filtro}*'";
+        }
+
+        private void comboBoxInstanciaBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceInstancia.Filter = $"nombre LIKE '*{filtro}*'";
+        }
+
+        private void comboBoxEmpresa_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
+        }
     }
 }

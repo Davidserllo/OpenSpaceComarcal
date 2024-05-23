@@ -23,6 +23,9 @@ namespace OpenSpaceComarcal
         {
             InitializeComponent();
             Apariencia.AplicarApariencia(skinEngineCursos);
+
+            // Ocultar barra de progreso
+            progressBarArchivo.Visible = false;
         }
 
         private void actualizarTextBoxes()
