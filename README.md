@@ -12,13 +12,14 @@ Para ejecutar este proyecto, se requiere tener instalado:
 
 - Microsoft Visual Studio (o cualquier otro entorno de desarrollo compatible con .NET)
   Un sistema de gestión de bases de datos relacional SQL Server
-- Microsoft Office, para la genereacion de diplomas en Word y Pdf.
+- Microsoft Office, para la genereacion de diplomas en Word y Pdf, ademas de Excel para exportar e importar datos.
 
 # Librerias utilizadas en el proyecto:
 
 - EntityFramework
 - DocX
 - Microsoft.Office.Interop.Word
+- Microsoft.Office.Excel
 
 # PowerPoint -> Word
 
