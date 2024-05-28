@@ -16,7 +16,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>F:\PCTs\Instalador\Open Space Comarcal - Instalador Software.2\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,9 +26,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,6 +53,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo-oscomarcal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>04CAEDFC34FEDD3592253837E9FADED0F9186C58</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OpenSpaceComarcal_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
@@ -301,6 +314,7 @@
     <None Include="Models\ModelOsc.edmx.diagram">
       <DependentUpon>ModelOsc.edmx</DependentUpon>
     </None>
+    <None Include="OpenSpaceComarcal_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno1.datasource" />
@@ -317,31 +331,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\TemasInterfaz\Deep\DeepCyan.ssk" />
-    <None Include="Resources\TemasInterfaz\Deep\DeepGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\Deep\DeepOrange.ssk" />
-    <None Include="Resources\TemasInterfaz\Eighteen\Eighteen.ssk" />
-    <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Eighteen\EighteenColor2.ssk" />
     <None Include="Resources\TemasInterfaz\Emerald\EmeraldBlue.ssk" />
     <None Include="Resources\TemasInterfaz\Emerald\EmeraldBrown.ssk" />
     <None Include="Resources\TemasInterfaz\Emerald\EmeraldCyan.ssk" />
     <None Include="Resources\TemasInterfaz\Emerald\EmeraldGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\Midsummer\Midsummer.ssk" />
-    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Midsummer\MidsummerColor3.ssk" />
-    <None Include="Resources\TemasInterfaz\Page\Page.ssk" />
-    <None Include="Resources\TemasInterfaz\Page\PageColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Page\PageColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Silver\Silver.ssk" />
-    <None Include="Resources\TemasInterfaz\Silver\SilverColor1.ssk" />
-    <None Include="Resources\TemasInterfaz\Silver\SilverColor2.ssk" />
-    <None Include="Resources\TemasInterfaz\Sports\SportsBlack.ssk" />
-    <None Include="Resources\TemasInterfaz\Sports\SportsBlue.ssk" />
-    <None Include="Resources\TemasInterfaz\Sports\SportsCyan.ssk" />
-    <None Include="Resources\TemasInterfaz\Sports\SportsGreen.ssk" />
-    <None Include="Resources\TemasInterfaz\Sports\SportsOrange.ssk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -362,17 +355,15 @@
       <LastGenOutput>ModelOsc.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\alumnos-icono.png" />
-    <None Include="Resources\check-icono.png" />
-    <None Include="Resources\archivo_icono.png" />
-    <None Include="Resources\cargando_icono.png" />
+    <Content Include="Resources\archivo_icono.png" />
+    <Content Include="Resources\cargando_icono.png" />
+    <Content Include="Resources\check-icono.png" />
     <Content Include="Resources\clientes-icono.png" />
-    <None Include="Resources\configuracion-icono.png" />
+    <Content Include="Resources\configuracion-icono.png" />
     <Content Include="Resources\curso-icono.png" />
-    <None Include="Resources\exportar-iconooooooooooooooo.png" />
-    <None Include="Resources\exportar-icono.png" />
+    <Content Include="Resources\exportar-icono.png" />
     <Content Include="Resources\fondo_home.jpg" />
-    <None Include="Resources\importar-iconooooooooooooooo.png" />
-    <None Include="Resources\importar-icono.png" />
+    <Content Include="Resources\importar-icono.png" />
     <Content Include="Resources\inscripcion-icono.png" />
     <Content Include="Resources\instancia-icono.png" />
     <Content Include="Resources\logo-oscomarcal.ico" />

@@ -493,17 +493,17 @@
             // 
             // toolStripMenuExportar
             // 
-            this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
+            this.toolStripMenuExportar.Image = global::OpenSpaceComarcal.Properties.Resources.exportar_icono;
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
             // ToolStripMenuImportar
             // 
-            this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
+            this.ToolStripMenuImportar.Image = global::OpenSpaceComarcal.Properties.Resources.importar_icono;
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
