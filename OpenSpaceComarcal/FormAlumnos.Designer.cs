@@ -76,10 +76,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonBuscarPorCampo = new System.Windows.Forms.Button();
             this.comboBoxEmpresaBusqueda = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -307,7 +307,7 @@
             // 
             this.buttonEliminarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminarAlumno.ForeColor = System.Drawing.Color.IndianRed;
-            this.buttonEliminarAlumno.Location = new System.Drawing.Point(910, 68);
+            this.buttonEliminarAlumno.Location = new System.Drawing.Point(910, 74);
             this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
             this.buttonEliminarAlumno.Size = new System.Drawing.Size(106, 41);
             this.buttonEliminarAlumno.TabIndex = 23;
@@ -359,10 +359,10 @@
             // 
             this.textBoxNotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNotas.Location = new System.Drawing.Point(535, 55);
+            this.textBoxNotas.Location = new System.Drawing.Point(535, 45);
             this.textBoxNotas.Multiline = true;
             this.textBoxNotas.Name = "textBoxNotas";
-            this.textBoxNotas.Size = new System.Drawing.Size(239, 52);
+            this.textBoxNotas.Size = new System.Drawing.Size(239, 69);
             this.textBoxNotas.TabIndex = 26;
             // 
             // label1
@@ -379,7 +379,7 @@
             // buttonLimpiar
             // 
             this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(793, 68);
+            this.buttonLimpiar.Location = new System.Drawing.Point(793, 75);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(103, 41);
             this.buttonLimpiar.TabIndex = 22;
@@ -557,6 +557,17 @@
             this.tabPage2.Text = "Avanzado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Por campo";
+            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -591,17 +602,6 @@
             this.comboBoxEmpresaBusqueda.TabIndex = 0;
             this.comboBoxEmpresaBusqueda.ValueMember = "id";
             this.comboBoxEmpresaBusqueda.TextChanged += new System.EventHandler(this.comboBoxEmpresaBusqueda_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Por campo";
             // 
             // FormAlumnos
             // 

@@ -105,7 +105,7 @@ namespace OpenSpaceComarcal
 
         private void ToolStripMenuDefault_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Si desea aplicar los cambios correctamente, cierre todas las ventanas abiertas.", "Cambio de apariencia por defecto");
+            MessageBox.Show("Si desea aplicar los cambios correctamente, reinicie la aplicacion.", "Cambio de apariencia Windows 10");
             nomApariencia = "";
             Apariencia.CambiarApariencia(skinEngineInicio, nomApariencia);
             CheckTema(Properties.Settings.Default.NomApariencia);
