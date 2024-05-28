@@ -115,13 +115,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
             this.textBoxBuscador.Name = "textBoxBuscador";
-            this.textBoxBuscador.Size = new System.Drawing.Size(465, 20);
+            this.textBoxBuscador.Size = new System.Drawing.Size(514, 20);
             this.textBoxBuscador.TabIndex = 4;
             // 
             // buttonBuscarCurso
             // 
             this.buttonBuscarCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscarCurso.Location = new System.Drawing.Point(643, 12);
+            this.buttonBuscarCurso.Location = new System.Drawing.Point(675, 12);
             this.buttonBuscarCurso.Name = "buttonBuscarCurso";
             this.buttonBuscarCurso.Size = new System.Drawing.Size(103, 34);
             this.buttonBuscarCurso.TabIndex = 5;
@@ -168,6 +168,8 @@
             // 
             // textBoxCodigo
             // 
+            this.textBoxCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCodigo.Location = new System.Drawing.Point(125, 106);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(139, 20);
@@ -175,6 +177,7 @@
             // 
             // numericUpDownSesion
             // 
+            this.numericUpDownSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownSesion.Location = new System.Drawing.Point(397, 106);
             this.numericUpDownSesion.Maximum = new decimal(new int[] {
             20,
@@ -198,6 +201,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(288, 111);
@@ -229,6 +233,7 @@
             // 
             // dateTimePickerFechaFin
             // 
+            this.dateTimePickerFechaFin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaFin.Location = new System.Drawing.Point(396, 66);
             this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
@@ -237,6 +242,7 @@
             // 
             // dateTimePickerFechaInicio
             // 
+            this.dateTimePickerFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(397, 26);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
@@ -245,6 +251,7 @@
             // 
             // labelFechaInicio
             // 
+            this.labelFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFechaInicio.AutoSize = true;
             this.labelFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFechaInicio.Location = new System.Drawing.Point(288, 30);
@@ -255,6 +262,8 @@
             // 
             // buttonSeleccionarDiploma
             // 
+            this.buttonSeleccionarDiploma.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSeleccionarDiploma.Location = new System.Drawing.Point(124, 64);
             this.buttonSeleccionarDiploma.Name = "buttonSeleccionarDiploma";
             this.buttonSeleccionarDiploma.Size = new System.Drawing.Size(139, 27);
@@ -265,6 +274,8 @@
             // 
             // comboBoxCursosSiglas
             // 
+            this.comboBoxCursosSiglas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCursosSiglas.DataSource = this.bindingSourceCursos;
             this.comboBoxCursosSiglas.DisplayMember = "siglas";
             this.comboBoxCursosSiglas.FormattingEnabled = true;
@@ -273,6 +284,7 @@
             this.comboBoxCursosSiglas.Size = new System.Drawing.Size(139, 21);
             this.comboBoxCursosSiglas.TabIndex = 9;
             this.comboBoxCursosSiglas.ValueMember = "id";
+            this.comboBoxCursosSiglas.TextChanged += new System.EventHandler(this.comboBoxCursosSiglas_TextChanged);
             // 
             // bindingSourceCursos
             // 
@@ -334,6 +346,7 @@
             // 
             // labelFechaFin
             // 
+            this.labelFechaFin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFechaFin.AutoSize = true;
             this.labelFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFechaFin.Location = new System.Drawing.Point(287, 69);
@@ -484,6 +497,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(715, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
@@ -493,6 +507,8 @@
             // 
             // progressBarArchivo
             // 
+            this.progressBarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBarArchivo.Location = new System.Drawing.Point(93, 62);
             this.progressBarArchivo.Name = "progressBarArchivo";
             this.progressBarArchivo.Size = new System.Drawing.Size(617, 10);

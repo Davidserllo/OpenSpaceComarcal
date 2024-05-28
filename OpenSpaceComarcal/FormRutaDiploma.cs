@@ -3,12 +3,6 @@ using OpenSpaceComarcal.Models;
 using OpenSpaceComarcal.Objects;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -77,7 +71,7 @@ namespace OpenSpaceComarcal
             }
             else
             {
-                MessageBox.Show("No ha puesto la ruta del destino o no hay alumnos seleccionados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No ha puesto la ruta del destino o no hay alumnos seleccionados que esten Aptos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             buttonGenerar.Enabled = true;
         }

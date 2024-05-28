@@ -143,6 +143,8 @@ namespace OpenSpaceComarcal
 
         private void buttonActualizarEmpresas_Click(object sender, EventArgs e)
         {
+            // Limpiar textBoxBusqueda
+            textBoxBusqueda.Text = "";
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
         }
 
@@ -197,9 +199,13 @@ namespace OpenSpaceComarcal
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
-        {
+        {   
             // Limpiar los campos y la selección
             LimpiarCampos();
+
+            // Actualizar tabla
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+
         }
 
         private void toolStripMenuExportar_Click(object sender, EventArgs e)
@@ -229,10 +235,10 @@ namespace OpenSpaceComarcal
         private void LimpiarCampos()
         {
             // Limpiar los campos y la selección
+            textBoxBusqueda.Text = "";
             textBoxCif.Text = "";
             textBoxSiglas.Text = "";
             textBoxNombre.Text = "";
-            textBoxBusqueda.Text = "";
             textBoxTelefono.Text = "";
             textBoxMail.Text = "";
             textBoxContacto.Text = "";

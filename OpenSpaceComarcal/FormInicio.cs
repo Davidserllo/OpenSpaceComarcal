@@ -36,7 +36,8 @@ namespace OpenSpaceComarcal
                 { "EmeraldCyan.ssk", toolStripMenuEmeraldCyan },
                 { "EmeraldBlue.ssk", ToolStripMenuEmeraldBlue },
                 { "EmeraldGreen.ssk", ToolStripMenuEmeraldGreen },
-                { "EmeraldBrown.ssk", ToolStripMenuEmeraldBrown }
+                { "EmeraldBrown.ssk", ToolStripMenuEmeraldBrown },
+                { "", ToolStripMenuDefault }
             };
 
             foreach (var kvp in temaMap)
@@ -98,6 +99,14 @@ namespace OpenSpaceComarcal
         {
             MessageBox.Show("Si desea aplicar los cambios correctamente, cierre todas las ventanas abiertas.", "Cambio de apariencia - Emerald Brown");
             nomApariencia = "EmeraldBrown.ssk";
+            Apariencia.CambiarApariencia(skinEngineInicio, nomApariencia);
+            CheckTema(Properties.Settings.Default.NomApariencia);
+        }
+
+        private void ToolStripMenuDefault_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Si desea aplicar los cambios correctamente, cierre todas las ventanas abiertas.", "Cambio de apariencia por defecto");
+            nomApariencia = "";
             Apariencia.CambiarApariencia(skinEngineInicio, nomApariencia);
             CheckTema(Properties.Settings.Default.NomApariencia);
         }

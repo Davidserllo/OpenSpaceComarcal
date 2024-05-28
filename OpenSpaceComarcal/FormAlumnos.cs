@@ -11,9 +11,8 @@ namespace OpenSpaceComarcal
     {
 
         public const string EXPLICACION_BUSQUEDA = "Busca la primera coincidencia de una fila." +
-            " Busqueda por todos los campos exceptuando: Empresa e ID." +
-            " (Use el buscador avanzado para estos)";
-
+                                                   " Busqueda por todos los campos exceptuando: Empresa e ID." +
+                                                   " (Use el buscador avanzado para estos)";
         private ToolTip toolTipExplicacionBusqueda;
 
         // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
@@ -26,7 +25,6 @@ namespace OpenSpaceComarcal
                 return cp;
             }
         }
-
 
         public FormAlumnos()
         {
@@ -255,8 +253,13 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
+            // Actualizar tabla
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+
             // Limpiar los campos y la selección
             LimpiarCampos();
+
         }
 
         private void dataGridViewAlumno_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -277,6 +280,7 @@ namespace OpenSpaceComarcal
         private void LimpiarCampos()
         {
             // Limpiar los campos y la selección
+            textBoxBuscador.Text = "";
             textBoxDniNie.Text = "";
             textBoxApellidos.Text = "";
             textBoxNombre.Text = "";
@@ -381,6 +385,18 @@ namespace OpenSpaceComarcal
 
             bindingSourceAlumno.DataSource = AlumnosOrm.SelectAvanzado(id_empresa);
         
+        }
+
+        private void comboBoxEmpresa_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
+        }
+
+        private void comboBoxEmpresaBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
+            bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
         }
     }
 }

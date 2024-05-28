@@ -47,6 +47,7 @@
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
             this.skinEngineInicio = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.ToolStripMenuDefault = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
@@ -172,37 +173,38 @@
             this.toolStripMenuEmeraldCyan,
             this.ToolStripMenuEmeraldBlue,
             this.ToolStripMenuEmeraldGreen,
-            this.ToolStripMenuEmeraldBrown});
+            this.ToolStripMenuEmeraldBrown,
+            this.ToolStripMenuDefault});
             this.ToolStripMenuApariencia.Name = "ToolStripMenuApariencia";
-            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuApariencia.Text = "Apariencia";
             this.ToolStripMenuApariencia.ToolTipText = "Apariencia";
             // 
             // toolStripMenuEmeraldCyan
             // 
             this.toolStripMenuEmeraldCyan.Name = "toolStripMenuEmeraldCyan";
-            this.toolStripMenuEmeraldCyan.Size = new System.Drawing.Size(154, 22);
+            this.toolStripMenuEmeraldCyan.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuEmeraldCyan.Text = "Emerald Cyan";
             this.toolStripMenuEmeraldCyan.Click += new System.EventHandler(this.toolStripMenuEmeraldCyan_Click);
             // 
             // ToolStripMenuEmeraldBlue
             // 
             this.ToolStripMenuEmeraldBlue.Name = "ToolStripMenuEmeraldBlue";
-            this.ToolStripMenuEmeraldBlue.Size = new System.Drawing.Size(154, 22);
+            this.ToolStripMenuEmeraldBlue.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuEmeraldBlue.Text = "Emerald Blue";
             this.ToolStripMenuEmeraldBlue.Click += new System.EventHandler(this.ToolStripMenuEmeraldBlue_Click);
             // 
             // ToolStripMenuEmeraldGreen
             // 
             this.ToolStripMenuEmeraldGreen.Name = "ToolStripMenuEmeraldGreen";
-            this.ToolStripMenuEmeraldGreen.Size = new System.Drawing.Size(154, 22);
+            this.ToolStripMenuEmeraldGreen.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuEmeraldGreen.Text = "Emerald Green";
             this.ToolStripMenuEmeraldGreen.Click += new System.EventHandler(this.ToolStripMenuEmeraldGreen_Click);
             // 
             // ToolStripMenuEmeraldBrown
             // 
             this.ToolStripMenuEmeraldBrown.Name = "ToolStripMenuEmeraldBrown";
-            this.ToolStripMenuEmeraldBrown.Size = new System.Drawing.Size(154, 22);
+            this.ToolStripMenuEmeraldBrown.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuEmeraldBrown.Text = "Emerald Brown";
             this.ToolStripMenuEmeraldBrown.Click += new System.EventHandler(this.ToolStripMenuEmeraldBrown_Click);
             // 
@@ -274,6 +276,13 @@
             this.skinEngineInicio.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineInicio.SkinFile = "";
             // 
+            // ToolStripMenuDefault
+            // 
+            this.ToolStripMenuDefault.Name = "ToolStripMenuDefault";
+            this.ToolStripMenuDefault.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuDefault.Text = "Windows Default";
+            this.ToolStripMenuDefault.Click += new System.EventHandler(this.ToolStripMenuDefault_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,5 +337,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBlue;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldGreen;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBrown;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuDefault;
     }
 }
