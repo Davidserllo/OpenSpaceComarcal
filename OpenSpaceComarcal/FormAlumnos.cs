@@ -337,7 +337,7 @@ namespace OpenSpaceComarcal
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Un error grave ocurrió: " + ex.Message , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Un error ocurrió: " + ex.Message , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

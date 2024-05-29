@@ -79,12 +79,17 @@ namespace OpenSpaceComarcal
             }
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
+        private void actualizarDatos()
         {
             bindingSourceAlumno.DataSource = AlumnosOrm.Select();
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            actualizarDatos();
         }
 
         private bool camposRellenados()
@@ -383,7 +388,48 @@ namespace OpenSpaceComarcal
 
         private void ToolStripMenuImportar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string rutaExcel = "";
+                using (OpenFileDialog fileDialog = new OpenFileDialog())
+                {
+                    fileDialog.Title = "Seleccione un archivo Excel para importarlo";
+                    fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
+                    fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
 
+                    // Mostrar el diálogo y obtener el resultado
+                    if (fileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        rutaExcel = fileDialog.FileName;
+                        MessageBox.Show($"Archivo Excel seleccionado: {rutaExcel}", "Archivo Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        List<inscripcion> listaInscripciones = Importar.importarInscripcionesDeExcel(rutaExcel);
+                        string messag = "";
+                        // Insertamos los alumnos en la BD
+                        foreach (var ins in listaInscripciones)
+                        {
+                            inscripcion _inscripcion= new inscripcion();
+
+                            _inscripcion.id_alumno = ins.id_alumno;
+                            _inscripcion.id_instancia = ins.id_instancia;
+                            _inscripcion.fecha_inscripcion = DateTime.Now;
+                            _inscripcion.fecha_expedicion = DateTime.Now;
+                            _inscripcion.apto = ins.apto;
+                            _inscripcion.cod_factura = ins.cod_factura;
+
+                            messag = InscripcionOrm.Insert(_inscripcion);
+                        }
+
+                        MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        actualizarDatos();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Un error grave ocurrió: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void LimpiarCampos()

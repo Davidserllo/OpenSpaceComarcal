@@ -1,6 +1,7 @@
 ﻿using OpenSpaceComarcal.Libraries;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +26,12 @@ namespace OpenSpaceComarcal
         public FormInicio()
         {
             InitializeComponent();
+
+            Version version = Assembly.GetExecutingAssembly().GetName().Version;
+            string versionText = $"v{version.Major}.{version.Minor}.{version.Build}";
+            string releaseStage = "Alpha";
+            labelVersion.Text = $"{versionText} {releaseStage}";
+
             Apariencia.AplicarApariencia(skinEngineInicio);
             CheckTema(Properties.Settings.Default.NomApariencia);
         }
