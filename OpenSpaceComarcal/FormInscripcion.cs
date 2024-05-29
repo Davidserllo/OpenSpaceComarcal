@@ -483,5 +483,13 @@ namespace OpenSpaceComarcal
             FormControlAsistencia ventanaControlAsistencia = new FormControlAsistencia();
             ventanaControlAsistencia.ShowDialog();
         }
+
+        private void comboBoxAlumno_Format(object sender, ListControlConvertEventArgs e)
+        {
+            alumno _alumno = (alumno)e.ListItem;
+            string nombre = _alumno.nombre;
+            string dni = _alumno.dni_nie_pasp;
+            e.Value = $"{nombre} - ({dni})  ";
+        }
     }
 }

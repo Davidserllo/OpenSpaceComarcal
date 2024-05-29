@@ -456,6 +456,7 @@
             this.comboBoxAlumno.Size = new System.Drawing.Size(143, 21);
             this.comboBoxAlumno.TabIndex = 10;
             this.comboBoxAlumno.ValueMember = "id";
+            this.comboBoxAlumno.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxAlumno_Format);
             this.comboBoxAlumno.TextChanged += new System.EventHandler(this.comboBoxAlumno_TextChanged);
             // 
             // buttonModificarInscripcion
