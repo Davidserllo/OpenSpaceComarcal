@@ -85,6 +85,7 @@
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
+            this.buttonAsistencias = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -681,11 +682,23 @@
             this.progressBarArchivo.Size = new System.Drawing.Size(547, 10);
             this.progressBarArchivo.TabIndex = 33;
             // 
+            // buttonAsistencias
+            // 
+            this.buttonAsistencias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAsistencias.Location = new System.Drawing.Point(581, 28);
+            this.buttonAsistencias.Name = "buttonAsistencias";
+            this.buttonAsistencias.Size = new System.Drawing.Size(113, 31);
+            this.buttonAsistencias.TabIndex = 34;
+            this.buttonAsistencias.Text = "Asistencias";
+            this.buttonAsistencias.UseVisualStyleBackColor = true;
+            this.buttonAsistencias.Click += new System.EventHandler(this.buttonAsistencias_Click);
+            // 
             // FormInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 567);
+            this.Controls.Add(this.buttonAsistencias);
             this.Controls.Add(this.progressBarArchivo);
             this.Controls.Add(this.toolStripInscripcion);
             this.Controls.Add(this.tabControl1);
@@ -775,5 +788,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaexpedicionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aptoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codfacturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonAsistencias;
     }
 }

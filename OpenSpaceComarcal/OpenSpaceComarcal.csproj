@@ -189,6 +189,12 @@
     <Compile Include="FormAlumnos.Designer.cs">
       <DependentUpon>FormAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormControlAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControlAsistencia.Designer.cs">
+      <DependentUpon>FormControlAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAlumnos.resx">
       <DependentUpon>FormAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControlAsistencia.resx">
+      <DependentUpon>FormControlAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCursos.resx">
       <DependentUpon>FormCursos.cs</DependentUpon>

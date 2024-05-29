@@ -477,5 +477,11 @@ namespace OpenSpaceComarcal
             string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
             bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
         }
+
+        private void buttonAsistencias_Click(object sender, EventArgs e)
+        {
+            FormControlAsistencia ventanaControlAsistencia = new FormControlAsistencia();
+            ventanaControlAsistencia.ShowDialog();
+        }
     }
 }
