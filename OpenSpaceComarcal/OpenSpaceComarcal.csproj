@@ -229,6 +229,7 @@
       <DependentUpon>FormInstancia.cs</DependentUpon>
     </Compile>
     <Compile Include="Libraries\Apariencia.cs" />
+    <Compile Include="Libraries\DatabaseUtils.cs" />
     <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\Exportar.cs" />
     <Compile Include="Libraries\Importar.cs" />
@@ -314,7 +315,6 @@
     <None Include="Models\ModelOsc.edmx.diagram">
       <DependentUpon>ModelOsc.edmx</DependentUpon>
     </None>
-    <None Include="OpenSpaceComarcal_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.alumno1.datasource" />
@@ -368,6 +368,7 @@
     <Content Include="Resources\instancia-icono.png" />
     <Content Include="Resources\logo-oscomarcal.ico" />
     <Content Include="Resources\logo-oscomarcal.png" />
+    <Content Include="Resources\logo-oscomarcal_name.ico" />
     <Content Include="Resources\TemasInterfaz\IrisSkin2.dll" />
     <Content Include="Resources\TemasInterfaz\SERIAL.txt" />
   </ItemGroup>

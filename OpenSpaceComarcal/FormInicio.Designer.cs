@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuBaseDeDatos = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuApariencia = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuEmeraldCyan = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuEmeraldBlue = new System.Windows.Forms.ToolStripMenuItem();
@@ -159,6 +160,7 @@
             // 
             this.toolStripDropDownButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuBaseDeDatos,
             this.ToolStripMenuApariencia});
             this.toolStripDropDownButtonSettings.Image = global::OpenSpaceComarcal.Properties.Resources.configuracion_icono;
             this.toolStripDropDownButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -166,6 +168,13 @@
             this.toolStripDropDownButtonSettings.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButtonSettings.Text = "Apariencia de la aplicación";
             this.toolStripDropDownButtonSettings.ToolTipText = "Ajustes";
+            // 
+            // toolStripMenuBaseDeDatos
+            // 
+            this.toolStripMenuBaseDeDatos.Name = "toolStripMenuBaseDeDatos";
+            this.toolStripMenuBaseDeDatos.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuBaseDeDatos.Text = "Base de datos";
+            this.toolStripMenuBaseDeDatos.ToolTipText = "Apariencia";
             // 
             // ToolStripMenuApariencia
             // 
@@ -176,7 +185,7 @@
             this.ToolStripMenuEmeraldBrown,
             this.ToolStripMenuDefault});
             this.ToolStripMenuApariencia.Name = "ToolStripMenuApariencia";
-            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(130, 22);
+            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuApariencia.Text = "Apariencia";
             this.ToolStripMenuApariencia.ToolTipText = "Apariencia";
             // 
@@ -335,6 +344,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuApariencia;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuEmeraldCyan;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBlue;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuBaseDeDatos;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldGreen;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBrown;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuDefault;

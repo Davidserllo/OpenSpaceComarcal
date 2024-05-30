@@ -7,7 +7,8 @@ namespace OpenSpaceComarcal.Libraries
     internal class Apariencia
     {
         // Ruta relativa de las apariencias
-        public static string RelativePath = @"..\..\Resources\TemasInterfaz\Emerald\";
+        //public static string RelativePath = @"..\..\Resources\TemasInterfaz\Emerald\";
+        public static string RelativePath = @"..\Resources\TemasInterfaz\Emerald\";
         public static void AplicarApariencia(SkinEngine skinEngine)
         {
             // Obtener nombre de la apariencia a aplicar

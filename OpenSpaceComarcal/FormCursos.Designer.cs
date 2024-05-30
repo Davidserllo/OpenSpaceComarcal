@@ -45,9 +45,6 @@
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewCursos = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.buttonActualizarCursos = new System.Windows.Forms.Button();
             this.skinEngineCursos = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
@@ -56,11 +53,14 @@
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceCursos = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).BeginInit();
             this.toolStripCursos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxBuscador
@@ -246,24 +246,6 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "siglas";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Siglas";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // bindingSourceCursos
-            // 
-            this.bindingSourceCursos.DataSource = typeof(OpenSpaceComarcal.Models.curso);
-            // 
             // labelCursos
             // 
             this.labelCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -341,6 +323,24 @@
             this.progressBarArchivo.Size = new System.Drawing.Size(404, 10);
             this.progressBarArchivo.TabIndex = 32;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "siglas";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Siglas";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // bindingSourceCursos
+            // 
+            this.bindingSourceCursos.DataSource = typeof(OpenSpaceComarcal.Models.curso);
+            // 
             // FormCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,9 +366,9 @@
             this.groupBoxInformacionCurso.ResumeLayout(false);
             this.groupBoxInformacionCurso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).EndInit();
             this.toolStripCursos.ResumeLayout(false);
             this.toolStripCursos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
