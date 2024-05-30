@@ -31,8 +31,6 @@ namespace OpenSpaceComarcal.Objects
         {
             Ciudad = CIUDAD;
             EmpresaId = "P001";
-
-            
         }
     }
 }

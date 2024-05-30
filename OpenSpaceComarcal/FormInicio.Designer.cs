@@ -49,6 +49,7 @@
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
             this.skinEngineInicio = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.labelVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
@@ -292,6 +293,16 @@
             this.skinEngineInicio.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
             this.skinEngineInicio.SkinFile = "";
             // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelVersion.Location = new System.Drawing.Point(12, 36);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(31, 13);
+            this.labelVersion.TabIndex = 23;
+            this.labelVersion.Text = "1.0.0";
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +311,7 @@
             this.BackgroundImage = global::OpenSpaceComarcal.Properties.Resources.fondo_home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxAlumnos);
             this.Controls.Add(this.pictureBoxClientes);
@@ -348,5 +360,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldGreen;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBrown;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuDefault;
+        private System.Windows.Forms.Label labelVersion;
     }
 }
