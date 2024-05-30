@@ -160,5 +160,64 @@ namespace OpenSpaceComarcal.Models
             }
             return mensajeError;
         }
+
+        public class AlumnoDTO
+        {
+            public string Apellidos { get; set; }
+            public string Nombre { get; set; }
+            public string DniNiePasp { get; set; }
+        }
+
+        public static PersAsistencias SelectDatosAsistencia(int instanciaID)
+        {
+
+            var query = Orm.bd.inscripcion
+                .Where(asistencia => instanciaID == asistencia.id_instancia)
+                .Select(asistencia => new
+                {
+                    // Curso
+                    NombreCurso = asistencia.instancia.curso.nombre,
+
+                    // Instancia
+                    InstanciaId = asistencia.instancia.id,
+                    Sesiones = asistencia.instancia.sesion,
+                    CodCurso = asistencia.instancia.codigo,
+                    FechaInicio = asistencia.instancia.fecha_inicio,
+                    FechaFin = asistencia.instancia.fecha_fin,
+
+                    // Alumnos
+                    Alumnos = asistencia.instancia.inscripcion.Select(insc => new AlumnoDTO
+                    {
+                        Apellidos = insc.alumno.apellidos,
+                        Nombre = insc.alumno.nombre,
+                        DniNiePasp = insc.alumno.dni_nie_pasp
+                    }).ToList()
+                })
+                .FirstOrDefault();
+
+            if (query == null)
+            {
+                return null;
+            }
+
+            PersAsistencias resultado = new PersAsistencias
+            {
+                NombreCurso = query.NombreCurso,
+                InstanciaId = query.InstanciaId,
+                Sesiones = query.Sesiones,
+                CodCurso = query.CodCurso,
+                FechaInicio = query.FechaInicio,
+                FechaFin = query.FechaFin,
+                Alumnos = query.Alumnos.Select(al => new alumno
+                {
+                    apellidos = al.Apellidos,
+                    nombre = al.Nombre,
+                    dni_nie_pasp = al.DniNiePasp
+                }).ToList()
+            };
+
+            return resultado;
+        }
+
     }
 }
