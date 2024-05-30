@@ -73,11 +73,6 @@ namespace OpenSpaceComarcal.Libraries
             string rutaDestinoCombinada = Path.Combine(rutaDestino, $"{nombreArchivo}.docx");
             DateTime thisTime = DateTime.Now;
 
-            foreach (var alumno in asistencia.Alumnos)
-            {
-                Console.WriteLine($" Nombre: {alumno.nombre}, DNI/NIE/PASP: {alumno.dni_nie_pasp}");
-            }
-
             using (DocX document = DocX.Load(rutaPlantilla))
             {
                 // Reemplazar los marcadores de posición en la plantilla con los datos proporcionados
