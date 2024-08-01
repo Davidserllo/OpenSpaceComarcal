@@ -41,6 +41,7 @@
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
             this.labelVersion = new System.Windows.Forms.Label();
+            this.toolStripButtonCheckUpdate = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStripInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlumnos)).BeginInit();
@@ -146,11 +147,12 @@
             this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonCursos});
+            this.toolStripButtonCursos,
+            this.toolStripButtonCheckUpdate});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStripInicio.Size = new System.Drawing.Size(1200, 33);
+            this.toolStripInicio.Size = new System.Drawing.Size(1200, 38);
             this.toolStripInicio.TabIndex = 18;
             this.toolStripInicio.Text = "toolStrip1";
             // 
@@ -234,6 +236,16 @@
             this.labelVersion.TabIndex = 23;
             this.labelVersion.Text = "1.0.0";
             // 
+            // toolStripButtonCheckUpdate
+            // 
+            this.toolStripButtonCheckUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonCheckUpdate.Image = global::OpenSpaceComarcal.Properties.Resources.actualizar;
+            this.toolStripButtonCheckUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCheckUpdate.Name = "toolStripButtonCheckUpdate";
+            this.toolStripButtonCheckUpdate.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButtonCheckUpdate.Text = "Comprobar Actualizaciones";
+            this.toolStripButtonCheckUpdate.Click += new System.EventHandler(this.toolStripButtonCheckUpdate_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,5 +296,6 @@
         private System.Windows.Forms.PictureBox pictureBoxInscripcion;
         private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
         private System.Windows.Forms.Label labelVersion;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCheckUpdate;
     }
 }

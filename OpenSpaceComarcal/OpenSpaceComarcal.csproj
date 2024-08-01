@@ -16,20 +16,23 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>F:\Empresas\OPEN SPACE\WebSite\</PublishUrl>
+    <PublishUrl>\\Nas01\administracion\Open_Space_Comarcal_Software\Publicaciones\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>OpenSpaceComarcal</ProductName>
-    <PublisherName>Artur y David</PublisherName>
+    <TargetCulture>es</TargetCulture>
+    <ProductName>Open Space Comarcal</ProductName>
+    <PublisherName>Artur</PublisherName>
     <SuiteName>Actualización OSC</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -335,7 +338,7 @@
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.inscripcion.datasource" />
     <None Include="Properties\DataSources\OpenSpaceComarcal.Models.instancia.datasource" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
@@ -366,6 +369,7 @@
       <DependentUpon>ModelOsc.edmx</DependentUpon>
       <LastGenOutput>ModelOsc.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\actualizar.png" />
     <Content Include="Resources\alumnos-icono.png" />
     <Content Include="Resources\archivo_icono.png" />
     <Content Include="Resources\cargando_icono.png" />

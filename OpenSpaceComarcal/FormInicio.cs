@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing.Text;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -9,29 +13,43 @@ namespace OpenSpaceComarcal
     public partial class FormInicio : Form
     {
         private FormLoading loading;
-
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
+        private Version version = Assembly.GetExecutingAssembly().GetName().Version;
 
         public FormInicio()
         {
             InitializeComponent();
 
-            Version version = Assembly.GetExecutingAssembly().GetName().Version;
             string versionText = $"v{version.Major}.{version.Minor}.{version.Build}";
             string releaseStage = "Alpha";
             labelVersion.Text = $"{versionText} {releaseStage}";
         }
 
+        private bool checkUpdate()
+        {
+            bool isValid = false;
+            string versionInfoPath = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Versiones\version.txt";
+            if (File.Exists(versionInfoPath))
+            {
+                var lines = File.ReadAllLines(versionInfoPath);
+                string latestVersion = lines[0].Trim();
 
+                string currentVersion = GetCurrentVersion();
+
+                if (latestVersion != currentVersion)
+                {
+                    isValid = true;
+                } else {
+                    MessageBox.Show("La aplicación ya esta actualizada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            return isValid;
+        }
+
+
+        private string GetCurrentVersion()
+        {
+            return $"{version.Major}.{version.Minor}.{version.Build}";
+        }
 
         private async void buttonAlumnos_Click(object sender, EventArgs e)
         {
@@ -90,6 +108,55 @@ namespace OpenSpaceComarcal
             };
 
             form.Show();
+        }
+
+        private void toolStripButtonCheckUpdate_Click(object sender, EventArgs e)
+        {
+            if (checkUpdate())
+            {
+                string setupFilePath = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Publicaciones\setup.exe";
+
+                // Verificar si el archivo setup.exe existe
+                if (File.Exists(setupFilePath))
+                {
+                    // Mostrar un mensaje al usuario
+                    var result = MessageBox.Show("Se ha encontrado una actualización. ¿Desea instalarla ahora?", "Actualización Disponible", MessageBoxButtons.YesNo);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Ejecutar el instalador
+                        StartInstaller(setupFilePath);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El archivo de actualización no se encontró en la ubicación especificada.");
+                }
+            }
+        }
+
+        private void StartInstaller(string installerPath)
+        {
+            try
+            {
+                // Configurar el proceso para ejecutar el setup.exe
+                ProcessStartInfo processStartInfo = new ProcessStartInfo
+                {
+                    FileName = installerPath,
+                    Arguments = "/silent", // Argumentos opcionales para ejecutar en modo silencioso (sin interacción con el usuario)
+                    UseShellExecute = true
+                };
+
+                // Iniciar el proceso
+                Process.Start(processStartInfo);
+
+                // Opcional: Cerrar la aplicación actual
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al iniciar el instalador: {ex.Message}");
+            }
         }
     }
 }
