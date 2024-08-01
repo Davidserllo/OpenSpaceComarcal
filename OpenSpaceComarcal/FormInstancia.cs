@@ -24,7 +24,6 @@ namespace OpenSpaceComarcal
         public FormInstancia()
         {
             InitializeComponent();
-            Apariencia.AplicarApariencia(skinEngineCursosProgramados);
         }
 
         private void Instancia_Load(object sender, System.EventArgs e)
@@ -98,7 +97,7 @@ namespace OpenSpaceComarcal
 
                 instancia _instancia = new instancia();
 
-                _instancia.id_curso = (int) comboBoxCursosSiglas.SelectedValue;
+                _instancia.id_curso = (int)comboBoxCursosSiglas.SelectedValue;
                 _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                 _instancia.fecha_fin = dateTimePickerFechaFin.Value;
                 _instancia.diploma = buttonSeleccionarDiploma.Text;
@@ -185,7 +184,7 @@ namespace OpenSpaceComarcal
 
                         if (comboBoxCursosSiglas.SelectedItem != null)
                         {
-                            _instancia.id_curso = (int) comboBoxCursosSiglas.SelectedValue;
+                            _instancia.id_curso = (int)comboBoxCursosSiglas.SelectedValue;
                         }
                         _instancia.fecha_inicio = dateTimePickerFechaInicio.Value;
                         _instancia.fecha_fin = dateTimePickerFechaFin.Value;
@@ -240,7 +239,7 @@ namespace OpenSpaceComarcal
             {
                 if (e.Value != null)
                 {
-                    e.Value = CursosOrm.SelectSigla((int) e.Value).FirstOrDefault();
+                    e.Value = CursosOrm.SelectSigla((int)e.Value).FirstOrDefault();
                 }
             }
         }
@@ -250,7 +249,7 @@ namespace OpenSpaceComarcal
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Microsoft Word (*.docx)|*.docx"; 
+                openFileDialog.Filter = "Microsoft Word (*.docx)|*.docx";
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)

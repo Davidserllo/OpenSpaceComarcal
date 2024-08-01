@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenSpaceComarcal.Objects
 {
-    
+
     public class PersDiploma
     {
         // Cnst
@@ -17,7 +13,7 @@ namespace OpenSpaceComarcal.Objects
         public string AlumnoDNI { get; set; }
         public string AlumnoNombre { get; set; }
         public string AlumnoApellidos { get; set; }
-        public string Ciudad {  get; set; }
+        public string Ciudad { get; set; }
         public string NumFactura { get; set; }
         public string EmpresaId { get; set; }
         public DateTime? FechaExpedicion { get; set; }

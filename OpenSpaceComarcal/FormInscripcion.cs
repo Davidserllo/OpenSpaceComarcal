@@ -2,9 +2,7 @@
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Net;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
@@ -26,7 +24,6 @@ namespace OpenSpaceComarcal
         public FormInscripcion()
         {
             InitializeComponent();
-            Apariencia.AplicarApariencia(skinEngineinscripcion);
 
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
@@ -36,7 +33,6 @@ namespace OpenSpaceComarcal
         public FormInscripcion(int id_alumno)
         {
             InitializeComponent();
-            Apariencia.AplicarApariencia(skinEngineinscripcion);
 
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
@@ -69,7 +65,7 @@ namespace OpenSpaceComarcal
             if (dataGridViewInscripcion.SelectedRows.Count == 1)
             {
                 DataGridViewRow fila = dataGridViewInscripcion.SelectedRows[0];
-                
+
                 comboBoxAlumno.SelectedValue = fila.Cells[1].Value;
                 comboBoxInstancia.SelectedValue = fila.Cells[2].Value;
                 dateTimePickerInscripcion.Text = fila.Cells[4].Value.ToString();
@@ -110,8 +106,8 @@ namespace OpenSpaceComarcal
 
                 inscripcion _inscripcion = new inscripcion();
 
-                _inscripcion.id_alumno = (int) comboBoxAlumno.SelectedValue;
-                _inscripcion.id_instancia = (int) comboBoxInstancia.SelectedValue;
+                _inscripcion.id_alumno = (int)comboBoxAlumno.SelectedValue;
+                _inscripcion.id_instancia = (int)comboBoxInstancia.SelectedValue;
                 _inscripcion.fecha_inscripcion = dateTimePickerInscripcion.Value;
                 _inscripcion.fecha_expedicion = dateTimePickerExpedicion.Value;
                 _inscripcion.apto = checkBoxApto.Checked;
@@ -293,9 +289,9 @@ namespace OpenSpaceComarcal
             // Obtenemos la lista de ids y se la pasamos a la nueva ventana
             foreach (DataGridViewRow row in dataGridViewInscripcion.Rows)
             {
-                if (!row.IsNewRow) 
+                if (!row.IsNewRow)
                 {
-                    int idInscripcion = Convert.ToInt32(row.Cells[0].Value);  
+                    int idInscripcion = Convert.ToInt32(row.Cells[0].Value);
                     ids.Add(idInscripcion);
                 }
             }
@@ -408,7 +404,7 @@ namespace OpenSpaceComarcal
                         // Insertamos los alumnos en la BD
                         foreach (var ins in listaInscripciones)
                         {
-                            inscripcion _inscripcion= new inscripcion();
+                            inscripcion _inscripcion = new inscripcion();
 
                             _inscripcion.id_alumno = ins.id_alumno;
                             _inscripcion.id_instancia = ins.id_instancia;

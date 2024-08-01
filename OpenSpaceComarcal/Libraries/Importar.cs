@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal.Libraries
@@ -69,11 +67,11 @@ namespace OpenSpaceComarcal.Libraries
                     {
                         DateTime? fechaInscripcion = null;
                         DateTime? fechaExpedicion = null;
-                        string fechaInscripcionRaw = row.Cell(4).GetValue<string>();  
-                        string fechaExpedicionRaw = row.Cell(5).GetValue<string>();  
+                        string fechaInscripcionRaw = row.Cell(4).GetValue<string>();
+                        string fechaExpedicionRaw = row.Cell(5).GetValue<string>();
                         if (DateTime.TryParse(fechaInscripcionRaw, out DateTime parsedDate))
                         {
-                            fechaInscripcion = parsedDate; 
+                            fechaInscripcion = parsedDate;
                         }
                         if (DateTime.TryParse(fechaExpedicionRaw, out DateTime parsedDate2))
                         {

@@ -1,17 +1,8 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
-using OpenSpaceComarcal.Libraries;
+﻿using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using OpenSpaceComarcal.Objects;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OpenSpaceComarcal
 {
@@ -74,7 +65,7 @@ namespace OpenSpaceComarcal
         private void buttonGenerar_Click(object sender, EventArgs e)
         {
             buttonGenerar.Enabled = false;
-            PersAsistencias asistencia = InscripcionOrm.SelectDatosAsistencia((int) comboBoxInstancia.SelectedValue);
+            PersAsistencias asistencia = InscripcionOrm.SelectDatosAsistencia((int)comboBoxInstancia.SelectedValue);
             if (asistencia != null && !string.IsNullOrEmpty(textBoxRutaDestino.Text) && !string.IsNullOrEmpty(textBoxRutaPlantilla.Text))
             {
                 Diploma.generarControlAsistencia(asistencia, textBoxRutaDestino.Text, textBoxRutaPlantilla.Text);

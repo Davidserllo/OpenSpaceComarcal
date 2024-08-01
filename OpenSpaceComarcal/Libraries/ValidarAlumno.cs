@@ -64,6 +64,6 @@ namespace OpenSpaceComarcal.Libraries
             return msgError;
         }
 
-        
+
     }
 }

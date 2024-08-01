@@ -54,7 +54,7 @@ namespace OpenSpaceComarcal.Models
                     inscripcion.instancia.diploma,
 
                     //Alumno
-                    
+
                     inscripcion.alumno.dni_nie_pasp,
                     inscripcion.alumno.nombre,
                     inscripcion.alumno.apellidos,

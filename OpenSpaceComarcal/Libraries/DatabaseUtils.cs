@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal.Libraries

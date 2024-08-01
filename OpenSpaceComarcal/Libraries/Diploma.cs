@@ -1,13 +1,8 @@
-﻿using Microsoft.Office.Interop.Word;
-using OpenSpaceComarcal.Objects;
+﻿using OpenSpaceComarcal.Objects;
 using System;
 using System.IO;
-using System.Net;
 using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
-using Xceed.Document.NET;
 using Xceed.Words.NET;
 
 namespace OpenSpaceComarcal.Libraries
@@ -43,7 +38,7 @@ namespace OpenSpaceComarcal.Libraries
                     {
                         document.ReplaceText("<num_cliente>", "POO1");
                     }
-                    
+
                     document.ReplaceText("<num_fact>", diploma.NumFactura);
                     document.ReplaceText("num_fact", diploma.NumFactura);
                     document.ReplaceText("<ciudad>", diploma.Ciudad);
@@ -133,7 +128,7 @@ namespace OpenSpaceComarcal.Libraries
                 }
                 // Guardar el documento Word
                 document.SaveAs(rutaDestinoCombinada);
-            
+
             }
         }
 

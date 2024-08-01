@@ -35,19 +35,11 @@
             this.buttonInstancia = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButtonSettings = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ToolStripMenuApariencia = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuEmeraldCyan = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuEmeraldBlue = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuEmeraldGreen = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuEmeraldBrown = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuDefault = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButtonCursos = new System.Windows.Forms.ToolStripButton();
             this.pictureBoxAlumnos = new System.Windows.Forms.PictureBox();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
             this.pictureBoxInstancia = new System.Windows.Forms.PictureBox();
             this.pictureBoxInscripcion = new System.Windows.Forms.PictureBox();
-            this.skinEngineInicio = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.labelVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStripInicio.SuspendLayout();
@@ -67,9 +59,10 @@
             this.buttonAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAlumnos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonAlumnos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAlumnos.Location = new System.Drawing.Point(134, 211);
+            this.buttonAlumnos.Location = new System.Drawing.Point(201, 325);
+            this.buttonAlumnos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAlumnos.Name = "buttonAlumnos";
-            this.buttonAlumnos.Size = new System.Drawing.Size(112, 28);
+            this.buttonAlumnos.Size = new System.Drawing.Size(168, 43);
             this.buttonAlumnos.TabIndex = 0;
             this.buttonAlumnos.Text = "Alumnos";
             this.buttonAlumnos.UseVisualStyleBackColor = false;
@@ -85,9 +78,10 @@
             this.buttonInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonInscripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonInscripcion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonInscripcion.Location = new System.Drawing.Point(555, 211);
+            this.buttonInscripcion.Location = new System.Drawing.Point(832, 325);
+            this.buttonInscripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonInscripcion.Name = "buttonInscripcion";
-            this.buttonInscripcion.Size = new System.Drawing.Size(112, 28);
+            this.buttonInscripcion.Size = new System.Drawing.Size(168, 43);
             this.buttonInscripcion.TabIndex = 4;
             this.buttonInscripcion.Text = "Inscripcion";
             this.buttonInscripcion.UseVisualStyleBackColor = false;
@@ -103,9 +97,10 @@
             this.buttonEmpresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonEmpresas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonEmpresas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonEmpresas.Location = new System.Drawing.Point(276, 211);
+            this.buttonEmpresas.Location = new System.Drawing.Point(414, 325);
+            this.buttonEmpresas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEmpresas.Name = "buttonEmpresas";
-            this.buttonEmpresas.Size = new System.Drawing.Size(112, 28);
+            this.buttonEmpresas.Size = new System.Drawing.Size(168, 43);
             this.buttonEmpresas.TabIndex = 2;
             this.buttonEmpresas.Text = "Empresas";
             this.buttonEmpresas.UseVisualStyleBackColor = false;
@@ -121,9 +116,10 @@
             this.buttonInstancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonInstancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonInstancia.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonInstancia.Location = new System.Drawing.Point(416, 211);
+            this.buttonInstancia.Location = new System.Drawing.Point(624, 325);
+            this.buttonInstancia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonInstancia.Name = "buttonInstancia";
-            this.buttonInstancia.Size = new System.Drawing.Size(112, 28);
+            this.buttonInstancia.Size = new System.Drawing.Size(168, 43);
             this.buttonInstancia.TabIndex = 3;
             this.buttonInstancia.Text = "Cursos Prg.";
             this.buttonInstancia.UseVisualStyleBackColor = false;
@@ -137,9 +133,10 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(276, 286);
+            this.pictureBox2.Location = new System.Drawing.Point(414, 440);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(251, 119);
+            this.pictureBox2.Size = new System.Drawing.Size(376, 183);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -147,74 +144,15 @@
             // toolStripInicio
             // 
             this.toolStripInicio.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripInicio.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButtonSettings,
             this.toolStripButtonCursos});
             this.toolStripInicio.Location = new System.Drawing.Point(0, 0);
             this.toolStripInicio.Name = "toolStripInicio";
-            this.toolStripInicio.Size = new System.Drawing.Size(800, 25);
+            this.toolStripInicio.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStripInicio.Size = new System.Drawing.Size(1200, 33);
             this.toolStripInicio.TabIndex = 18;
             this.toolStripInicio.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButtonSettings
-            // 
-            this.toolStripDropDownButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButtonSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuApariencia});
-            this.toolStripDropDownButtonSettings.Image = global::OpenSpaceComarcal.Properties.Resources.configuracion_icono;
-            this.toolStripDropDownButtonSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButtonSettings.Name = "toolStripDropDownButtonSettings";
-            this.toolStripDropDownButtonSettings.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButtonSettings.Text = "Apariencia de la aplicación";
-            this.toolStripDropDownButtonSettings.ToolTipText = "Ajustes";
-            // 
-            // ToolStripMenuApariencia
-            // 
-            this.ToolStripMenuApariencia.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuEmeraldCyan,
-            this.ToolStripMenuEmeraldBlue,
-            this.ToolStripMenuEmeraldGreen,
-            this.ToolStripMenuEmeraldBrown,
-            this.ToolStripMenuDefault});
-            this.ToolStripMenuApariencia.Name = "ToolStripMenuApariencia";
-            this.ToolStripMenuApariencia.Size = new System.Drawing.Size(146, 22);
-            this.ToolStripMenuApariencia.Text = "Apariencia";
-            this.ToolStripMenuApariencia.ToolTipText = "Apariencia";
-            // 
-            // toolStripMenuEmeraldCyan
-            // 
-            this.toolStripMenuEmeraldCyan.Name = "toolStripMenuEmeraldCyan";
-            this.toolStripMenuEmeraldCyan.Size = new System.Drawing.Size(164, 22);
-            this.toolStripMenuEmeraldCyan.Text = "Emerald Cyan";
-            this.toolStripMenuEmeraldCyan.Click += new System.EventHandler(this.toolStripMenuEmeraldCyan_Click);
-            // 
-            // ToolStripMenuEmeraldBlue
-            // 
-            this.ToolStripMenuEmeraldBlue.Name = "ToolStripMenuEmeraldBlue";
-            this.ToolStripMenuEmeraldBlue.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuEmeraldBlue.Text = "Emerald Blue";
-            this.ToolStripMenuEmeraldBlue.Click += new System.EventHandler(this.ToolStripMenuEmeraldBlue_Click);
-            // 
-            // ToolStripMenuEmeraldGreen
-            // 
-            this.ToolStripMenuEmeraldGreen.Name = "ToolStripMenuEmeraldGreen";
-            this.ToolStripMenuEmeraldGreen.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuEmeraldGreen.Text = "Emerald Green";
-            this.ToolStripMenuEmeraldGreen.Click += new System.EventHandler(this.ToolStripMenuEmeraldGreen_Click);
-            // 
-            // ToolStripMenuEmeraldBrown
-            // 
-            this.ToolStripMenuEmeraldBrown.Name = "ToolStripMenuEmeraldBrown";
-            this.ToolStripMenuEmeraldBrown.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuEmeraldBrown.Text = "Emerald Brown";
-            this.ToolStripMenuEmeraldBrown.Click += new System.EventHandler(this.ToolStripMenuEmeraldBrown_Click);
-            // 
-            // ToolStripMenuDefault
-            // 
-            this.ToolStripMenuDefault.Name = "ToolStripMenuDefault";
-            this.ToolStripMenuDefault.Size = new System.Drawing.Size(164, 22);
-            this.ToolStripMenuDefault.Text = "Windows Default";
-            this.ToolStripMenuDefault.Click += new System.EventHandler(this.ToolStripMenuDefault_Click);
             // 
             // toolStripButtonCursos
             // 
@@ -222,7 +160,7 @@
             this.toolStripButtonCursos.Image = global::OpenSpaceComarcal.Properties.Resources.curso_icono;
             this.toolStripButtonCursos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCursos.Name = "toolStripButtonCursos";
-            this.toolStripButtonCursos.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonCursos.Size = new System.Drawing.Size(34, 28);
             this.toolStripButtonCursos.Text = "Cursos";
             this.toolStripButtonCursos.ToolTipText = "Cursos";
             this.toolStripButtonCursos.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -233,9 +171,10 @@
             this.pictureBoxAlumnos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxAlumnos.Image = global::OpenSpaceComarcal.Properties.Resources.alumnos_icono;
             this.pictureBoxAlumnos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxAlumnos.Location = new System.Drawing.Point(134, 86);
+            this.pictureBoxAlumnos.Location = new System.Drawing.Point(201, 132);
+            this.pictureBoxAlumnos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxAlumnos.Name = "pictureBoxAlumnos";
-            this.pictureBoxAlumnos.Size = new System.Drawing.Size(112, 104);
+            this.pictureBoxAlumnos.Size = new System.Drawing.Size(168, 160);
             this.pictureBoxAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlumnos.TabIndex = 19;
             this.pictureBoxAlumnos.TabStop = false;
@@ -246,9 +185,10 @@
             this.pictureBoxClientes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxClientes.Image = global::OpenSpaceComarcal.Properties.Resources.clientes_icono;
             this.pictureBoxClientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxClientes.Location = new System.Drawing.Point(276, 86);
+            this.pictureBoxClientes.Location = new System.Drawing.Point(414, 132);
+            this.pictureBoxClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxClientes.Name = "pictureBoxClientes";
-            this.pictureBoxClientes.Size = new System.Drawing.Size(112, 104);
+            this.pictureBoxClientes.Size = new System.Drawing.Size(168, 160);
             this.pictureBoxClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxClientes.TabIndex = 21;
             this.pictureBoxClientes.TabStop = false;
@@ -259,9 +199,10 @@
             this.pictureBoxInstancia.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInstancia.Image = global::OpenSpaceComarcal.Properties.Resources.instancia_icono;
             this.pictureBoxInstancia.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxInstancia.Location = new System.Drawing.Point(416, 86);
+            this.pictureBoxInstancia.Location = new System.Drawing.Point(624, 132);
+            this.pictureBoxInstancia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxInstancia.Name = "pictureBoxInstancia";
-            this.pictureBoxInstancia.Size = new System.Drawing.Size(112, 104);
+            this.pictureBoxInstancia.Size = new System.Drawing.Size(168, 160);
             this.pictureBoxInstancia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInstancia.TabIndex = 20;
             this.pictureBoxInstancia.TabStop = false;
@@ -272,17 +213,13 @@
             this.pictureBoxInscripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pictureBoxInscripcion.Image = global::OpenSpaceComarcal.Properties.Resources.inscripcion_icono;
             this.pictureBoxInscripcion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxInscripcion.Location = new System.Drawing.Point(555, 86);
+            this.pictureBoxInscripcion.Location = new System.Drawing.Point(832, 132);
+            this.pictureBoxInscripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxInscripcion.Name = "pictureBoxInscripcion";
-            this.pictureBoxInscripcion.Size = new System.Drawing.Size(112, 104);
+            this.pictureBoxInscripcion.Size = new System.Drawing.Size(168, 160);
             this.pictureBoxInscripcion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInscripcion.TabIndex = 22;
             this.pictureBoxInscripcion.TabStop = false;
-            // 
-            // skinEngineInicio
-            // 
-            this.skinEngineInicio.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineInicio.SkinFile = "";
             // 
             // labelVersion
             // 
@@ -290,20 +227,21 @@
             this.labelVersion.AutoSize = true;
             this.labelVersion.BackColor = System.Drawing.Color.Transparent;
             this.labelVersion.ForeColor = System.Drawing.Color.White;
-            this.labelVersion.Location = new System.Drawing.Point(12, 428);
+            this.labelVersion.Location = new System.Drawing.Point(18, 658);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(31, 13);
+            this.labelVersion.Size = new System.Drawing.Size(44, 20);
             this.labelVersion.TabIndex = 23;
             this.labelVersion.Text = "1.0.0";
             // 
             // FormInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::OpenSpaceComarcal.Properties.Resources.fondo_home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxAlumnos);
@@ -316,6 +254,7 @@
             this.Controls.Add(this.buttonEmpresas);
             this.Controls.Add(this.buttonInstancia);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPEN SPACE COMARCAL";
@@ -344,14 +283,6 @@
         private System.Windows.Forms.PictureBox pictureBoxInstancia;
         private System.Windows.Forms.PictureBox pictureBoxInscripcion;
         private System.Windows.Forms.ToolStripButton toolStripButtonCursos;
-        private Sunisoft.IrisSkin.SkinEngine skinEngineInicio;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSettings;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuApariencia;
-        public System.Windows.Forms.ToolStripMenuItem toolStripMenuEmeraldCyan;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBlue;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldGreen;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuEmeraldBrown;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuDefault;
         private System.Windows.Forms.Label labelVersion;
     }
 }

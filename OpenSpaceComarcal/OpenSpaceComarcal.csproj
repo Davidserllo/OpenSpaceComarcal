@@ -237,7 +237,6 @@
     <Compile Include="FormInstancia.Designer.cs">
       <DependentUpon>FormInstancia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Libraries\Apariencia.cs" />
     <Compile Include="Libraries\DatabaseUtils.cs" />
     <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\Exportar.cs" />

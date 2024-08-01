@@ -29,7 +29,6 @@ namespace OpenSpaceComarcal
             InitializeComponent();
             progressBar1.Visible = false;
             labelNumeroDiplomas.Text = ids.Count.ToString();
-            Apariencia.AplicarApariencia(skinEngineDiploma);
         }
 
         private void buttonSeleccionarRuta_Click(object sender, EventArgs e)
@@ -37,7 +36,7 @@ namespace OpenSpaceComarcal
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
                 folderDialog.Description = "Seleccione una carpeta para guardar el archivo";
-                folderDialog.ShowNewFolderButton = true; 
+                folderDialog.ShowNewFolderButton = true;
                 folderDialog.RootFolder = Environment.SpecialFolder.MyComputer;
 
                 // Mostrar el diálogo y obtener el resultado
@@ -49,7 +48,7 @@ namespace OpenSpaceComarcal
                 }
             }
         }
-        
+
         private void buttonGenerar_Click(object sender, EventArgs e)
         {
             buttonGenerar.Enabled = false;

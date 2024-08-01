@@ -29,7 +29,6 @@ namespace OpenSpaceComarcal
         public FormAlumnos()
         {
             InitializeComponent();
-            Apariencia.AplicarApariencia(skinEngineAlumnos);
             configToolTip();
 
             // Ocultar barra de progreso
@@ -110,8 +109,8 @@ namespace OpenSpaceComarcal
                 _alumno.telefono = textBoxTelefono.Text;
                 _alumno.email = textBoxEmail.Text;
 
-                if (comboBoxEmpresa.SelectedItem != null && comboBoxEmpresa.Text  != "")
-                { 
+                if (comboBoxEmpresa.SelectedItem != null && comboBoxEmpresa.Text != "")
+                {
                     _alumno.id_empresa = (int)comboBoxEmpresa.SelectedValue;
                 }
 
@@ -123,7 +122,8 @@ namespace OpenSpaceComarcal
                 if (mensajeError == "")
                 {
                     String msg = ValidarAlumno.validarDniNie(_alumno.dni_nie_pasp);
-                    if (msg != "") {
+                    if (msg != "")
+                    {
                         MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     MessageBox.Show("Se ha creado un nuevo alumno llamado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -337,7 +337,7 @@ namespace OpenSpaceComarcal
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Un error ocurrió: " + ex.Message , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Un error ocurrió: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -368,7 +368,7 @@ namespace OpenSpaceComarcal
                 FormInscripcion ventanaInscripcion = new FormInscripcion((int)fila.Cells[0].Value);
                 ventanaInscripcion.Show();
             }
-                
+
         }
 
         private void buttonBuscarPorCampo_Click(object sender, EventArgs e)
@@ -384,7 +384,7 @@ namespace OpenSpaceComarcal
             }
 
             bindingSourceAlumno.DataSource = AlumnosOrm.SelectAvanzado(id_empresa);
-        
+
         }
 
         private void comboBoxEmpresa_TextChanged(object sender, EventArgs e)

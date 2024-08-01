@@ -22,7 +22,6 @@ namespace OpenSpaceComarcal
         public FormEmpresas()
         {
             InitializeComponent();
-            Apariencia.AplicarApariencia(skinEngineEmpresas);
 
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
@@ -199,7 +198,7 @@ namespace OpenSpaceComarcal
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
-        {   
+        {
             // Limpiar los campos y la selección
             LimpiarCampos();
 
