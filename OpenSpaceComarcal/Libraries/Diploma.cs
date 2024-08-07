@@ -63,7 +63,7 @@ namespace OpenSpaceComarcal.Libraries
 
         public static void generarControlAsistencia(PersAsistencias asistencia, string rutaDestino, string rutaPlantilla)
         {
-            string nombreArchivo = $"{asistencia.InstanciaId}_{asistencia.NombreCurso}_" +
+            string nombreArchivo = $"{asistencia.NombreCurso}_{asistencia.InstanciaId}_" +
                 $"{asistencia.CodCurso}";
             string rutaDestinoCombinada = Path.Combine(rutaDestino, $"{nombreArchivo}.docx");
             DateTime thisTime = DateTime.Now;
@@ -74,7 +74,6 @@ namespace OpenSpaceComarcal.Libraries
                 document.ReplaceText("[nom_curso]", asistencia.NombreCurso);
                 document.ReplaceText("[cod_curso]", asistencia.CodCurso);
                 document.ReplaceText("[sesiones]", asistencia.Sesiones.ToString());
-                document.ReplaceText("[fecha_actual]", thisTime.ToString("dd/MM/yyyy"));
                 document.ReplaceText("[fecha_inicio]", asistencia.FechaInicio.HasValue ? asistencia.FechaInicio.Value.ToString("dd/MM/yyyy") : "");
                 document.ReplaceText("[fecha_fin]", asistencia.FechaFin.HasValue ? asistencia.FechaFin.Value.ToString("dd/MM/yyyy") : "");
 
@@ -127,7 +126,19 @@ namespace OpenSpaceComarcal.Libraries
                     }
                 }
                 // Guardar el documento Word
-                document.SaveAs(rutaDestinoCombinada);
+                if (!(asistencia.Sesiones > 1))
+                {
+                    document.SaveAs(rutaDestinoCombinada);
+                }
+                else
+                {
+                    for (int i = 0; i < asistencia.Sesiones; i++) {
+                        string nombreArchivoConIndice = $"S{i + 1}_{nombreArchivo}.docx";
+                        string rutaDestinoConIndice = Path.Combine(rutaDestino, nombreArchivoConIndice);
+                        document.SaveAs(rutaDestinoConIndice);
+                    }
+                }
+                
 
             }
         }

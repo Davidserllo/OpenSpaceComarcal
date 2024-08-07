@@ -2,12 +2,17 @@
 using OpenSpaceComarcal.Models;
 using OpenSpaceComarcal.Objects;
 using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OpenSpaceComarcal
 {
     public partial class FormControlAsistencia : Form
     {
+        public const string RUTA_DESTINO = @"\\Nas01\administracion\Open_Space_Comarcal_Software\C. Asistencias";
+        public const string RUTA_PLANTILLA = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Plantillas\C. Asistencias\CONTROL-ASISTENCIAS.docx";
         public FormControlAsistencia()
         {
             InitializeComponent();
@@ -17,6 +22,8 @@ namespace OpenSpaceComarcal
         private void FormControlAsistencia_Load(object sender, EventArgs e)
         {
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+            textBoxRutaDestino.Text = RUTA_DESTINO;
+            textBoxRutaPlantilla.Text = RUTA_PLANTILLA;
         }
 
         private string elegirRuta()
@@ -66,11 +73,14 @@ namespace OpenSpaceComarcal
         {
             buttonGenerar.Enabled = false;
             PersAsistencias asistencia = InscripcionOrm.SelectDatosAsistencia((int)comboBoxInstancia.SelectedValue);
+
             if (asistencia != null && !string.IsNullOrEmpty(textBoxRutaDestino.Text) && !string.IsNullOrEmpty(textBoxRutaPlantilla.Text))
             {
                 Diploma.generarControlAsistencia(asistencia, textBoxRutaDestino.Text, textBoxRutaPlantilla.Text);
+                
 
-                MessageBox.Show("Se han creado los diplomas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se han creado los controles de asistencia", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OpenFileExplorer(textBoxRutaDestino.Text);
             }
             else
             {
@@ -82,6 +92,40 @@ namespace OpenSpaceComarcal
         private void buttonSeleccionarRutaPlantilla_Click(object sender, EventArgs e)
         {
             textBoxRutaPlantilla.Text = elegirRutaPlantilla();
+        }
+
+        private void OpenFileExplorer(string path)
+        {
+            try
+            {
+                // Verificar si la ruta existe
+                if (Directory.Exists(path))
+                {
+                    // Iniciar el Explorador de Archivos en la ruta especificada
+                    Process.Start("explorer.exe", path);
+                }
+                else
+                {
+                    MessageBox.Show("La ruta especificada no existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir el Explorador de Archivos: {ex.Message}");
+            }
+        }
+
+        private void comboBoxInstancia_Format(object sender, ListControlConvertEventArgs e)
+        {
+            instancia _instancia = (instancia)e.ListItem;
+            string fecha = _instancia.fecha_inicio.HasValue
+                   ? _instancia.fecha_inicio.Value.ToString("yy/MM/dd")
+                   : "Error";
+            string siglaCurso = CursosOrm.SelectSigla(
+                        InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
+                        .FirstOrDefault();
+
+            e.Value = $"{siglaCurso} - ({fecha})  ";
         }
     }
 }
