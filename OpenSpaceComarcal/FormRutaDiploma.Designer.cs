@@ -45,9 +45,10 @@
             // 
             // buttonGenerar
             // 
-            this.buttonGenerar.Location = new System.Drawing.Point(187, 171);
+            this.buttonGenerar.Location = new System.Drawing.Point(280, 263);
+            this.buttonGenerar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonGenerar.Name = "buttonGenerar";
-            this.buttonGenerar.Size = new System.Drawing.Size(113, 42);
+            this.buttonGenerar.Size = new System.Drawing.Size(170, 65);
             this.buttonGenerar.TabIndex = 26;
             this.buttonGenerar.Text = "Generar";
             this.buttonGenerar.UseVisualStyleBackColor = true;
@@ -57,9 +58,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 9);
+            this.label1.Location = new System.Drawing.Point(124, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 31);
+            this.label1.Size = new System.Drawing.Size(481, 47);
             this.label1.TabIndex = 27;
             this.label1.Text = "Generador de Diplomas";
             // 
@@ -71,9 +73,11 @@
             this.groupBox1.Controls.Add(this.buttonSeleccionarRuta);
             this.groupBox1.Controls.Add(this.textBoxRutaDestino);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Location = new System.Drawing.Point(18, 88);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 108);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(693, 166);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
@@ -81,36 +85,40 @@
             // labelNumeroDiplomas
             // 
             this.labelNumeroDiplomas.AutoSize = true;
-            this.labelNumeroDiplomas.Location = new System.Drawing.Point(171, 69);
+            this.labelNumeroDiplomas.Location = new System.Drawing.Point(256, 106);
+            this.labelNumeroDiplomas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNumeroDiplomas.Name = "labelNumeroDiplomas";
-            this.labelNumeroDiplomas.Size = new System.Drawing.Size(13, 13);
+            this.labelNumeroDiplomas.Size = new System.Drawing.Size(18, 20);
             this.labelNumeroDiplomas.TabIndex = 32;
             this.labelNumeroDiplomas.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 68);
+            this.label3.Location = new System.Drawing.Point(22, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 13);
+            this.label3.Size = new System.Drawing.Size(230, 20);
             this.label3.TabIndex = 31;
             this.label3.Text = "Número de diplomas a generar:";
             // 
             // checkBoxPDF
             // 
             this.checkBoxPDF.AutoSize = true;
-            this.checkBoxPDF.Location = new System.Drawing.Point(323, 68);
+            this.checkBoxPDF.Location = new System.Drawing.Point(484, 105);
+            this.checkBoxPDF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxPDF.Name = "checkBoxPDF";
-            this.checkBoxPDF.Size = new System.Drawing.Size(88, 17);
+            this.checkBoxPDF.Size = new System.Drawing.Size(130, 24);
             this.checkBoxPDF.TabIndex = 30;
             this.checkBoxPDF.Text = "Generar PDF";
             this.checkBoxPDF.UseVisualStyleBackColor = true;
             // 
             // buttonSeleccionarRuta
             // 
-            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(417, 27);
+            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(626, 42);
+            this.buttonSeleccionarRuta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSeleccionarRuta.Name = "buttonSeleccionarRuta";
-            this.buttonSeleccionarRuta.Size = new System.Drawing.Size(26, 20);
+            this.buttonSeleccionarRuta.Size = new System.Drawing.Size(39, 31);
             this.buttonSeleccionarRuta.TabIndex = 29;
             this.buttonSeleccionarRuta.Text = "...";
             this.buttonSeleccionarRuta.UseVisualStyleBackColor = true;
@@ -118,18 +126,20 @@
             // 
             // textBoxRutaDestino
             // 
-            this.textBoxRutaDestino.Location = new System.Drawing.Point(91, 27);
+            this.textBoxRutaDestino.Location = new System.Drawing.Point(136, 42);
+            this.textBoxRutaDestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxRutaDestino.Name = "textBoxRutaDestino";
             this.textBoxRutaDestino.ReadOnly = true;
-            this.textBoxRutaDestino.Size = new System.Drawing.Size(320, 20);
+            this.textBoxRutaDestino.Size = new System.Drawing.Size(478, 26);
             this.textBoxRutaDestino.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 30);
+            this.label2.Location = new System.Drawing.Point(22, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ruta destino:";
             // 
@@ -140,29 +150,32 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(-3, -4);
+            this.progressBar1.Location = new System.Drawing.Point(-4, -6);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(490, 10);
+            this.progressBar1.Size = new System.Drawing.Size(735, 15);
             this.progressBar1.TabIndex = 29;
             // 
             // FormRutaDiploma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 224);
+            this.ClientSize = new System.Drawing.Size(720, 318);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGenerar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(502, 263);
+            this.MaximumSize = new System.Drawing.Size(742, 374);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(502, 263);
+            this.MinimumSize = new System.Drawing.Size(742, 374);
             this.Name = "FormRutaDiploma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DIPLOMA - OPEN SPACE COMARCAL";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormRutaDiploma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -248,7 +248,7 @@ namespace OpenSpaceComarcal
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = @"Z:\Open_Space_Comarcal_Software\Plantillas\Diplomas";
                 openFileDialog.Filter = "Microsoft Word (*.docx)|*.docx";
                 openFileDialog.RestoreDirectory = true;
 

@@ -3,6 +3,8 @@ using OpenSpaceComarcal.Models;
 using OpenSpaceComarcal.Objects;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 
@@ -10,6 +12,8 @@ namespace OpenSpaceComarcal
 {
     public partial class FormRutaDiploma : Form
     {
+        public const string RUTA_DESTINO = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Diplomas";
+        
         private List<int> ids;
 
         // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
@@ -67,12 +71,39 @@ namespace OpenSpaceComarcal
                 }
                 progressBar1.Visible = false;
                 MessageBox.Show("Se han creado los diplomas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OpenFileExplorer(textBoxRutaDestino.Text);
             }
             else
             {
                 MessageBox.Show("No ha puesto la ruta del destino o no hay alumnos seleccionados que esten Aptos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             buttonGenerar.Enabled = true;
+        }
+
+        private void FormRutaDiploma_Load(object sender, EventArgs e)
+        {
+            textBoxRutaDestino.Text = RUTA_DESTINO;
+        }
+
+        private void OpenFileExplorer(string path)
+        {
+            try
+            {
+                // Verificar si la ruta existe
+                if (Directory.Exists(path))
+                {
+                    // Iniciar el Explorador de Archivos en la ruta especificada
+                    Process.Start("explorer.exe", path);
+                }
+                else
+                {
+                    MessageBox.Show("La ruta especificada no existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir el Explorador de Archivos: {ex.Message}");
+            }
         }
     }
 }

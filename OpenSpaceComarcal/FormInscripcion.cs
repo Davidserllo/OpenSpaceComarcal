@@ -9,8 +9,6 @@ namespace OpenSpaceComarcal
 {
     public partial class FormInscripcion : Form
     {
-
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
         protected override CreateParams CreateParams
         {
             get
@@ -24,6 +22,7 @@ namespace OpenSpaceComarcal
         public FormInscripcion()
         {
             InitializeComponent();
+            // this.ClientSize = new System.Drawing.Size(1294, 951);
 
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;

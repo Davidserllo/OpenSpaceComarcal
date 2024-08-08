@@ -19,6 +19,7 @@ namespace OpenSpaceComarcal
         {
             InitializeComponent();
 
+
             string versionText = $"v{version.Major}.{version.Minor}.{version.Build}";
             string releaseStage = "Alpha";
             labelVersion.Text = $"{versionText} {releaseStage}";
