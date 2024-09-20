@@ -1,6 +1,8 @@
 ﻿using OpenSpaceComarcal.Objects;
 using System;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Xceed.Words.NET;
@@ -182,6 +184,54 @@ namespace OpenSpaceComarcal.Libraries
                 // Realizar segunda recolección para asegurar la limpieza de los RCWs
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
+            }
+        }
+
+        public static void combinarDiplomas(String rutaCarpeta)
+        {
+            try
+            {
+                string carpeta = rutaCarpeta;
+
+                var archivosDocx = Directory.GetFiles(carpeta, "*.docx");
+
+                if (archivosDocx.Length == 0)
+                {
+                    MessageBox.Show("No se encontraron archivos .docx en la carpeta.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    string archivoCombinadoPath = Path.Combine(carpeta, "COMBINADO.docx");
+
+                    using (var docCombinado = DocX.Create(archivoCombinadoPath))
+                    {
+                        foreach (var archivo in archivosDocx)
+                        {
+                            using (var documento = DocX.Load(archivo))
+                            {
+                                docCombinado.InsertDocument(documento);
+                            }
+                        }
+                        docCombinado.Save();
+                    }
+
+                    using (var docCombinado = DocX.Load(archivoCombinadoPath))
+                    {
+                        var primeraPagina = docCombinado.Paragraphs.First();
+                        primeraPagina.Remove(false);
+
+                        // Guardar los cambios
+                        docCombinado.Save();
+                    }
+
+                    MessageBox.Show($"Se ha creado el archivo combinado en: {archivoCombinadoPath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Process.Start("explorer.exe", carpeta);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al combinar los archivos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

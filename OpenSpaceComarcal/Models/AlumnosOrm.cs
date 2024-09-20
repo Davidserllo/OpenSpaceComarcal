@@ -15,6 +15,18 @@ namespace OpenSpaceComarcal.Models
             return _alumnos;
         }
 
+        public static int SelectID(string dni, string apellidos)
+        {
+
+            int id = Orm.bd.alumno
+                .OrderBy(n => n.id)
+                .Where(n => n.dni_nie_pasp == dni && n.apellidos == apellidos)
+                .Select(n => n.id)
+                .FirstOrDefault();
+            return id;
+        }
+
+
         public static List<alumno> Select(string busqueda)
         {
             if (string.IsNullOrEmpty(busqueda))

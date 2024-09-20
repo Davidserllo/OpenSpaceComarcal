@@ -10,9 +10,6 @@ namespace OpenSpaceComarcal
     public partial class FormAlumnos : Form
     {
 
-        public const string EXPLICACION_BUSQUEDA = "Busca la primera coincidencia de una fila." +
-                                                   " Busqueda por todos los campos exceptuando: Empresa e ID." +
-                                                   " (Use el buscador avanzado para estos)";
         private ToolTip toolTipExplicacionBusqueda;
 
         // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
@@ -29,20 +26,13 @@ namespace OpenSpaceComarcal
         public FormAlumnos()
         {
             InitializeComponent();
-            configToolTip();
+
 
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
 
-        private void configToolTip()
-        {
-            toolTipExplicacionBusqueda = new ToolTip();
-            toolTipExplicacionBusqueda.AutoPopDelay = 10000;
-            toolTipExplicacionBusqueda.InitialDelay = 100;
-            toolTipExplicacionBusqueda.ReshowDelay = 100;
-            toolTipExplicacionBusqueda.SetToolTip(tabControl1, EXPLICACION_BUSQUEDA);
-        }
+
 
         private void Alumnos_Load(object sender, EventArgs e)
         {
@@ -253,13 +243,17 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            // Actualizar tabla
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-
-            // Limpiar los campos y la selección
-            LimpiarCampos();
-
+            textBoxBuscador.Text = "";
+            textBoxDniNie.Text = "";
+            textBoxApellidos.Text = "";
+            textBoxNombre.Text = "";
+            textBoxTelefono.Text = "";
+            textBoxEmail.Text = "";
+            comboBoxEmpresa.SelectedIndex = -1;
+            dataGridViewAlumno.ClearSelection();
+            textBoxBuscador.Text = "";
+            textBoxNotas.Text = "";
+            comboBoxEmpresaBusqueda.SelectedIndex = -1;
         }
 
         private void dataGridViewAlumno_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -277,22 +271,6 @@ namespace OpenSpaceComarcal
             }
         }
 
-        private void LimpiarCampos()
-        {
-            // Limpiar los campos y la selección
-            textBoxBuscador.Text = "";
-            textBoxDniNie.Text = "";
-            textBoxApellidos.Text = "";
-            textBoxNombre.Text = "";
-            textBoxTelefono.Text = "";
-            textBoxEmail.Text = "";
-            comboBoxEmpresa.SelectedIndex = -1;
-            dataGridViewAlumno.ClearSelection();
-            textBoxBuscador.Text = "";
-            textBoxNotas.Text = "";
-            comboBoxEmpresaBusqueda.SelectedIndex = -1;
-        }
-
         private void ToolStripMenuImportar_Click(object sender, EventArgs e)
         {
             try
@@ -302,7 +280,7 @@ namespace OpenSpaceComarcal
                 {
                     fileDialog.Title = "Seleccione un archivo Excel para importarlo";
                     fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
-                    fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
+                    fileDialog.InitialDirectory = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Importaciones";
 
                     // Mostrar el diálogo y obtener el resultado
                     if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -343,18 +321,11 @@ namespace OpenSpaceComarcal
 
         private void toolStripMenuExportar_Click(object sender, EventArgs e)
         {
-            // Preguntar al usuario si desea exportar los datos
             DialogResult result = MessageBox.Show("¿Desea exportar los datos seleccionados?", "Exportar datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                // Limpiar los campos y la selección
-                LimpiarCampos();
-
-                // Exportar los datos a Excel
                 Exportar.ExportarDataGridViewExcel(dataGridViewAlumno, "Alumnos", progressBarArchivo);
-
-                // Ocultar la barra de progreso al finalizar la exportación
                 progressBarArchivo.Visible = false;
             }
         }

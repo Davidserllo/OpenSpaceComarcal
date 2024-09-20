@@ -41,8 +41,7 @@ namespace OpenSpaceComarcal
             {
                 folderDialog.Description = "Seleccione una carpeta para guardar el archivo";
                 folderDialog.ShowNewFolderButton = true;
-                folderDialog.RootFolder = Environment.SpecialFolder.MyComputer;
-
+                folderDialog.SelectedPath = RUTA_DESTINO;
                 // Mostrar el diálogo y obtener el resultado
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -72,6 +71,7 @@ namespace OpenSpaceComarcal
                 progressBar1.Visible = false;
                 MessageBox.Show("Se han creado los diplomas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OpenFileExplorer(textBoxRutaDestino.Text);
+                this.Close();
             }
             else
             {
@@ -104,6 +104,32 @@ namespace OpenSpaceComarcal
             {
                 MessageBox.Show($"Error al abrir el Explorador de Archivos: {ex.Message}");
             }
+        }
+
+        private void buttonRutaCombinar_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Seleccione la carpeta para combinar los archivos";
+                folderDialog.ShowNewFolderButton = true;
+                folderDialog.SelectedPath = RUTA_DESTINO;
+
+                // Mostrar el diálogo y obtener el resultado
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    MessageBox.Show($"Carpeta seleccionada: {selectedPath}", "Ruta destino", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBoxCombinar.Text = selectedPath;
+                }
+            }
+        }
+
+        private void buttonCombinar_Click(object sender, EventArgs e)
+        {
+            buttonGenerar.Enabled = false;
+            Diploma.combinarDiplomas(textBoxCombinar.Text);
+            this.Close();
+            buttonGenerar.Enabled = true;
         }
     }
 }

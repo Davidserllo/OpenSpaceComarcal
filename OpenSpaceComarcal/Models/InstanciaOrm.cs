@@ -15,6 +15,24 @@ namespace OpenSpaceComarcal.Models
             return _instancia;
         }
 
+        public static DateTime? SelectDate(int id_instancia)
+        {
+            DateTime? fechaCurso = Orm.bd.instancia
+                .Where(n => n.id == id_instancia)
+                .Select(n => n.fecha_inicio)
+                .FirstOrDefault();
+            return fechaCurso;
+        }
+
+        public static DateTime? SelectEndDate(int id_instancia)
+        {
+            DateTime? fechaCurso = Orm.bd.instancia
+                .Where(n => n.id == id_instancia)
+                .Select(n => n.fecha_fin)
+                .FirstOrDefault();
+            return fechaCurso;
+        }
+
         public static List<instancia> Select(string busqueda)
         {
             if (string.IsNullOrEmpty(busqueda))

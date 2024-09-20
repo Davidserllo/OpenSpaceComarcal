@@ -33,9 +33,8 @@ namespace OpenSpaceComarcal
             {
                 folderDialog.Description = "Seleccione una carpeta para guardar el archivo";
                 folderDialog.ShowNewFolderButton = true;
-                folderDialog.RootFolder = Environment.SpecialFolder.MyComputer;
+                folderDialog.SelectedPath = RUTA_DESTINO;
 
-                // Mostrar el diálogo y obtener el resultado
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedPath = folderDialog.SelectedPath;
@@ -52,9 +51,8 @@ namespace OpenSpaceComarcal
             {
                 openFileDialog.Title = "Seleccione el archivo de plantilla";
                 openFileDialog.Filter = "Documentos de Word (*.doc;*.docx)|*.doc;*.docx";
-                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.InitialDirectory = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Plantillas\C. Asistencias";
 
-                // Mostrar el diálogo y obtener el resultado
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedFilePath = openFileDialog.FileName;
@@ -98,10 +96,8 @@ namespace OpenSpaceComarcal
         {
             try
             {
-                // Verificar si la ruta existe
                 if (Directory.Exists(path))
                 {
-                    // Iniciar el Explorador de Archivos en la ruta especificada
                     Process.Start("explorer.exe", path);
                 }
                 else

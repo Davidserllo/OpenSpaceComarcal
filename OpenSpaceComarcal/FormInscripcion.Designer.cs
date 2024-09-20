@@ -86,6 +86,7 @@
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.buttonAsistencias = new System.Windows.Forms.Button();
+            this.crearExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -192,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(389, 5);
+            this.label10.Location = new System.Drawing.Point(500, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 25;
@@ -204,7 +205,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(248, 5);
+            this.label9.Location = new System.Drawing.Point(337, 5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 13);
             this.label9.TabIndex = 24;
@@ -216,7 +217,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(131, 5);
+            this.label8.Location = new System.Drawing.Point(165, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 23;
@@ -228,7 +229,7 @@
             this.comboBoxEmpresa.DataSource = this.bindingSourceEmpresa;
             this.comboBoxEmpresa.DisplayMember = "siglas";
             this.comboBoxEmpresa.FormattingEnabled = true;
-            this.comboBoxEmpresa.Location = new System.Drawing.Point(366, 19);
+            this.comboBoxEmpresa.Location = new System.Drawing.Point(468, 20);
             this.comboBoxEmpresa.Name = "comboBoxEmpresa";
             this.comboBoxEmpresa.Size = new System.Drawing.Size(114, 21);
             this.comboBoxEmpresa.TabIndex = 22;
@@ -278,9 +279,9 @@
             this.comboBoxInstanciaBusqueda.DataSource = this.bindingSourceInstancia;
             this.comboBoxInstanciaBusqueda.DisplayMember = "id_curso";
             this.comboBoxInstanciaBusqueda.FormattingEnabled = true;
-            this.comboBoxInstanciaBusqueda.Location = new System.Drawing.Point(231, 19);
+            this.comboBoxInstanciaBusqueda.Location = new System.Drawing.Point(282, 20);
             this.comboBoxInstanciaBusqueda.Name = "comboBoxInstanciaBusqueda";
-            this.comboBoxInstanciaBusqueda.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxInstanciaBusqueda.Size = new System.Drawing.Size(180, 21);
             this.comboBoxInstanciaBusqueda.TabIndex = 15;
             this.comboBoxInstanciaBusqueda.ValueMember = "id";
             this.comboBoxInstanciaBusqueda.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInscripBusqueda_Format);
@@ -297,7 +298,7 @@
             this.comboBoxAlumnoBusqueda.FormattingEnabled = true;
             this.comboBoxAlumnoBusqueda.Location = new System.Drawing.Point(102, 19);
             this.comboBoxAlumnoBusqueda.Name = "comboBoxAlumnoBusqueda";
-            this.comboBoxAlumnoBusqueda.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxAlumnoBusqueda.Size = new System.Drawing.Size(174, 21);
             this.comboBoxAlumnoBusqueda.TabIndex = 11;
             this.comboBoxAlumnoBusqueda.ValueMember = "id";
             this.comboBoxAlumnoBusqueda.TextChanged += new System.EventHandler(this.comboBoxAlumnoBusqueda_TextChanged);
@@ -349,16 +350,16 @@
             // 
             // textBoxCodFactura
             // 
-            this.textBoxCodFactura.Location = new System.Drawing.Point(387, 97);
+            this.textBoxCodFactura.Location = new System.Drawing.Point(443, 97);
             this.textBoxCodFactura.Name = "textBoxCodFactura";
-            this.textBoxCodFactura.Size = new System.Drawing.Size(139, 20);
+            this.textBoxCodFactura.Size = new System.Drawing.Size(107, 20);
             this.textBoxCodFactura.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(273, 100);
+            this.label7.Location = new System.Drawing.Point(329, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 16);
             this.label7.TabIndex = 19;
@@ -368,7 +369,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(273, 67);
+            this.label6.Location = new System.Drawing.Point(329, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 16);
             this.label6.TabIndex = 15;
@@ -377,9 +378,9 @@
             // dateTimePickerExpedicion
             // 
             this.dateTimePickerExpedicion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerExpedicion.Location = new System.Drawing.Point(387, 65);
+            this.dateTimePickerExpedicion.Location = new System.Drawing.Point(443, 65);
             this.dateTimePickerExpedicion.Name = "dateTimePickerExpedicion";
-            this.dateTimePickerExpedicion.Size = new System.Drawing.Size(139, 20);
+            this.dateTimePickerExpedicion.Size = new System.Drawing.Size(107, 20);
             this.dateTimePickerExpedicion.TabIndex = 16;
             // 
             // buttonLimpiar
@@ -418,7 +419,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 36);
+            this.label2.Location = new System.Drawing.Point(331, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 11;
@@ -427,9 +428,9 @@
             // dateTimePickerInscripcion
             // 
             this.dateTimePickerInscripcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerInscripcion.Location = new System.Drawing.Point(387, 34);
+            this.dateTimePickerInscripcion.Location = new System.Drawing.Point(443, 34);
             this.dateTimePickerInscripcion.Name = "dateTimePickerInscripcion";
-            this.dateTimePickerInscripcion.Size = new System.Drawing.Size(139, 20);
+            this.dateTimePickerInscripcion.Size = new System.Drawing.Size(107, 20);
             this.dateTimePickerInscripcion.TabIndex = 12;
             // 
             // comboBoxInstancia
@@ -440,7 +441,7 @@
             this.comboBoxInstancia.FormattingEnabled = true;
             this.comboBoxInstancia.Location = new System.Drawing.Point(100, 65);
             this.comboBoxInstancia.Name = "comboBoxInstancia";
-            this.comboBoxInstancia.Size = new System.Drawing.Size(143, 21);
+            this.comboBoxInstancia.Size = new System.Drawing.Size(202, 21);
             this.comboBoxInstancia.TabIndex = 14;
             this.comboBoxInstancia.ValueMember = "id";
             this.comboBoxInstancia.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInstancia_Format);
@@ -453,7 +454,7 @@
             this.comboBoxAlumno.FormattingEnabled = true;
             this.comboBoxAlumno.Location = new System.Drawing.Point(100, 33);
             this.comboBoxAlumno.Name = "comboBoxAlumno";
-            this.comboBoxAlumno.Size = new System.Drawing.Size(143, 21);
+            this.comboBoxAlumno.Size = new System.Drawing.Size(202, 21);
             this.comboBoxAlumno.TabIndex = 10;
             this.comboBoxAlumno.ValueMember = "id";
             this.comboBoxAlumno.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxAlumno_Format);
@@ -580,7 +581,7 @@
             // fechainscripcionDataGridViewTextBoxColumn
             // 
             this.fechainscripcionDataGridViewTextBoxColumn.DataPropertyName = "fecha_inscripcion";
-            this.fechainscripcionDataGridViewTextBoxColumn.HeaderText = "F. Inscripción";
+            this.fechainscripcionDataGridViewTextBoxColumn.HeaderText = "F. Inicio";
             this.fechainscripcionDataGridViewTextBoxColumn.Name = "fechainscripcionDataGridViewTextBoxColumn";
             this.fechainscripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -650,7 +651,8 @@
             this.toolStripDropDownButtonArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButtonArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuExportar,
-            this.ToolStripMenuImportar});
+            this.ToolStripMenuImportar,
+            this.crearExcelToolStripMenuItem});
             this.toolStripDropDownButtonArchivo.Image = global::OpenSpaceComarcal.Properties.Resources.archivo_icono;
             this.toolStripDropDownButtonArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButtonArchivo.Name = "toolStripDropDownButtonArchivo";
@@ -662,7 +664,7 @@
             // 
             this.toolStripMenuExportar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuExportar.Image")));
             this.toolStripMenuExportar.Name = "toolStripMenuExportar";
-            this.toolStripMenuExportar.Size = new System.Drawing.Size(120, 22);
+            this.toolStripMenuExportar.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuExportar.Text = "Exportar";
             this.toolStripMenuExportar.Click += new System.EventHandler(this.toolStripMenuExportar_Click);
             // 
@@ -670,7 +672,7 @@
             // 
             this.ToolStripMenuImportar.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuImportar.Image")));
             this.ToolStripMenuImportar.Name = "ToolStripMenuImportar";
-            this.ToolStripMenuImportar.Size = new System.Drawing.Size(120, 22);
+            this.ToolStripMenuImportar.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuImportar.Text = "Importar";
             this.ToolStripMenuImportar.Click += new System.EventHandler(this.ToolStripMenuImportar_Click);
             // 
@@ -693,6 +695,13 @@
             this.buttonAsistencias.Text = "Asistencias";
             this.buttonAsistencias.UseVisualStyleBackColor = true;
             this.buttonAsistencias.Click += new System.EventHandler(this.buttonAsistencias_Click);
+            // 
+            // crearExcelToolStripMenuItem
+            // 
+            this.crearExcelToolStripMenuItem.Name = "crearExcelToolStripMenuItem";
+            this.crearExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearExcelToolStripMenuItem.Text = "Crear Excel";
+            this.crearExcelToolStripMenuItem.Click += new System.EventHandler(this.crearExcelToolStripMenuItem_Click);
             // 
             // FormInscripcion
             // 
@@ -781,6 +790,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button buttonAsistencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinstanciaDataGridViewTextBoxColumn;
@@ -789,6 +799,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaexpedicionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aptoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codfacturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonAsistencias;
+        private System.Windows.Forms.ToolStripMenuItem crearExcelToolStripMenuItem;
     }
 }

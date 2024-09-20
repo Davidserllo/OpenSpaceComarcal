@@ -74,8 +74,6 @@ namespace OpenSpaceComarcal
         }
         private void buttonActualizar_Click(object sender, System.EventArgs e)
         {
-            // Limpiar los campos y la selección
-            LimpiarCampos();
             // Actualizar tabla
             bindingSourceCursos.DataSource = CursosOrm.Select();
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
@@ -224,13 +222,14 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            // Actualizar tabla
-            bindingSourceCursos.DataSource = CursosOrm.Select();
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
-
-            // Limpiar los campos y la selección
-            LimpiarCampos();
-
+            dateTimePickerFechaInicio.Value = DateTime.Now;
+            dateTimePickerFechaFin.Value = DateTime.Now;
+            buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
+            dataGridViewCurso.ClearSelection();
+            comboBoxCursosSiglas.SelectedIndex = -1;
+            numericUpDownSesion.Value = 1;
+            textBoxBuscador.Text = "";
+            textBoxCodigo.Text = "";
         }
 
         private void dataGridViewCurso_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -267,9 +266,6 @@ namespace OpenSpaceComarcal
 
             if (result == DialogResult.Yes)
             {
-                // Limpiar los campos y la selección
-                LimpiarCampos();
-
                 // Exportar los datos a Excel
                 Exportar.ExportarDataGridViewExcel(dataGridViewCurso, "Cursos_Programados", progressBarArchivo);
 
@@ -283,16 +279,6 @@ namespace OpenSpaceComarcal
 
         }
 
-        private void LimpiarCampos()
-        {
-            // Limpiar los campos y la selección
-            dateTimePickerFechaInicio.Value = DateTime.Now;
-            dateTimePickerFechaFin.Value = DateTime.Now;
-            buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
-            dataGridViewCurso.ClearSelection();
-            comboBoxCursosSiglas.SelectedIndex = -1;
-            textBoxBuscador.Text = "";
-        }
 
         private void comboBoxCursosSiglas_TextChanged(object sender, EventArgs e)
         {

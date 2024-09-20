@@ -2,9 +2,11 @@
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using Xceed.Words.NET;
 
 namespace OpenSpaceComarcal.Libraries
 {
@@ -23,12 +25,7 @@ namespace OpenSpaceComarcal.Libraries
 
                     foreach (var row in worksheet.RowsUsed().Skip(1))
                     {
-                        DateTime? fechaRegistro = null;
-                        string fechaRegistroRaw = row.Cell(4).GetValue<string>();
-                        if (DateTime.TryParse(fechaRegistroRaw, out DateTime parsedDate))
-                        {
-                            fechaRegistro = parsedDate;
-                        }
+
                         // Crear una instancia de Alumno y llenar con datos de la fila
                         var alu = new alumno
                         {
@@ -38,8 +35,8 @@ namespace OpenSpaceComarcal.Libraries
                             telefono = row.Cell(4).GetValue<string>(),
                             email = row.Cell(5).GetValue<string>(),
                             id_empresa = int.TryParse(row.Cell(6).GetValue<string>(), out int idEmpresa) ? idEmpresa : (int?)null,
-                            fecha_registro = fechaRegistro,
-                            notas = row.Cell(8).GetValue<string>(),
+                            fecha_registro = DateTime.Today,
+                            notas = row.Cell(7).GetValue<string>(),
                         };
 
                         // Añadir el alumno a la lista
@@ -65,37 +62,53 @@ namespace OpenSpaceComarcal.Libraries
 
                     foreach (var row in worksheet.RowsUsed().Skip(1))
                     {
-                        DateTime? fechaInscripcion = null;
-                        DateTime? fechaExpedicion = null;
-                        string fechaInscripcionRaw = row.Cell(4).GetValue<string>();
-                        string fechaExpedicionRaw = row.Cell(5).GetValue<string>();
-                        if (DateTime.TryParse(fechaInscripcionRaw, out DateTime parsedDate))
+                        var alu = new alumno
                         {
-                            fechaInscripcion = parsedDate;
-                        }
-                        if (DateTime.TryParse(fechaExpedicionRaw, out DateTime parsedDate2))
+                            dni_nie_pasp = row.Cell(1).GetValue<string>(),
+                            apellidos = row.Cell(2).GetValue<string>(),
+                            nombre = row.Cell(3).GetValue<string>(),
+                            telefono = row.Cell(4).GetValue<string>(),
+                            email = row.Cell(5).GetValue<string>(),
+                            id_empresa = int.TryParse(row.Cell(6).GetValue<string>(), out int idEmpresa) ? idEmpresa : (int?)null,
+                            fecha_registro = DateTime.Today,
+                            notas = row.Cell(7).GetValue<string>(),
+                        };
+
+                        int idAlumno = AlumnosOrm.SelectID(alu.dni_nie_pasp, alu.apellidos);
+
+                        if (idAlumno == 0)
                         {
-                            fechaExpedicion = parsedDate;
+                            AlumnosOrm.Insert(alu);
                         }
+
+                        int idInstancia = row.Cell(8).GetValue<int>();
+                        DateTime? fechaInicioCurso = InstanciaOrm.SelectDate(idInstancia);
+                        DateTime? fechaFinCurso = InstanciaOrm.SelectEndDate(idInstancia);
+
+                        idAlumno = AlumnosOrm.SelectID(alu.dni_nie_pasp, alu.apellidos);
+
                         var ins = new inscripcion
                         {
-                            id_alumno = row.Cell(1).GetValue<int>(),
-                            id_instancia = row.Cell(2).GetValue<int>(),
-                            id_empresa = int.TryParse(row.Cell(3).GetValue<string>(), out int idEmpresa) ? idEmpresa : (int?)null,
-                            fecha_inscripcion = fechaInscripcion,
-                            fecha_expedicion = fechaExpedicion,
-                            apto = bool.TryParse(row.Cell(6).GetValue<string>(), out bool aptoBool) && aptoBool,
-                            cod_factura = row.Cell(7).GetValue<string>(),
+
+                            id_alumno = idAlumno,
+                            id_instancia = row.Cell(8).GetValue<int>(),
+                            fecha_inscripcion = fechaInicioCurso,
+                            fecha_expedicion = fechaFinCurso,
+                            apto = bool.TryParse(row.Cell(9).GetValue<string>(), out bool aptoBool) && aptoBool,
+                            cod_factura = row.Cell(10).GetValue<string>(),
                         };
                         inscripciones.Add(ins);
                     }
                 }
             }
-            catch (IOException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Un proceso esta usando este excel, cierrelo o finalice el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                MessageBox.Show($"ERROR: {ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return inscripciones;
         }
+
+        
     }
 }

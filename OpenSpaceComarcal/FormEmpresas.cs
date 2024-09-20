@@ -199,12 +199,15 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            // Limpiar los campos y la selección
-            LimpiarCampos();
-
-            // Actualizar tabla
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-
+            textBoxBusqueda.Text = "";
+            textBoxCif.Text = "";
+            textBoxSiglas.Text = "";
+            textBoxNombre.Text = "";
+            textBoxTelefono.Text = "";
+            textBoxMail.Text = "";
+            textBoxContacto.Text = "";
+            textBoxNotas.Text = "";
+            dataGridViewEmpresas.ClearSelection();
         }
 
         private void toolStripMenuExportar_Click(object sender, EventArgs e)
@@ -215,9 +218,6 @@ namespace OpenSpaceComarcal
 
             if (result == DialogResult.Yes)
             {
-                // Limpiar los campos y la selección
-                LimpiarCampos();
-
                 // Exportar los datos a Excel
                 Exportar.ExportarDataGridViewExcel(dataGridViewEmpresas, "Empresas", progressBarArchivo);
 
@@ -230,20 +230,5 @@ namespace OpenSpaceComarcal
         {
 
         }
-
-        private void LimpiarCampos()
-        {
-            // Limpiar los campos y la selección
-            textBoxBusqueda.Text = "";
-            textBoxCif.Text = "";
-            textBoxSiglas.Text = "";
-            textBoxNombre.Text = "";
-            textBoxTelefono.Text = "";
-            textBoxMail.Text = "";
-            textBoxContacto.Text = "";
-            textBoxNotas.Text = "";
-            dataGridViewEmpresas.ClearSelection();
-        }
-
     }
 }

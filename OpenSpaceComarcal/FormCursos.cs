@@ -182,8 +182,10 @@ namespace OpenSpaceComarcal
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
-            // Limpiar los campos y la selección
-            LimpiarCampos();
+            textBoxSiglas.Text = "";
+            textBoxNombre.Text = "";
+            textBoxBusqueda.Text = "";
+            dataGridViewCursos.ClearSelection();
         }
 
         private void toolStripMenuExportar_Click(object sender, EventArgs e)
@@ -194,9 +196,6 @@ namespace OpenSpaceComarcal
 
             if (result == DialogResult.Yes)
             {
-                // Limpiar los campos y la selección
-                LimpiarCampos();
-
                 // Exportar los datos a Excel
                 Exportar.ExportarDataGridViewExcel(dataGridViewCursos, "Cursos", progressBarArchivo);
 
@@ -208,14 +207,6 @@ namespace OpenSpaceComarcal
         private void ToolStripMenuImportar_Click(object sender, EventArgs e)
         {
 
-        }
-        private void LimpiarCampos()
-        {
-            // Limpiar los campos y la selección
-            textBoxSiglas.Text = "";
-            textBoxNombre.Text = "";
-            textBoxBusqueda.Text = "";
-            dataGridViewCursos.ClearSelection();
         }
     }
 }

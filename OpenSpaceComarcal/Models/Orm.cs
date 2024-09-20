@@ -58,6 +58,17 @@ namespace OpenSpaceComarcal.Models
             {
                 SqlException sqlException = (SqlException)ex.InnerException.InnerException;
                 missatge = Orm.MensajeError(sqlException);
+                Console.WriteLine(missatge);
+                Console.WriteLine(ex);
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine("InnerException: " + ex.InnerException.Message);
+
+                    if (ex.InnerException.InnerException != null)
+                    {
+                        Console.WriteLine("Inner InnerException: " + ex.InnerException.InnerException.Message);
+                    }
+                }
                 RejectChanges();
             }
 

@@ -2,6 +2,9 @@
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -22,8 +25,6 @@ namespace OpenSpaceComarcal
         public FormInscripcion()
         {
             InitializeComponent();
-            // this.ClientSize = new System.Drawing.Size(1294, 951);
-
             // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
@@ -251,7 +252,7 @@ namespace OpenSpaceComarcal
                         InstanciaOrm.SelectIdCurso(Convert.ToInt32(e.Value)).FirstOrDefault())
                         .FirstOrDefault();
                     string fechaPrograma = InscripcionOrm.SelectFecha(Convert.ToInt32(e.Value)).FirstOrDefault();
-                    e.Value = siglaCurso + " (" + fechaPrograma + ")";
+                    e.Value = siglaCurso;
                 }
             }
             if (e.ColumnIndex == 3)
@@ -304,7 +305,7 @@ namespace OpenSpaceComarcal
         {
             instancia _instancia = (instancia)e.ListItem;
             string fecha = _instancia.fecha_inicio.HasValue
-                   ? _instancia.fecha_inicio.Value.ToString("yy/MM/dd")
+                   ? _instancia.fecha_inicio.Value.ToString("dd/MM/yy")
                    : "Error";
             string siglaCurso = CursosOrm.SelectSigla(
                         InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
@@ -317,7 +318,7 @@ namespace OpenSpaceComarcal
         {
             instancia _instancia = (instancia)e.ListItem;
             string fecha = _instancia.fecha_inicio.HasValue
-                   ? _instancia.fecha_inicio.Value.ToString("yy/MM/dd")
+                   ? _instancia.fecha_inicio.Value.ToString("dd/MM/yy")
                    : "Error";
             string siglaCurso = CursosOrm.SelectSigla(
                         InstanciaOrm.SelectIdCurso(Convert.ToInt32(_instancia.id)).FirstOrDefault())
@@ -390,7 +391,7 @@ namespace OpenSpaceComarcal
                 {
                     fileDialog.Title = "Seleccione un archivo Excel para importarlo";
                     fileDialog.Filter = "Archivos Excel|*.xls;*.xlsx";
-                    fileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Puedes ajustar el directorio inicial como prefieras
+                    fileDialog.InitialDirectory = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Importaciones";
 
                     // Mostrar el diálogo y obtener el resultado
                     if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -407,15 +408,24 @@ namespace OpenSpaceComarcal
 
                             _inscripcion.id_alumno = ins.id_alumno;
                             _inscripcion.id_instancia = ins.id_instancia;
-                            _inscripcion.fecha_inscripcion = DateTime.Now;
-                            _inscripcion.fecha_expedicion = DateTime.Now;
+                            _inscripcion.fecha_inscripcion = ins.fecha_inscripcion;
+                            _inscripcion.fecha_expedicion = ins.fecha_expedicion;
                             _inscripcion.apto = ins.apto;
                             _inscripcion.cod_factura = ins.cod_factura;
 
                             messag = InscripcionOrm.Insert(_inscripcion);
                         }
 
-                        MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (messag != "")
+                        {
+                            MessageBox.Show($"Ha ocurrido un problema: {messag}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Se han importado los alumnos", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
 
                         actualizarDatos();
                     }
@@ -485,6 +495,37 @@ namespace OpenSpaceComarcal
             string nombre = _alumno.nombre;
             string dni = _alumno.dni_nie_pasp;
             e.Value = $"{nombre} - ({dni})  ";
+        }
+
+        private void crearExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string plantillaPath = @"Z:\Open_Space_Comarcal_Software\Plantillas\Importar\IMPORTAR - ALUMNOS - INSC.xlsx";
+
+                int añoActual = DateTime.Now.Year;
+                string mesActual = DateTime.Now.ToString("MMMM", new CultureInfo("es-ES"));
+                string díaActual = DateTime.Now.ToString("dd");
+
+                string carpetaDestino = $@"Z:\Open_Space_Comarcal_Software\Importaciones\{añoActual}\{mesActual.ToUpper()}"; // Mes en mayúsculas
+
+                if (!Directory.Exists(carpetaDestino))
+                {
+                    Directory.CreateDirectory(carpetaDestino);
+                }
+
+                string nombreArchivoDestino = $"INSCRIPCIONES-DIA_{díaActual}.xlsx";
+                string rutaArchivoDestino = Path.Combine(carpetaDestino, nombreArchivoDestino);
+                File.Copy(plantillaPath, rutaArchivoDestino, true); 
+
+                MessageBox.Show($"Archivo creado exitosamente en la ruta: {rutaArchivoDestino}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Process.Start(rutaArchivoDestino);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al crear o abrir el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
