@@ -1,6 +1,7 @@
 ﻿using OpenSpaceComarcal.Objects;
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -11,16 +12,31 @@ namespace OpenSpaceComarcal.Libraries
 {
     internal class Diploma
     {
-        public static void generarDiplomaWord(PersDiploma diploma, string rutaDestino, bool saveAsPDF)
+        public static string generarDiplomaWord(PersDiploma diploma, string rutaDestino, bool saveAsPDF)
         {
             if (diploma.Diploma != "Seleccionar Diploma")
             {
+                string anioInicio = diploma.FechaInicio.HasValue ? diploma.FechaInicio.Value.Year.ToString() 
+                : DateTime.Now.Year.ToString();
+                string mesInicio = diploma.FechaInicio.HasValue ? ObtenerMesEnEspanol(diploma.FechaInicio.Value.Month) 
+                : DateTime.Now.ToString("MMMM", new CultureInfo("es-ES"));
 
-                string nombreArchivo = $"{diploma.InscripcionId}_{diploma.AlumnoNombre}_" +
+                string rutaAnio = Path.Combine(rutaDestino, anioInicio);
+                string rutaMes = Path.Combine(rutaAnio, mesInicio);
+                string rutaCurso = Path.Combine(rutaMes, $"{diploma.SiglasCurso}_DIA_{diploma.FechaInicio.Value.Day}");
+
+                // Crear las carpetas si no existen
+                if (!Directory.Exists(rutaCurso))
+                {
+                    Directory.CreateDirectory(rutaCurso);
+                }
+
+                string nombreArchivo = 
+                $"{diploma.InscripcionId}_{diploma.AlumnoNombre}_" +
                 $"{diploma.AlumnoApellidos}_" +
                 $"{diploma.AlumnoDNI}_" +
                 $"{diploma.CodCurso}";
-                string rutaDestinoCombinada = Path.Combine(rutaDestino, $"{nombreArchivo}.docx");
+                string rutaDestinoCombinada = Path.Combine(rutaCurso, $"{nombreArchivo}.docx");
 
                 using (DocX document = DocX.Load(diploma.Diploma))
                 {
@@ -52,7 +68,7 @@ namespace OpenSpaceComarcal.Libraries
                 }
                 if (saveAsPDF)
                 {
-                    string rutaCarpetaPDF = Path.Combine(rutaDestino, "PDF");
+                    string rutaCarpetaPDF = Path.Combine(rutaCurso, "PDF");
                     string rutaPDF = Path.Combine(rutaCarpetaPDF, $"{nombreArchivo}.pdf");
                     if (!Directory.Exists(rutaCarpetaPDF))
                     {
@@ -60,14 +76,45 @@ namespace OpenSpaceComarcal.Libraries
                     }
                     ConvertirWordAPdf(rutaDestinoCombinada, rutaPDF);
                 }
+                return rutaCurso;
+            }
+            return null;
+        }
+        private static string ObtenerMesEnEspanol(int mes)
+        {
+            string[] mesesEspanol = {
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    };
+
+            if (mes >= 1 && mes <= 12)
+            {
+                return mesesEspanol[mes - 1].ToUpper();
+            }
+            else
+            {
+                return "MesInvalido";
             }
         }
 
         public static void generarControlAsistencia(PersAsistencias asistencia, string rutaDestino, string rutaPlantilla)
         {
+            string anioInicio = asistencia.FechaInicio.HasValue ? asistencia.FechaInicio.Value.Year.ToString() 
+            : DateTime.Now.Year.ToString();
+            string mesInicio = asistencia.FechaInicio.HasValue ? ObtenerMesEnEspanol(asistencia.FechaInicio.Value.Month) 
+            : DateTime.Now.ToString("MMMM", new CultureInfo("es-ES"));
+
+            string rutaAnio = Path.Combine(rutaDestino, anioInicio);
+            string rutaMes = Path.Combine(rutaAnio, mesInicio);
+            string rutaCurso = Path.Combine(rutaMes, $"{asistencia.SiglasCurso}_DIA_{asistencia.FechaInicio.Value.Day}");
+
+            if (!Directory.Exists(rutaCurso))
+            {
+                Directory.CreateDirectory(rutaCurso);
+            }
+
             string nombreArchivo = $"{asistencia.NombreCurso}_{asistencia.InstanciaId}_" +
                 $"{asistencia.CodCurso}";
-            string rutaDestinoCombinada = Path.Combine(rutaDestino, $"{nombreArchivo}.docx");
             DateTime thisTime = DateTime.Now;
 
             using (DocX document = DocX.Load(rutaPlantilla))
@@ -130,13 +177,14 @@ namespace OpenSpaceComarcal.Libraries
                 // Guardar el documento Word
                 if (!(asistencia.Sesiones > 1))
                 {
+                    string rutaDestinoCombinada = Path.Combine(rutaCurso, $"{nombreArchivo}.docx");
                     document.SaveAs(rutaDestinoCombinada);
                 }
                 else
                 {
                     for (int i = 0; i < asistencia.Sesiones; i++) {
                         string nombreArchivoConIndice = $"S{i + 1}_{nombreArchivo}.docx";
-                        string rutaDestinoConIndice = Path.Combine(rutaDestino, nombreArchivoConIndice);
+                        string rutaDestinoConIndice = Path.Combine(rutaCurso, nombreArchivoConIndice);
                         document.SaveAs(rutaDestinoConIndice);
                     }
                 }
@@ -224,9 +272,6 @@ namespace OpenSpaceComarcal.Libraries
                         // Guardar los cambios
                         docCombinado.Save();
                     }
-
-                    MessageBox.Show($"Se ha creado el archivo combinado en: {archivoCombinadoPath}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Process.Start("explorer.exe", carpeta);
                 }
             }
             catch (Exception ex)

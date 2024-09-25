@@ -58,17 +58,23 @@ namespace OpenSpaceComarcal
             List<PersDiploma> diplomas = InscripcionOrm.SelectDatosDiploma(ids);
             if (diplomas.Count > 0 && !string.IsNullOrEmpty(textBoxRutaDestino.Text))
             {
+                string rutaCombinada = "";
+
                 progressBar1.Visible = true;
                 progressBar1.Maximum = diplomas.Count;
                 progressBar1.Value = 0;
 
                 foreach (var diploma in diplomas)
                 {
-                    Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text, checkBoxPDF.Checked);
+                    rutaCombinada = Diploma.generarDiplomaWord(diploma, textBoxRutaDestino.Text, checkBoxPDF.Checked);
 
                     progressBar1.Value += 1;
                 }
                 progressBar1.Visible = false;
+                if (checkBoxCombinar.Checked)
+                {
+                    Diploma.combinarDiplomas(rutaCombinada);
+                }
                 MessageBox.Show("Se han creado los diplomas", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OpenFileExplorer(textBoxRutaDestino.Text);
                 this.Close();
@@ -104,32 +110,6 @@ namespace OpenSpaceComarcal
             {
                 MessageBox.Show($"Error al abrir el Explorador de Archivos: {ex.Message}");
             }
-        }
-
-        private void buttonRutaCombinar_Click(object sender, EventArgs e)
-        {
-            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
-            {
-                folderDialog.Description = "Seleccione la carpeta para combinar los archivos";
-                folderDialog.ShowNewFolderButton = true;
-                folderDialog.SelectedPath = RUTA_DESTINO;
-
-                // Mostrar el diálogo y obtener el resultado
-                if (folderDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string selectedPath = folderDialog.SelectedPath;
-                    MessageBox.Show($"Carpeta seleccionada: {selectedPath}", "Ruta destino", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBoxCombinar.Text = selectedPath;
-                }
-            }
-        }
-
-        private void buttonCombinar_Click(object sender, EventArgs e)
-        {
-            buttonGenerar.Enabled = false;
-            Diploma.combinarDiplomas(textBoxCombinar.Text);
-            this.Close();
-            buttonGenerar.Enabled = true;
         }
     }
 }

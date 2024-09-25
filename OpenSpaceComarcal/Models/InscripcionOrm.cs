@@ -47,6 +47,9 @@ namespace OpenSpaceComarcal.Models
                     inscripcion.cod_factura,
                     inscripcion.fecha_expedicion,
 
+                    // Curso
+                    inscripcion.instancia.curso.siglas,
+
                     // Instancia
                     inscripcion.instancia.codigo,
                     inscripcion.instancia.fecha_inicio,
@@ -75,6 +78,7 @@ namespace OpenSpaceComarcal.Models
                 AlumnoNombre = x.nombre,
                 AlumnoApellidos = x.apellidos,
                 Diploma = x.diploma,
+                SiglasCurso = x.siglas,
             }).ToList();
 
             return resultados;
@@ -177,6 +181,7 @@ namespace OpenSpaceComarcal.Models
                 {
                     // Curso
                     NombreCurso = asistencia.instancia.curso.nombre,
+                    SiglasCurso = asistencia.instancia.curso.siglas,
 
                     // Instancia
                     InstanciaId = asistencia.instancia.id,
@@ -203,6 +208,7 @@ namespace OpenSpaceComarcal.Models
             PersAsistencias resultado = new PersAsistencias
             {
                 NombreCurso = query.NombreCurso,
+                SiglasCurso = query.SiglasCurso,
                 InstanciaId = query.InstanciaId,
                 Sesiones = query.Sesiones,
                 CodCurso = query.CodCurso,

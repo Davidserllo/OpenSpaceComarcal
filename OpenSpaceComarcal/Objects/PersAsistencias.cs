@@ -7,6 +7,7 @@ namespace OpenSpaceComarcal.Objects
     public class PersAsistencias
     {
         public string NombreCurso { get; set; }
+        public string SiglasCurso { get; set; }
         public string CodCurso { get; set; }
         public int InstanciaId { get; set; }
         public int? Sesiones { get; set; }

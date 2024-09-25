@@ -55,10 +55,15 @@
             this.textBoxCif = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.persona_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripEmpresas = new System.Windows.Forms.ToolStrip();
@@ -66,16 +71,11 @@
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
-            this.toolStripEmpresas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
+            this.toolStripEmpresas.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonActualizarEmpresas
@@ -335,6 +335,7 @@
             this.dataGridViewEmpresas.AllowUserToAddRows = false;
             this.dataGridViewEmpresas.AllowUserToDeleteRows = false;
             this.dataGridViewEmpresas.AllowUserToOrderColumns = true;
+            this.dataGridViewEmpresas.AllowUserToResizeRows = false;
             this.dataGridViewEmpresas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -361,6 +362,34 @@
             this.dataGridViewEmpresas.Size = new System.Drawing.Size(939, 318);
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cifDataGridViewTextBoxColumn
+            // 
+            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
+            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
+            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
+            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // siglasDataGridViewTextBoxColumn
+            // 
+            this.siglasDataGridViewTextBoxColumn.DataPropertyName = "siglas";
+            this.siglasDataGridViewTextBoxColumn.HeaderText = "Siglas";
+            this.siglasDataGridViewTextBoxColumn.Name = "siglasDataGridViewTextBoxColumn";
+            this.siglasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefono
             // 
@@ -389,6 +418,10 @@
             this.notas.HeaderText = "Notas";
             this.notas.Name = "notas";
             this.notas.ReadOnly = true;
+            // 
+            // bindingSourceEmpresa
+            // 
+            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
             // 
             // labelCursos
             // 
@@ -457,38 +490,6 @@
             this.progressBarArchivo.Size = new System.Drawing.Size(780, 10);
             this.progressBarArchivo.TabIndex = 31;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cifDataGridViewTextBoxColumn
-            // 
-            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
-            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
-            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
-            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // siglasDataGridViewTextBoxColumn
-            // 
-            this.siglasDataGridViewTextBoxColumn.DataPropertyName = "siglas";
-            this.siglasDataGridViewTextBoxColumn.HeaderText = "Siglas";
-            this.siglasDataGridViewTextBoxColumn.Name = "siglasDataGridViewTextBoxColumn";
-            this.siglasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceEmpresa
-            // 
-            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
-            // 
             // FormEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,9 +513,9 @@
             this.groupBoxInformacionEmpresa.ResumeLayout(false);
             this.groupBoxInformacionEmpresa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
             this.toolStripEmpresas.ResumeLayout(false);
             this.toolStripEmpresas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -217,6 +217,7 @@
             this.dataGridViewCursos.AllowUserToAddRows = false;
             this.dataGridViewCursos.AllowUserToDeleteRows = false;
             this.dataGridViewCursos.AllowUserToOrderColumns = true;
+            this.dataGridViewCursos.AllowUserToResizeRows = false;
             this.dataGridViewCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

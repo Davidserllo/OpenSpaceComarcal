@@ -32,7 +32,7 @@
     <SuiteName>Actualización OSC</SuiteName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -359,6 +359,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apuntes.txt" />
     <Content Include="logo-oscomarcal.ico" />
     <Content Include="Models\ModelOsc.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

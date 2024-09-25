@@ -22,6 +22,7 @@ namespace OpenSpaceComarcal.Objects
         public DateTime? FechaFin { get; set; }
         public int NumeroDiploma { get; set; }
         public string Diploma { get; set; }
+        public string SiglasCurso { get; set; }
 
         public PersDiploma()
         {

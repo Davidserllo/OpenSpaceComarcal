@@ -79,6 +79,7 @@ namespace OpenSpaceComarcal
 
                 MessageBox.Show("Se han creado los controles de asistencia", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OpenFileExplorer(textBoxRutaDestino.Text);
+                this.Close();
             }
             else
             {

@@ -68,8 +68,6 @@ namespace OpenSpaceComarcal
 
                 comboBoxAlumno.SelectedValue = fila.Cells[1].Value;
                 comboBoxInstancia.SelectedValue = fila.Cells[2].Value;
-                dateTimePickerInscripcion.Text = fila.Cells[4].Value.ToString();
-                dateTimePickerExpedicion.Text = fila.Cells[5].Value.ToString();
                 checkBoxApto.Checked = Convert.ToInt32(fila.Cells[6].Value) != 0;
                 textBoxCodFactura.Text = fila.Cells[7].Value.ToString();
             }
@@ -106,10 +104,13 @@ namespace OpenSpaceComarcal
 
                 inscripcion _inscripcion = new inscripcion();
 
+                instancia instancia = comboBoxInstancia.SelectedItem as instancia;
+
+
                 _inscripcion.id_alumno = (int)comboBoxAlumno.SelectedValue;
                 _inscripcion.id_instancia = (int)comboBoxInstancia.SelectedValue;
-                _inscripcion.fecha_inscripcion = dateTimePickerInscripcion.Value;
-                _inscripcion.fecha_expedicion = dateTimePickerExpedicion.Value;
+                _inscripcion.fecha_inscripcion = instancia.fecha_inicio;
+                _inscripcion.fecha_expedicion = instancia.fecha_fin;
                 _inscripcion.apto = checkBoxApto.Checked;
                 _inscripcion.cod_factura = textBoxCodFactura.Text;
 
@@ -192,8 +193,6 @@ namespace OpenSpaceComarcal
 
                         _inscripcion.id_alumno = (int)comboBoxAlumno.SelectedValue;
                         _inscripcion.id_instancia = (int)comboBoxInstancia.SelectedValue;
-                        _inscripcion.fecha_inscripcion = dateTimePickerInscripcion.Value;
-                        _inscripcion.fecha_expedicion = dateTimePickerExpedicion.Value;
                         _inscripcion.apto = checkBoxApto.Checked;
                         _inscripcion.cod_factura = textBoxCodFactura.Text;
 
@@ -445,8 +444,6 @@ namespace OpenSpaceComarcal
             comboBoxEmpresa.SelectedIndex = -1;
             dataGridViewInscripcion.ClearSelection();
             checkBoxApto.Checked = false;
-            dateTimePickerExpedicion.Value = DateTime.Now;
-            dateTimePickerInscripcion.Value = DateTime.Now;
             textBoxCodFactura.Text = "";
             textBoxBuscador.Text = "";
             comboBoxInstanciaBusqueda.SelectedIndex = -1;
