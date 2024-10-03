@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using OpenSpaceComarcal.Libraries;
 
 namespace OpenSpaceComarcal.Models
 {
     public static class AlumnosOrm
     {
-        public static List<alumno> Select()
+        public static SortableBindingList<alumno> Select(DateTime fechaInicio, DateTime fechaFin)
         {
             List<alumno> _alumnos = Orm.bd.alumno
+                .Where(n => n.fecha_registro >= fechaInicio && n.fecha_registro <= fechaFin)
                 .OrderBy(n => n.id)
                 .ToList();
 
-            return _alumnos;
+            return new SortableBindingList<alumno>(_alumnos);
         }
 
         public static int SelectID(string dni, string apellidos)
@@ -27,14 +30,18 @@ namespace OpenSpaceComarcal.Models
         }
 
 
-        public static List<alumno> Select(string busqueda)
+        public static SortableBindingList<alumno> Select(string busqueda, DateTime fechaInicio, DateTime fechaFin)
         {
             if (string.IsNullOrEmpty(busqueda))
             {
-                return Orm.bd.alumno.OrderBy(a => a.id).ToList();
+                List<alumno> _alumnos = Orm.bd.alumno.OrderBy(a => a.id)
+                    .Where(n => n.fecha_registro >= fechaInicio && n.fecha_registro <= fechaFin)
+                    .ToList();
+                return new SortableBindingList<alumno>(_alumnos);
             }
 
             var query = Orm.bd.alumno
+                .Where(n => n.fecha_registro >= fechaInicio && n.fecha_registro <= fechaFin)
                 .Where(a => a.id.ToString().Contains(busqueda)
                             || a.dni_nie_pasp.Contains(busqueda)
                             || a.apellidos.Contains(busqueda)
@@ -46,21 +53,25 @@ namespace OpenSpaceComarcal.Models
                 .OrderBy(a => a.id)
                 .ToList();
 
-            return query;
+            return new SortableBindingList<alumno>(query);
         }
 
-        public static List<alumno> SelectAvanzado(int empresaId)
+        public static SortableBindingList<alumno> SelectAvanzado(int empresaId, DateTime fechaInicio, DateTime fechaFin)
         {
             var query = Orm.bd.alumno.AsQueryable();
 
             if (empresaId != -1)
             {
-                query = query.Where(i => i.id_empresa == empresaId);
+                query = query
+                    .Where(n => n.fecha_registro >= fechaInicio && n.fecha_registro <= fechaFin)
+                    .Where(i => i.id_empresa == empresaId);
             }
 
-            query = query.OrderBy(i => i.id);
+            query = query
+                .Where(n => n.fecha_registro >= fechaInicio && n.fecha_registro <= fechaFin)
+                .OrderBy(i => i.id);
 
-            return query.ToList();
+            return new SortableBindingList<alumno>(query.ToList());
         }
 
         public static List<string> SelectNombre(int id_alumno)

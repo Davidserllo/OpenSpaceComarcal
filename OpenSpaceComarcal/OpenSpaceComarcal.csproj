@@ -244,6 +244,7 @@
     <Compile Include="Libraries\Diploma.cs" />
     <Compile Include="Libraries\Exportar.cs" />
     <Compile Include="Libraries\Importar.cs" />
+    <Compile Include="Libraries\SortableBindingList.cs" />
     <Compile Include="Libraries\ValidarAlumno.cs" />
     <Compile Include="Models\alumno.cs">
       <DependentUpon>ModelOsc.tt</DependentUpon>

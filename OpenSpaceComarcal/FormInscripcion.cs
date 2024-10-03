@@ -12,20 +12,9 @@ namespace OpenSpaceComarcal
 {
     public partial class FormInscripcion : Form
     {
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
-
         public FormInscripcion()
         {
             InitializeComponent();
-            // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
         // Constructor para inscribir un alumno de alumnos más rápido
@@ -33,18 +22,18 @@ namespace OpenSpaceComarcal
         public FormInscripcion(int id_alumno)
         {
             InitializeComponent();
-
-            // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
             this.id_alumno = id_alumno;
         }
 
         private void Inscripcion_Load(object sender, EventArgs e)
         {
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
-            bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+            DateTime hoy = DateTime.Now;
+            dateTimePickerFechaInicioBuscador.Value =
+                new DateTime(hoy.Year, hoy.Month, 1);
+            dateTimePickerFechaFinBuscador.Value =
+                new DateTime(hoy.Year, hoy.Month, DateTime.DaysInMonth(hoy.Year, hoy.Month));
+            actualizarDatos();
             iniciarPanelAvanzado();
             if (this.id_alumno != -1)
             {
@@ -52,7 +41,6 @@ namespace OpenSpaceComarcal
                 comboBoxAlumno.SelectedValue = id_alumno;
             }
         }
-
         private void iniciarPanelAvanzado()
         {
             comboBoxInstanciaBusqueda.SelectedIndex = -1;
@@ -75,7 +63,8 @@ namespace OpenSpaceComarcal
 
         private void actualizarDatos()
         {
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select(
+                            dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
             bindingSourceInstancia.DataSource = InstanciaOrm.Select();
             bindingSourceInscipcion.DataSource = InscripcionOrm.Select();
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();

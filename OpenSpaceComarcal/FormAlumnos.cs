@@ -2,6 +2,7 @@
 using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -9,26 +10,9 @@ namespace OpenSpaceComarcal
 {
     public partial class FormAlumnos : Form
     {
-
-        private ToolTip toolTipExplicacionBusqueda;
-
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
-
         public FormAlumnos()
         {
             InitializeComponent();
-
-
-            // Ocultar barra de progreso
             progressBarArchivo.Visible = false;
         }
 
@@ -36,14 +20,27 @@ namespace OpenSpaceComarcal
 
         private void Alumnos_Load(object sender, EventArgs e)
         {
-            actualizarDatos();
+            DateTime hoy = DateTime.Now;
+            dateTimePickerFechaInicioBuscador.Value = 
+                new DateTime(hoy.Year, hoy.Month, 1);
+            dateTimePickerFechaFinBuscador.Value = 
+                new DateTime(hoy.Year, hoy.Month, DateTime.DaysInMonth(hoy.Year, hoy.Month));
             comboBoxEmpresaBusqueda.SelectedIndex = -1;
+            dataGridViewAlumno.Columns[0].FillWeight = 35;
+            dataGridViewAlumno.Columns[1].FillWeight = 75;
+            dataGridViewAlumno.Columns[2].FillWeight = 150;
+            dataGridViewAlumno.Columns[4].FillWeight = 75;
+            dataGridViewAlumno.Columns[5].FillWeight = 150;
+            dataGridViewAlumno.Columns[7].FillWeight = 75;
+            actualizarDatos();
         }
 
         private void actualizarDatos()
         {
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value); 
             bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+            bindingSourceBusquedaEmpresa.DataSource = EmpresaOrm.Select();
+            actualizarTextBoxes();
         }
 
         private void actualizarTextBoxes()
@@ -65,6 +62,7 @@ namespace OpenSpaceComarcal
                 {
                     comboBoxEmpresa.SelectedIndex = -1;
                 }
+                comboBoxEmpresaBusqueda.SelectedIndex = -1;
                 textBoxNotas.Text = fila.Cells[8].Value.ToString();
             }
         }
@@ -117,7 +115,7 @@ namespace OpenSpaceComarcal
                         MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     MessageBox.Show("Se ha creado un nuevo alumno llamado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                    actualizarDatos();
                 }
                 else
                 {
@@ -132,7 +130,10 @@ namespace OpenSpaceComarcal
 
         private void dataGridViewAlumno_SelectionChanged(object sender, EventArgs e)
         {
-            actualizarTextBoxes();
+            if (dataGridViewAlumno.SelectedRows.Count == 1)
+            {
+                actualizarTextBoxes();
+            }
         }
 
         private void buttonEliminarAlumno_Click(object sender, EventArgs e)
@@ -155,7 +156,7 @@ namespace OpenSpaceComarcal
                         if (mensajeError == "")
                         {
                             MessageBox.Show("Se ha eliminado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                            actualizarDatos();
                         }
                         else
                         {
@@ -216,7 +217,7 @@ namespace OpenSpaceComarcal
                                 MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                             MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceAlumno.DataSource = AlumnosOrm.Select();
+                            actualizarDatos();
                         }
                         else
                         {
@@ -238,7 +239,8 @@ namespace OpenSpaceComarcal
         private void BuscarAlumno_Click(object sender, EventArgs e)
         {
             String busqueda = textBoxBuscador.Text;
-            bindingSourceAlumno.DataSource = AlumnosOrm.Select(busqueda);
+            bindingSourceAlumno.DataSource = AlumnosOrm.Select(
+                busqueda, dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
@@ -351,23 +353,21 @@ namespace OpenSpaceComarcal
             }
             else
             {
-                id_empresa = (int)comboBoxEmpresa.SelectedValue;
+                id_empresa = (int)comboBoxEmpresaBusqueda.SelectedValue;
             }
 
-            bindingSourceAlumno.DataSource = AlumnosOrm.SelectAvanzado(id_empresa);
-
+            bindingSourceAlumno.DataSource = AlumnosOrm.SelectAvanzado(
+                id_empresa, dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
         }
 
-        private void comboBoxEmpresa_TextChanged(object sender, EventArgs e)
+        private void buttonBuscarEmpresa1_Click(object sender, EventArgs e)
         {
-            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
-            bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(comboBoxEmpresa.Text);
         }
 
-        private void comboBoxEmpresaBusqueda_TextChanged(object sender, EventArgs e)
+        private void buttonBuscarEmpresa2_Click(object sender, EventArgs e)
         {
-            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
-            bindingSourceEmpresa.Filter = $"nombre LIKE '*{filtro}*'";
+            bindingSourceBusquedaEmpresa.DataSource = EmpresaOrm.Select(comboBoxEmpresaBusqueda.Text);
         }
     }
 }

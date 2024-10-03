@@ -9,9 +9,9 @@ namespace OpenSpaceComarcal.Models
         public static List<empresa> Select()
         {
             List<empresa> _empresas = Orm.bd.empresa
-                .OrderBy(n => n.id)
+                .OrderByDescending(n => n.id)
+                .Take(10)                      
                 .ToList();
-
             return _empresas;
         }
 
