@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpaceComarcal.Libraries;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,13 +7,15 @@ namespace OpenSpaceComarcal.Models
 {
     public static class InstanciaOrm
     {
-        public static List<instancia> Select()
+        public static SortableBindingList<instancia> Select(DateTime fechaInicio, DateTime fechaFin)
         {
             List<instancia> _instancia = Orm.bd.instancia
+                .Where(n => n.fecha_inicio >= fechaInicio && n.fecha_inicio <= fechaFin ||
+                n.fecha_fin >= fechaInicio && n.fecha_fin <= fechaFin)
                 .OrderBy(n => n.id)
                 .ToList();
 
-            return _instancia;
+            return new SortableBindingList<instancia>(_instancia);
         }
 
         public static DateTime? SelectDate(int id_instancia)
@@ -33,14 +36,21 @@ namespace OpenSpaceComarcal.Models
             return fechaCurso;
         }
 
-        public static List<instancia> Select(string busqueda)
+        public static SortableBindingList<instancia> Select(string busqueda, DateTime fechaInicio, DateTime fechaFin)
         {
             if (string.IsNullOrEmpty(busqueda))
             {
-                return Orm.bd.instancia.OrderBy(a => a.id).ToList();
+                List<instancia> _instancias = Orm.bd.instancia
+                    .Where(n => n.fecha_inicio >= fechaInicio && n.fecha_inicio <= fechaFin ||
+                    n.fecha_fin >= fechaInicio && n.fecha_fin <= fechaFin)
+                    .OrderBy(a => a.id).ToList();
+
+                return new SortableBindingList<instancia>(_instancias);
             }
 
             var query = Orm.bd.instancia
+                .Where(n => n.fecha_inicio >= fechaInicio && n.fecha_inicio <= fechaFin ||
+                n.fecha_fin >= fechaInicio && n.fecha_fin <= fechaFin)
                 .Where(a => a.id.ToString().Contains(busqueda)
                             || a.fecha_inicio.ToString().Contains(busqueda)
                             || a.fecha_fin.ToString().Contains(busqueda)
@@ -50,7 +60,34 @@ namespace OpenSpaceComarcal.Models
                 .OrderBy(a => a.id)
                 .ToList();
 
-            return query;
+            return new SortableBindingList<instancia>(query);
+        }
+
+        public static SortableBindingList<instancia> SelectBusqueda(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                List<instancia> _instancias = Orm.bd.instancia
+                    .OrderBy(a => a.id).ToList();
+
+                return new SortableBindingList<instancia>(_instancias);
+            }
+
+            var query = Orm.bd.instancia
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.fecha_inicio.ToString().Contains(busqueda)
+                            || a.fecha_fin.ToString().Contains(busqueda)
+                            || a.diploma.Contains(busqueda)
+                            || a.codigo.Contains(busqueda)
+                            || a.sesion.ToString().Contains(busqueda)
+
+                            || a.curso.nombre.Contains(busqueda)
+                            || a.curso.siglas.Contains(busqueda))
+
+                .OrderBy(a => a.id)
+                .ToList();
+
+            return new SortableBindingList<instancia>(query);
         }
 
         public static List<int> SelectIdCurso(int id_instancia)

@@ -12,7 +12,7 @@ namespace OpenSpaceComarcal.Libraries
 {
     public class Importar
     {
-        public static List<alumno> importarAlumnosDeExcel(string rutaExcel)
+        public static List<alumno> importarAlumnosDeExcel(string rutaExcel, ProgressBar progressBar)
         {
             var alumnos = new List<alumno>();
 
@@ -22,10 +22,8 @@ namespace OpenSpaceComarcal.Libraries
                 {
                     // Acceder a la primera hoja
                     var worksheet = workbook.Worksheet(1);
-
                     foreach (var row in worksheet.RowsUsed().Skip(1))
                     {
-
                         // Crear una instancia de Alumno y llenar con datos de la fila
                         var alu = new alumno
                         {
@@ -38,7 +36,7 @@ namespace OpenSpaceComarcal.Libraries
                             fecha_registro = DateTime.Today,
                             notas = row.Cell(7).GetValue<string>(),
                         };
-
+                        
                         // Añadir el alumno a la lista
                         alumnos.Add(alu);
                     }
@@ -46,7 +44,7 @@ namespace OpenSpaceComarcal.Libraries
             }
             catch (IOException ex)
             {
-                MessageBox.Show($"Un proceso esta usando este excel, cierrelo o finalice el proceso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Un proceso esta usando este excel, cierrelo o finalice el proceso. {ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return alumnos;
         }

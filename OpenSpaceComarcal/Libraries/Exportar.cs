@@ -12,9 +12,10 @@ namespace OpenSpaceComarcal.Libraries
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
             saveFileDialog.Title = "Guardar como";
+            saveFileDialog.InitialDirectory = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Exportaciones";
 
             DateTime fechaActual = DateTime.Now;
-            string fechaHoraFormateada = fechaActual.ToString("yyyy-MM-dd");
+            string fechaHoraFormateada = fechaActual.ToString("dd-MM-yyyy");
             saveFileDialog.FileName = $"OpenSpaceComarcal_{nameArchivo}_{fechaHoraFormateada}.xlsx";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)

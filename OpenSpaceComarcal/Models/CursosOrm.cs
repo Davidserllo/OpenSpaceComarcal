@@ -6,10 +6,11 @@ namespace OpenSpaceComarcal.Models
 {
     public static class CursosOrm
     {
-        public static List<curso> Select()
+        public static List<curso> Select(int quantity)
         {
             List<curso> _curso = Orm.bd.curso
-                .OrderBy(n => n.id)
+                .OrderByDescending(n => n.id)
+                .Take(quantity)
                 .ToList();
 
             return _curso;

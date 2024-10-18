@@ -3,6 +3,8 @@ using OpenSpaceComarcal.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -16,7 +18,7 @@ namespace OpenSpaceComarcal
             progressBarArchivo.Visible = false;
         }
 
-
+        public static int TAKE_EMPRESAS = 10;
 
         private void Alumnos_Load(object sender, EventArgs e)
         {
@@ -38,8 +40,8 @@ namespace OpenSpaceComarcal
         private void actualizarDatos()
         {
             bindingSourceAlumno.DataSource = AlumnosOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value); 
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
-            bindingSourceBusquedaEmpresa.DataSource = EmpresaOrm.Select();
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(TAKE_EMPRESAS);
+            bindingSourceBusquedaEmpresa.DataSource = EmpresaOrm.Select(TAKE_EMPRESAS);
             actualizarTextBoxes();
         }
 
@@ -264,7 +266,7 @@ namespace OpenSpaceComarcal
             {
                 if (e.Value != null)
                 {
-                    e.Value = EmpresaOrm.Select(Convert.ToInt32(e.Value)).FirstOrDefault();
+                    e.Value = EmpresaOrm.SelectEmpresa(Convert.ToInt32(e.Value)).FirstOrDefault();
                 }
                 else
                 {
@@ -290,7 +292,7 @@ namespace OpenSpaceComarcal
                         rutaExcel = fileDialog.FileName;
                         MessageBox.Show($"Archivo Excel seleccionado: {rutaExcel}", "Archivo Seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        List<alumno> listaAlumnos = Importar.importarAlumnosDeExcel(rutaExcel);
+                        List<alumno> listaAlumnos = Importar.importarAlumnosDeExcel(rutaExcel, progressBarArchivo);
                         string messag = "";
                         // Insertamos los alumnos en la BD
                         foreach (var alu in listaAlumnos)
@@ -310,7 +312,7 @@ namespace OpenSpaceComarcal
                         }
 
                         MessageBox.Show($"Se han importado los alumnos" + messag, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        progressBarArchivo.Visible = false;
                         actualizarDatos();
                     }
                 }
@@ -328,6 +330,7 @@ namespace OpenSpaceComarcal
             if (result == DialogResult.Yes)
             {
                 Exportar.ExportarDataGridViewExcel(dataGridViewAlumno, "Alumnos", progressBarArchivo);
+                OpenFileExplorer(@"\\Nas01\administracion\Open_Space_Comarcal_Software\Exportaciones");
                 progressBarArchivo.Visible = false;
             }
         }
@@ -368,6 +371,27 @@ namespace OpenSpaceComarcal
         private void buttonBuscarEmpresa2_Click(object sender, EventArgs e)
         {
             bindingSourceBusquedaEmpresa.DataSource = EmpresaOrm.Select(comboBoxEmpresaBusqueda.Text);
+        }
+
+        private void OpenFileExplorer(string path)
+        {
+            try
+            {
+                // Verificar si la ruta existe
+                if (Directory.Exists(path))
+                {
+                    // Iniciar el Explorador de Archivos en la ruta especificada
+                    Process.Start("explorer.exe", path);
+                }
+                else
+                {
+                    MessageBox.Show("La ruta especificada no existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir el Explorador de Archivos: {ex.Message}");
+            }
         }
     }
 }

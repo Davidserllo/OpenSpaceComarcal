@@ -32,26 +32,38 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInscripcion));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaFinBuscador = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaInicioBuscador = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.buttonBuscarInscipcion = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxEmpresa = new System.Windows.Forms.ComboBox();
-            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEmpresaBusqueda = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.checkBoxAptoBusqueda = new System.Windows.Forms.CheckBox();
             this.comboBoxInstanciaBusqueda = new System.Windows.Forms.ComboBox();
-            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceInstanciaBusqueda = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxAlumnoBusqueda = new System.Windows.Forms.ComboBox();
+            this.bindingSourceAlumnoBusqueda = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceInscipcion = new System.Windows.Forms.BindingSource(this.components);
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBuscarEmpresa1 = new System.Windows.Forms.Button();
             this.textBoxCodFactura = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
@@ -75,7 +87,6 @@
             this.codfacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelInscripcion = new System.Windows.Forms.Label();
             this.buttonGenerarDiplomas = new System.Windows.Forms.Button();
-            this.skinEngineinscripcion = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.toolStripInscripcion = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButtonArchivo = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,13 +94,12 @@
             this.crearExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
             this.buttonAsistencias = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaFinBuscador = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFechaInicioBuscador = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresaBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstanciaBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumnoBusqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).BeginInit();
@@ -128,6 +138,44 @@
             this.tabPage1.Text = "Buscador";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(525, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "F. Fin";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(525, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "F. Inicio";
+            // 
+            // dateTimePickerFechaFinBuscador
+            // 
+            this.dateTimePickerFechaFinBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerFechaFinBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaFinBuscador.Location = new System.Drawing.Point(585, 33);
+            this.dateTimePickerFechaFinBuscador.Name = "dateTimePickerFechaFinBuscador";
+            this.dateTimePickerFechaFinBuscador.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePickerFechaFinBuscador.TabIndex = 44;
+            // 
+            // dateTimePickerFechaInicioBuscador
+            // 
+            this.dateTimePickerFechaInicioBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerFechaInicioBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaInicioBuscador.Location = new System.Drawing.Point(585, 7);
+            this.dateTimePickerFechaInicioBuscador.Name = "dateTimePickerFechaInicioBuscador";
+            this.dateTimePickerFechaInicioBuscador.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePickerFechaInicioBuscador.TabIndex = 43;
+            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -162,6 +210,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
@@ -180,12 +231,39 @@
             this.tabPage2.Text = "Avanzado";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(603, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(24, 23);
+            this.button4.TabIndex = 40;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(447, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 23);
+            this.button3.TabIndex = 39;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(244, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 23);
+            this.button2.TabIndex = 38;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(615, 6);
+            this.label11.Location = new System.Drawing.Point(639, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 26;
@@ -197,7 +275,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(500, 5);
+            this.label10.Location = new System.Drawing.Point(515, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 25;
@@ -230,19 +308,18 @@
             // comboBoxEmpresa
             // 
             this.comboBoxEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBoxEmpresa.DataSource = this.bindingSourceEmpresa;
+            this.comboBoxEmpresa.DataSource = this.bindingSourceEmpresaBusqueda;
             this.comboBoxEmpresa.DisplayMember = "siglas";
             this.comboBoxEmpresa.FormattingEnabled = true;
-            this.comboBoxEmpresa.Location = new System.Drawing.Point(468, 24);
+            this.comboBoxEmpresa.Location = new System.Drawing.Point(483, 23);
             this.comboBoxEmpresa.Name = "comboBoxEmpresa";
             this.comboBoxEmpresa.Size = new System.Drawing.Size(114, 21);
             this.comboBoxEmpresa.TabIndex = 22;
             this.comboBoxEmpresa.ValueMember = "id";
-            this.comboBoxEmpresa.TextChanged += new System.EventHandler(this.comboBoxEmpresa_TextChanged);
             // 
-            // bindingSourceEmpresa
+            // bindingSourceEmpresaBusqueda
             // 
-            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
+            this.bindingSourceEmpresaBusqueda.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
             // 
             // label1
             // 
@@ -271,7 +348,7 @@
             // 
             this.checkBoxAptoBusqueda.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.checkBoxAptoBusqueda.AutoSize = true;
-            this.checkBoxAptoBusqueda.Location = new System.Drawing.Point(618, 27);
+            this.checkBoxAptoBusqueda.Location = new System.Drawing.Point(642, 30);
             this.checkBoxAptoBusqueda.Name = "checkBoxAptoBusqueda";
             this.checkBoxAptoBusqueda.Size = new System.Drawing.Size(15, 14);
             this.checkBoxAptoBusqueda.TabIndex = 19;
@@ -280,32 +357,42 @@
             // comboBoxInstanciaBusqueda
             // 
             this.comboBoxInstanciaBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBoxInstanciaBusqueda.DataSource = this.bindingSourceInstancia;
+            this.comboBoxInstanciaBusqueda.DataSource = this.bindingSourceInstanciaBusqueda;
             this.comboBoxInstanciaBusqueda.DisplayMember = "id_curso";
             this.comboBoxInstanciaBusqueda.FormattingEnabled = true;
             this.comboBoxInstanciaBusqueda.Location = new System.Drawing.Point(282, 23);
             this.comboBoxInstanciaBusqueda.Name = "comboBoxInstanciaBusqueda";
-            this.comboBoxInstanciaBusqueda.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxInstanciaBusqueda.Size = new System.Drawing.Size(159, 21);
             this.comboBoxInstanciaBusqueda.TabIndex = 15;
             this.comboBoxInstanciaBusqueda.ValueMember = "id";
             this.comboBoxInstanciaBusqueda.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInscripBusqueda_Format);
-            this.comboBoxInstanciaBusqueda.TextChanged += new System.EventHandler(this.comboBoxInstanciaBusqueda_TextChanged);
+            // 
+            // bindingSourceInstanciaBusqueda
+            // 
+            this.bindingSourceInstanciaBusqueda.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
+            // 
+            // comboBoxAlumnoBusqueda
+            // 
+            this.comboBoxAlumnoBusqueda.DataSource = this.bindingSourceAlumnoBusqueda;
+            this.comboBoxAlumnoBusqueda.DisplayMember = "nombre";
+            this.comboBoxAlumnoBusqueda.FormattingEnabled = true;
+            this.comboBoxAlumnoBusqueda.Location = new System.Drawing.Point(94, 23);
+            this.comboBoxAlumnoBusqueda.Name = "comboBoxAlumnoBusqueda";
+            this.comboBoxAlumnoBusqueda.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxAlumnoBusqueda.TabIndex = 11;
+            this.comboBoxAlumnoBusqueda.ValueMember = "id";
+            // 
+            // bindingSourceAlumnoBusqueda
+            // 
+            this.bindingSourceAlumnoBusqueda.DataSource = typeof(OpenSpaceComarcal.Models.alumno);
+            // 
+            // bindingSourceEmpresa
+            // 
+            this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
             // 
             // bindingSourceInstancia
             // 
             this.bindingSourceInstancia.DataSource = typeof(OpenSpaceComarcal.Models.instancia);
-            // 
-            // comboBoxAlumnoBusqueda
-            // 
-            this.comboBoxAlumnoBusqueda.DataSource = this.bindingSourceAlumno;
-            this.comboBoxAlumnoBusqueda.DisplayMember = "nombre";
-            this.comboBoxAlumnoBusqueda.FormattingEnabled = true;
-            this.comboBoxAlumnoBusqueda.Location = new System.Drawing.Point(102, 24);
-            this.comboBoxAlumnoBusqueda.Name = "comboBoxAlumnoBusqueda";
-            this.comboBoxAlumnoBusqueda.Size = new System.Drawing.Size(174, 21);
-            this.comboBoxAlumnoBusqueda.TabIndex = 11;
-            this.comboBoxAlumnoBusqueda.ValueMember = "id";
-            this.comboBoxAlumnoBusqueda.TextChanged += new System.EventHandler(this.comboBoxAlumnoBusqueda_TextChanged);
             // 
             // bindingSourceAlumno
             // 
@@ -329,6 +416,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonBuscarEmpresa1);
             this.groupBox1.Controls.Add(this.textBoxCodFactura);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.buttonLimpiar);
@@ -348,27 +437,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de la Inscripción";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 38;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonBuscarEmpresa1
+            // 
+            this.buttonBuscarEmpresa1.Location = new System.Drawing.Point(317, 38);
+            this.buttonBuscarEmpresa1.Name = "buttonBuscarEmpresa1";
+            this.buttonBuscarEmpresa1.Size = new System.Drawing.Size(24, 23);
+            this.buttonBuscarEmpresa1.TabIndex = 37;
+            this.buttonBuscarEmpresa1.UseVisualStyleBackColor = true;
+            this.buttonBuscarEmpresa1.Click += new System.EventHandler(this.buttonBuscarEmpresa1_Click);
+            // 
             // textBoxCodFactura
             // 
-            this.textBoxCodFactura.Location = new System.Drawing.Point(445, 40);
+            this.textBoxCodFactura.Location = new System.Drawing.Point(431, 39);
             this.textBoxCodFactura.Name = "textBoxCodFactura";
-            this.textBoxCodFactura.Size = new System.Drawing.Size(107, 20);
+            this.textBoxCodFactura.Size = new System.Drawing.Size(131, 20);
             this.textBoxCodFactura.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(331, 43);
+            this.label7.Location = new System.Drawing.Point(359, 41);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 16);
+            this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Cód. Factura";
+            this.label7.Text = "Factura";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // buttonLimpiar
             // 
             this.buttonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(574, 76);
+            this.buttonLimpiar.Location = new System.Drawing.Point(582, 76);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(103, 38);
             this.buttonLimpiar.TabIndex = 23;
@@ -380,7 +488,7 @@
             // 
             this.checkBoxApto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxApto.AutoSize = true;
-            this.checkBoxApto.Location = new System.Drawing.Point(446, 87);
+            this.checkBoxApto.Location = new System.Drawing.Point(431, 86);
             this.checkBoxApto.Name = "checkBoxApto";
             this.checkBoxApto.Size = new System.Drawing.Size(15, 14);
             this.checkBoxApto.TabIndex = 18;
@@ -391,7 +499,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(332, 85);
+            this.label5.Location = new System.Drawing.Point(360, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 17;
@@ -403,26 +511,24 @@
             this.comboBoxInstancia.DataSource = this.bindingSourceInstancia;
             this.comboBoxInstancia.DisplayMember = "id_curso";
             this.comboBoxInstancia.FormattingEnabled = true;
-            this.comboBoxInstancia.Location = new System.Drawing.Point(108, 85);
+            this.comboBoxInstancia.Location = new System.Drawing.Point(97, 82);
             this.comboBoxInstancia.Name = "comboBoxInstancia";
-            this.comboBoxInstancia.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxInstancia.Size = new System.Drawing.Size(214, 21);
             this.comboBoxInstancia.TabIndex = 14;
             this.comboBoxInstancia.ValueMember = "id";
             this.comboBoxInstancia.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxInstancia_Format);
-            this.comboBoxInstancia.TextChanged += new System.EventHandler(this.comboBoxInstancia_TextChanged);
             // 
             // comboBoxAlumno
             // 
             this.comboBoxAlumno.DataSource = this.bindingSourceAlumno;
             this.comboBoxAlumno.DisplayMember = "nombre";
             this.comboBoxAlumno.FormattingEnabled = true;
-            this.comboBoxAlumno.Location = new System.Drawing.Point(107, 42);
+            this.comboBoxAlumno.Location = new System.Drawing.Point(96, 39);
             this.comboBoxAlumno.Name = "comboBoxAlumno";
-            this.comboBoxAlumno.Size = new System.Drawing.Size(202, 21);
+            this.comboBoxAlumno.Size = new System.Drawing.Size(215, 21);
             this.comboBoxAlumno.TabIndex = 10;
             this.comboBoxAlumno.ValueMember = "id";
             this.comboBoxAlumno.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxAlumno_Format);
-            this.comboBoxAlumno.TextChanged += new System.EventHandler(this.comboBoxAlumno_TextChanged);
             // 
             // buttonModificarInscripcion
             // 
@@ -450,7 +556,7 @@
             // buttonCrearInscripcion
             // 
             this.buttonCrearInscripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCrearInscripcion.Location = new System.Drawing.Point(573, 26);
+            this.buttonCrearInscripcion.Location = new System.Drawing.Point(581, 26);
             this.buttonCrearInscripcion.Name = "buttonCrearInscripcion";
             this.buttonCrearInscripcion.Size = new System.Drawing.Size(103, 37);
             this.buttonCrearInscripcion.TabIndex = 21;
@@ -463,7 +569,7 @@
             this.labelDNINIA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDNINIA.AutoSize = true;
             this.labelDNINIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDNINIA.Location = new System.Drawing.Point(21, 47);
+            this.labelDNINIA.Location = new System.Drawing.Point(10, 44);
             this.labelDNINIA.Name = "labelDNINIA";
             this.labelDNINIA.Size = new System.Drawing.Size(58, 16);
             this.labelDNINIA.TabIndex = 9;
@@ -474,7 +580,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 87);
+            this.label4.Location = new System.Drawing.Point(10, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 13;
@@ -517,6 +623,7 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.DividerWidth = 2;
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
@@ -592,11 +699,6 @@
             this.buttonGenerarDiplomas.UseVisualStyleBackColor = true;
             this.buttonGenerarDiplomas.Click += new System.EventHandler(this.buttonGenerarDiplomas_Click);
             // 
-            // skinEngineinscripcion
-            // 
-            this.skinEngineinscripcion.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngineinscripcion.SkinFile = "";
-            // 
             // toolStripInscripcion
             // 
             this.toolStripInscripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -667,44 +769,6 @@
             this.buttonAsistencias.UseVisualStyleBackColor = true;
             this.buttonAsistencias.Click += new System.EventHandler(this.buttonAsistencias_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(525, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "F. Fin";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(525, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "F. Inicio";
-            // 
-            // dateTimePickerFechaFinBuscador
-            // 
-            this.dateTimePickerFechaFinBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerFechaFinBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaFinBuscador.Location = new System.Drawing.Point(585, 33);
-            this.dateTimePickerFechaFinBuscador.Name = "dateTimePickerFechaFinBuscador";
-            this.dateTimePickerFechaFinBuscador.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePickerFechaFinBuscador.TabIndex = 44;
-            // 
-            // dateTimePickerFechaInicioBuscador
-            // 
-            this.dateTimePickerFechaInicioBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerFechaInicioBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaInicioBuscador.Location = new System.Drawing.Point(585, 7);
-            this.dateTimePickerFechaInicioBuscador.Name = "dateTimePickerFechaInicioBuscador";
-            this.dateTimePickerFechaInicioBuscador.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePickerFechaInicioBuscador.TabIndex = 43;
-            // 
             // FormInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,6 +794,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresaBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstanciaBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumnoBusqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAlumno)).EndInit();
@@ -776,7 +843,6 @@
         private System.Windows.Forms.Button buttonBusquedaAvanzada;
         private System.Windows.Forms.CheckBox checkBoxAptoBusqueda;
         private System.Windows.Forms.Label label1;
-        private Sunisoft.IrisSkin.SkinEngine skinEngineinscripcion;
         private System.Windows.Forms.ComboBox comboBoxEmpresa;
         private System.Windows.Forms.BindingSource bindingSourceEmpresa;
         private System.Windows.Forms.ToolStrip toolStripInscripcion;
@@ -789,6 +855,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button buttonAsistencias;
+        private System.Windows.Forms.ToolStripMenuItem crearExcelToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinBuscador;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicioBuscador;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBuscarEmpresa1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinstanciaDataGridViewTextBoxColumn;
@@ -797,10 +870,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaexpedicionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aptoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codfacturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem crearExcelToolStripMenuItem;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinBuscador;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicioBuscador;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource bindingSourceAlumnoBusqueda;
+        private System.Windows.Forms.BindingSource bindingSourceInstanciaBusqueda;
+        private System.Windows.Forms.BindingSource bindingSourceEmpresaBusqueda;
     }
 }

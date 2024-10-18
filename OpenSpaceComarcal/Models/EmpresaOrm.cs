@@ -6,16 +6,16 @@ namespace OpenSpaceComarcal.Models
 {
     public static class EmpresaOrm
     {
-        public static List<empresa> Select()
+        public static List<empresa> Select(int quantity)
         {
             List<empresa> _empresas = Orm.bd.empresa
                 .OrderByDescending(n => n.id)
-                .Take(10)                      
+                .Take(quantity)                      
                 .ToList();
             return _empresas;
         }
 
-        public static List<string> Select(int id_empresa)
+        public static List<string> SelectEmpresa(int id_empresa)
         {
             List<string> siglaEmpresa = Orm.bd.empresa
                 .Where(n => n.id == id_empresa)

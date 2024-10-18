@@ -8,17 +8,6 @@ namespace OpenSpaceComarcal
     public partial class FormCursos : Form
     {
 
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
-
         public FormCursos()
         {
             InitializeComponent();
@@ -51,7 +40,17 @@ namespace OpenSpaceComarcal
 
         private void Cursos_Load(object sender, EventArgs e)
         {
-            bindingSourceCursos.DataSource = CursosOrm.Select();
+            dataGridViewCursos.Columns[0].FillWeight = 10;
+            dataGridViewCursos.Columns[1].FillWeight = 30;
+            
+
+            comboBoxTakeCursos.Items.Add("1000");
+            comboBoxTakeCursos.Items.Add("100");
+            comboBoxTakeCursos.Items.Add("50");
+            comboBoxTakeCursos.Items.Add("10");
+            comboBoxTakeCursos.SelectedIndex = 3;
+
+            bindingSourceCursos.DataSource = CursosOrm.Select(Int32.Parse(comboBoxTakeCursos.SelectedItem.ToString()));
         }
 
         private void buttonCrearCurso_Click(object sender, EventArgs e)
@@ -70,7 +69,7 @@ namespace OpenSpaceComarcal
                 if (mensajeError == "")
                 {
                     MessageBox.Show("Se ha creado un nuevo curso llamado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bindingSourceCursos.DataSource = CursosOrm.Select();
+                    bindingSourceCursos.DataSource = CursosOrm.Select(Int32.Parse(comboBoxTakeCursos.SelectedItem.ToString()));
                 }
                 else
                 {
@@ -110,7 +109,7 @@ namespace OpenSpaceComarcal
                         else
                         {
                             MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceCursos.DataSource = CursosOrm.Select();
+                            bindingSourceCursos.DataSource = CursosOrm.Select(Int32.Parse(comboBoxTakeCursos.SelectedItem.ToString()));
                         }
                     }
                     else
@@ -127,7 +126,7 @@ namespace OpenSpaceComarcal
 
         private void buttonActualizarCursos_Click(object sender, EventArgs e)
         {
-            bindingSourceCursos.DataSource = CursosOrm.Select();
+            bindingSourceCursos.DataSource = CursosOrm.Select(Int32.Parse(comboBoxTakeCursos.SelectedItem.ToString()));
         }
 
         private void dataGridViewCursos_SelectionChanged(object sender, EventArgs e)
@@ -155,7 +154,7 @@ namespace OpenSpaceComarcal
                         if (mensajeError == "")
                         {
                             MessageBox.Show("Se ha eliminado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceCursos.DataSource = CursosOrm.Select();
+                            bindingSourceCursos.DataSource = CursosOrm.Select(Int32.Parse(comboBoxTakeCursos.SelectedItem.ToString()));
                         }
                         else
                         {

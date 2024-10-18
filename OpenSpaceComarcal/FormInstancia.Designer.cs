@@ -32,11 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInstancia));
             this.bindingSourceInstancia = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaFinBuscador = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaInicioBuscador = new System.Windows.Forms.DateTimePicker();
             this.labelCualquierCampo = new System.Windows.Forms.Label();
             this.textBoxBuscador = new System.Windows.Forms.TextBox();
             this.buttonBuscarCurso = new System.Windows.Forms.Button();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.groupBoxInfoCurso = new System.Windows.Forms.GroupBox();
+            this.buttonBuscarSiglasCurso = new System.Windows.Forms.Button();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.numericUpDownSesion = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,15 +92,57 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.dateTimePickerFechaFinBuscador);
+            this.groupBox2.Controls.Add(this.dateTimePickerFechaInicioBuscador);
             this.groupBox2.Controls.Add(this.labelCualquierCampo);
             this.groupBox2.Controls.Add(this.textBoxBuscador);
             this.groupBox2.Controls.Add(this.buttonBuscarCurso);
             this.groupBox2.Location = new System.Drawing.Point(9, 71);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(784, 52);
+            this.groupBox2.Size = new System.Drawing.Size(784, 65);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscador";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(513, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "F. Fin";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(513, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "F. Inicio";
+            // 
+            // dateTimePickerFechaFinBuscador
+            // 
+            this.dateTimePickerFechaFinBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerFechaFinBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaFinBuscador.Location = new System.Drawing.Point(573, 39);
+            this.dateTimePickerFechaFinBuscador.Name = "dateTimePickerFechaFinBuscador";
+            this.dateTimePickerFechaFinBuscador.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePickerFechaFinBuscador.TabIndex = 48;
+            // 
+            // dateTimePickerFechaInicioBuscador
+            // 
+            this.dateTimePickerFechaInicioBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerFechaInicioBuscador.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaInicioBuscador.Location = new System.Drawing.Point(573, 13);
+            this.dateTimePickerFechaInicioBuscador.Name = "dateTimePickerFechaInicioBuscador";
+            this.dateTimePickerFechaInicioBuscador.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePickerFechaInicioBuscador.TabIndex = 47;
             // 
             // labelCualquierCampo
             // 
@@ -103,7 +150,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCualquierCampo.AutoSize = true;
             this.labelCualquierCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCualquierCampo.Location = new System.Drawing.Point(14, 21);
+            this.labelCualquierCampo.Location = new System.Drawing.Point(13, 27);
             this.labelCualquierCampo.Name = "labelCualquierCampo";
             this.labelCualquierCampo.Size = new System.Drawing.Size(124, 16);
             this.labelCualquierCampo.TabIndex = 3;
@@ -113,15 +160,15 @@
             // 
             this.textBoxBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscador.Location = new System.Drawing.Point(155, 19);
+            this.textBoxBuscador.Location = new System.Drawing.Point(154, 25);
             this.textBoxBuscador.Name = "textBoxBuscador";
-            this.textBoxBuscador.Size = new System.Drawing.Size(514, 20);
+            this.textBoxBuscador.Size = new System.Drawing.Size(353, 20);
             this.textBoxBuscador.TabIndex = 4;
             // 
             // buttonBuscarCurso
             // 
             this.buttonBuscarCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscarCurso.Location = new System.Drawing.Point(675, 12);
+            this.buttonBuscarCurso.Location = new System.Drawing.Point(674, 18);
             this.buttonBuscarCurso.Name = "buttonBuscarCurso";
             this.buttonBuscarCurso.Size = new System.Drawing.Size(103, 34);
             this.buttonBuscarCurso.TabIndex = 5;
@@ -143,6 +190,7 @@
             // 
             this.groupBoxInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxInfoCurso.Controls.Add(this.buttonBuscarSiglasCurso);
             this.groupBoxInfoCurso.Controls.Add(this.textBoxCodigo);
             this.groupBoxInfoCurso.Controls.Add(this.numericUpDownSesion);
             this.groupBoxInfoCurso.Controls.Add(this.label2);
@@ -166,13 +214,22 @@
             this.groupBoxInfoCurso.TabStop = false;
             this.groupBoxInfoCurso.Text = "Informacion del Curso";
             // 
+            // buttonBuscarSiglasCurso
+            // 
+            this.buttonBuscarSiglasCurso.Location = new System.Drawing.Point(254, 26);
+            this.buttonBuscarSiglasCurso.Name = "buttonBuscarSiglasCurso";
+            this.buttonBuscarSiglasCurso.Size = new System.Drawing.Size(24, 23);
+            this.buttonBuscarSiglasCurso.TabIndex = 37;
+            this.buttonBuscarSiglasCurso.UseVisualStyleBackColor = true;
+            this.buttonBuscarSiglasCurso.Click += new System.EventHandler(this.buttonBuscarSiglasCurso_Click);
+            // 
             // textBoxCodigo
             // 
             this.textBoxCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCodigo.Location = new System.Drawing.Point(125, 106);
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(139, 20);
+            this.textBoxCodigo.Size = new System.Drawing.Size(153, 20);
             this.textBoxCodigo.TabIndex = 23;
             // 
             // numericUpDownSesion
@@ -266,7 +323,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSeleccionarDiploma.Location = new System.Drawing.Point(124, 64);
             this.buttonSeleccionarDiploma.Name = "buttonSeleccionarDiploma";
-            this.buttonSeleccionarDiploma.Size = new System.Drawing.Size(139, 27);
+            this.buttonSeleccionarDiploma.Size = new System.Drawing.Size(154, 27);
             this.buttonSeleccionarDiploma.TabIndex = 13;
             this.buttonSeleccionarDiploma.Text = "Seleccionar Diploma";
             this.buttonSeleccionarDiploma.UseVisualStyleBackColor = true;
@@ -279,12 +336,11 @@
             this.comboBoxCursosSiglas.DataSource = this.bindingSourceCursos;
             this.comboBoxCursosSiglas.DisplayMember = "siglas";
             this.comboBoxCursosSiglas.FormattingEnabled = true;
-            this.comboBoxCursosSiglas.Location = new System.Drawing.Point(125, 29);
+            this.comboBoxCursosSiglas.Location = new System.Drawing.Point(125, 27);
             this.comboBoxCursosSiglas.Name = "comboBoxCursosSiglas";
-            this.comboBoxCursosSiglas.Size = new System.Drawing.Size(139, 21);
+            this.comboBoxCursosSiglas.Size = new System.Drawing.Size(123, 21);
             this.comboBoxCursosSiglas.TabIndex = 9;
             this.comboBoxCursosSiglas.ValueMember = "id";
-            this.comboBoxCursosSiglas.TextChanged += new System.EventHandler(this.comboBoxCursosSiglas_TextChanged);
             // 
             // bindingSourceCursos
             // 
@@ -376,16 +432,17 @@
             this.codigo,
             this.sesion});
             this.dataGridViewCurso.DataSource = this.bindingSourceInstancia;
-            this.dataGridViewCurso.Location = new System.Drawing.Point(9, 129);
+            this.dataGridViewCurso.Location = new System.Drawing.Point(9, 142);
             this.dataGridViewCurso.MultiSelect = false;
             this.dataGridViewCurso.Name = "dataGridViewCurso";
             this.dataGridViewCurso.ReadOnly = true;
             this.dataGridViewCurso.RowHeadersVisible = false;
             this.dataGridViewCurso.RowHeadersWidth = 72;
             this.dataGridViewCurso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCurso.Size = new System.Drawing.Size(784, 310);
+            this.dataGridViewCurso.Size = new System.Drawing.Size(784, 297);
             this.dataGridViewCurso.TabIndex = 6;
             this.dataGridViewCurso.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCurso_CellFormatting);
+            this.dataGridViewCurso.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewCurso_RowPrePaint);
             this.dataGridViewCurso.SelectionChanged += new System.EventHandler(this.dataGridViewCurso_SelectionChanged);
             // 
             // idDataGridViewTextBoxColumn
@@ -589,5 +646,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diplomaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn sesion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinBuscador;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicioBuscador;
+        private System.Windows.Forms.Button buttonBuscarSiglasCurso;
     }
 }

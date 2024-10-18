@@ -1,26 +1,17 @@
-﻿using OpenSpaceComarcal.Libraries;
+﻿
+using OpenSpaceComarcal.Libraries;
 using OpenSpaceComarcal.Models;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
+
 
 
 namespace OpenSpaceComarcal
 {
     public partial class FormInstancia : Form
     {
-
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
-
         public FormInstancia()
         {
             InitializeComponent();
@@ -28,24 +19,23 @@ namespace OpenSpaceComarcal
 
         private void Instancia_Load(object sender, System.EventArgs e)
         {
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
-            bindingSourceCursos.DataSource = CursosOrm.Select();
-            setToolTip();
+            dataGridViewCurso.Columns[0].FillWeight = 35;
+            dataGridViewCurso.Columns[1].FillWeight = 60;
+            dataGridViewCurso.Columns[2].FillWeight = 60;
+            dataGridViewCurso.Columns[3].FillWeight = 60;
+            dataGridViewCurso.Columns[4].FillWeight = 150;
+            dataGridViewCurso.Columns[5].FillWeight = 60;
+            dataGridViewCurso.Columns[6].FillWeight = 20;
 
-            // Ocultar barra de progreso
+            DateTime hoy = DateTime.Now;
+            dateTimePickerFechaInicioBuscador.Value =
+                new DateTime(hoy.Year, hoy.Month, 1);
+            dateTimePickerFechaFinBuscador.Value =
+                new DateTime(hoy.Year, hoy.Month, DateTime.DaysInMonth(hoy.Year, hoy.Month));
+            bindingSourceInstancia.DataSource = InstanciaOrm.Select(
+                dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
+            bindingSourceCursos.DataSource = CursosOrm.Select(10);
             progressBarArchivo.Visible = false;
-        }
-
-        ToolTip toolTip1 = new ToolTip();
-
-        private void setToolTip()
-        {
-            toolTip1.AutoPopDelay = 2000;
-            toolTip1.InitialDelay = 500;
-            toolTip1.ReshowDelay = 500;
-            toolTip1.ShowAlways = true;
-
-            toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
         }
 
         private void actualizarTextBoxes()
@@ -69,14 +59,13 @@ namespace OpenSpaceComarcal
                 buttonSeleccionarDiploma.Text = fila.Cells[4].Value.ToString();
                 textBoxCodigo.Text = fila.Cells[5].Value.ToString();
                 numericUpDownSesion.Value = (int)fila.Cells[6].Value;
-                toolTip1.SetToolTip(buttonSeleccionarDiploma, buttonSeleccionarDiploma.Text);
             }
         }
         private void buttonActualizar_Click(object sender, System.EventArgs e)
         {
             // Actualizar tabla
-            bindingSourceCursos.DataSource = CursosOrm.Select();
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+            bindingSourceCursos.DataSource = CursosOrm.Select(10);
+            bindingSourceInstancia.DataSource = InstanciaOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
         }
         private bool camposRellenados()
         {
@@ -107,7 +96,7 @@ namespace OpenSpaceComarcal
                 if (mensajeError == "")
                 {
                     MessageBox.Show("Se ha creado un curso programado del curso " + comboBoxCursosSiglas.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+                    bindingSourceInstancia.DataSource = InstanciaOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
                 }
                 else
                 {
@@ -141,7 +130,7 @@ namespace OpenSpaceComarcal
                         if (mensajeError == "")
                         {
                             MessageBox.Show("Se ha eliminado el programa " + comboBoxCursosSiglas.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+                            bindingSourceInstancia.DataSource = InstanciaOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
                         }
                         else
                         {
@@ -199,7 +188,7 @@ namespace OpenSpaceComarcal
                         else
                         {
                             MessageBox.Show("Se ha actualizado " + comboBoxCursosSiglas.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+                            bindingSourceInstancia.DataSource = InstanciaOrm.Select(dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
                         }
                     }
                     else
@@ -217,7 +206,7 @@ namespace OpenSpaceComarcal
         private void buttonBuscarCurso_Click(object sender, EventArgs e)
         {
             String busqueda = textBoxBuscador.Text;
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select(busqueda);
+            bindingSourceInstancia.DataSource = InstanciaOrm.Select(busqueda, dateTimePickerFechaInicioBuscador.Value, dateTimePickerFechaFinBuscador.Value);
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
@@ -279,11 +268,35 @@ namespace OpenSpaceComarcal
 
         }
 
-
-        private void comboBoxCursosSiglas_TextChanged(object sender, EventArgs e)
+        private void buttonBuscarSiglasCurso_Click(object sender, EventArgs e)
         {
-            string filtro = textBoxBuscador.Text.Trim(); // Obtener el texto del textBoxBuscador
-            bindingSourceCursos.Filter = $"nombre LIKE '*{filtro}*'";
+            bindingSourceCursos.DataSource = CursosOrm.Select(comboBoxCursosSiglas.Text);
+        }
+
+        private void dataGridViewCurso_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtiene la cuarta columna (índice 3)
+                DataGridViewRow row = dataGridViewCurso.Rows[e.RowIndex];
+                DateTime fechaFin;
+
+                // Verifica si el valor de la cuarta columna es una fecha válida
+                if (DateTime.TryParse(row.Cells[3].Value?.ToString(), out fechaFin))
+                {
+                    // Compara la fecha con la fecha actual
+                    if (fechaFin > DateTime.Now)
+                    {
+                        // Cambia el color de la fila a verde si la fecha es mayor que la actual
+                        row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    }
+                    else
+                    {
+                        // Restablece el color por defecto si no se cumple la condición
+                        row.DefaultCellStyle.BackColor = dataGridViewCurso.DefaultCellStyle.BackColor;
+                    }
+                }
+            }
         }
     }
 }

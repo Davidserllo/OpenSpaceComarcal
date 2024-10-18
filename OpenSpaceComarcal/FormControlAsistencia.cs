@@ -11,17 +11,21 @@ namespace OpenSpaceComarcal
 {
     public partial class FormControlAsistencia : Form
     {
+        private DateTime fechaInicio;
+        private DateTime fechaFin;
         public const string RUTA_DESTINO = @"\\Nas01\administracion\Open_Space_Comarcal_Software\C. Asistencias";
         public const string RUTA_PLANTILLA = @"\\Nas01\administracion\Open_Space_Comarcal_Software\Plantillas\C. Asistencias\CONTROL-ASISTENCIAS.docx";
-        public FormControlAsistencia()
+        public FormControlAsistencia(DateTime fechaInicio, DateTime fechaFin)
         {
+            this.fechaFin = fechaFin;
+            this.fechaInicio = fechaInicio;
             InitializeComponent();
             progressBar1.Visible = false;
         }
 
         private void FormControlAsistencia_Load(object sender, EventArgs e)
         {
-            bindingSourceInstancia.DataSource = InstanciaOrm.Select();
+            bindingSourceInstancia.DataSource = InstanciaOrm.Select(this.fechaInicio, this.fechaFin);
             textBoxRutaDestino.Text = RUTA_DESTINO;
             textBoxRutaPlantilla.Text = RUTA_PLANTILLA;
         }

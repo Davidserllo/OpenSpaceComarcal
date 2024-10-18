@@ -56,6 +56,30 @@ namespace OpenSpaceComarcal.Models
             return new SortableBindingList<alumno>(query);
         }
 
+        public static SortableBindingList<alumno> SelectBusqueda(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                List<alumno> _alumnos = Orm.bd.alumno.OrderBy(a => a.id)
+                    .ToList();
+                return new SortableBindingList<alumno>(_alumnos);
+            }
+
+            var query = Orm.bd.alumno
+                .Where(a => a.id.ToString().Contains(busqueda)
+                            || a.dni_nie_pasp.Contains(busqueda)
+                            || a.apellidos.Contains(busqueda)
+                            || a.nombre.Contains(busqueda)
+                            || a.telefono.Contains(busqueda)
+                            || a.email.Contains(busqueda)
+                            || a.fecha_registro.ToString().Contains(busqueda)
+                            || a.notas.Contains(busqueda))
+                .OrderBy(a => a.id)
+                .ToList();
+
+            return new SortableBindingList<alumno>(query);
+        }
+
         public static SortableBindingList<alumno> SelectAvanzado(int empresaId, DateTime fechaInicio, DateTime fechaFin)
         {
             var query = Orm.bd.alumno.AsQueryable();

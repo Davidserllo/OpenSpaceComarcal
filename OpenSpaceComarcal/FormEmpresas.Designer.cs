@@ -55,14 +55,6 @@
             this.textBoxCif = new System.Windows.Forms.TextBox();
             this.labelSiglas = new System.Windows.Forms.Label();
             this.dataGridViewEmpresas = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.persona_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceEmpresa = new System.Windows.Forms.BindingSource(this.components);
             this.labelCursos = new System.Windows.Forms.Label();
             this.skinEngineEmpresas = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
@@ -71,6 +63,15 @@
             this.toolStripMenuExportar = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuImportar = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBarArchivo = new System.Windows.Forms.ProgressBar();
+            this.comboBoxTakeEmpresas = new System.Windows.Forms.ComboBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siglasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.persona_contacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxBuscador.SuspendLayout();
             this.groupBoxInformacionEmpresa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpresas)).BeginInit();
@@ -363,62 +364,6 @@
             this.dataGridViewEmpresas.TabIndex = 6;
             this.dataGridViewEmpresas.SelectionChanged += new System.EventHandler(this.dataGridViewEmpresas_SelectionChanged);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cifDataGridViewTextBoxColumn
-            // 
-            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
-            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
-            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
-            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // siglasDataGridViewTextBoxColumn
-            // 
-            this.siglasDataGridViewTextBoxColumn.DataPropertyName = "siglas";
-            this.siglasDataGridViewTextBoxColumn.HeaderText = "Siglas";
-            this.siglasDataGridViewTextBoxColumn.Name = "siglasDataGridViewTextBoxColumn";
-            this.siglasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // persona_contacto
-            // 
-            this.persona_contacto.DataPropertyName = "persona_contacto";
-            this.persona_contacto.HeaderText = "Nombre Contacto";
-            this.persona_contacto.Name = "persona_contacto";
-            this.persona_contacto.ReadOnly = true;
-            // 
-            // notas
-            // 
-            this.notas.DataPropertyName = "notas";
-            this.notas.HeaderText = "Notas";
-            this.notas.Name = "notas";
-            this.notas.ReadOnly = true;
-            // 
             // bindingSourceEmpresa
             // 
             this.bindingSourceEmpresa.DataSource = typeof(OpenSpaceComarcal.Models.empresa);
@@ -490,11 +435,77 @@
             this.progressBarArchivo.Size = new System.Drawing.Size(780, 10);
             this.progressBarArchivo.TabIndex = 31;
             // 
+            // comboBoxTakeEmpresas
+            // 
+            this.comboBoxTakeEmpresas.FormattingEnabled = true;
+            this.comboBoxTakeEmpresas.Location = new System.Drawing.Point(839, 36);
+            this.comboBoxTakeEmpresas.Name = "comboBoxTakeEmpresas";
+            this.comboBoxTakeEmpresas.Size = new System.Drawing.Size(95, 21);
+            this.comboBoxTakeEmpresas.TabIndex = 32;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.DividerWidth = 2;
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cifDataGridViewTextBoxColumn
+            // 
+            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
+            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
+            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
+            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // siglasDataGridViewTextBoxColumn
+            // 
+            this.siglasDataGridViewTextBoxColumn.DataPropertyName = "siglas";
+            this.siglasDataGridViewTextBoxColumn.HeaderText = "Siglas";
+            this.siglasDataGridViewTextBoxColumn.Name = "siglasDataGridViewTextBoxColumn";
+            this.siglasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // persona_contacto
+            // 
+            this.persona_contacto.DataPropertyName = "persona_contacto";
+            this.persona_contacto.HeaderText = "Nombre Contacto";
+            this.persona_contacto.Name = "persona_contacto";
+            this.persona_contacto.ReadOnly = true;
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Notas";
+            this.notas.Name = "notas";
+            this.notas.ReadOnly = true;
+            // 
             // FormEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 587);
+            this.Controls.Add(this.comboBoxTakeEmpresas);
             this.Controls.Add(this.progressBarArchivo);
             this.Controls.Add(this.toolStripEmpresas);
             this.Controls.Add(this.buttonActualizarEmpresas);
@@ -551,6 +562,12 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxNotas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStripEmpresas;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
+        private System.Windows.Forms.ProgressBar progressBarArchivo;
+        private System.Windows.Forms.ComboBox comboBoxTakeEmpresas;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cifDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn siglasDataGridViewTextBoxColumn;
@@ -559,10 +576,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn persona_contacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
-        private System.Windows.Forms.ToolStrip toolStripEmpresas;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonArchivo;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuExportar;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuImportar;
-        private System.Windows.Forms.ProgressBar progressBarArchivo;
     }
 }

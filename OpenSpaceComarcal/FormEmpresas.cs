@@ -7,18 +7,6 @@ namespace OpenSpaceComarcal
 {
     public partial class FormEmpresas : Form
     {
-
-        // Sobreescribe la propiedad CreateParams para personalizar los parámetros de creación del formulario
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
-        }
-
         public FormEmpresas()
         {
             InitializeComponent();
@@ -56,7 +44,20 @@ namespace OpenSpaceComarcal
 
         private void Empresas_Load(object sender, EventArgs e)
         {
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+            dataGridViewEmpresas.Columns[0].FillWeight = 35;
+            dataGridViewEmpresas.Columns[1].FillWeight = 70;
+            dataGridViewEmpresas.Columns[2].FillWeight = 70;
+            dataGridViewEmpresas.Columns[3].FillWeight = 130;
+            dataGridViewEmpresas.Columns[4].FillWeight = 70;
+            dataGridViewEmpresas.Columns[5].FillWeight = 130;
+
+            comboBoxTakeEmpresas.Items.Add("1000");
+            comboBoxTakeEmpresas.Items.Add("100");
+            comboBoxTakeEmpresas.Items.Add("50");
+            comboBoxTakeEmpresas.Items.Add("10");
+            comboBoxTakeEmpresas.SelectedIndex = 3;
+
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(Int32.Parse(comboBoxTakeEmpresas.SelectedItem.ToString()));
         }
 
         private void buttonCrearEmpresa_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace OpenSpaceComarcal
                 if (mensajeError == "")
                 {
                     MessageBox.Show("Se ha creado una nueva empresa llamada " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+                    bindingSourceEmpresa.DataSource = EmpresaOrm.Select(Int32.Parse(comboBoxTakeEmpresas.SelectedItem.ToString()));
                 }
                 else
                 {
@@ -121,7 +122,7 @@ namespace OpenSpaceComarcal
                         if (mensajeError == "")
                         {
                             MessageBox.Show("Se ha actualizado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+                            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(Int32.Parse(comboBoxTakeEmpresas.SelectedItem.ToString()));
                         }
                         else
                         {
@@ -144,7 +145,7 @@ namespace OpenSpaceComarcal
         {
             // Limpiar textBoxBusqueda
             textBoxBusqueda.Text = "";
-            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(Int32.Parse(comboBoxTakeEmpresas.SelectedItem.ToString()));
         }
 
         private void dataGridViewEmpresas_SelectionChanged(object sender, EventArgs e)
@@ -172,7 +173,7 @@ namespace OpenSpaceComarcal
                         if (mensajeError == "")
                         {
                             MessageBox.Show("Se ha eliminado " + textBoxNombre.Text, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bindingSourceEmpresa.DataSource = EmpresaOrm.Select();
+                            bindingSourceEmpresa.DataSource = EmpresaOrm.Select(Int32.Parse(comboBoxTakeEmpresas.SelectedItem.ToString()));
                         }
                         else
                         {
